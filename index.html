@@ -13,16 +13,16 @@
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-  <link rel="shortcut icon" href="assets/images/favicon.png">
+  <link rel="shortcut icon" href="assets/images/favicon2.png">
 </head>
 
 <body class="bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-white relative overflow-x-hidden">
 
   <!-- BACKGROUND GLOBAL EFFECT -->
   <div class="fixed inset-0 -z-10 pointer-events-none">
-    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-blue-500/10 blur-[140px] rounded-full">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-blue-500/10 blur-[140px] rounded-full animate-pulse-slow">
     </div>
-    <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-500/10 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-500/10 blur-[120px] rounded-full animate-pulse-slow"></div>
   </div>
 
   <!-- HEADER -->
@@ -31,7 +31,7 @@
 
       <!-- LOGO -->
       <div class="flex items-center gap-3">
-        <img src="assets/images/logo_seatec.png" class="h-8 transition hover:scale-105">
+        <img src="assets/images/logo_seatec.png" class="h-8 transition duration-500 hover:scale-105">
       </div>
 
       <!-- MENU -->
@@ -39,32 +39,32 @@
 
         <a href="#inicio" class="relative group">
           Início
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
         </a>
 
         <a href="#sobre" class="relative group">
           Sobre
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
         </a>
 
         <a href="#sistemas" class="relative group">
           Sistemas
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
         </a>
 
         <a href="#funcionalidades" class="relative group">
           Funcionalidades
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
         </a>
 
         <a href="#depoimentos" class="relative group">
           Depoimentos
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
         </a>
 
         <a href="#contatos" class="relative group">
           Contatos
-          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all duration-500 group-hover:w-full"></span>
         </a>
 
       </nav>
@@ -72,12 +72,12 @@
       <!-- CTA -->
       <button onclick="abrirWhats()" class="relative bg-gradient-to-r from-green-500 to-green-600 px-5 py-2.5 rounded-xl text-sm font-medium 
       shadow-lg shadow-green-500/20 hover:shadow-green-500/40 
-      hover:scale-105 transition-all duration-300">
+      hover:scale-105 transition-all duration-500">
 
         💬 Falar no WhatsApp
 
         <!-- glow effect -->
-        <span class="absolute inset-0 rounded-xl bg-green-400/20 blur-xl opacity-0 hover:opacity-100 transition"></span>
+        <span class="absolute inset-0 rounded-xl bg-green-400/20 blur-xl opacity-0 hover:opacity-100 transition duration-500"></span>
       </button>
 
     </div>
@@ -90,10 +90,13 @@
     <!-- EFEITO FUNDO -->
     <div class="absolute inset-0 pointer-events-none">
       <div
-        class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[120px] rounded-full">
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[120px] rounded-full animate-pulse-slow">
       </div>
-      <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[100px] rounded-full"></div>
+      <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[100px] rounded-full animate-pulse-slow"></div>
     </div>
+
+    <!-- Padrão de grade sutil -->
+    <div class="absolute inset-0 opacity-[0.03] pointer-events-none hero-grid"></div>
 
     <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
 
@@ -102,36 +105,41 @@
 
         <!-- BADGE -->
         <span
-          class="inline-block mb-4 px-4 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
-          🚀 Automação Comercial Inteligente
+          class="inline-flex items-center gap-2 mb-5 px-4 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 shadow-lg shadow-blue-500/5">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+          </span>
+          Automação Comercial Inteligente
         </span>
 
         <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-          Sistema PDV completo
-          <span class="text-blue-400">para seu negócio crescer</span>
+          O sistema PDV que faz seu
+          <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">negócio decolar</span>
         </h1>
 
-        <p class="text-slate-300 mt-5 text-lg max-w-xl">
-          Escolha entre um sistema robusto para <b>Windows</b> ou uma solução prática para <b>Android</b> e tenha total
-          controle da sua operação com velocidade e eficiência.
+        <p class="text-slate-300 mt-6 text-lg max-w-xl leading-relaxed">
+          Da loja física à operação móvel, oferecemos soluções PDV
+          <b class="text-white">robustas, rápidas e fáceis de usar</b> — para você focar no que importa: vender mais.
         </p>
 
         <!-- BOTÕES -->
-        <div class="flex flex-wrap gap-4 mt-8">
+        <div class="flex flex-wrap gap-4 mt-9">
 
           <button onclick="abrirWhats()" class="relative bg-gradient-to-r from-green-500 to-green-600 px-7 py-3 rounded-xl font-medium
           shadow-lg shadow-green-500/20 hover:shadow-green-500/40
-          hover:scale-105 transition-all duration-300">
+          hover:scale-105 transition-all duration-500">
 
             💬 Falar no WhatsApp
 
             <span
-              class="absolute inset-0 rounded-xl bg-green-400/20 blur-xl opacity-0 hover:opacity-100 transition"></span>
+              class="absolute inset-0 rounded-xl bg-green-400/20 blur-xl opacity-0 hover:opacity-100 transition duration-500"></span>
           </button>
 
           <a href="#sistemas" class="px-7 py-3 rounded-xl border border-white/10 hover:border-blue-400
-          bg-white/5 hover:bg-white/10 backdrop-blur transition-all duration-300">
+          bg-white/5 hover:bg-white/10 backdrop-blur transition-all duration-500 flex items-center gap-2 group">
             Ver sistemas
+            <span class="material-symbols-outlined text-base transition-transform duration-500 group-hover:translate-x-1">arrow_forward</span>
           </a>
 
         </div>
@@ -139,15 +147,15 @@
         <!-- BENEFÍCIOS -->
         <div class="flex flex-wrap gap-6 mt-10 text-sm text-slate-400">
 
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2 hero-mini-badge">
             <span class="text-blue-400">⚡</span> Implantação rápida
           </div>
 
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2 hero-mini-badge">
             <span class="text-green-400">📊</span> Controle total
           </div>
 
-          <div class="flex items-center gap-2">
+          <div class="flex items-center gap-2 hero-mini-badge">
             <span class="text-purple-400">🤝</span> Suporte humanizado
           </div>
 
@@ -159,18 +167,25 @@
       <div class="fade-up relative">
 
         <!-- glow atrás -->
-        <div class="absolute inset-0 bg-blue-500/20 blur-3xl opacity-70"></div>
+        <div class="absolute inset-0 bg-blue-500/20 blur-3xl opacity-70 animate-pulse-slow"></div>
 
         <!-- card efeito -->
-        <div class="relative bg-slate-900/40 backdrop-blur rounded-2xl border border-white/10 p-3 shadow-2xl">
+        <div class="relative bg-slate-900/40 backdrop-blur rounded-2xl border border-white/10 p-3 shadow-2xl hero-image-wrap">
 
-          <img src="assets/images/imagem.png" class="rounded-xl shadow-2xl hover:scale-[1.02] transition duration-500">
+          <img src="assets/images/imagem.png" class="rounded-xl shadow-2xl transition duration-700 hover:scale-[1.02]">
 
         </div>
 
       </div>
 
     </div>
+
+    <!-- INDICADOR DE SCROLL -->
+    <div class="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 text-slate-500 text-xs animate-bounce-slow">
+      <span>Role para descobrir</span>
+      <span class="material-symbols-outlined text-base">keyboard_arrow_down</span>
+    </div>
+
   </section>
 
   <!-- SOBRE -->
@@ -185,17 +200,22 @@
 
     <div class="max-w-6xl mx-auto px-6 text-center fade-up relative z-10">
 
+      <!-- BADGE -->
+      <span class="inline-block mb-5 px-4 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+        SOBRE A SEATEC
+      </span>
+
       <!-- TÍTULO -->
       <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
         Mais de uma década entregando
-        <span class="text-blue-400">tecnologia que gera resultado</span>
+        <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">tecnologia que gera resultado</span>
       </h2>
 
       <!-- TEXTO -->
       <p class="text-slate-300 max-w-3xl mx-auto text-lg leading-relaxed">
-        Desde 2012, a Seatec Soluções Tecnológicas vem transformando a gestão de negócios em todo o Brasil.
-        Criamos sistemas PDV focados em <b>performance, simplicidade e controle total</b>.
-        Nosso compromisso vai além da tecnologia: entregamos segurança e crescimento para sua operação.
+        Desde <b class="text-white">2012</b>, a Seatec Soluções Tecnológicas vem transformando a gestão de negócios em todo o Brasil.
+        Criamos sistemas PDV focados em <b class="text-white">performance, simplicidade e controle total</b>.
+        Nosso compromisso vai além da tecnologia: entregamos segurança e crescimento para a sua operação.
       </p>
 
       <!-- CARDS -->
@@ -203,16 +223,16 @@
 
         <!-- CARD CLIENTES -->
         <div class="group relative bg-gradient-to-br from-blue-900/40 to-blue-600/10 p-10 rounded-2xl border border-blue-500/20
-        hover:scale-[1.04] transition duration-300 shadow-xl shadow-blue-500/10 overflow-hidden">
+        hover:scale-[1.04] transition duration-700 shadow-xl shadow-blue-500/10 overflow-hidden">
 
           <!-- glow -->
-          <div class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-40 group-hover:opacity-70 transition"></div>
+          <div class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-40 group-hover:opacity-70 transition duration-700"></div>
 
           <div class="relative z-10 flex flex-col items-center">
 
-            <div class="text-5xl mb-4">🚀</div>
+            <div class="text-5xl mb-4 transition-transform duration-700 group-hover:scale-110">🚀</div>
 
-            <h3 class="text-5xl font-extrabold text-blue-400 tracking-tight">
+            <h3 class="text-5xl md:text-6xl font-extrabold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent tracking-tight">
               400+
             </h3>
 
@@ -226,14 +246,14 @@
 
         <!-- CARD SUPORTE -->
         <div class="group relative bg-gradient-to-br from-green-900/40 to-green-600/10 p-10 rounded-2xl border border-green-500/20
-        hover:scale-[1.04] transition duration-300 shadow-xl shadow-green-500/10 overflow-hidden">
+        hover:scale-[1.04] transition duration-700 shadow-xl shadow-green-500/10 overflow-hidden">
 
           <!-- glow -->
-          <div class="absolute inset-0 bg-green-500/10 blur-2xl opacity-40 group-hover:opacity-70 transition"></div>
+          <div class="absolute inset-0 bg-green-500/10 blur-2xl opacity-40 group-hover:opacity-70 transition duration-700"></div>
 
           <div class="relative z-10 flex flex-col items-center">
 
-            <div class="text-5xl mb-4">🛠️</div>
+            <div class="text-5xl mb-4 transition-transform duration-700 group-hover:scale-110">🛠️</div>
 
             <h3 class="text-2xl font-bold text-green-400">
               Suporte Dedicado
@@ -264,19 +284,26 @@
 
     <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
-        Nossos Sistemas
-      </h2>
+      <div class="text-center mb-20 fade-up">
+        <span class="inline-block mb-5 px-4 py-1.5 text-xs rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20">
+          NOSSOS SISTEMAS
+        </span>
 
-      <p class="text-center text-slate-400 mb-20 text-lg">
-        Escolha a solução ideal para o seu tipo de operação
-      </p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          Duas soluções,
+          <span class="bg-gradient-to-r from-orange-400 to-blue-400 bg-clip-text text-transparent">um só objetivo</span>
+        </h2>
+
+        <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+          Escolha a solução ideal para o seu tipo de operação — seja loja física ou negócio em movimento.
+        </p>
+      </div>
 
       <div class="grid md:grid-cols-2 gap-12">
 
         <!-- VOEPDV -->
         <div
-          class="group relative bg-gradient-to-br from-orange-900/40 to-orange-500/10 p-10 rounded-2xl border border-orange-500/30 hover:border-orange-400/70 transition duration-300 hover:scale-[1.04] shadow-lg shadow-orange-500/10">
+          class="group relative bg-gradient-to-br from-orange-900/40 to-orange-500/10 p-10 rounded-2xl border border-orange-500/30 hover:border-orange-400/70 transition duration-700 hover:scale-[1.04] shadow-lg shadow-orange-500/10 fade-up">
 
           <!-- BADGE -->
           <span
@@ -285,32 +312,35 @@
           </span>
 
           <!-- GLOW -->
-          <div class="absolute inset-0 bg-orange-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition"></div>
+          <div class="absolute inset-0 bg-orange-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition duration-700"></div>
 
           <div class="relative z-10">
 
-            <img src="assets/images/voepdv.png" class="h-10 mb-6 opacity-90">
+            <img src="assets/images/voepdv.png" class="h-10 mb-6 opacity-90 transition duration-700 group-hover:opacity-100">
 
-            <span class="text-orange-400 text-xs tracking-wider">WINDOWS • ROBUSTO</span>
-
+            <span class="text-orange-400 text-xs tracking-wider flex items-center gap-2 mb-3">
+              <span class="material-symbols-outlined text-sm">desktop_windows</span>
+              WINDOWS • ROBUSTO
+            </span>
 
             <p class="text-slate-300">
-              Sistema completo para empresas que precisam de controle total, estabilidade e alta performance no caixa.
+              Para quem precisa de um caixa que <b class="text-white">não para</b>: estabilidade, alta performance e
+              integração com leitor, balança, gaveta e impressora fiscal.
             </p>
 
             <ul class="mt-6 space-y-2 text-sm text-slate-300">
-              <li>✔ Controle de caixa completo</li>
-              <li>✔ Gestão de estoque avançada</li>
-              <li>✔ Emissão fiscal NFC-e</li>
-              <li>✔ Relatórios detalhados</li>
-              <li>✔ Ideal para alto volume de vendas</li>
+              <li class="flex items-start gap-2"><span class="text-orange-400 mt-0.5">✔</span> Funciona mesmo sem internet</li>
+              <li class="flex items-start gap-2"><span class="text-orange-400 mt-0.5">✔</span> Gestão de estoque avançada</li>
+              <li class="flex items-start gap-2"><span class="text-orange-400 mt-0.5">✔</span> Emissão fiscal NFC-e e SAT</li>
+              <li class="flex items-start gap-2"><span class="text-orange-400 mt-0.5">✔</span> Relatórios gerenciais detalhados</li>
+              <li class="flex items-start gap-2"><span class="text-orange-400 mt-0.5">✔</span> Ideal para alto volume de vendas</li>
             </ul>
 
-            <button onclick="abrirModal('voe')" class="mt-8 w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-xl font-medium
-transition transform hover:scale-105 active:scale-95
-shadow-lg shadow-orange-500/20">
+            <a href="voe.html" class="block text-center mt-8 w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-xl font-medium
+            transition-all transform duration-500 hover:scale-105 active:scale-95
+            shadow-lg shadow-orange-500/20">
               Conhecer sistema
-            </button>
+            </a>
 
           </div>
 
@@ -318,7 +348,7 @@ shadow-lg shadow-orange-500/20">
 
         <!-- PDV LEGAL -->
         <div
-          class="group relative bg-gradient-to-br from-blue-900/40 to-blue-500/10 p-10 rounded-2xl border border-blue-500/30 hover:border-blue-400/70 transition duration-300 hover:scale-[1.04] shadow-lg shadow-blue-500/10">
+          class="group relative bg-gradient-to-br from-blue-900/40 to-blue-500/10 p-10 rounded-2xl border border-blue-500/30 hover:border-blue-400/70 transition duration-700 hover:scale-[1.04] shadow-lg shadow-blue-500/10 fade-up">
 
           <!-- BADGE -->
           <span
@@ -327,31 +357,36 @@ shadow-lg shadow-orange-500/20">
           </span>
 
           <!-- GLOW -->
-          <div class="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition"></div>
+          <div class="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition duration-700"></div>
 
           <div class="relative z-10">
 
-            <img src="assets/images/pdvlegal.png" class="h-10 mb-6 opacity-90">
+            <img src="assets/images/pdvlegal.png" class="h-10 mb-6 opacity-90 transition duration-700 group-hover:opacity-100">
 
-            <span class="text-blue-400 text-xs tracking-wider">ANDROID • MOBILE</span>
+            <span class="text-blue-400 text-xs tracking-wider flex items-center gap-2 mb-3">
+              <span class="material-symbols-outlined text-sm">phone_android</span>
+              ANDROID • MOBILE
+            </span>
 
             <p class="text-slate-300">
-              Solução leve, rápida e intuitiva para quem precisa de mobilidade e agilidade no atendimento.
+              Atendimento direto da maquininha ou tablet. <b class="text-white">Mobilidade total</b> para delivery,
+              comandas e operações que precisam de agilidade.
             </p>
 
             <ul class="mt-6 space-y-2 text-sm text-slate-300">
-              <li>✔ Funciona em smartphones e tablets</li>
-              <li>✔ Atendimento rápido e eficiente</li>
-              <li>✔ Ideal para delivery e comandas</li>
-              <li>✔ Interface simples e intuitiva</li>
-              <li>✔ Mobilidade total</li>
+              <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">✔</span> Funciona em smartphones e tablets</li>
+              <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">✔</span> Atendimento rápido e eficiente</li>
+              <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">✔</span> Ideal para delivery e comandas</li>
+              <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">✔</span> Interface simples e intuitiva</li>
+              <li class="flex items-start gap-2"><span class="text-blue-400 mt-0.5">✔</span> Sincronização em nuvem</li>
             </ul>
 
-            <button onclick="abrirModal('legal')" class="mt-8 w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-xl font-medium
-transition transform hover:scale-105 active:scale-95
-shadow-lg shadow-blue-500/20">
+
+            <a href="pdv-legal.html" class="block text-center mt-8 w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-xl font-medium
+            transition-all transform duration-500 hover:scale-105 active:scale-95
+            shadow-lg shadow-blue-500/20">
               Conhecer sistema
-            </button>
+            </a>
 
           </div>
 
@@ -373,60 +408,67 @@ shadow-lg shadow-blue-500/20">
 
     <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-      <h2 class="text-4xl font-bold text-center mb-4">
-        Recursos que impulsionam seus resultados
-      </h2>
+      <div class="text-center mb-16 fade-up">
+        <span class="inline-block mb-5 px-4 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+          FUNCIONALIDADES
+        </span>
 
-      <p class="text-center text-slate-400 mb-16">
-        Tudo que você precisa para gestão completa e eficiente
-      </p>
+        <h2 class="text-4xl font-bold mb-4">
+          Recursos que
+          <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">impulsionam seus resultados</span>
+        </h2>
+
+        <p class="text-slate-400">
+          Tudo que você precisa para uma gestão completa e eficiente
+        </p>
+      </div>
 
       <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
         <!-- ITEM -->
-        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-blue-400/40 transition duration-500 fade-up">
           <span class="material-symbols-outlined text-blue-400 text-3xl">cloud</span>
           <h3 class="mt-4 font-semibold">Gestão em Nuvem</h3>
           <p class="text-sm text-slate-400 mt-1">Acesso de onde estiver.</p>
         </div>
 
-        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-green-400/40 transition duration-500 fade-up">
           <span class="material-symbols-outlined text-green-400 text-3xl">bar_chart</span>
           <h3 class="mt-4 font-semibold">Controle de Vendas</h3>
           <p class="text-sm text-slate-400 mt-1">Relatórios detalhados.</p>
         </div>
 
-        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-orange-400/40 transition duration-500 fade-up">
           <span class="material-symbols-outlined text-orange-400 text-3xl">inventory</span>
           <h3 class="mt-4 font-semibold">Controle de Estoque</h3>
           <p class="text-sm text-slate-400 mt-1">Gerencie entradas e saídas.</p>
         </div>
 
-        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-purple-400/40 transition duration-500 fade-up">
           <span class="material-symbols-outlined text-purple-400 text-3xl">receipt_long</span>
           <h3 class="mt-4 font-semibold">Emissão Fiscal</h3>
           <p class="text-sm text-slate-400 mt-1">CF-e, NFC-e e mais.</p>
         </div>
 
-        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-red-400/40 transition duration-500 fade-up">
           <span class="material-symbols-outlined text-red-400 text-3xl">print</span>
           <h3 class="mt-4 font-semibold">Impressão de Produção</h3>
           <p class="text-sm text-slate-400 mt-1">Pedidos direto para cozinha.</p>
         </div>
 
-        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-yellow-400/40 transition duration-500 fade-up">
           <span class="material-symbols-outlined text-yellow-400 text-3xl">shopping_cart</span>
           <h3 class="mt-4 font-semibold">Cadastro de Produtos</h3>
           <p class="text-sm text-slate-400 mt-1">Completo e fácil.</p>
         </div>
 
-        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-emerald-400/40 transition duration-500 fade-up">
           <span class="material-symbols-outlined text-emerald-400 text-3xl">monetization_on</span>
           <h3 class="mt-4 font-semibold">Rotina de Caixa</h3>
           <p class="text-sm text-slate-400 mt-1">Abertura e fechamento.</p>
         </div>
 
-        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-indigo-400/40 transition duration-500 fade-up">
           <span class="material-symbols-outlined text-indigo-400 text-3xl">vpn_key</span>
           <h3 class="mt-4 font-semibold">Controle de Acesso</h3>
           <p class="text-sm text-slate-400 mt-1">Permissões por usuário.</p>
@@ -447,22 +489,29 @@ shadow-lg shadow-blue-500/20">
 
     <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
-        O que nossos clientes dizem
-      </h2>
+      <div class="text-center mb-16 fade-up">
+        <span class="inline-block mb-5 px-4 py-1.5 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+          DEPOIMENTOS
+        </span>
 
-      <p class="text-center text-slate-400 mb-16">
-        Resultados reais de quem usa nossos sistemas no dia a dia
-      </p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          O que nossos clientes
+          <span class="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">dizem</span>
+        </h2>
+
+        <p class="text-slate-400">
+          Resultados reais de quem usa nossos sistemas no dia a dia
+        </p>
+      </div>
 
       <div class="grid md:grid-cols-3 gap-10">
 
         <!-- CARD 1 -->
         <div class="group relative bg-white/5 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-8 
-      hover:scale-[1.04] hover:border-blue-400/50 transition duration-300 shadow-xl shadow-blue-500/10">
+      hover:scale-[1.04] hover:border-blue-400/50 transition duration-700 shadow-xl shadow-blue-500/10 fade-up">
 
           <!-- ASPAS -->
-          <span class="absolute -top-4 left-6 text-7xl text-blue-500/10 font-serif">“</span>
+          <span class="absolute -top-4 left-6 text-7xl text-blue-500/20 font-serif select-none">"</span>
 
           <!-- STARS -->
           <div class="flex gap-1 text-yellow-400 mb-4">
@@ -470,8 +519,7 @@ shadow-lg shadow-blue-500/20">
           </div>
 
           <p class="text-slate-300 leading-relaxed">
-            Uso o sistema Web Automação (VoePDV) há anos, e o que mais me impressiona é a estabilidade e o suporte
-            rápido.
+            Uso o sistema VoePDV há anos, e o que mais me impressiona é a estabilidade e o suporte rápido.
             Recomendo a todos os meus amigos empresários!
           </p>
 
@@ -484,9 +532,9 @@ shadow-lg shadow-blue-500/20">
 
         <!-- CARD 2 -->
         <div class="group relative bg-white/5 backdrop-blur-xl border border-green-500/20 rounded-2xl p-8 
-      hover:scale-[1.04] hover:border-green-400/50 transition duration-300 shadow-xl shadow-green-500/10">
+      hover:scale-[1.04] hover:border-green-400/50 transition duration-700 shadow-xl shadow-green-500/10 fade-up">
 
-          <span class="absolute -top-4 left-6 text-7xl text-green-500/10 font-serif">“</span>
+          <span class="absolute -top-4 left-6 text-7xl text-green-500/20 font-serif select-none">"</span>
 
           <div class="flex gap-1 text-yellow-400 mb-4">
             ★★★★★
@@ -494,8 +542,7 @@ shadow-lg shadow-blue-500/20">
 
           <p class="text-slate-300 leading-relaxed">
             De longe o melhor PDV que já testei para minha lanchonete. O PDV Legal no Smart POS me deu a mobilidade que
-            eu precisava.
-            Fácil de usar e muito intuitivo!
+            eu precisava. Fácil de usar e muito intuitivo!
           </p>
 
           <div class="mt-6 border-t border-white/10 pt-4">
@@ -507,9 +554,9 @@ shadow-lg shadow-blue-500/20">
 
         <!-- CARD 3 -->
         <div class="group relative bg-white/5 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-8 
-      hover:scale-[1.04] hover:border-purple-400/50 transition duration-300 shadow-xl shadow-purple-500/10">
+      hover:scale-[1.04] hover:border-purple-400/50 transition duration-700 shadow-xl shadow-purple-500/10 fade-up">
 
-          <span class="absolute -top-4 left-6 text-7xl text-purple-500/10 font-serif">“</span>
+          <span class="absolute -top-4 left-6 text-7xl text-purple-500/20 font-serif select-none">"</span>
 
           <div class="flex gap-1 text-yellow-400 mb-4">
             ★★★★★
@@ -543,21 +590,28 @@ shadow-lg shadow-blue-500/20">
         <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/10 blur-3xl rounded-full"></div>
       </div>
 
-      <h2 class="text-4xl md:text-5xl font-bold mb-4 relative z-10">
-        Fale Conosco
-      </h2>
+      <div class="relative z-10 fade-up">
+        <span class="inline-block mb-5 px-4 py-1.5 text-xs rounded-full bg-green-500/10 text-green-400 border border-green-500/20">
+          FALE CONOSCO
+        </span>
 
-      <p class="text-slate-400 mb-16 max-w-2xl mx-auto relative z-10">
-        Nossa equipe está pronta para entender sua necessidade e indicar o melhor sistema para o seu negócio
-      </p>
+        <h2 class="text-4xl md:text-5xl font-bold mb-4">
+          Vamos conversar sobre
+          <span class="bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent">seu negócio</span>
+        </h2>
+
+        <p class="text-slate-400 mb-16 max-w-2xl mx-auto">
+          Nossa equipe está pronta para entender sua necessidade e indicar o melhor sistema para o seu negócio
+        </p>
+      </div>
 
       <div class="grid md:grid-cols-3 gap-10 relative z-10">
 
         <!-- COMERCIAL -->
         <div class="group relative bg-white/5 backdrop-blur-xl border border-blue-500/20 p-8 rounded-2xl 
-      hover:scale-[1.05] hover:border-blue-400/50 transition duration-300 shadow-xl shadow-blue-500/10">
+      hover:scale-[1.05] hover:border-blue-400/50 transition duration-700 shadow-xl shadow-blue-500/10 fade-up">
 
-          <div class="text-5xl mb-4">💼</div>
+          <div class="text-5xl mb-4 transition-transform duration-700 group-hover:scale-110">💼</div>
 
           <h3 class="text-xl font-semibold text-blue-400 mb-2">
             Comercial & Vendas
@@ -573,7 +627,7 @@ shadow-lg shadow-blue-500/20">
 
           <a href="https://wa.me/551133846313?text=Olá,%20quero%20saber%20mais%20sobre%20os%20sistemas%20PDV"
             target="_blank"
-            class="block w-full bg-green-500 hover:bg-green-600 py-3 rounded-xl font-medium transition shadow-lg shadow-green-500/20">
+            class="block w-full bg-green-500 hover:bg-green-600 py-3 rounded-xl font-medium transition duration-500 shadow-lg shadow-green-500/20">
             Falar no WhatsApp
           </a>
 
@@ -586,9 +640,9 @@ shadow-lg shadow-blue-500/20">
 
         <!-- SUPORTE -->
         <div class="group relative bg-white/5 backdrop-blur-xl border border-green-500/20 p-8 rounded-2xl 
-      hover:scale-[1.05] hover:border-green-400/50 transition duration-300 shadow-xl shadow-green-500/10">
+      hover:scale-[1.05] hover:border-green-400/50 transition duration-700 shadow-xl shadow-green-500/10 fade-up">
 
-          <div class="text-5xl mb-4">🛠️</div>
+          <div class="text-5xl mb-4 transition-transform duration-700 group-hover:scale-110">🛠️</div>
 
           <h3 class="text-xl font-semibold text-green-400 mb-2">
             Suporte Técnico
@@ -603,7 +657,7 @@ shadow-lg shadow-blue-500/20">
           </p>
 
           <a href="https://wa.me/551142101779?text=Olá,%20preciso%20de%20suporte%20técnico" target="_blank"
-            class="block w-full bg-green-500 hover:bg-green-600 py-3 rounded-xl font-medium transition shadow-lg shadow-green-500/20">
+            class="block w-full bg-green-500 hover:bg-green-600 py-3 rounded-xl font-medium transition duration-500 shadow-lg shadow-green-500/20">
             WhatsApp suporte
           </a>
 
@@ -611,9 +665,9 @@ shadow-lg shadow-blue-500/20">
 
         <!-- EMAIL -->
         <div class="group relative bg-white/5 backdrop-blur-xl border border-purple-500/20 p-8 rounded-2xl 
-      hover:scale-[1.05] hover:border-purple-400/50 transition duration-300 shadow-xl shadow-purple-500/10">
+      hover:scale-[1.05] hover:border-purple-400/50 transition duration-700 shadow-xl shadow-purple-500/10 fade-up">
 
-          <div class="text-5xl mb-4">📧</div>
+          <div class="text-5xl mb-4 transition-transform duration-700 group-hover:scale-110">📧</div>
 
           <h3 class="text-xl font-semibold text-purple-400 mb-2">
             Email
@@ -628,7 +682,7 @@ shadow-lg shadow-blue-500/20">
           </p>
 
           <a href="mailto:suporte@seatec.com.br"
-            class="block w-full bg-purple-600 hover:bg-purple-700 py-3 rounded-xl font-medium transition shadow-lg shadow-purple-500/20">
+            class="block w-full bg-purple-600 hover:bg-purple-700 py-3 rounded-xl font-medium transition duration-500 shadow-lg shadow-purple-500/20">
             Enviar email
           </a>
 
@@ -671,11 +725,11 @@ shadow-lg shadow-blue-500/20">
         <div>
           <h4 class="font-semibold mb-4 text-white">Navegação</h4>
           <ul class="space-y-2 text-sm text-slate-400">
-            <li><a href="#inicio" class="hover:text-white transition">Início</a></li>
-            <li><a href="#sobre" class="hover:text-white transition">Sobre</a></li>
-            <li><a href="#sistemas" class="hover:text-white transition">Sistemas</a></li>
-            <li><a href="#depoimentos" class="hover:text-white transition">Depoimentos</a></li>
-            <li><a href="#contatos" class="hover:text-white transition">Contato</a></li>
+            <li><a href="#inicio" class="hover:text-white transition duration-500">Início</a></li>
+            <li><a href="#sobre" class="hover:text-white transition duration-500">Sobre</a></li>
+            <li><a href="#sistemas" class="hover:text-white transition duration-500">Sistemas</a></li>
+            <li><a href="#depoimentos" class="hover:text-white transition duration-500">Depoimentos</a></li>
+            <li><a href="#contatos" class="hover:text-white transition duration-500">Contato</a></li>
           </ul>
         </div>
 
@@ -683,10 +737,10 @@ shadow-lg shadow-blue-500/20">
         <div>
           <h4 class="font-semibold mb-4 text-white">Soluções</h4>
           <ul class="space-y-2 text-sm text-slate-400">
-            <li class="hover:text-white transition">VoePDV (Windows)</li>
-            <li class="hover:text-white transition">PDV Legal (Android)</li>
-            <li class="hover:text-white transition">Automação Comercial</li>
-            <li class="hover:text-white transition">Implantação e Suporte</li>
+            <li class="hover:text-white transition duration-500">VoePDV (Windows)</li>
+            <li class="hover:text-white transition duration-500">PDV Legal (Android)</li>
+            <li class="hover:text-white transition duration-500">Automação Comercial</li>
+            <li class="hover:text-white transition duration-500">Implantação e Suporte</li>
           </ul>
         </div>
 
@@ -698,21 +752,21 @@ shadow-lg shadow-blue-500/20">
 
             <div>
               <p class="text-white">Comercial</p>
-              <p class="hover:text-green-400 transition cursor-pointer">
+              <p class="hover:text-green-400 transition duration-500 cursor-pointer">
                 +55 11 3384-6313
               </p>
             </div>
 
             <div>
               <p class="text-white">Suporte</p>
-              <p class="hover:text-green-400 transition cursor-pointer">
+              <p class="hover:text-green-400 transition duration-500 cursor-pointer">
                 +55 11 4210-1779
               </p>
             </div>
 
             <div>
               <p class="text-white">Email</p>
-              <p class="hover:text-purple-400 transition cursor-pointer">
+              <p class="hover:text-purple-400 transition duration-500 cursor-pointer">
                 suporte@seatec.com.br
               </p>
             </div>
@@ -730,11 +784,11 @@ shadow-lg shadow-blue-500/20">
         </p>
 
         <div class="flex gap-4 text-slate-400 text-sm">
-          <span class="hover:text-white transition">Automação Comercial</span>
+          <span class="hover:text-white transition duration-500">Automação Comercial</span>
           <span>•</span>
-          <span class="hover:text-white transition">Sistemas PDV</span>
+          <span class="hover:text-white transition duration-500">Sistemas PDV</span>
           <span>•</span>
-          <span class="hover:text-white transition">Suporte Especializado</span>
+          <span class="hover:text-white transition duration-500">Suporte Especializado</span>
         </div>
 
       </div>
@@ -744,7 +798,7 @@ shadow-lg shadow-blue-500/20">
 
   <!-- BOTÃO WHATS -->
   <button onclick="abrirWhats()"
-    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-xl shadow-green-500/30 hover:scale-110 transition duration-300">
+    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-xl shadow-green-500/30 hover:scale-110 transition duration-500 z-50 whats-float">
     💬
   </button>
 
@@ -755,7 +809,7 @@ shadow-lg shadow-blue-500/20">
 
     <!-- BACKDROP -->
     <div onclick="fecharModal()" id="backdrop"
-      class="absolute inset-0 bg-black/70 backdrop-blur-sm opacity-0 transition duration-500">
+      class="absolute inset-0 bg-black/70 backdrop-blur-sm opacity-0 transition duration-700">
     </div>
 
     <!-- CAIXA -->
@@ -765,7 +819,7 @@ shadow-lg shadow-blue-500/20">
     shadow-2xl shadow-black/50
 
     opacity-0 scale-90 translate-y-10
-    transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">
+    transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
 
       <!-- HEADER -->
       <div class="flex justify-between items-center p-6 border-b border-white/10">
@@ -775,7 +829,7 @@ shadow-lg shadow-blue-500/20">
         </div>
 
         <button onclick="fecharModal()" class="w-9 h-9 flex items-center justify-center rounded-full
-        hover:bg-white/10 transition text-slate-300 hover:text-white">
+        hover:bg-white/10 transition duration-500 text-slate-300 hover:text-white">
           ✕
         </button>
       </div>
@@ -802,7 +856,7 @@ shadow-lg shadow-blue-500/20">
 
           <!-- VIDEO -->
           <div class="relative group">
-            <div class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-50 group-hover:opacity-80 transition"></div>
+            <div class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-50 group-hover:opacity-80 transition duration-700"></div>
 
             <iframe id="modalVideo" class="relative w-full h-[260px] rounded-xl border border-white/10 shadow-lg" src=""
               frameborder="0" allowfullscreen>
@@ -820,7 +874,7 @@ shadow-lg shadow-blue-500/20">
           </span>
 
           <button onclick="abrirWhats()" class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-xl font-semibold
-          transition transform hover:scale-105 active:scale-95
+          transition-all duration-500 transform hover:scale-105 active:scale-95
           shadow-lg shadow-green-500/30">
             Falar com especialista
           </button>
