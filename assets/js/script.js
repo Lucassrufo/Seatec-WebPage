@@ -21,8 +21,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 
 // ANIMAÇÃO AO SCROLL (fade-up)
-const elements = document.querySelectorAll('.fade-up');
-
+const elements = document.querySelectorAll('.fade-up, .maquininha-card, .adquirente-card');
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {

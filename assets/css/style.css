@@ -6,10 +6,17 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ============================================== */
+/* ANIMAÇÕES MAIS SUAVES (versão melhorada)        */
+/* ============================================== */
+
+/* Sobrescreve a transição do .fade-up para ficar mais lento e elegante */
 .fade-up {
     opacity: 0;
-    transform: translateY(30px);
-    transition: all 0.6s ease;
+    transform: translateY(40px);
+    transition:
+        opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .fade-up.show {
@@ -17,6 +24,394 @@ html {
     transform: translateY(0);
 }
 
+/* ============================================== */
+/* ANIMAÇÕES CUSTOMIZADAS                          */
+/* ============================================== */
+
+/* Pulse lento para os glows de fundo */
+@keyframes pulseSlow {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulseSlow 6s ease-in-out infinite;
+}
+
+/* Bounce suave para o indicador de scroll */
+@keyframes bounceSlow {
+    0%, 100% {
+        transform: translate(-50%, 0);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-50%, 8px);
+        opacity: 1;
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounceSlow 2.5s ease-in-out infinite;
+}
+
+/* Float discreto no botão flutuante de WhatsApp */
+@keyframes floatGentle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.whats-float {
+    animation: floatGentle 3s ease-in-out infinite;
+}
+
+.whats-float:hover {
+    animation: none;
+}
+
+/* ============================================== */
+/* PADRÃO DE GRADE NO HERO (efeito profundidade)   */
+/* ============================================== */
+
+.hero-grid {
+    background-image:
+        linear-gradient(rgba(59, 130, 246, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+/* ============================================== */
+/* IMAGEM DO HERO COM EFEITO FLUTUANTE              */
+/* ============================================== */
+
+@keyframes heroImageFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+.hero-image-wrap {
+    animation: heroImageFloat 6s ease-in-out infinite;
+}
+
+/* ============================================== */
+/* MINI BADGES DO HERO (linha de benefícios)        */
+/* ============================================== */
+
+.hero-mini-badge {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-mini-badge:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+/* ============================================== */
+/* SCROLL MAIS SUAVE (sobrescrevendo o html)        */
+/* ============================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ============================================== */
+/* MELHORIA NO MAQUININHA-CARD (transição mais lenta) */
+/* ============================================== */
+
+.maquininha-card {
+    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ============================================== */
+/* SELEÇÃO DE TEXTO COM COR DA MARCA                */
+/* ============================================== */
+
+::selection {
+    background: rgba(59, 130, 246, 0.3);
+    color: #ffffff;
+}
+
+/* ============================================== */
+/* SCROLLBAR ESTILIZADA                              */
+/* ============================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.5), rgba(168, 85, 247, 0.5));
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.8), rgba(168, 85, 247, 0.8));
+}
+
+/* ============================================== */
+/* RESPEITO À PREFERÊNCIA DE REDUÇÃO DE MOVIMENTO    */
+/* ============================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 section {
     scroll-margin-top: 120px;
+}
+
+.maquininha-card {
+    position: relative;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    padding: 36px;
+    min-height: 280px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    transform: translateY(40px);
+    opacity: 0;
+    transition: all 0.6s ease;
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
+}
+
+.maquininha-card.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.maquininha-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.14), transparent);
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.maquininha-card:hover::before {
+    opacity: 1;
+}
+
+.maquininha-card img {
+    width: 170px;
+    max-height: 190px;
+    object-fit: contain;
+    position: relative;
+    z-index: 1;
+    animation: maquinaFloat 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+.maquininha-card:hover img {
+    transform: scale(1.08) rotate(2deg);
+}
+
+.maquininha-card h3 {
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    color: #e2e8f0;
+}
+
+@keyframes maquinaFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ============================================== */
+/* ADQUIRENTES HOMOLOGADAS                        */
+/* ============================================== */
+
+.adquirente-card {
+    position: relative;
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 28px 20px;
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+
+    /* estado inicial (animação de entrada) */
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease,
+        scale 0.4s ease;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    cursor: default;
+}
+
+/* GLOW interno */
+.adquirente-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(168, 85, 247, 0.08));
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+}
+
+/* Estado animado (acionado pelo IntersectionObserver via .show) */
+.adquirente-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Delays em cascata baseados no atributo data-delay */
+.adquirente-card[data-delay="0"]   { transition-delay: 0ms; }
+.adquirente-card[data-delay="100"] { transition-delay: 100ms; }
+.adquirente-card[data-delay="200"] { transition-delay: 200ms; }
+.adquirente-card[data-delay="300"] { transition-delay: 300ms; }
+.adquirente-card[data-delay="400"] { transition-delay: 400ms; }
+.adquirente-card[data-delay="500"] { transition-delay: 500ms; }
+.adquirente-card[data-delay="600"] { transition-delay: 600ms; }
+
+/* Hover */
+.adquirente-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(59, 130, 246, 0.18);
+}
+
+.adquirente-card:hover::before {
+    opacity: 1;
+}
+
+/* Logo container */
+.adquirente-logo {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.4s ease;
+}
+
+.adquirente-card:hover .adquirente-logo {
+    transform: scale(1.08);
+}
+
+.adquirente-logo img {
+    max-width: 130px;
+    max-height: 70px;
+    object-fit: contain;
+    filter: brightness(1) drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
+    transition: filter 0.4s ease;
+}
+
+.adquirente-card:hover .adquirente-logo img {
+    filter: brightness(1.15) drop-shadow(0 6px 18px rgba(59, 130, 246, 0.4));
+}
+
+/* Fallback (caso a imagem não exista) */
+.adquirente-fallback {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #cbd5e1;
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(168, 85, 247, 0.1));
+    border: 1px dashed rgba(255, 255, 255, 0.15);
+    border-radius: 12px;
+}
+
+/* Nome da adquirente */
+.adquirente-card h3 {
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
+    font-size: 15px;
+    color: #e2e8f0;
+    letter-spacing: 0.3px;
+    transition: color 0.3s ease;
+}
+
+.adquirente-card:hover h3 {
+    color: #ffffff;
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+    .adquirente-card {
+        min-height: 150px;
+        padding: 22px 16px;
+    }
+    .adquirente-logo {
+        height: 60px;
+    }
+    .adquirente-logo img {
+        max-width: 100px;
+        max-height: 55px;
+    }
 }
