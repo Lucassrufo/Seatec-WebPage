@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seatec - Sistemas PDV</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+  <link rel="shortcut icon" href="assets/images/favicon.png">
+</head>
+
+<body class="bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-white relative overflow-x-hidden">
+
+  <!-- BACKGROUND GLOBAL EFFECT -->
+  <div class="fixed inset-0 -z-10 pointer-events-none">
+    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-blue-500/10 blur-[140px] rounded-full">
+    </div>
+    <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-500/10 blur-[120px] rounded-full"></div>
+  </div>
+
+  <!-- HEADER -->
+  <header class="fixed w-full z-50 backdrop-blur-xl bg-slate-900/60 border-b border-white/5 shadow-lg shadow-black/20">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+
+      <!-- LOGO -->
+      <div class="flex items-center gap-3">
+        <img src="assets/images/logo_seatec.png" class="h-8 transition hover:scale-105">
+      </div>
+
+      <!-- MENU -->
+      <nav class="hidden md:flex items-center gap-8 text-sm text-slate-300">
+
+        <a href="#inicio" class="relative group">
+          Início
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+        </a>
+
+        <a href="#sobre" class="relative group">
+          Sobre
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+        </a>
+
+        <a href="#sistemas" class="relative group">
+          Sistemas
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+        </a>
+
+        <a href="#funcionalidades" class="relative group">
+          Funcionalidades
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+        </a>
+
+        <a href="#depoimentos" class="relative group">
+          Depoimentos
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+        </a>
+
+        <a href="#contatos" class="relative group">
+          Contatos
+          <span class="absolute left-0 -bottom-1 w-0 h-[2px] bg-blue-500 transition-all group-hover:w-full"></span>
+        </a>
+
+      </nav>
+
+      <!-- CTA -->
+      <button onclick="abrirWhats()" class="relative bg-gradient-to-r from-green-500 to-green-600 px-5 py-2.5 rounded-xl text-sm font-medium 
+      shadow-lg shadow-green-500/20 hover:shadow-green-500/40 
+      hover:scale-105 transition-all duration-300">
+
+        💬 Falar no WhatsApp
+
+        <!-- glow effect -->
+        <span class="absolute inset-0 rounded-xl bg-green-400/20 blur-xl opacity-0 hover:opacity-100 transition"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="inicio"
+    class="pt-32 pb-28 bg-gradient-to-br from-blue-900/40 via-slate-900 to-black relative overflow-hidden">
+
+    <!-- EFEITO FUNDO -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[120px] rounded-full">
+      </div>
+      <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[100px] rounded-full"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
+
+      <!-- TEXTO -->
+      <div class="fade-up">
+
+        <!-- BADGE -->
+        <span
+          class="inline-block mb-4 px-4 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+          🚀 Automação Comercial Inteligente
+        </span>
+
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+          Sistema PDV completo
+          <span class="text-blue-400">para seu negócio crescer</span>
+        </h1>
+
+        <p class="text-slate-300 mt-5 text-lg max-w-xl">
+          Escolha entre um sistema robusto para <b>Windows</b> ou uma solução prática para <b>Android</b> e tenha total
+          controle da sua operação com velocidade e eficiência.
+        </p>
+
+        <!-- BOTÕES -->
+        <div class="flex flex-wrap gap-4 mt-8">
+
+          <button onclick="abrirWhats()" class="relative bg-gradient-to-r from-green-500 to-green-600 px-7 py-3 rounded-xl font-medium
+          shadow-lg shadow-green-500/20 hover:shadow-green-500/40
+          hover:scale-105 transition-all duration-300">
+
+            💬 Falar no WhatsApp
+
+            <span
+              class="absolute inset-0 rounded-xl bg-green-400/20 blur-xl opacity-0 hover:opacity-100 transition"></span>
+          </button>
+
+          <a href="#sistemas" class="px-7 py-3 rounded-xl border border-white/10 hover:border-blue-400
+          bg-white/5 hover:bg-white/10 backdrop-blur transition-all duration-300">
+            Ver sistemas
+          </a>
+
+        </div>
+
+        <!-- BENEFÍCIOS -->
+        <div class="flex flex-wrap gap-6 mt-10 text-sm text-slate-400">
+
+          <div class="flex items-center gap-2">
+            <span class="text-blue-400">⚡</span> Implantação rápida
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="text-green-400">📊</span> Controle total
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span class="text-purple-400">🤝</span> Suporte humanizado
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- IMAGEM -->
+      <div class="fade-up relative">
+
+        <!-- glow atrás -->
+        <div class="absolute inset-0 bg-blue-500/20 blur-3xl opacity-70"></div>
+
+        <!-- card efeito -->
+        <div class="relative bg-slate-900/40 backdrop-blur rounded-2xl border border-white/10 p-3 shadow-2xl">
+
+          <img src="assets/images/imagem.png" class="rounded-xl shadow-2xl hover:scale-[1.02] transition duration-500">
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="py-32 bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 relative overflow-hidden">
+
+    <!-- FUNDO DECORATIVO -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[140px] rounded-full">
+      </div>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-6 text-center fade-up relative z-10">
+
+      <!-- TÍTULO -->
+      <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+        Mais de uma década entregando
+        <span class="text-blue-400">tecnologia que gera resultado</span>
+      </h2>
+
+      <!-- TEXTO -->
+      <p class="text-slate-300 max-w-3xl mx-auto text-lg leading-relaxed">
+        Desde 2012, a Seatec Soluções Tecnológicas vem transformando a gestão de negócios em todo o Brasil.
+        Criamos sistemas PDV focados em <b>performance, simplicidade e controle total</b>.
+        Nosso compromisso vai além da tecnologia: entregamos segurança e crescimento para sua operação.
+      </p>
+
+      <!-- CARDS -->
+      <div class="grid md:grid-cols-2 gap-10 mt-20">
+
+        <!-- CARD CLIENTES -->
+        <div class="group relative bg-gradient-to-br from-blue-900/40 to-blue-600/10 p-10 rounded-2xl border border-blue-500/20
+        hover:scale-[1.04] transition duration-300 shadow-xl shadow-blue-500/10 overflow-hidden">
+
+          <!-- glow -->
+          <div class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-40 group-hover:opacity-70 transition"></div>
+
+          <div class="relative z-10 flex flex-col items-center">
+
+            <div class="text-5xl mb-4">🚀</div>
+
+            <h3 class="text-5xl font-extrabold text-blue-400 tracking-tight">
+              400+
+            </h3>
+
+            <p class="text-slate-300 mt-3 text-lg">
+              Empresas já transformaram sua gestão com a Seatec
+            </p>
+
+          </div>
+
+        </div>
+
+        <!-- CARD SUPORTE -->
+        <div class="group relative bg-gradient-to-br from-green-900/40 to-green-600/10 p-10 rounded-2xl border border-green-500/20
+        hover:scale-[1.04] transition duration-300 shadow-xl shadow-green-500/10 overflow-hidden">
+
+          <!-- glow -->
+          <div class="absolute inset-0 bg-green-500/10 blur-2xl opacity-40 group-hover:opacity-70 transition"></div>
+
+          <div class="relative z-10 flex flex-col items-center">
+
+            <div class="text-5xl mb-4">🛠️</div>
+
+            <h3 class="text-2xl font-bold text-green-400">
+              Suporte Dedicado
+            </h3>
+
+            <p class="text-slate-300 mt-3 text-lg text-center">
+              Atendimento ágil e eficiente para garantir que sua operação nunca pare.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SISTEMAS -->
+  <section id="sistemas"
+    class="scroll-mt-32 py-32 bg-gradient-to-b from-slate-900 via-slate-950 to-black relative overflow-hidden">
+
+    <!-- FUNDO -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-20 left-1/3 w-[500px] h-[500px] bg-orange-500/10 blur-3xl rounded-full"></div>
+      <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-blue-500/10 blur-3xl rounded-full"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
+        Nossos Sistemas
+      </h2>
+
+      <p class="text-center text-slate-400 mb-20 text-lg">
+        Escolha a solução ideal para o seu tipo de operação
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-12">
+
+        <!-- VOEPDV -->
+        <div
+          class="group relative bg-gradient-to-br from-orange-900/40 to-orange-500/10 p-10 rounded-2xl border border-orange-500/30 hover:border-orange-400/70 transition duration-300 hover:scale-[1.04] shadow-lg shadow-orange-500/10">
+
+          <!-- BADGE -->
+          <span
+            class="absolute top-6 right-6 text-xs bg-orange-500/20 text-orange-300 px-3 py-1 rounded-full border border-orange-500/30">
+            MAIS COMPLETO
+          </span>
+
+          <!-- GLOW -->
+          <div class="absolute inset-0 bg-orange-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition"></div>
+
+          <div class="relative z-10">
+
+            <img src="assets/images/voepdv.png" class="h-10 mb-6 opacity-90">
+
+            <span class="text-orange-400 text-xs tracking-wider">WINDOWS • ROBUSTO</span>
+
+
+            <p class="text-slate-300">
+              Sistema completo para empresas que precisam de controle total, estabilidade e alta performance no caixa.
+            </p>
+
+            <ul class="mt-6 space-y-2 text-sm text-slate-300">
+              <li>✔ Controle de caixa completo</li>
+              <li>✔ Gestão de estoque avançada</li>
+              <li>✔ Emissão fiscal NFC-e</li>
+              <li>✔ Relatórios detalhados</li>
+              <li>✔ Ideal para alto volume de vendas</li>
+            </ul>
+
+            <button onclick="abrirModal('voe')" class="mt-8 w-full bg-orange-500 hover:bg-orange-600 py-3 rounded-xl font-medium
+transition transform hover:scale-105 active:scale-95
+shadow-lg shadow-orange-500/20">
+              Conhecer sistema
+            </button>
+
+          </div>
+
+        </div>
+
+        <!-- PDV LEGAL -->
+        <div
+          class="group relative bg-gradient-to-br from-blue-900/40 to-blue-500/10 p-10 rounded-2xl border border-blue-500/30 hover:border-blue-400/70 transition duration-300 hover:scale-[1.04] shadow-lg shadow-blue-500/10">
+
+          <!-- BADGE -->
+          <span
+            class="absolute top-6 right-6 text-xs bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full border border-blue-500/30">
+            MAIS PRÁTICO
+          </span>
+
+          <!-- GLOW -->
+          <div class="absolute inset-0 bg-blue-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition"></div>
+
+          <div class="relative z-10">
+
+            <img src="assets/images/pdvlegal.png" class="h-10 mb-6 opacity-90">
+
+            <span class="text-blue-400 text-xs tracking-wider">ANDROID • MOBILE</span>
+
+            <p class="text-slate-300">
+              Solução leve, rápida e intuitiva para quem precisa de mobilidade e agilidade no atendimento.
+            </p>
+
+            <ul class="mt-6 space-y-2 text-sm text-slate-300">
+              <li>✔ Funciona em smartphones e tablets</li>
+              <li>✔ Atendimento rápido e eficiente</li>
+              <li>✔ Ideal para delivery e comandas</li>
+              <li>✔ Interface simples e intuitiva</li>
+              <li>✔ Mobilidade total</li>
+            </ul>
+
+            <button onclick="abrirModal('legal')" class="mt-8 w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-xl font-medium
+transition transform hover:scale-105 active:scale-95
+shadow-lg shadow-blue-500/20">
+              Conhecer sistema
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- RECURSOS -->
+  <section id="funcionalidades" class="py-28 bg-gradient-to-b from-slate-950 to-slate-900 relative overflow-hidden">
+
+    <!-- FUNDO -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 left-1/4 w-[400px] h-[400px] bg-blue-500/10 blur-3xl rounded-full"></div>
+      <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-500/10 blur-3xl rounded-full"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+      <h2 class="text-4xl font-bold text-center mb-4">
+        Recursos que impulsionam seus resultados
+      </h2>
+
+      <p class="text-center text-slate-400 mb-16">
+        Tudo que você precisa para gestão completa e eficiente
+      </p>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+        <!-- ITEM -->
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+          <span class="material-symbols-outlined text-blue-400 text-3xl">cloud</span>
+          <h3 class="mt-4 font-semibold">Gestão em Nuvem</h3>
+          <p class="text-sm text-slate-400 mt-1">Acesso de onde estiver.</p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+          <span class="material-symbols-outlined text-green-400 text-3xl">bar_chart</span>
+          <h3 class="mt-4 font-semibold">Controle de Vendas</h3>
+          <p class="text-sm text-slate-400 mt-1">Relatórios detalhados.</p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+          <span class="material-symbols-outlined text-orange-400 text-3xl">inventory</span>
+          <h3 class="mt-4 font-semibold">Controle de Estoque</h3>
+          <p class="text-sm text-slate-400 mt-1">Gerencie entradas e saídas.</p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+          <span class="material-symbols-outlined text-purple-400 text-3xl">receipt_long</span>
+          <h3 class="mt-4 font-semibold">Emissão Fiscal</h3>
+          <p class="text-sm text-slate-400 mt-1">CF-e, NFC-e e mais.</p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+          <span class="material-symbols-outlined text-red-400 text-3xl">print</span>
+          <h3 class="mt-4 font-semibold">Impressão de Produção</h3>
+          <p class="text-sm text-slate-400 mt-1">Pedidos direto para cozinha.</p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+          <span class="material-symbols-outlined text-yellow-400 text-3xl">shopping_cart</span>
+          <h3 class="mt-4 font-semibold">Cadastro de Produtos</h3>
+          <p class="text-sm text-slate-400 mt-1">Completo e fácil.</p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+          <span class="material-symbols-outlined text-emerald-400 text-3xl">monetization_on</span>
+          <h3 class="mt-4 font-semibold">Rotina de Caixa</h3>
+          <p class="text-sm text-slate-400 mt-1">Abertura e fechamento.</p>
+        </div>
+
+        <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] transition">
+          <span class="material-symbols-outlined text-indigo-400 text-3xl">vpn_key</span>
+          <h3 class="mt-4 font-semibold">Controle de Acesso</h3>
+          <p class="text-sm text-slate-400 mt-1">Permissões por usuário.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEPOIMENTOS -->
+  <section id="depoimentos"
+    class="py-28 bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden">
+
+    <!-- FUNDO DECORATIVO -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-10 left-1/3 w-[500px] h-[500px] bg-blue-500/10 blur-3xl rounded-full"></div>
+      <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/10 blur-3xl rounded-full"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-4">
+        O que nossos clientes dizem
+      </h2>
+
+      <p class="text-center text-slate-400 mb-16">
+        Resultados reais de quem usa nossos sistemas no dia a dia
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-10">
+
+        <!-- CARD 1 -->
+        <div class="group relative bg-white/5 backdrop-blur-xl border border-blue-500/20 rounded-2xl p-8 
+      hover:scale-[1.04] hover:border-blue-400/50 transition duration-300 shadow-xl shadow-blue-500/10">
+
+          <!-- ASPAS -->
+          <span class="absolute -top-4 left-6 text-7xl text-blue-500/10 font-serif">“</span>
+
+          <!-- STARS -->
+          <div class="flex gap-1 text-yellow-400 mb-4">
+            ★★★★★
+          </div>
+
+          <p class="text-slate-300 leading-relaxed">
+            Uso o sistema Web Automação (VoePDV) há anos, e o que mais me impressiona é a estabilidade e o suporte
+            rápido.
+            Recomendo a todos os meus amigos empresários!
+          </p>
+
+          <div class="mt-6 border-t border-white/10 pt-4">
+            <h4 class="font-semibold text-blue-300">Jenny Cristina</h4>
+            <span class="text-sm text-slate-400">Proprietária de Restaurante</span>
+          </div>
+
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="group relative bg-white/5 backdrop-blur-xl border border-green-500/20 rounded-2xl p-8 
+      hover:scale-[1.04] hover:border-green-400/50 transition duration-300 shadow-xl shadow-green-500/10">
+
+          <span class="absolute -top-4 left-6 text-7xl text-green-500/10 font-serif">“</span>
+
+          <div class="flex gap-1 text-yellow-400 mb-4">
+            ★★★★★
+          </div>
+
+          <p class="text-slate-300 leading-relaxed">
+            De longe o melhor PDV que já testei para minha lanchonete. O PDV Legal no Smart POS me deu a mobilidade que
+            eu precisava.
+            Fácil de usar e muito intuitivo!
+          </p>
+
+          <div class="mt-6 border-t border-white/10 pt-4">
+            <h4 class="font-semibold text-green-300">João Sobishi</h4>
+            <span class="text-sm text-slate-400">Dono de Lanchonete</span>
+          </div>
+
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="group relative bg-white/5 backdrop-blur-xl border border-purple-500/20 rounded-2xl p-8 
+      hover:scale-[1.04] hover:border-purple-400/50 transition duration-300 shadow-xl shadow-purple-500/10">
+
+          <span class="absolute -top-4 left-6 text-7xl text-purple-500/10 font-serif">“</span>
+
+          <div class="flex gap-1 text-yellow-400 mb-4">
+            ★★★★★
+          </div>
+
+          <p class="text-slate-300 leading-relaxed">
+            Um sistema completo! A gestão de estoque e a emissão de cupons fiscais funcionam perfeitamente.
+            O investimento se paga pela economia de tempo e redução de erros.
+          </p>
+
+          <div class="mt-6 border-t border-white/10 pt-4">
+            <h4 class="font-semibold text-purple-300">Murilo Henrique</h4>
+            <span class="text-sm text-slate-400">Gerente de Varejo</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTATOS -->
+  <section id="contatos" class="py-28 bg-gradient-to-b from-slate-900 via-slate-950 to-black relative overflow-hidden">
+    <div class="max-w-6xl mx-auto px-6 text-center">
+
+      <!-- FUNDO DECORATIVO -->
+      <div class="absolute inset-0 pointer-events-none">
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-3xl rounded-full">
+        </div>
+        <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/10 blur-3xl rounded-full"></div>
+      </div>
+
+      <h2 class="text-4xl md:text-5xl font-bold mb-4 relative z-10">
+        Fale Conosco
+      </h2>
+
+      <p class="text-slate-400 mb-16 max-w-2xl mx-auto relative z-10">
+        Nossa equipe está pronta para entender sua necessidade e indicar o melhor sistema para o seu negócio
+      </p>
+
+      <div class="grid md:grid-cols-3 gap-10 relative z-10">
+
+        <!-- COMERCIAL -->
+        <div class="group relative bg-white/5 backdrop-blur-xl border border-blue-500/20 p-8 rounded-2xl 
+      hover:scale-[1.05] hover:border-blue-400/50 transition duration-300 shadow-xl shadow-blue-500/10">
+
+          <div class="text-5xl mb-4">💼</div>
+
+          <h3 class="text-xl font-semibold text-blue-400 mb-2">
+            Comercial & Vendas
+          </h3>
+
+          <p class="text-slate-300 mb-4">
+            Quer contratar ou entender melhor? Fale direto com nosso time comercial.
+          </p>
+
+          <p class="font-semibold text-lg mb-6">
+            +55 11 3384-6313
+          </p>
+
+          <a href="https://wa.me/551133846313?text=Olá,%20quero%20saber%20mais%20sobre%20os%20sistemas%20PDV"
+            target="_blank"
+            class="block w-full bg-green-500 hover:bg-green-600 py-3 rounded-xl font-medium transition shadow-lg shadow-green-500/20">
+            Falar no WhatsApp
+          </a>
+
+          <!-- BADGE -->
+          <span class="absolute top-4 right-4 text-xs bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
+            Mais rápido
+          </span>
+
+        </div>
+
+        <!-- SUPORTE -->
+        <div class="group relative bg-white/5 backdrop-blur-xl border border-green-500/20 p-8 rounded-2xl 
+      hover:scale-[1.05] hover:border-green-400/50 transition duration-300 shadow-xl shadow-green-500/10">
+
+          <div class="text-5xl mb-4">🛠️</div>
+
+          <h3 class="text-xl font-semibold text-green-400 mb-2">
+            Suporte Técnico
+          </h3>
+
+          <p class="text-slate-300 mb-4">
+            Já é cliente? Nosso suporte resolve seu problema com rapidez.
+          </p>
+
+          <p class="font-semibold text-lg mb-6">
+            +55 11 4210-1779
+          </p>
+
+          <a href="https://wa.me/551142101779?text=Olá,%20preciso%20de%20suporte%20técnico" target="_blank"
+            class="block w-full bg-green-500 hover:bg-green-600 py-3 rounded-xl font-medium transition shadow-lg shadow-green-500/20">
+            WhatsApp suporte
+          </a>
+
+        </div>
+
+        <!-- EMAIL -->
+        <div class="group relative bg-white/5 backdrop-blur-xl border border-purple-500/20 p-8 rounded-2xl 
+      hover:scale-[1.05] hover:border-purple-400/50 transition duration-300 shadow-xl shadow-purple-500/10">
+
+          <div class="text-5xl mb-4">📧</div>
+
+          <h3 class="text-xl font-semibold text-purple-400 mb-2">
+            Email
+          </h3>
+
+          <p class="text-slate-300 mb-4">
+            Prefere escrever? Envie sua dúvida e retornamos rapidamente.
+          </p>
+
+          <p class="font-semibold text-lg mb-6">
+            suporte@seatec.com.br
+          </p>
+
+          <a href="mailto:suporte@seatec.com.br"
+            class="block w-full bg-purple-600 hover:bg-purple-700 py-3 rounded-xl font-medium transition shadow-lg shadow-purple-500/20">
+            Enviar email
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer
+    class="bg-gradient-to-b from-slate-950 via-black to-black border-t border-white/10 pt-20 pb-10 relative overflow-hidden">
+
+    <!-- FUNDO DECORATIVO -->
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 left-1/3 w-[400px] h-[400px] bg-blue-500/10 blur-3xl rounded-full"></div>
+      <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-purple-500/10 blur-3xl rounded-full"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10">
+      <!-- GRID -->
+      <div class="grid md:grid-cols-4 gap-10 mb-14">
+
+        <!-- LOGO + DESC -->
+        <div>
+          <img src="assets/images/logo_seatec.png" class="h-9 mb-4">
+
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Desde 2012 ajudando empresas a crescer com tecnologia, automação comercial e sistemas PDV eficientes.
+          </p>
+
+          <!-- MINI BADGE -->
+          <div class="mt-4 text-xs text-green-400 bg-green-500/10 inline-block px-3 py-1 rounded-full">
+            +400 clientes atendidos
+          </div>
+        </div>
+
+        <!-- LINKS -->
+        <div>
+          <h4 class="font-semibold mb-4 text-white">Navegação</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li><a href="#inicio" class="hover:text-white transition">Início</a></li>
+            <li><a href="#sobre" class="hover:text-white transition">Sobre</a></li>
+            <li><a href="#sistemas" class="hover:text-white transition">Sistemas</a></li>
+            <li><a href="#depoimentos" class="hover:text-white transition">Depoimentos</a></li>
+            <li><a href="#contatos" class="hover:text-white transition">Contato</a></li>
+          </ul>
+        </div>
+
+        <!-- SISTEMAS -->
+        <div>
+          <h4 class="font-semibold mb-4 text-white">Soluções</h4>
+          <ul class="space-y-2 text-sm text-slate-400">
+            <li class="hover:text-white transition">VoePDV (Windows)</li>
+            <li class="hover:text-white transition">PDV Legal (Android)</li>
+            <li class="hover:text-white transition">Automação Comercial</li>
+            <li class="hover:text-white transition">Implantação e Suporte</li>
+          </ul>
+        </div>
+
+        <!-- CONTATO -->
+        <div>
+          <h4 class="font-semibold mb-4 text-white">Contato</h4>
+
+          <div class="space-y-4 text-sm text-slate-400">
+
+            <div>
+              <p class="text-white">Comercial</p>
+              <p class="hover:text-green-400 transition cursor-pointer">
+                +55 11 3384-6313
+              </p>
+            </div>
+
+            <div>
+              <p class="text-white">Suporte</p>
+              <p class="hover:text-green-400 transition cursor-pointer">
+                +55 11 4210-1779
+              </p>
+            </div>
+
+            <div>
+              <p class="text-white">Email</p>
+              <p class="hover:text-purple-400 transition cursor-pointer">
+                suporte@seatec.com.br
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- DIVISÃO -->
+      <div class="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
+
+        <p class="text-slate-500 text-sm text-center md:text-left">
+          © 2026 Seatec Soluções Tecnológicas — Todos os direitos reservados
+        </p>
+
+        <div class="flex gap-4 text-slate-400 text-sm">
+          <span class="hover:text-white transition">Automação Comercial</span>
+          <span>•</span>
+          <span class="hover:text-white transition">Sistemas PDV</span>
+          <span>•</span>
+          <span class="hover:text-white transition">Suporte Especializado</span>
+        </div>
+
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- BOTÃO WHATS -->
+  <button onclick="abrirWhats()"
+    class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-xl shadow-green-500/30 hover:scale-110 transition duration-300">
+    💬
+  </button>
+
+
+  <!-- MODAL SISTEMA -->
+  <div id="modalSistema" class="fixed inset-0 z-50 hidden items-center justify-center p-6">
+
+
+    <!-- BACKDROP -->
+    <div onclick="fecharModal()" id="backdrop"
+      class="absolute inset-0 bg-black/70 backdrop-blur-sm opacity-0 transition duration-500">
+    </div>
+
+    <!-- CAIXA -->
+    <div id="modalBox" class="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto
+    rounded-3xl border border-white/10
+    bg-gradient-to-br from-slate-900/95 to-slate-950/95
+    shadow-2xl shadow-black/50
+
+    opacity-0 scale-90 translate-y-10
+    transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]">
+
+      <!-- HEADER -->
+      <div class="flex justify-between items-center p-6 border-b border-white/10">
+        <div class="flex items-center gap-4">
+          <img id="modalLogo" src="" class="h-10 hidden" alt="Logo sistema">
+          <h3 id="modalTitulo" class="text-2xl font-bold"></h3>
+        </div>
+
+        <button onclick="fecharModal()" class="w-9 h-9 flex items-center justify-center rounded-full
+        hover:bg-white/10 transition text-slate-300 hover:text-white">
+          ✕
+        </button>
+      </div>
+
+      <!-- CONTEÚDO -->
+      <div class="p-8 space-y-10">
+
+        <!-- DESCRIÇÃO -->
+        <p id="modalDescricao" class="text-slate-300 leading-relaxed text-lg max-w-3xl">
+        </p>
+
+        <!-- GRID -->
+        <div class="grid md:grid-cols-2 gap-8 items-start">
+
+          <!-- LISTA -->
+          <div>
+            <h4 class="text-lg font-semibold mb-4 text-white">
+              Funcionalidades
+            </h4>
+
+            <ul id="modalLista" class="space-y-3 text-sm text-slate-300">
+            </ul>
+          </div>
+
+          <!-- VIDEO -->
+          <div class="relative group">
+            <div class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-50 group-hover:opacity-80 transition"></div>
+
+            <iframe id="modalVideo" class="relative w-full h-[260px] rounded-xl border border-white/10 shadow-lg" src=""
+              frameborder="0" allowfullscreen>
+            </iframe>
+          </div>
+
+        </div>
+
+
+        <!-- CTA -->
+        <div class="flex justify-between items-center flex-col md:flex-row gap-6 pt-4 border-t border-white/10">
+
+          <span class="text-slate-400 text-sm">
+            Quer implementar esse sistema no seu negócio?
+          </span>
+
+          <button onclick="abrirWhats()" class="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-xl font-semibold
+          transition transform hover:scale-105 active:scale-95
+          shadow-lg shadow-green-500/30">
+            Falar com especialista
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
