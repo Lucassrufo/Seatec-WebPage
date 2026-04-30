@@ -22,27 +22,6 @@ O foco é:
 
 ---
 
-## 🧩 Estrutura do Projeto
-
-📁 projeto/
-│
-├── index.html # Página principal
-├── voe.html # Landing page VoePDV
-├── pdv-legal.html # Landing page PDV Legal
-│
-├── assets/
-│ ├── css/
-│ │ └── style.css # Estilos e animações customizadas
-│ │
-│ ├── js/
-│ │ └── script.js # Interações, animações e lógica
-│ │
-│ └── images/ # Imagens do projeto
-│
-└── README.md
-
----
-
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**
