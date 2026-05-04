@@ -1,9 +1,10 @@
 body {
     font-family: "Inter", sans-serif;
+    text-rendering: optimizeLegibility;
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
 }
 
 /* ============================================== */
@@ -12,15 +13,20 @@ html {
 
 .fade-up {
     opacity: 0;
-    transform: translateY(50px);
+    transform: translate3d(0, 72px, 0);
     transition:
-        opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 1.4s cubic-bezier(0.16, 1, 0.3, 1);
+        opacity 2.1s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 2.45s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
 }
 
 .fade-up.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
+}
+
+.fade-up.show.animation-done {
+    will-change: auto;
 }
 
 /* ============================================== */
@@ -39,7 +45,7 @@ html {
 }
 
 .animate-pulse-slow {
-    animation: pulseSlow 7s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: none;
 }
 
 @keyframes bounceSlow {
@@ -68,7 +74,13 @@ html {
 
 .whats-float {
     animation: floatGentle 4.5s ease-in-out infinite;
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition:
+        color 0.22s ease,
+        background-color 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease,
+        transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.22s ease;
 }
 
 .whats-float:hover {
@@ -319,7 +331,7 @@ html {
 
 .hero-image-wrap {
     animation: heroImageFloat 9s ease-in-out infinite;
-    transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
 }
 
 .hero-image-wrap:hover {
@@ -335,8 +347,8 @@ html {
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(8px);
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    backdrop-filter: blur(4px);
+    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .hero-mini-badge:hover {
@@ -361,8 +373,8 @@ section {
 .maquininha-card {
     position: relative;
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.6));
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1.5px solid rgba(255, 255, 255, 0.08);
     border-radius: 28px;
     padding: 42px;
@@ -372,9 +384,13 @@ section {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    transform: translateY(50px);
+    transform: translate3d(0, 72px, 0);
     opacity: 0;
-    transition: all 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition:
+        opacity 2.1s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 2.45s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
     box-shadow: 
         0 25px 50px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -382,7 +398,7 @@ section {
 }
 
 .maquininha-card.show {
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
 }
 
@@ -428,14 +444,18 @@ section {
     object-fit: contain;
     position: relative;
     z-index: 1;
-    animation: maquinaFloat 5s ease-in-out infinite;
-    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    animation: none;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
     filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
 }
 
 .maquininha-card:hover img {
     transform: scale(1.1) rotate(3deg);
     filter: drop-shadow(0 15px 35px rgba(59, 130, 246, 0.4));
+}
+
+.maquininha-card.show:hover img {
+    transform: scale(1.1) rotate(3deg);
 }
 
 .maquininha-card h3 {
@@ -468,8 +488,8 @@ section {
 .adquirente-card {
     position: relative;
     background: linear-gradient(135deg, rgba(30, 41, 59, 0.6), rgba(15, 23, 42, 0.8));
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1.5px solid rgba(255, 255, 255, 0.06);
     border-radius: 24px;
     padding: 32px 24px;
@@ -480,13 +500,12 @@ section {
     align-items: center;
     gap: 16px;
     opacity: 0;
-    transform: translateY(50px);
+    transform: translate3d(0, 72px, 0);
     transition:
-        opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 1.4s cubic-bezier(0.16, 1, 0.3, 1),
-        border-color 0.6s ease,
-        box-shadow 0.6s ease,
-        scale 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        opacity 2.1s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 2.45s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
     box-shadow: 
         0 15px 40px rgba(0, 0, 0, 0.35),
         inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -518,7 +537,7 @@ section {
 
 .adquirente-card.show {
     opacity: 1;
-    transform: translateY(0);
+    transform: translate3d(0, 0, 0);
 }
 
 .adquirente-card[data-delay="0"]   { transition-delay: 0ms; }
@@ -583,7 +602,7 @@ section {
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(168, 85, 247, 0.12));
     border: 1.5px dashed rgba(255, 255, 255, 0.15);
     border-radius: 14px;
-    transition: all 0.6s ease;
+    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
 }
 
 .adquirente-card:hover .adquirente-fallback {
@@ -606,11 +625,87 @@ section {
 }
 
 /* ============================================== */
+/* CLIENTES EM MOVIMENTO                           */
+/* ============================================== */
+
+.clientes-marquee {
+    position: relative;
+    overflow: hidden;
+    padding: 8px 0;
+    mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+}
+
+.clientes-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 24px;
+    animation: clientesMarquee 28s linear infinite;
+}
+
+.clientes-marquee:hover .clientes-marquee-track {
+    animation-play-state: paused;
+}
+
+.cliente-logo-card {
+    width: clamp(190px, 22vw, 260px);
+    height: 128px;
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 22px;
+    border-radius: 22px;
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(30, 41, 59, 0.62));
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.cliente-logo-card img {
+    max-width: 100%;
+    max-height: 82px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.35));
+}
+
+@keyframes clientesMarquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-50% - 12px));
+    }
+}
+
+/* ============================================== */
 /* TRANSIÇÕES GLOBAIS SUAVES                       */
 /* ============================================== */
 
 a, button {
-    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition:
+        color 0.22s ease,
+        background-color 0.22s ease,
+        border-color 0.22s ease,
+        box-shadow 0.22s ease,
+        transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.22s ease;
+}
+
+.transition-all {
+    transition-property: color, background-color, border-color, opacity, box-shadow, transform !important;
+}
+
+.backdrop-blur-xl,
+.backdrop-blur-2xl {
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.backdrop-blur-sm {
+    backdrop-filter: blur(4px) !important;
+    -webkit-backdrop-filter: blur(4px) !important;
 }
 
 /* ============================================== */

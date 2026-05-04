@@ -1,4 +1,4 @@
-// SCROLL SUAVE COM OFFSET (header fixo)
+// SCROLL COM OFFSET (header fixo)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -14,7 +14,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
         window.scrollTo({
             top: offsetPosition,
-            behavior: "smooth"
+            behavior: "auto"
         });
     });
 });
@@ -25,19 +25,17 @@ const elements = document.querySelectorAll('.fade-up, .maquininha-card, .adquire
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-
-            // pequeno delay pra ficar mais elegante
-            setTimeout(() => {
-                entry.target.classList.add('show');
-            }, 150);
-
+            entry.target.classList.add('show');
+            entry.target.addEventListener('transitionend', () => {
+                entry.target.classList.add('animation-done');
+            }, { once: true });
+            observer.unobserve(entry.target);
         }
     });
 }, {
-    threshold: 0.4 // só anima quando estiver mais visível
+    rootMargin: "0px 0px -16% 0px",
+    threshold: 0.18
 });
-
-
 
 elements.forEach(el => observer.observe(el));
 
