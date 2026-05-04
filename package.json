@@ -1,0 +1,16 @@
+{
+  "name": "seatec-webpage",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:tailwind": "tailwindcss -i ./src/css/tailwind-input.css -o ./assets/css/tailwind.css --minify",
+    "build:assets": "cleancss -o ./assets/css/style.min.css ./src/css/style.css && terser ./src/js/script.js -c -m -o ./assets/js/script.min.js",
+    "build": "npm run build:tailwind && npm run build:assets",
+    "build:css": "npm run build:tailwind"
+  },
+  "devDependencies": {
+    "clean-css-cli": "^5.6.3",
+    "tailwindcss": "3.4.17",
+    "terser": "^5.46.2"
+  }
+}

@@ -4,11 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self'; upgrade-insecure-requests">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <title>PDV Legal - Sistema PDV para Maquininha e Smart POS | Seatec</title>
+    <meta name="description" content="PDV Legal é o sistema PDV Android da SEATEC para maquininha, Smart POS, delivery, estoque, vendas e emissão fiscal com mobilidade.">
+    <meta name="theme-color" content="#020617">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SEATEC">
+    <meta property="og:title" content="PDV Legal - Sistema PDV para Android e Smart POS">
+    <meta property="og:description" content="Venda, receba e emita NFC-e direto da maquininha com o PDV Legal.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PDV Legal - Sistema PDV para Android e Smart POS">
+    <meta name="twitter:description" content="PDV Android para maquininha, delivery, estoque e vendas móveis.">
 
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="assets/images/legal-equipamentos.png" fetchpriority="high">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+    <link rel="stylesheet" href="./assets/css/style.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
@@ -25,7 +41,7 @@
     <header class="fixed w-full z-50 backdrop-blur-2xl bg-slate-900/70 border-b border-white/10 shadow-2xl shadow-black/30 transition-all duration-700">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="assets/images/logo_seatec.png" class="h-8 transition-all duration-700 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                <img src="assets/images/logo_seatec.png" width="2550" height="625" decoding="async" class="h-8 w-auto transition-all duration-700 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]" alt="SEATEC">
             </a>
 
             <a href="index.html#sistemas"
@@ -53,7 +69,7 @@
                     PDV NA MAQUININHA • ANDROID • SMART POS
                 </span>
 
-                <img src="assets/images/pdvlegal.png" class="h-12 mb-7 transition-all duration-700 hover:scale-110 drop-shadow-lg">
+                <img src="assets/images/pdvlegal.png" width="819" height="209" decoding="async" class="h-12 w-auto mb-7 transition-all duration-700 hover:scale-110 drop-shadow-lg" alt="PDV Legal">
 
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
                     Venda, receba e emita
@@ -67,7 +83,7 @@
 
                 <!-- BOTÕES -->
                 <div class="flex flex-wrap gap-4 mt-9">
-                    <button onclick="abrirWhats('Olá! Quero saber mais sobre o PDV Legal.')"
+                    <button data-whatsapp="Olá! Quero saber mais sobre o PDV Legal."
                         class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-8 py-4 rounded-xl font-semibold
                         shadow-xl shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/50
                         hover:scale-110 transition-all duration-700 group overflow-hidden">
@@ -107,7 +123,7 @@
                 <div class="relative bg-gradient-to-br from-slate-900/70 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl text-center hover:border-blue-500/30 transition-all duration-1000 hover:scale-[1.02] overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-60"></div>
 
-                    <img src="assets/images/legal-equipamentos.png" alt="PDV Legal rodando em maquininha e equipamentos Android"
+                    <img src="assets/images/legal-equipamentos.png" width="742" height="623" decoding="async" fetchpriority="high" alt="PDV Legal rodando em maquininha e equipamentos Android"
                         class="relative z-10 w-full max-h-[360px] object-contain rounded-2xl drop-shadow-[0_20px_45px_rgba(15,23,42,0.7)]">
 
                     <p class="relative z-10 text-slate-300 mt-5 mb-2 text-base md:text-lg">
@@ -280,7 +296,7 @@
                         <span class="ml-4 text-xs text-slate-500 truncate font-medium">pdvlegal • Retaguarda</span>
                     </div>
 
-                    <img src="./assets/images/pdvlegal-dash.png" alt="Retaguarda PDV Legal"
+                    <img src="assets/images/optimized/pdvlegal-dash-1200.jpg" width="1200" height="567" loading="lazy" decoding="async" alt="Retaguarda PDV Legal"
                         class="w-full rounded-b-2xl group-hover:scale-[1.005] transition-transform duration-1000">
 
                 </div>
@@ -691,63 +707,56 @@
 
                 <div class="adquirente-card" data-delay="0">
                     <div class="adquirente-logo">
-                        <img src="assets/images/adquirentes/getnet.png" alt="Getnet"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="adquirente-fallback" style="display:none;">GETNET</div>
+                        <img src="assets/images/adquirentes/getnet.png" width="887" height="198" loading="lazy" decoding="async" alt="Getnet">
+                        <div class="adquirente-fallback hidden">GETNET</div>
                     </div>
                     <h3>Getnet</h3>
                 </div>
 
                 <div class="adquirente-card" data-delay="100">
                     <div class="adquirente-logo">
-                        <img src="assets/images/adquirentes/cielo.png" alt="Cielo"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="adquirente-fallback" style="display:none;">CIELO</div>
+                        <img src="assets/images/optimized/cielo-280.png" width="280" height="93" loading="lazy" decoding="async" alt="Cielo">
+                        <div class="adquirente-fallback hidden">CIELO</div>
                     </div>
                     <h3>Cielo</h3>
                 </div>
 
                 <div class="adquirente-card" data-delay="200">
                     <div class="adquirente-logo">
-                        <img src="assets/images/adquirentes/stone.png" alt="Stone"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="adquirente-fallback" style="display:none;">STONE</div>
+                        <img src="assets/images/optimized/stone-280.png" width="280" height="142" loading="lazy" decoding="async" alt="Stone">
+                        <div class="adquirente-fallback hidden">STONE</div>
                     </div>
                     <h3>Stone</h3>
                 </div>
 
                 <div class="adquirente-card" data-delay="300">
                     <div class="adquirente-logo">
-                        <img src="assets/images/adquirentes/pagbank.png" alt="PagBank"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="adquirente-fallback" style="display:none;">PAGBANK</div>
+                        <img src="assets/images/adquirentes/pagbank.png" width="615" height="190" loading="lazy" decoding="async" alt="PagBank">
+                        <div class="adquirente-fallback hidden">PAGBANK</div>
                     </div>
                     <h3>PagBank</h3>
                 </div>
 
                 <div class="adquirente-card" data-delay="400">
                     <div class="adquirente-logo">
-                        <img src="assets/images/adquirentes/sicredi.png" alt="Sicredi"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="adquirente-fallback" style="display:none;">SICREDI</div>
+                        <img src="assets/images/optimized/sicredi-280.png" width="280" height="66" loading="lazy" decoding="async" alt="Sicredi">
+                        <div class="adquirente-fallback hidden">SICREDI</div>
                     </div>
                     <h3>Sicredi</h3>
                 </div>
 
                 <div class="adquirente-card" data-delay="500">
                     <div class="adquirente-logo">
-                        <img src="assets/images/adquirentes/caixa.png" alt="Caixa"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="adquirente-fallback" style="display:none;">CAIXA</div>
+                        <img src="assets/images/optimized/caixa-280.png" width="280" height="63" loading="lazy" decoding="async" alt="Caixa">
+                        <div class="adquirente-fallback hidden">CAIXA</div>
                     </div>
                     <h3>Caixa</h3>
                 </div>
 
                 <div class="adquirente-card" data-delay="600">
                     <div class="adquirente-logo">
-                        <img src="assets/images/adquirentes/banrisul.png" alt="Banrisul"
-                            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="adquirente-fallback" style="display:none;">BANRISUL</div>
+                        <img src="assets/images/optimized/banrisul-280.png" width="280" height="126" loading="lazy" decoding="async" alt="Banrisul">
+                        <div class="adquirente-fallback hidden">BANRISUL</div>
                     </div>
                     <h3>Banrisul</h3>
                 </div>
@@ -782,28 +791,28 @@
             <div class="clientes-marquee fade-up" aria-label="Clientes PDV Legal">
                 <div class="clientes-marquee-track">
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente1.png" alt="Cliente PDV Legal 1">
+                        <img src="assets/images/clientes/cliente1.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 1">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente2.png" alt="Cliente PDV Legal 2">
+                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 2">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente1.png" alt="Cliente PDV Legal 1">
+                        <img src="assets/images/clientes/cliente1.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 1">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente2.png" alt="Cliente PDV Legal 2">
+                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 2">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente1.png" alt="Cliente PDV Legal 1">
+                        <img src="assets/images/clientes/cliente1.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 1">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente2.png" alt="Cliente PDV Legal 2">
+                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 2">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente1.png" alt="Cliente PDV Legal 1">
+                        <img src="assets/images/clientes/cliente1.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 1">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente2.png" alt="Cliente PDV Legal 2">
+                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 2">
                     </div>
                 </div>
             </div>
@@ -828,7 +837,7 @@
                 Fale com nosso time e veja como o PDV Legal pode reduzir estrutura, acelerar filas e dar mais controle para sua gestão.
             </p>
 
-            <button onclick="abrirWhats('Olá! Quero contratar o PDV Legal.')"
+            <button data-whatsapp="Olá! Quero contratar o PDV Legal."
                 class="bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-10 py-5 rounded-xl font-bold text-lg
                 shadow-2xl shadow-green-500/40 hover:shadow-3xl hover:shadow-green-500/60
                 hover:scale-110 transition-all duration-700 group overflow-hidden relative">
@@ -845,7 +854,7 @@
     <footer class="border-t border-white/10 py-8 text-center text-slate-500 text-sm">
         © 2026 Seatec Soluções Tecnológicas — Todos os direitos reservados
     </footer>
-    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/script.min.js"></script>
 </body>
 
 </html>

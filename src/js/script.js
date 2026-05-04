@@ -1,20 +1,29 @@
 // SCROLL COM OFFSET (header fixo)
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-
         const targetId = this.getAttribute('href');
+        if (!targetId || targetId === "#") return;
+
         const target = document.querySelector(targetId);
 
         if (!target) return;
 
-        const headerOffset = 90;
-        const elementPosition = target.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        e.preventDefault();
+
+        const header = document.querySelector("header");
+        const headerOffset = header ? header.offsetHeight : 90;
+        const targetRect = target.getBoundingClientRect();
+        const targetTop = targetRect.top + window.pageYOffset;
+        const viewportArea = window.innerHeight - headerOffset;
+        const targetCenter = targetTop + (targetRect.height / 2);
+        const centeredPosition = targetCenter - headerOffset - (viewportArea / 2);
+        const minPosition = Math.max(0, targetTop - headerOffset - 24);
+        const maxPosition = document.documentElement.scrollHeight - window.innerHeight;
+        const offsetPosition = Math.min(Math.max(centeredPosition, minPosition), maxPosition);
 
         window.scrollTo({
             top: offsetPosition,
-            behavior: "auto"
+            behavior: prefersReducedMotion ? "auto" : "smooth"
         });
     });
 });
@@ -22,29 +31,67 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ANIMAÇÃO AO SCROLL (fade-up)
 const elements = document.querySelectorAll('.fade-up, .maquininha-card, .adquirente-card');
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-            entry.target.addEventListener('transitionend', () => {
-                entry.target.classList.add('animation-done');
-            }, { once: true });
-            observer.unobserve(entry.target);
-        }
-    });
-}, {
-    rootMargin: "0px 0px -16% 0px",
-    threshold: 0.18
-});
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-elements.forEach(el => observer.observe(el));
+if (prefersReducedMotion || !('IntersectionObserver' in window)) {
+    elements.forEach(el => el.classList.add('show', 'animation-done'));
+} else {
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+                entry.target.addEventListener('transitionend', () => {
+                    entry.target.classList.add('animation-done');
+                }, { once: true });
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        rootMargin: "120px 0px -10% 0px",
+        threshold: 0.08
+    });
+
+    elements.forEach(el => observer.observe(el));
+}
+
+document.querySelectorAll('img').forEach((img, index) => {
+    img.decoding = 'async';
+    if (index > 1 && !img.hasAttribute('loading')) {
+        img.loading = 'lazy';
+    }
+});
 
 function abrirWhats(msg = "Olá! Vim pelo site e quero saber mais sobre os sistemas PDV.") {
     const phone = "551133846313"; // TROCAR AQUI
     const message = encodeURIComponent(msg);
 
     const url = `https://wa.me/${phone}?text=${message}`;
-    window.open(url, "_blank");
+    window.open(url, "_blank", "noopener,noreferrer");
+}
+
+document.querySelectorAll("[data-whatsapp]").forEach(button => {
+  button.addEventListener("click", () => {
+    const message = button.dataset.whatsapp || undefined;
+    abrirWhats(message);
+  });
+});
+
+const mobileMenuToggle = document.querySelector("[data-mobile-menu-toggle]");
+const mobileMenu = document.getElementById("mobileMenu");
+
+if (mobileMenuToggle && mobileMenu) {
+  mobileMenuToggle.addEventListener("click", () => {
+    const isOpen = !mobileMenu.classList.contains("hidden");
+    mobileMenu.classList.toggle("hidden", isOpen);
+    mobileMenuToggle.setAttribute("aria-expanded", String(!isOpen));
+  });
+
+  mobileMenu.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      mobileMenuToggle.setAttribute("aria-expanded", "false");
+    });
+  });
 }
 
 function abrirModal(tipo) {
@@ -52,6 +99,7 @@ function abrirModal(tipo) {
   const box = document.getElementById("modalBox");
   const backdrop = document.getElementById("backdrop");
   const modalLogo = document.getElementById("modalLogo");
+  const modalVideo = document.getElementById("modalVideo");
 
   modal.classList.remove("hidden");
   modal.classList.add("flex");
@@ -80,7 +128,8 @@ function abrirModal(tipo) {
       <li>✔ Ideal para alto volume</li>
     `;
 
-    modalVideo.src = "https://www.youtube.com/embed/VIDEO_VOEPDV";
+    modalVideo.removeAttribute("src");
+    modalVideo.classList.add("hidden");
   }
 
   if (tipo === "legal") {
@@ -98,7 +147,8 @@ function abrirModal(tipo) {
       <li>✔ Mobilidade total</li>
     `;
 
-    modalVideo.src = "https://www.youtube.com/embed/VIDEO_PDVLEGAL";
+    modalVideo.removeAttribute("src");
+    modalVideo.classList.add("hidden");
   }
 }
 
@@ -121,6 +171,17 @@ function fecharModal() {
     modalLogo.classList.add("hidden");
   }, 400);
 }
+
+document.querySelectorAll("[data-modal-close]").forEach(button => {
+  button.addEventListener("click", fecharModal);
+});
+
+document.querySelectorAll(".adquirente-logo img").forEach(img => {
+  img.addEventListener("error", () => {
+    img.classList.add("hidden");
+    img.nextElementSibling?.classList.remove("hidden");
+  });
+});
 
 const kellyIaTopics = [
   {
@@ -170,7 +231,7 @@ const kellyIaTopics = [
     answer: "Perfeito. Nosso time comercial pode entender sua opera\u00e7\u00e3o e indicar a melhor solu\u00e7\u00e3o entre VoePDV, PDV Legal e outros recursos da SEATEC.",
     action: {
       label: "Abrir WhatsApp",
-      message: "Ol\u00e1! Vim pelo chat KellyIA e quero falar com um consultor."
+      message: "Ol\u00e1! Vim pelo chat TsuruIA e quero falar com um consultor."
     }
   }
 ];
@@ -182,21 +243,23 @@ function iniciarKellyIa() {
   widget.id = "kellyIaWidget";
   widget.className = "kellyia-widget";
   widget.innerHTML = `
-    <section class="kellyia-chat" aria-label="Chat KellyIA">
+    <section class="kellyia-chat" aria-label="Chat TsuruIA">
       <header class="kellyia-header">
-        <div class="kellyia-avatar">K</div>
+        <div class="kellyia-avatar">
+          <img src="assets/images/tsuru.png" width="56" height="56" alt="" loading="lazy" decoding="async">
+        </div>
         <div>
-          <strong>KellyIA</strong>
+          <strong>TsuruIA</strong>
           <span>Assistente virtual da SEATEC</span>
         </div>
-        <button type="button" class="kellyia-close" aria-label="Fechar KellyIA">
+        <button type="button" class="kellyia-close" aria-label="Fechar TsuruIA">
           <span class="material-symbols-outlined">close</span>
         </button>
       </header>
 
       <div class="kellyia-body">
         <div class="kellyia-message kellyia-message-bot">
-          Oi! Eu sou a KellyIA. Escolha uma pergunta abaixo para saber mais sobre a SEATEC.
+          Oi! Eu sou a TsuruIA. Escolha uma pergunta abaixo para saber mais sobre a SEATEC.
         </div>
         <div class="kellyia-reply" aria-live="polite"></div>
       </div>
@@ -205,8 +268,8 @@ function iniciarKellyIa() {
     </section>
 
     <button type="button" class="kellyia-toggle" aria-expanded="false" aria-controls="kellyIaWidget">
-      <span class="material-symbols-outlined">smart_toy</span>
-      <span>Fale com a KellyIA</span>
+      <img src="assets/images/tsuru.png" width="34" height="34" alt="" loading="lazy" decoding="async">
+      <span>Fale com a TsuruIA</span>
     </button>
   `;
 
@@ -231,15 +294,25 @@ function iniciarKellyIa() {
   }
 
   function showTopic(topic) {
-    reply.innerHTML = `
-      <div class="kellyia-message kellyia-message-user">${topic.question}</div>
-      <div class="kellyia-message kellyia-message-bot">${topic.answer}</div>
-      ${topic.action ? `<button type="button" class="kellyia-action">${topic.action.label}</button>` : ""}
-    `;
+    reply.replaceChildren();
 
-    const actionButton = reply.querySelector(".kellyia-action");
-    if (actionButton) {
+    const question = document.createElement("div");
+    question.className = "kellyia-message kellyia-message-user";
+    question.textContent = topic.question;
+
+    const answer = document.createElement("div");
+    answer.className = "kellyia-message kellyia-message-bot";
+    answer.innerHTML = topic.answer;
+
+    reply.append(question, answer);
+
+    if (topic.action) {
+      const actionButton = document.createElement("button");
+      actionButton.type = "button";
+      actionButton.className = "kellyia-action";
+      actionButton.textContent = topic.action.label;
       actionButton.addEventListener("click", () => abrirWhats(topic.action.message));
+      reply.appendChild(actionButton);
     }
   }
 
@@ -269,8 +342,16 @@ function iniciarKellyIa() {
   });
 }
 
+function iniciarKellyIaQuandoLivre() {
+  if ('requestIdleCallback' in window) {
+    requestIdleCallback(iniciarKellyIa, { timeout: 1800 });
+  } else {
+    setTimeout(iniciarKellyIa, 800);
+  }
+}
+
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", iniciarKellyIa);
+  document.addEventListener("DOMContentLoaded", iniciarKellyIaQuandoLivre);
 } else {
-  iniciarKellyIa();
+  iniciarKellyIaQuandoLivre();
 }

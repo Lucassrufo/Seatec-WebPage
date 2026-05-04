@@ -7,17 +7,37 @@ html {
     scroll-behavior: auto;
 }
 
+:focus-visible {
+    outline: 3px solid rgba(56, 189, 248, 0.85);
+    outline-offset: 4px;
+}
+
+.bg-size-200 {
+    background-size: 200% 100%;
+}
+
+.bg-pos-0 {
+    background-position: 0% 50%;
+}
+
+.hover\:bg-pos-100:hover {
+    background-position: 100% 50%;
+}
+
+.hover\:shadow-3xl:hover {
+    box-shadow: 0 35px 80px rgba(0, 0, 0, 0.45);
+}
+
 /* ============================================== */
 /* ANIMAÇÕES PREMIUM - LENTAS E ELEGANTES         */
 /* ============================================== */
 
 .fade-up {
     opacity: 0;
-    transform: translate3d(0, 72px, 0);
+    transform: translate3d(0, 40px, 0);
     transition:
-        opacity 2.1s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 2.45s cubic-bezier(0.16, 1, 0.3, 1);
-    will-change: opacity, transform;
+        opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-up.show {
@@ -27,6 +47,12 @@ html {
 
 .fade-up.show.animation-done {
     will-change: auto;
+}
+
+.fade-up:not(.show),
+.maquininha-card:not(.show),
+.adquirente-card:not(.show) {
+    will-change: opacity, transform;
 }
 
 /* ============================================== */
@@ -60,7 +86,7 @@ html {
 }
 
 .animate-bounce-slow {
-    animation: bounceSlow 3.5s ease-in-out infinite;
+    animation: bounceSlow 4.8s ease-in-out infinite;
 }
 
 @keyframes floatGentle {
@@ -73,7 +99,7 @@ html {
 }
 
 .whats-float {
-    animation: floatGentle 4.5s ease-in-out infinite;
+    animation: floatGentle 6s ease-in-out infinite;
     transition:
         color 0.22s ease,
         background-color 0.22s ease,
@@ -108,9 +134,9 @@ html {
 .kellyia-toggle {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    min-height: 56px;
-    padding: 0 18px;
+    gap: 12px;
+    min-height: 64px;
+    padding: 0 20px 0 16px;
     border: 1px solid rgba(125, 211, 252, 0.35);
     border-radius: 999px;
     background: linear-gradient(135deg, #2563eb, #0891b2);
@@ -140,8 +166,8 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 24px;
     background: linear-gradient(145deg, rgba(15, 23, 42, 0.97), rgba(2, 6, 23, 0.97));
-    backdrop-filter: blur(24px);
-    -webkit-backdrop-filter: blur(24px);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     box-shadow: 0 28px 80px rgba(0, 0, 0, 0.5), 0 0 45px rgba(14, 165, 233, 0.16);
     opacity: 0;
     pointer-events: none;
@@ -164,8 +190,8 @@ html {
 }
 
 .kellyia-avatar {
-    width: 42px;
-    height: 42px;
+    width: 58px;
+    height: 58px;
     border-radius: 50%;
     display: grid;
     place-items: center;
@@ -174,6 +200,19 @@ html {
     color: #ffffff;
     font-weight: 900;
     box-shadow: 0 0 28px rgba(56, 189, 248, 0.35);
+}
+
+.kellyia-avatar img,
+.kellyia-toggle img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.kellyia-toggle img {
+    width: 36px;
+    height: 36px;
+    flex: 0 0 auto;
 }
 
 .kellyia-header strong,
@@ -297,8 +336,8 @@ html {
 
     .kellyia-toggle {
         align-self: flex-end;
-        min-height: 52px;
-        padding: 0 15px;
+        min-height: 58px;
+        padding: 0 16px 0 14px;
         font-size: 0.84rem;
     }
 }
@@ -366,6 +405,16 @@ section {
     scroll-margin-top: 120px;
 }
 
+body > section:not(#inicio),
+body > footer {
+    content-visibility: auto;
+    contain-intrinsic-size: 900px;
+}
+
+img {
+    content-visibility: auto;
+}
+
 /* ============================================== */
 /* CARDS DE MAQUININHA                             */
 /* ============================================== */
@@ -384,11 +433,11 @@ section {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    transform: translate3d(0, 72px, 0);
+    transform: translate3d(0, 40px, 0);
     opacity: 0;
     transition:
-        opacity 2.1s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 2.45s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.95s cubic-bezier(0.16, 1, 0.3, 1),
         border-color 0.25s ease,
         box-shadow 0.25s ease;
     box-shadow: 
@@ -500,10 +549,10 @@ section {
     align-items: center;
     gap: 16px;
     opacity: 0;
-    transform: translate3d(0, 72px, 0);
+    transform: translate3d(0, 40px, 0);
     transition:
-        opacity 2.1s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 2.45s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.95s cubic-bezier(0.16, 1, 0.3, 1),
         border-color 0.25s ease,
         box-shadow 0.25s ease;
     box-shadow: 
@@ -640,7 +689,7 @@ section {
     display: flex;
     width: max-content;
     gap: 24px;
-    animation: clientesMarquee 28s linear infinite;
+    animation: clientesMarquee 36s linear infinite;
 }
 
 .clientes-marquee:hover .clientes-marquee-track {
@@ -699,13 +748,21 @@ a, button {
 
 .backdrop-blur-xl,
 .backdrop-blur-2xl {
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(8px) !important;
+    -webkit-backdrop-filter: blur(8px) !important;
 }
 
 .backdrop-blur-sm {
-    backdrop-filter: blur(4px) !important;
-    -webkit-backdrop-filter: blur(4px) !important;
+    backdrop-filter: blur(3px) !important;
+    -webkit-backdrop-filter: blur(3px) !important;
+}
+
+.blur-3xl {
+    filter: blur(36px) !important;
+}
+
+[class*="blur-["] {
+    filter: blur(64px) !important;
 }
 
 /* ============================================== */
@@ -766,6 +823,18 @@ a, button {
 /* ============================================== */
 
 @media (max-width: 640px) {
+    .backdrop-blur-sm,
+    .backdrop-blur-xl,
+    .backdrop-blur-2xl {
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
+    .blur-3xl,
+    [class*="blur-["] {
+        filter: blur(28px) !important;
+    }
+
     .adquirente-card {
         min-height: 160px;
         padding: 26px 18px;

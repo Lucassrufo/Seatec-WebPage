@@ -4,16 +4,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <title>Seatec Soluções Tecnológicas</title>
+  <meta name="description" content="Soluções PDV para varejo, restaurantes e operações comerciais: VoePDV para Windows, PDV Legal para Android, implantação e suporte especializado.">
+  <meta name="theme-color" content="#020617">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SEATEC">
+  <meta property="og:title" content="SEATEC Soluções Tecnológicas">
+  <meta property="og:description" content="Automação comercial e sistemas PDV estáveis, fiscais e prontos para alto volume.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SEATEC Soluções Tecnológicas">
+  <meta name="twitter:description" content="Sistemas PDV para empresas que precisam vender com controle, estabilidade e suporte.">
 
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/images/optimized/imagem-1200.jpg" fetchpriority="high">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/tailwind.css">
+  <link rel="stylesheet" href="./assets/css/style.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
   <link rel="icon" type="image/png" href="assets/images/favicon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
   <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-  <link rel="shortcut icon" href="assets/images/favicon2.png">
+  <link rel="shortcut icon" href="assets/images/favicon.png">
 </head>
 
 <body class="bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-white relative overflow-x-hidden">
@@ -31,7 +47,7 @@
 
       <!-- LOGO -->
       <div class="flex items-center gap-3">
-        <img src="assets/images/logo_seatec.png" class="h-8 transition-all duration-700 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+        <img src="assets/images/logo_seatec.png" width="2550" height="625" decoding="async" class="h-8 w-auto transition-all duration-700 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]" alt="SEATEC">
       </div>
 
       <!-- MENU -->
@@ -69,8 +85,8 @@
 
       </nav>
 
-      <!-- CTA -->
-      <button onclick="abrirWhats()" class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 bg-size-200 bg-pos-0 hover:bg-pos-100 px-6 py-3 rounded-xl text-sm font-semibold 
+      <div class="hidden md:block">
+      <button data-whatsapp class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 bg-size-200 bg-pos-0 hover:bg-pos-100 px-6 py-3 rounded-xl text-sm font-semibold 
       shadow-lg shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/50 
       hover:scale-110 transition-all duration-700 group overflow-hidden">
 
@@ -81,8 +97,25 @@
         <!-- glow effect -->
         <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
       </button>
+      </div>
+
+      <button type="button" class="md:hidden w-11 h-11 grid place-items-center rounded-xl border border-white/10 bg-white/5 text-white" data-mobile-menu-toggle aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
 
     </div>
+
+    <nav id="mobileMenu" class="hidden md:hidden border-t border-white/10 bg-slate-950/95 px-6 py-4">
+      <div class="grid gap-3 text-sm font-semibold text-slate-200">
+        <a href="#inicio" class="py-2">Início</a>
+        <a href="#sobre" class="py-2">Sobre</a>
+        <a href="#sistemas" class="py-2">Sistemas</a>
+        <a href="#funcionalidades" class="py-2">Funcionalidades</a>
+        <a href="#depoimentos" class="py-2">Depoimentos</a>
+        <a href="#contatos" class="py-2">Contatos</a>
+        <button data-whatsapp class="mt-2 rounded-xl bg-green-500 px-5 py-3 text-left font-bold text-white">Falar no WhatsApp</button>
+      </div>
+    </nav>
   </header>
 
   <!-- HERO -->
@@ -128,7 +161,7 @@
         <!-- BOTÕES -->
         <div class="flex flex-wrap gap-4 mt-10">
 
-          <button onclick="abrirWhats()" class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-8 py-4 rounded-xl font-semibold
+          <button data-whatsapp class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-8 py-4 rounded-xl font-semibold
           shadow-xl shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/50
           hover:scale-110 transition-all duration-700 group overflow-hidden">
 
@@ -179,7 +212,7 @@
         <!-- card efeito -->
         <div class="relative bg-gradient-to-br from-slate-900/60 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl hero-image-wrap hover:border-blue-500/30 transition-all duration-1000">
 
-          <img src="assets/images/imagem.png" class="rounded-2xl shadow-2xl transition-all duration-1000 hover:scale-[1.03]">
+          <img src="assets/images/optimized/imagem-1200.jpg" width="1200" height="800" decoding="async" fetchpriority="high" class="rounded-2xl shadow-2xl transition-all duration-1000 hover:scale-[1.03]" alt="Sistema SEATEC em operação">
 
         </div>
 
@@ -323,7 +356,7 @@
 
           <div class="relative z-10">
 
-            <img src="assets/images/voepdv.png" class="h-11 mb-7 opacity-90 transition-all duration-1000 group-hover:opacity-100 group-hover:scale-110 drop-shadow-lg">
+            <img src="assets/images/voepdv.png" width="852" height="214" loading="lazy" decoding="async" class="h-11 w-auto mb-7 opacity-90 transition-all duration-1000 group-hover:opacity-100 group-hover:scale-110 drop-shadow-lg" alt="VoePDV">
 
             <span class="text-orange-400 text-xs tracking-wider flex items-center gap-2 mb-4 font-semibold">
               <span class="material-symbols-outlined text-sm">desktop_windows</span>
@@ -383,7 +416,7 @@
 
           <div class="relative z-10">
 
-            <img src="assets/images/pdvlegal.png" class="h-11 mb-7 opacity-90 transition-all duration-1000 group-hover:opacity-100 group-hover:scale-110 drop-shadow-lg">
+            <img src="assets/images/pdvlegal.png" width="819" height="209" loading="lazy" decoding="async" class="h-11 w-auto mb-7 opacity-90 transition-all duration-1000 group-hover:opacity-100 group-hover:scale-110 drop-shadow-lg" alt="PDV Legal">
 
             <span class="text-blue-400 text-xs tracking-wider flex items-center gap-2 mb-4 font-semibold">
               <span class="material-symbols-outlined text-sm">phone_android</span>
@@ -666,7 +699,7 @@
           </p>
 
           <a href="https://wa.me/551133846313?text=Olá,%20quero%20saber%20mais%20sobre%20os%20sistemas%20PDV"
-            target="_blank"
+            target="_blank" rel="noopener noreferrer"
             class="relative z-20 block w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 py-4 rounded-xl font-semibold transition-all duration-700 shadow-xl shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/50 hover:scale-105 text-center">
             💬 Falar no WhatsApp
           </a>
@@ -694,7 +727,7 @@
             Já é cliente? Nosso suporte resolve seu problema com rapidez.
           </p>
 
-          <a href="https://wa.me/551142101779?text=Olá,%20preciso%20de%20suporte%20técnico" target="_blank"
+          <a href="https://wa.me/551142101779?text=Olá,%20preciso%20de%20suporte%20técnico" target="_blank" rel="noopener noreferrer"
             class="relative z-20 block w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 py-4 rounded-xl font-semibold transition-all duration-700 shadow-xl shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/50 hover:scale-105 text-center">
             💬 WhatsApp suporte
           </a>
@@ -747,7 +780,7 @@
 
         <!-- LOGO + DESC -->
         <div>
-          <img src="assets/images/logo_seatec.png" class="h-9 mb-5 transition-all duration-700 hover:scale-110">
+          <img src="assets/images/logo_seatec.png" width="2550" height="625" loading="lazy" decoding="async" class="h-9 w-auto mb-5 transition-all duration-700 hover:scale-110" alt="SEATEC">
 
           <p class="text-slate-400 text-sm leading-relaxed">
             Desde 2012 ajudando empresas a crescer com tecnologia, automação comercial e sistemas PDV eficientes.
@@ -790,14 +823,14 @@
 
             <div>
               <p class="text-white font-semibold mb-1">Comercial</p>
-              <a href="https://wa.me/551133846313?text=Olá,%20quero%20saber%20mais%20sobre%20os%20sistemas%20PDV" target="_blank" class="hover:text-green-400 transition-colors duration-500 cursor-pointer inline-block">
+              <a href="https://wa.me/551133846313?text=Olá,%20quero%20saber%20mais%20sobre%20os%20sistemas%20PDV" target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition-colors duration-500 cursor-pointer inline-block">
                 +55 11 3384-6313
               </a>
             </div>
 
             <div>
               <p class="text-white font-semibold mb-1">Suporte</p>
-              <a href="https://wa.me/551142101779?text=Olá,%20preciso%20de%20suporte%20técnico" target="_blank" class="hover:text-green-400 transition-colors duration-500 cursor-pointer inline-block">
+              <a href="https://wa.me/551142101779?text=Olá,%20preciso%20de%20suporte%20técnico" target="_blank" rel="noopener noreferrer" class="hover:text-green-400 transition-colors duration-500 cursor-pointer inline-block">
                 +55 11 4210-1779
               </a>
             </div>
@@ -838,7 +871,7 @@
 
 
     <!-- BACKDROP -->
-    <div onclick="fecharModal()" id="backdrop"
+    <div data-modal-close id="backdrop"
       class="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-700">
     </div>
 
@@ -854,11 +887,11 @@
       <!-- HEADER -->
       <div class="flex justify-between items-center p-7 border-b border-white/10">
         <div class="flex items-center gap-4">
-          <img id="modalLogo" src="" class="h-10 hidden" alt="Logo sistema">
+          <img id="modalLogo" src="" width="852" height="214" loading="lazy" decoding="async" class="h-10 w-auto hidden" alt="Logo sistema">
           <h3 id="modalTitulo" class="text-2xl font-bold"></h3>
         </div>
 
-        <button onclick="fecharModal()" class="w-10 h-10 flex items-center justify-center rounded-full
+        <button data-modal-close class="w-10 h-10 flex items-center justify-center rounded-full
         hover:bg-white/10 transition-all duration-500 text-slate-300 hover:text-white hover:scale-110">
           ✕
         </button>
@@ -889,7 +922,7 @@
             <div class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-700"></div>
 
             <iframe id="modalVideo" class="relative w-full h-[260px] rounded-xl border-2 border-white/10 shadow-lg" src=""
-              frameborder="0" allowfullscreen>
+              frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; picture-in-picture">
             </iframe>
           </div>
 
@@ -903,7 +936,7 @@
             Quer implementar esse sistema no seu negócio?
           </span>
 
-          <button onclick="abrirWhats()" class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-7 py-4 rounded-xl font-bold
+          <button data-whatsapp class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-7 py-4 rounded-xl font-bold
           transition-all duration-700 transform hover:scale-110 active:scale-95
           shadow-xl shadow-green-500/40 hover:shadow-2xl hover:shadow-green-500/60">
             Falar com especialista
@@ -916,7 +949,7 @@
     </div>
   </div>
 
-  <script src="./assets/js/script.js"></script>
+  <script src="./assets/js/script.min.js"></script>
 
 </body>
 
