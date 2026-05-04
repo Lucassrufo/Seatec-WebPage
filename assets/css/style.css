@@ -15,8 +15,8 @@ html {
     opacity: 0;
     transform: translateY(40px);
     transition:
-        opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
-        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+    opacity 1.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.8s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 .fade-up.show {
@@ -139,7 +139,7 @@ html {
 /* ============================================== */
 
 .maquininha-card {
-    transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
 /* ============================================== */
@@ -208,7 +208,7 @@ section {
 
     transform: translateY(40px);
     opacity: 0;
-    transition: all 0.6s ease;
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 
     box-shadow: 0 20px 45px rgba(0, 0, 0, 0.35);
 }
@@ -291,11 +291,11 @@ section {
     opacity: 0;
     transform: translateY(40px);
     transition:
-        opacity 0.7s ease,
-        transform 0.7s ease,
-        border-color 0.4s ease,
-        box-shadow 0.4s ease,
-        scale 0.4s ease;
+    opacity 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1.2s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.4s ease,
+    box-shadow 0.4s ease,
+    scale 0.4s ease;
 
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
     overflow: hidden;
@@ -413,5 +413,330 @@ section {
     .adquirente-logo img {
         max-width: 100px;
         max-height: 55px;
+    }
+}
+
+/* ============================================== */
+/* ANIMAÇÕES MUITO MAIS LENTAS E FLUIDAS          */
+/* ============================================== */
+
+/* Animação principal do fade-up agora é BEM mais lenta para o usuário conseguir ver */
+.fade-up {
+    opacity: 0;
+    transform: translateY(60px);
+    transition:
+        opacity 2s cubic-bezier(0.22, 1, 0.36, 1),
+        transform 2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.fade-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ============================================== */
+/* ANIMAÇÕES CUSTOMIZADAS - MAIS LENTAS           */
+/* ============================================== */
+
+/* Pulse lento para os glows de fundo */
+@keyframes pulseSlow {
+    0%, 100% {
+        opacity: 0.5;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.animate-pulse-slow {
+    animation: pulseSlow 8s ease-in-out infinite;
+}
+
+/* Bounce suave para o indicador de scroll */
+@keyframes bounceSlow {
+    0%, 100% {
+        transform: translate(-50%, 0);
+        opacity: 0.6;
+    }
+    50% {
+        transform: translate(-50%, 10px);
+        opacity: 1;
+    }
+}
+
+.animate-bounce-slow {
+    animation: bounceSlow 3s ease-in-out infinite;
+}
+
+/* Float discreto no botão flutuante de WhatsApp */
+@keyframes floatGentle {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.whats-float {
+    animation: floatGentle 4s ease-in-out infinite;
+}
+
+.whats-float:hover {
+    animation: none;
+}
+
+/* ============================================== */
+/* PADRÃO DE GRADE NO HERO (efeito profundidade)   */
+/* ============================================== */
+
+.hero-grid {
+    background-image:
+        linear-gradient(rgba(59, 130, 246, 0.5) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(59, 130, 246, 0.5) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+
+/* ============================================== */
+/* IMAGEM DO HERO COM EFEITO FLUTUANTE              */
+/* ============================================== */
+
+@keyframes heroImageFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+.hero-image-wrap {
+    animation: heroImageFloat 8s ease-in-out infinite;
+}
+
+/* ============================================== */
+/* MINI BADGES DO HERO (linha de benefícios)        */
+/* ============================================== */
+
+.hero-mini-badge {
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hero-mini-badge:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+}
+
+/* ============================================== */
+/* TRANSIÇÕES GLOBAIS MAIS LENTAS                  */
+/* ============================================== */
+
+/* Sobrescrevendo todas as transições rápidas para ficarem mais lentas */
+a, button, .transition, .transition-all, 
+[class*="hover:"], [class*="group-hover:"] {
+    transition-duration: 0.7s !important;
+}
+
+/* Cards e elementos interativos */
+.maquininha-card,
+.adquirente-card,
+[class*="hover:scale"] {
+    transition: all 1.2s cubic-bezier(0.22, 1, 0.36, 1) !important;
+}
+
+/* ============================================== */
+/* SELEÇÃO DE TEXTO COM COR DA MARCA                */
+/* ============================================== */
+
+::selection {
+    background: rgba(59, 130, 246, 0.3);
+    color: #ffffff;
+}
+
+/* ============================================== */
+/* SCROLLBAR ESTILIZADA                              */
+/* ============================================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(15, 23, 42, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.5), rgba(168, 85, 247, 0.5));
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.8), rgba(168, 85, 247, 0.8));
+}
+
+/* ============================================== */
+/* SISTEMA DE TEMA CLARO/ESCURO                     */
+/* ============================================== */
+
+/* Tema Claro */
+body.light-theme {
+    background: linear-gradient(to bottom, #f8fafc, #f1f5f9, #e2e8f0) !important;
+    color: #1e293b !important;
+}
+
+/* Backgrounds de seções no tema claro */
+body.light-theme section {
+    background: transparent !important;
+}
+
+body.light-theme .bg-gradient-to-b,
+body.light-theme .bg-gradient-to-br {
+    background: transparent !important;
+}
+
+/* Textos no tema claro */
+body.light-theme .text-white {
+    color: #0f172a !important;
+}
+
+body.light-theme .text-slate-300,
+body.light-theme .text-slate-400,
+body.light-theme .text-slate-500 {
+    color: #475569 !important;
+}
+
+/* Cards no tema claro */
+body.light-theme .bg-slate-900\/60,
+body.light-theme .bg-slate-900\/40,
+body.light-theme .bg-slate-900\/80,
+body.light-theme .bg-white\/5 {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: rgba(59, 130, 246, 0.2) !important;
+}
+
+/* Gradientes de cards mantêm as cores azuis */
+body.light-theme .bg-gradient-to-br {
+    background: linear-gradient(to bottom right, rgba(59, 130, 246, 0.1), rgba(255, 255, 255, 0.9)) !important;
+}
+
+/* Header no tema claro */
+body.light-theme header {
+    background: rgba(255, 255, 255, 0.7) !important;
+    border-bottom: 1px solid rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Footer no tema claro */
+body.light-theme footer {
+    background: rgba(248, 250, 252, 0.9) !important;
+    border-top: 1px solid rgba(59, 130, 246, 0.1) !important;
+}
+
+/* Bordas no tema claro */
+body.light-theme .border-white\/10,
+body.light-theme .border-white\/5 {
+    border-color: rgba(59, 130, 246, 0.15) !important;
+}
+
+/* Glows de fundo no tema claro (mais suaves) */
+body.light-theme .fixed.inset-0.-z-10 > div,
+body.light-theme .absolute.inset-0.pointer-events-none > div {
+    opacity: 0.3 !important;
+}
+
+/* Botão de tema */
+#theme-toggle {
+    position: fixed;
+    top: 90px;
+    right: 24px;
+    z-index: 50;
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1);
+    background: rgba(59, 130, 246, 0.2);
+    border-color: rgba(59, 130, 246, 0.5);
+}
+
+#theme-toggle .material-symbols-outlined {
+    font-size: 24px;
+    color: #3b82f6;
+    transition: all 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+body.light-theme #theme-toggle {
+    background: rgba(15, 23, 42, 0.05);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+body.light-theme #theme-toggle:hover {
+    background: rgba(15, 23, 42, 0.1);
+}
+
+/* Seleção no tema claro */
+body.light-theme ::selection {
+    background: rgba(59, 130, 246, 0.2);
+    color: #0f172a;
+}
+
+/* Scrollbar no tema claro */
+body.light-theme ::-webkit-scrollbar-track {
+    background: rgba(241, 245, 249, 0.5);
+}
+
+body.light-theme ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.4), rgba(168, 85, 247, 0.4));
+}
+
+body.light-theme ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(59, 130, 246, 0.6), rgba(168, 85, 247, 0.6));
+}
+
+/* ============================================== */
+/* RESPEITO À PREFERÊNCIA DE REDUÇÃO DE MOVIMENTO    */
+/* ============================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================================== */
+/* AJUSTES MOBILE PARA BOTÃO DE TEMA               */
+/* ============================================== */
+
+@media (max-width: 768px) {
+    #theme-toggle {
+        top: auto;
+        bottom: 80px;
+        right: 16px;
+        width: 44px;
+        height: 44px;
     }
 }

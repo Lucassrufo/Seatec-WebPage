@@ -25,17 +25,24 @@ const elements = document.querySelectorAll('.fade-up, .maquininha-card, .adquire
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            entry.target.classList.add('show');
+
+            // pequeno delay pra ficar mais elegante
+            setTimeout(() => {
+                entry.target.classList.add('show');
+            }, 150);
+
         }
     });
 }, {
-    threshold: 0.2
+    threshold: 0.4 // só anima quando estiver mais visível
 });
+
+
 
 elements.forEach(el => observer.observe(el));
 
 function abrirWhats(msg = "Olá! Vim pelo site e quero saber mais sobre os sistemas PDV.") {
-    const phone = "5511954401640"; // TROCAR AQUI
+    const phone = "551133846313"; // TROCAR AQUI
     const message = encodeURIComponent(msg);
 
     const url = `https://wa.me/${phone}?text=${message}`;
