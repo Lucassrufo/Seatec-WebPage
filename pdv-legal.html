@@ -7,7 +7,7 @@
     <title>PDV Legal - Sistema PDV para Maquininha e Smart POS | Seatec</title>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
@@ -22,14 +22,14 @@
     </div>
 
     <!-- HEADER -->
-    <header class="fixed w-full z-50 backdrop-blur-xl bg-slate-900/60 border-b border-white/5 shadow-lg shadow-black/20">
+    <header class="fixed w-full z-50 backdrop-blur-2xl bg-slate-900/70 border-b border-white/10 shadow-2xl shadow-black/30 transition-all duration-700">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="assets/images/logo_seatec.png" class="h-8 transition duration-500 hover:scale-105">
+                <img src="assets/images/logo_seatec.png" class="h-8 transition-all duration-700 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
             </a>
 
             <a href="index.html#sistemas"
-                class="text-sm text-slate-300 hover:text-white transition duration-500 flex items-center gap-2">
+                class="text-sm text-slate-300 hover:text-white transition-all duration-500 flex items-center gap-2 font-medium hover:gap-3">
                 ← Voltar
             </a>
         </div>
@@ -47,66 +47,68 @@
 
             <!-- TEXTO -->
             <div class="fade-up">
-                <span class="inline-flex items-center gap-2 mb-5 px-4 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20 shadow-lg shadow-blue-500/5">
+                <span class="inline-flex items-center gap-2 mb-5 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 shadow-lg shadow-blue-500/10 backdrop-blur-sm hover:bg-blue-500/20 hover:border-blue-400/50 transition-all duration-700">
                     <span class="material-symbols-outlined text-sm">phone_android</span>
                     PDV NA MAQUININHA • ANDROID • SMART POS
                 </span>
 
-                <img src="assets/images/pdvlegal.png" class="h-12 mb-6">
+                <img src="assets/images/pdvlegal.png" class="h-12 mb-7 transition-all duration-700 hover:scale-110 drop-shadow-lg">
 
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
                     Toda sua operação
-                    <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent">na palma da mão</span>
+                    <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.4)]">na palma da mão</span>
                 </h1>
 
                 <p class="text-slate-300 mt-6 text-lg max-w-xl leading-relaxed">
-                    Venda, emita NFC-e, controle estoque e gerencie comandas <b class="text-white">direto da maquininha</b>.
+                    Venda, emita NFC-e, controle estoque e gerencie comandas <b class="text-white font-semibold">direto da maquininha</b>.
                     Acabou a necessidade de computador, monitor e impressora separados — tudo em um único equipamento.
                 </p>
 
                 <!-- BOTÕES -->
                 <div class="flex flex-wrap gap-4 mt-9">
                     <button onclick="abrirWhats('Olá! Quero saber mais sobre o PDV Legal.')"
-                        class="relative bg-gradient-to-r from-green-500 to-green-600 px-7 py-3 rounded-xl font-medium
-                        shadow-lg shadow-green-500/20 hover:shadow-green-500/40
-                        hover:scale-105 transition-all duration-500">
-                        💬 Falar com especialista
-                        <span class="absolute inset-0 rounded-xl bg-green-400/20 blur-xl opacity-0 hover:opacity-100 transition duration-500"></span>
+                        class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-8 py-4 rounded-xl font-semibold
+                        shadow-xl shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/50
+                        hover:scale-110 transition-all duration-700 group overflow-hidden">
+                        
+                        <span class="relative z-10">💬 Falar com especialista</span>
+                        
+                        <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
                     </button>
 
-                    <a href="#funcionalidades" class="px-7 py-3 rounded-xl border border-white/10 hover:border-blue-400
-                    bg-white/5 hover:bg-white/10 backdrop-blur transition-all duration-500 flex items-center gap-2 group">
+                    <a href="#funcionalidades" class="px-8 py-4 rounded-xl border-2 border-white/10 hover:border-blue-400/50
+                    bg-white/5 hover:bg-white/10 backdrop-blur-xl transition-all duration-700 flex items-center gap-2 group shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-105 font-semibold">
                         Ver funcionalidades
-                        <span class="material-symbols-outlined text-base transition-transform duration-500 group-hover:translate-x-1">arrow_forward</span>
+                        <span class="material-symbols-outlined text-base transition-transform duration-700 group-hover:translate-x-2">arrow_forward</span>
                     </a>
                 </div>
 
                 <!-- BENEFÍCIOS -->
-                <div class="flex flex-wrap gap-6 mt-10 text-sm text-slate-400">
-                    <div class="flex items-center gap-2">
+                <div class="flex flex-wrap gap-6 mt-12 text-sm text-slate-400">
+                    <div class="flex items-center gap-2 hero-mini-badge">
                         <span class="material-symbols-outlined text-blue-400 text-base">attach_money</span>
-                        Reduz custos operacionais
+                        <span class="font-medium">Reduz custos operacionais</span>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 hero-mini-badge">
                         <span class="material-symbols-outlined text-purple-400 text-base">cloud_done</span>
-                        Retaguarda em nuvem
+                        <span class="font-medium">Retaguarda em nuvem</span>
                     </div>
-                    <div class="flex items-center gap-2">
+                    <div class="flex items-center gap-2 hero-mini-badge">
                         <span class="material-symbols-outlined text-green-400 text-base">verified</span>
-                        Emite NFC-e
+                        <span class="font-medium">Emite NFC-e</span>
                     </div>
                 </div>
             </div>
 
             <!-- VISUAL -->
             <div class="fade-up relative">
-                <div class="absolute inset-0 bg-blue-500/20 blur-3xl opacity-70 animate-pulse-slow"></div>
-                <div class="relative bg-slate-900/40 backdrop-blur rounded-2xl border border-white/10 p-10 shadow-2xl text-center">
-                    <span class="material-symbols-outlined text-blue-400 text-9xl drop-shadow-[0_0_20px_rgba(59,130,246,0.5)]">phone_android</span>
-                    <p class="text-slate-300 mt-6 text-lg">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 blur-3xl opacity-70 animate-pulse-slow"></div>
+                <div class="relative bg-gradient-to-br from-slate-900/60 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-12 shadow-2xl text-center hover:border-blue-500/30 transition-all duration-1000 hover:scale-105">
+                    <span class="material-symbols-outlined text-blue-400 text-9xl drop-shadow-[0_10px_40px_rgba(59,130,246,0.5)] transition-transform duration-1000 hover:scale-110">phone_android</span>
+                    <p class="text-slate-300 mt-7 text-lg">
                         Vendas, fiscal, estoque e gestão.
                         <br>
-                        <span class="text-blue-300 font-semibold">Tudo em uma maquininha.</span>
+                        <span class="text-blue-300 font-bold">Tudo em uma maquininha.</span>
                     </p>
                 </div>
             </div>
@@ -123,98 +125,110 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-            <div class="text-center mb-16 fade-up">
-                <span class="inline-block mb-5 px-4 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+            <div class="text-center mb-20 fade-up">
+                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
                     POR QUE PDV NA MAQUININHA?
                 </span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Menos equipamento,
-                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">mais agilidade</span>
+                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">mais agilidade</span>
                 </h2>
-                <p class="text-slate-400 text-lg max-w-3xl mx-auto">
+                <p class="text-slate-400 text-lg max-w-3xl mx-auto leading-relaxed">
                     Em vez de manter computador, monitor, gaveta e impressora ocupando espaço no balcão,
                     a operação inteira cabe num único equipamento Android.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-10">
 
                 <!-- DIFERENCIAL 1 -->
-                <div class="fade-up bg-gradient-to-br from-blue-900/20 to-slate-900/60 border border-blue-500/20 p-8 rounded-2xl hover:scale-[1.03] hover:border-blue-400/50 transition duration-700">
-                    <div class="w-14 h-14 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center mb-5">
-                        <span class="material-symbols-outlined text-blue-400 text-3xl">savings</span>
+                <div class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-1000 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
+                    
+                    <div class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-6">
+                        <span class="material-symbols-outlined text-blue-400 text-4xl">savings</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Economia real</h3>
+                    
+                    <h3 class="text-xl font-bold mb-4">Economia real</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
                         Dispensa computador, monitor, nobreak, teclado, mouse e impressora dedicada.
                         Você economiza na compra, na manutenção e até no espaço do balcão.
                     </p>
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-1000"></div>
                 </div>
 
                 <!-- DIFERENCIAL 2 -->
-                <div class="fade-up bg-gradient-to-br from-blue-900/20 to-slate-900/60 border border-blue-500/20 p-8 rounded-2xl hover:scale-[1.03] hover:border-blue-400/50 transition duration-700">
-                    <div class="w-14 h-14 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center mb-5">
-                        <span class="material-symbols-outlined text-blue-400 text-3xl">explore</span>
+                <div class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-1000 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
+                    
+                    <div class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-6">
+                        <span class="material-symbols-outlined text-blue-400 text-4xl">explore</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Mobilidade total</h3>
+                    
+                    <h3 class="text-xl font-bold mb-4">Mobilidade total</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
                         Atenda na mesa, no balcão, no estacionamento ou na rua.
                         Como funciona com 4G ou Wi-Fi, sua equipe leva o caixa pra onde o cliente estiver.
                     </p>
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-1000"></div>
                 </div>
 
                 <!-- DIFERENCIAL 3 -->
-                <div class="fade-up bg-gradient-to-br from-blue-900/20 to-slate-900/60 border border-blue-500/20 p-8 rounded-2xl hover:scale-[1.03] hover:border-blue-400/50 transition duration-700">
-                    <div class="w-14 h-14 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center mb-5">
-                        <span class="material-symbols-outlined text-blue-400 text-3xl">sync</span>
+                <div class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-1000 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
+                    
+                    <div class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-6">
+                        <span class="material-symbols-outlined text-blue-400 text-4xl">sync</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Pagamento integrado</h3>
+                    
+                    <h3 class="text-xl font-bold mb-4">Pagamento integrado</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
                         Como o sistema roda na própria maquininha, o pagamento já vem vinculado à NFC-e.
                         Atende a obrigatoriedade fiscal de estados como RS e MT, sem complicação.
                     </p>
+
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-1000"></div>
                 </div>
 
             </div>
 
             <!-- LINHA DE INFO TÉCNICA -->
-            <div class="fade-up mt-16 bg-gradient-to-r from-slate-900/80 to-slate-900/40 border border-white/5 rounded-2xl p-6 flex flex-wrap items-center justify-around gap-6 text-center">
+            <div class="fade-up mt-20 bg-gradient-to-r from-slate-900/80 to-slate-900/40 border-2 border-white/10 rounded-3xl p-8 flex flex-wrap items-center justify-around gap-8 text-center backdrop-blur-xl shadow-xl">
 
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-blue-400 text-2xl">android</span>
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-blue-400 text-3xl">android</span>
                     <div class="text-left">
-                        <p class="text-xs text-slate-500">Plataforma</p>
-                        <p class="text-sm font-semibold">Android • Smart POS</p>
+                        <p class="text-xs text-slate-500 font-semibold">Plataforma</p>
+                        <p class="text-sm font-bold">Android • Smart POS</p>
                     </div>
                 </div>
 
-                <div class="hidden md:block w-px h-10 bg-white/10"></div>
+                <div class="hidden md:block w-px h-12 bg-white/20"></div>
 
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-blue-400 text-2xl">cloud</span>
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-blue-400 text-3xl">cloud</span>
                     <div class="text-left">
-                        <p class="text-xs text-slate-500">Retaguarda</p>
-                        <p class="text-sm font-semibold">100% em nuvem</p>
+                        <p class="text-xs text-slate-500 font-semibold">Retaguarda</p>
+                        <p class="text-sm font-bold">100% em nuvem</p>
                     </div>
                 </div>
 
-                <div class="hidden md:block w-px h-10 bg-white/10"></div>
+                <div class="hidden md:block w-px h-12 bg-white/20"></div>
 
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-blue-400 text-2xl">receipt_long</span>
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-blue-400 text-3xl">receipt_long</span>
                     <div class="text-left">
-                        <p class="text-xs text-slate-500">Emissão fiscal</p>
-                        <p class="text-sm font-semibold">NFC-e integrada</p>
+                        <p class="text-xs text-slate-500 font-semibold">Emissão fiscal</p>
+                        <p class="text-sm font-bold">NFC-e integrada</p>
                     </div>
                 </div>
 
-                <div class="hidden md:block w-px h-10 bg-white/10"></div>
+                <div class="hidden md:block w-px h-12 bg-white/20"></div>
 
-                <div class="flex items-center gap-3">
-                    <span class="material-symbols-outlined text-blue-400 text-2xl">devices</span>
+                <div class="flex items-center gap-4">
+                    <span class="material-symbols-outlined text-blue-400 text-3xl">devices</span>
                     <div class="text-left">
-                        <p class="text-xs text-slate-500">Multi-dispositivo</p>
-                        <p class="text-sm font-semibold">POS, celular ou tablet</p>
+                        <p class="text-xs text-slate-500 font-semibold">Multi-dispositivo</p>
+                        <p class="text-sm font-bold">POS, celular ou tablet</p>
                     </div>
                 </div>
 
@@ -233,15 +247,15 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-            <div class="text-center mb-16 fade-up">
-                <span class="inline-block mb-5 px-4 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+            <div class="text-center mb-20 fade-up">
+                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
                     PAINEL DE GESTÃO
                 </span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Retaguarda na nuvem,
-                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">de qualquer lugar</span>
+                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">de qualquer lugar</span>
                 </h2>
-                <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
                     Enquanto sua equipe vende na maquininha, você acompanha tudo pelo navegador —
                     relatórios, comissão de garçom, vendas por horário e produtos mais vendidos em tempo real.
                 </p>
@@ -251,54 +265,54 @@
             <div class="fade-up relative max-w-6xl mx-auto">
                 <div class="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 blur-3xl opacity-60 rounded-3xl"></div>
 
-                <div class="relative bg-slate-900/60 backdrop-blur-xl rounded-2xl border border-white/10 p-3 shadow-2xl shadow-blue-500/10
-                hover:scale-[1.01] transition duration-700 group">
+                <div class="relative bg-gradient-to-br from-slate-900/80 to-slate-800/60 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl shadow-blue-500/20
+                hover:scale-[1.01] transition-all duration-1000 group">
 
-                    <div class="flex items-center gap-2 px-4 py-3 border-b border-white/5">
+                    <div class="flex items-center gap-2 px-5 py-4 border-b border-white/10">
                         <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
                         <span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
                         <span class="w-3 h-3 rounded-full bg-green-500/70"></span>
-                        <span class="ml-3 text-xs text-slate-500 truncate">pdvlegal • Retaguarda</span>
+                        <span class="ml-4 text-xs text-slate-500 truncate font-medium">pdvlegal • Retaguarda</span>
                     </div>
 
                     <img src="./assets/images/pdvlegal-dash.png" alt="Retaguarda PDV Legal"
-                        class="w-full rounded-b-xl group-hover:scale-[1.005] transition duration-700">
+                        class="w-full rounded-b-2xl group-hover:scale-[1.005] transition-transform duration-1000">
 
                 </div>
             </div>
 
             <!-- DESTAQUES ABAIXO DA IMAGEM -->
-            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 mt-16">
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mt-20">
 
                 <div class="fade-up text-center">
-                    <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-blue-400 text-3xl">date_range</span>
+                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-blue-500/15 border-2 border-blue-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                        <span class="material-symbols-outlined text-blue-400 text-4xl">date_range</span>
                     </div>
-                    <h3 class="font-semibold mb-1">Filtros por Período</h3>
+                    <h3 class="font-bold mb-2">Filtros por Período</h3>
                     <p class="text-sm text-slate-400">Análise diária, mensal ou anual</p>
                 </div>
 
                 <div class="fade-up text-center">
-                    <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-purple-400 text-3xl">store</span>
+                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-purple-500/15 border-2 border-purple-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                        <span class="material-symbols-outlined text-purple-400 text-4xl">store</span>
                     </div>
-                    <h3 class="font-semibold mb-1">Multi-filial</h3>
+                    <h3 class="font-bold mb-2">Multi-filial</h3>
                     <p class="text-sm text-slate-400">Gerencie todas as unidades</p>
                 </div>
 
                 <div class="fade-up text-center">
-                    <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-green-500/10 border border-green-500/30 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-green-400 text-3xl">badge</span>
+                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-green-500/15 border-2 border-green-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                        <span class="material-symbols-outlined text-green-400 text-4xl">badge</span>
                     </div>
-                    <h3 class="font-semibold mb-1">Comissão Garçom</h3>
+                    <h3 class="font-bold mb-2">Comissão Garçom</h3>
                     <p class="text-sm text-slate-400">Controle automático</p>
                 </div>
 
                 <div class="fade-up text-center">
-                    <div class="w-14 h-14 mx-auto mb-4 rounded-2xl bg-yellow-500/10 border border-yellow-500/30 flex items-center justify-center">
-                        <span class="material-symbols-outlined text-yellow-400 text-3xl">leaderboard</span>
+                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-yellow-500/15 border-2 border-yellow-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                        <span class="material-symbols-outlined text-yellow-400 text-4xl">leaderboard</span>
                     </div>
-                    <h3 class="font-semibold mb-1">Mais Vendidos</h3>
+                    <h3 class="font-bold mb-2">Mais Vendidos</h3>
                     <p class="text-sm text-slate-400">Ranking automático</p>
                 </div>
 
@@ -317,31 +331,31 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-            <div class="text-center mb-16 fade-up">
-                <span class="inline-block mb-5 px-4 py-1.5 text-xs rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+            <div class="text-center mb-20 fade-up">
+                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 backdrop-blur-sm">
                     BARES E RESTAURANTES
                 </span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Atendimento de mesa
-                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">do jeito certo</span>
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(168,85,247,0.3)]">do jeito certo</span>
                 </h2>
-                <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
                     Garçons com maquininha na mão, pedidos imprimindo automaticamente na cozinha
                     e comissão calculada na hora. Tudo em um sistema só.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid md:grid-cols-2 gap-14 items-center">
 
                 <!-- COLUNA TEXTO -->
-                <div class="fade-up space-y-6">
+                <div class="fade-up space-y-7">
 
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-blue-400">restaurant_menu</span>
+                    <div class="flex gap-5 group">
+                        <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
+                            <span class="material-symbols-outlined text-blue-400 text-2xl">restaurant_menu</span>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-lg mb-1">Comandas individuais ou por mesa</h3>
+                            <h3 class="font-bold text-lg mb-2">Comandas individuais ou por mesa</h3>
                             <p class="text-slate-400 text-sm leading-relaxed">
                                 Abra comandas separadas para cada cliente da mesa, divida a conta com facilidade
                                 e mantenha o controle de tudo que foi consumido.
@@ -349,25 +363,25 @@
                         </div>
                     </div>
 
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-blue-400">print</span>
+                    <div class="flex gap-5 group">
+                        <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
+                            <span class="material-symbols-outlined text-blue-400 text-2xl">print</span>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-lg mb-1">Impressão por setor de produção</h3>
+                            <h3 class="font-bold text-lg mb-2">Impressão por setor de produção</h3>
                             <p class="text-slate-400 text-sm leading-relaxed">
-                                Conecte até <b class="text-white">10 impressoras</b> de expedição. Bebidas vão pro bar,
+                                Conecte até <b class="text-white font-semibold">10 impressoras</b> de expedição. Bebidas vão pro bar,
                                 comidas vão pra cozinha — automaticamente.
                             </p>
                         </div>
                     </div>
 
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-blue-400">tune</span>
+                    <div class="flex gap-5 group">
+                        <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
+                            <span class="material-symbols-outlined text-blue-400 text-2xl">tune</span>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-lg mb-1">Modificadores de pedido</h3>
+                            <h3 class="font-bold text-lg mb-2">Modificadores de pedido</h3>
                             <p class="text-slate-400 text-sm leading-relaxed">
                                 Adicionais, remoções, ponto da carne, observações... Personalize qualquer prato
                                 com poucos toques — e o valor já se ajusta automaticamente.
@@ -375,12 +389,12 @@
                         </div>
                     </div>
 
-                    <div class="flex gap-4">
-                        <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-500/15 border border-blue-500/30 flex items-center justify-center">
-                            <span class="material-symbols-outlined text-blue-400">badge</span>
+                    <div class="flex gap-5 group">
+                        <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
+                            <span class="material-symbols-outlined text-blue-400 text-2xl">badge</span>
                         </div>
                         <div>
-                            <h3 class="font-semibold text-lg mb-1">Comissão de garçom em tempo real</h3>
+                            <h3 class="font-bold text-lg mb-2">Comissão de garçom em tempo real</h3>
                             <p class="text-slate-400 text-sm leading-relaxed">
                                 Cada venda é vinculada ao garçom responsável. Acompanhe a produtividade do time
                                 e a comissão acumulada direto no painel.
@@ -392,56 +406,56 @@
 
                 <!-- COLUNA VISUAL -->
                 <div class="fade-up relative">
-                    <div class="absolute inset-0 bg-blue-500/15 blur-3xl opacity-60"></div>
-                    <div class="relative bg-gradient-to-br from-slate-900/80 to-slate-950/80 border border-blue-500/20 rounded-2xl p-8 shadow-2xl shadow-blue-500/10">
+                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/10 blur-3xl opacity-60"></div>
+                    <div class="relative bg-gradient-to-br from-slate-900/90 to-slate-950/90 border-2 border-blue-500/30 rounded-3xl p-10 shadow-2xl shadow-blue-500/20 backdrop-blur-xl">
 
                         <!-- Mock comanda -->
-                        <div class="border-b border-white/10 pb-4 mb-4 flex justify-between items-center">
+                        <div class="border-b border-white/10 pb-5 mb-5 flex justify-between items-center">
                             <div>
-                                <p class="text-xs text-slate-500 uppercase tracking-wide">Mesa 12</p>
-                                <p class="text-lg font-semibold">Comanda #4821</p>
+                                <p class="text-xs text-slate-500 uppercase tracking-wide font-semibold">Mesa 12</p>
+                                <p class="text-xl font-bold">Comanda #4821</p>
                             </div>
-                            <span class="text-xs bg-green-500/15 text-green-400 px-2 py-1 rounded-full border border-green-500/30">Aberta</span>
+                            <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1.5 rounded-full border border-green-500/40 font-semibold">Aberta</span>
                         </div>
 
-                        <div class="space-y-3 mb-5">
+                        <div class="space-y-4 mb-6">
                             <div class="flex justify-between text-sm">
                                 <div>
-                                    <p>2x Hambúrguer Artesanal</p>
-                                    <p class="text-xs text-slate-500">+ bacon, sem cebola</p>
+                                    <p class="font-medium">2x Hambúrguer Artesanal</p>
+                                    <p class="text-xs text-slate-500 mt-1">+ bacon, sem cebola</p>
                                 </div>
-                                <p class="text-blue-300 font-semibold">R$ 78,00</p>
+                                <p class="text-blue-300 font-bold">R$ 78,00</p>
                             </div>
                             <div class="flex justify-between text-sm">
-                                <p>1x Batata Frita G</p>
-                                <p class="text-blue-300 font-semibold">R$ 24,90</p>
+                                <p class="font-medium">1x Batata Frita G</p>
+                                <p class="text-blue-300 font-bold">R$ 24,90</p>
                             </div>
                             <div class="flex justify-between text-sm">
-                                <p>3x Chopp Pilsen 300ml</p>
-                                <p class="text-blue-300 font-semibold">R$ 36,00</p>
+                                <p class="font-medium">3x Chopp Pilsen 300ml</p>
+                                <p class="text-blue-300 font-bold">R$ 36,00</p>
                             </div>
                         </div>
 
-                        <div class="border-t border-white/10 pt-4 space-y-2">
+                        <div class="border-t border-white/10 pt-5 space-y-3">
                             <div class="flex justify-between text-sm text-slate-400">
                                 <span>Subtotal</span>
-                                <span>R$ 138,90</span>
+                                <span class="font-medium">R$ 138,90</span>
                             </div>
                             <div class="flex justify-between text-sm text-slate-400">
                                 <span>Taxa de serviço (10%)</span>
-                                <span>R$ 13,89</span>
+                                <span class="font-medium">R$ 13,89</span>
                             </div>
-                            <div class="flex justify-between text-base font-bold pt-2 border-t border-white/10">
+                            <div class="flex justify-between text-base font-extrabold pt-3 border-t border-white/10">
                                 <span>Total</span>
                                 <span class="text-blue-300">R$ 152,79</span>
                             </div>
                         </div>
 
-                        <div class="mt-5 p-3 bg-blue-500/10 border border-blue-500/20 rounded-lg flex items-center gap-3 text-sm">
-                            <span class="material-symbols-outlined text-blue-400">person</span>
+                        <div class="mt-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center gap-4 text-sm backdrop-blur-sm">
+                            <span class="material-symbols-outlined text-blue-400 text-2xl">person</span>
                             <div>
-                                <p class="text-xs text-slate-500">Garçom</p>
-                                <p class="font-semibold">Pedro Silva</p>
+                                <p class="text-xs text-slate-500 font-semibold">Garçom</p>
+                                <p class="font-bold">Pedro Silva</p>
                             </div>
                         </div>
 
@@ -463,13 +477,13 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-            <div class="text-center mb-16 fade-up">
-                <span class="inline-block mb-5 px-4 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+            <div class="text-center mb-20 fade-up">
+                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
                     FUNCIONALIDADES
                 </span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Recursos que
-                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">aceleram suas vendas</span>
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">aceleram suas vendas</span>
                 </h2>
                 <p class="text-slate-400 text-lg">
                     Tudo o que sua operação precisa, sem complicação
@@ -478,76 +492,76 @@
 
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-blue-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-blue-400 text-3xl">smartphone</span>
-                    <h3 class="mt-4 font-semibold">Roda em qualquer Android</h3>
-                    <p class="text-sm text-slate-400 mt-1">Maquininha, celular ou tablet.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-blue-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-4xl drop-shadow-lg">smartphone</span>
+                    <h3 class="mt-5 font-bold text-base">Roda em qualquer Android</h3>
+                    <p class="text-sm text-slate-400 mt-2">Maquininha, celular ou tablet.</p>
                 </div>
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-purple-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-purple-400 text-3xl">receipt_long</span>
-                    <h3 class="mt-4 font-semibold">Emissão NFC-e</h3>
-                    <p class="text-sm text-slate-400 mt-1">Cupom fiscal direto da maquininha.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-purple-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-purple-500/20">
+                    <span class="material-symbols-outlined text-purple-400 text-4xl drop-shadow-lg">receipt_long</span>
+                    <h3 class="mt-5 font-bold text-base">Emissão NFC-e</h3>
+                    <p class="text-sm text-slate-400 mt-2">Cupom fiscal direto da maquininha.</p>
                 </div>
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-green-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-green-400 text-3xl">restaurant_menu</span>
-                    <h3 class="mt-4 font-semibold">Comandas e Mesas</h3>
-                    <p class="text-sm text-slate-400 mt-1">Atendimento direto na mesa.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-green-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-green-500/20">
+                    <span class="material-symbols-outlined text-green-400 text-4xl drop-shadow-lg">restaurant_menu</span>
+                    <h3 class="mt-5 font-bold text-base">Comandas e Mesas</h3>
+                    <p class="text-sm text-slate-400 mt-2">Atendimento direto na mesa.</p>
                 </div>
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-yellow-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-yellow-400 text-3xl">touch_app</span>
-                    <h3 class="mt-4 font-semibold">Interface Intuitiva</h3>
-                    <p class="text-sm text-slate-400 mt-1">Treinamento mínimo da equipe.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-yellow-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-yellow-500/20">
+                    <span class="material-symbols-outlined text-yellow-400 text-4xl drop-shadow-lg">touch_app</span>
+                    <h3 class="mt-5 font-bold text-base">Interface Intuitiva</h3>
+                    <p class="text-sm text-slate-400 mt-2">Treinamento mínimo da equipe.</p>
                 </div>
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-orange-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-orange-400 text-3xl">qr_code_scanner</span>
-                    <h3 class="mt-4 font-semibold">Leitura de Código</h3>
-                    <p class="text-sm text-slate-400 mt-1">Câmera ou scanner integrado.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-orange-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
+                    <span class="material-symbols-outlined text-orange-400 text-4xl drop-shadow-lg">qr_code_scanner</span>
+                    <h3 class="mt-5 font-bold text-base">Leitura de Código</h3>
+                    <p class="text-sm text-slate-400 mt-2">Câmera ou scanner integrado.</p>
                 </div>
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-red-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-red-400 text-3xl">print</span>
-                    <h3 class="mt-4 font-semibold">Até 10 Impressoras</h3>
-                    <p class="text-sm text-slate-400 mt-1">Bar, cozinha e produção.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-red-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-red-500/20">
+                    <span class="material-symbols-outlined text-red-400 text-4xl drop-shadow-lg">print</span>
+                    <h3 class="mt-5 font-bold text-base">Até 10 Impressoras</h3>
+                    <p class="text-sm text-slate-400 mt-2">Bar, cozinha e produção.</p>
                 </div>
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-emerald-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-emerald-400 text-3xl">payments</span>
-                    <h3 class="mt-4 font-semibold">Pagamento Integrado</h3>
-                    <p class="text-sm text-slate-400 mt-1">Pix, cartão e dinheiro.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-emerald-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-emerald-500/20">
+                    <span class="material-symbols-outlined text-emerald-400 text-4xl drop-shadow-lg">payments</span>
+                    <h3 class="mt-5 font-bold text-base">Pagamento Integrado</h3>
+                    <p class="text-sm text-slate-400 mt-2">Pix, cartão e dinheiro.</p>
                 </div>
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-indigo-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-indigo-400 text-3xl">cloud_sync</span>
-                    <h3 class="mt-4 font-semibold">Sincronização em Nuvem</h3>
-                    <p class="text-sm text-slate-400 mt-1">Dados sempre atualizados.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-indigo-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20">
+                    <span class="material-symbols-outlined text-indigo-400 text-4xl drop-shadow-lg">cloud_sync</span>
+                    <h3 class="mt-5 font-bold text-base">Sincronização em Nuvem</h3>
+                    <p class="text-sm text-slate-400 mt-2">Dados sempre atualizados.</p>
                 </div>
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-cyan-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-cyan-400 text-3xl">badge</span>
-                    <h3 class="mt-4 font-semibold">Controle de Garçom</h3>
-                    <p class="text-sm text-slate-400 mt-1">Comissão automática por venda.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-cyan-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20">
+                    <span class="material-symbols-outlined text-cyan-400 text-4xl drop-shadow-lg">badge</span>
+                    <h3 class="mt-5 font-bold text-base">Controle de Garçom</h3>
+                    <p class="text-sm text-slate-400 mt-2">Comissão automática por venda.</p>
                 </div>
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-pink-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-pink-400 text-3xl">confirmation_number</span>
-                    <h3 class="mt-4 font-semibold">Fichas e Senhas</h3>
-                    <p class="text-sm text-slate-400 mt-1">Ideal para eventos e food trucks.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-pink-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-pink-500/20">
+                    <span class="material-symbols-outlined text-pink-400 text-4xl drop-shadow-lg">confirmation_number</span>
+                    <h3 class="mt-5 font-bold text-base">Fichas e Senhas</h3>
+                    <p class="text-sm text-slate-400 mt-2">Ideal para eventos e food trucks.</p>
                 </div>
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-amber-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-amber-400 text-3xl">scale</span>
-                    <h3 class="mt-4 font-semibold">Integração com Balança</h3>
-                    <p class="text-sm text-slate-400 mt-1">Para venda por peso.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-amber-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-amber-500/20">
+                    <span class="material-symbols-outlined text-amber-400 text-4xl drop-shadow-lg">scale</span>
+                    <h3 class="mt-5 font-bold text-base">Integração com Balança</h3>
+                    <p class="text-sm text-slate-400 mt-2">Para venda por peso.</p>
                 </div>
 
-                <div class="bg-slate-900/60 border border-white/10 p-6 rounded-2xl hover:scale-[1.03] hover:border-teal-400/40 transition duration-500 fade-up">
-                    <span class="material-symbols-outlined text-teal-400 text-3xl">analytics</span>
-                    <h3 class="mt-4 font-semibold">Relatórios Completos</h3>
-                    <p class="text-sm text-slate-400 mt-1">Por horário, produto e forma.</p>
+                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-teal-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-teal-500/20">
+                    <span class="material-symbols-outlined text-teal-400 text-4xl drop-shadow-lg">analytics</span>
+                    <h3 class="mt-5 font-bold text-base">Relatórios Completos</h3>
+                    <p class="text-sm text-slate-400 mt-2">Por horário, produto e forma.</p>
                 </div>
 
             </div>
@@ -564,79 +578,79 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-            <div class="text-center mb-16 fade-up">
-                <span class="inline-block mb-5 px-4 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+            <div class="text-center mb-20 fade-up">
+                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
                     SEGMENTOS
                 </span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Feito sob medida para
-                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">food service e varejo</span>
+                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">food service e varejo</span>
                 </h2>
                 <p class="text-slate-400 text-lg">
                     Negócios que precisam de mobilidade, agilidade e simplicidade
                 </p>
             </div>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">restaurant</span>
-                    <p class="text-sm font-semibold mt-2">Restaurantes</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">restaurant</span>
+                    <p class="text-sm font-bold mt-3">Restaurantes</p>
                 </div>
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">lunch_dining</span>
-                    <p class="text-sm font-semibold mt-2">Lanchonetes</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">lunch_dining</span>
+                    <p class="text-sm font-bold mt-3">Lanchonetes</p>
                 </div>
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">local_bar</span>
-                    <p class="text-sm font-semibold mt-2">Bares</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">local_bar</span>
+                    <p class="text-sm font-bold mt-3">Bares</p>
                 </div>
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">icecream</span>
-                    <p class="text-sm font-semibold mt-2">Sorveterias</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">icecream</span>
+                    <p class="text-sm font-bold mt-3">Sorveterias</p>
                 </div>
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">local_dining</span>
-                    <p class="text-sm font-semibold mt-2">Food Trucks</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">local_dining</span>
+                    <p class="text-sm font-bold mt-3">Food Trucks</p>
                 </div>
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">store</span>
-                    <p class="text-sm font-semibold mt-2">Conveniência</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">store</span>
+                    <p class="text-sm font-bold mt-3">Conveniência</p>
                 </div>
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">storefront</span>
-                    <p class="text-sm font-semibold mt-2">Quiosques</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">storefront</span>
+                    <p class="text-sm font-bold mt-3">Quiosques</p>
                 </div>
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">festival</span>
-                    <p class="text-sm font-semibold mt-2">Eventos</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">festival</span>
+                    <p class="text-sm font-bold mt-3">Eventos</p>
                 </div>
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">bakery_dining</span>
-                    <p class="text-sm font-semibold mt-2">Padarias</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">bakery_dining</span>
+                    <p class="text-sm font-bold mt-3">Padarias</p>
                 </div>
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">coffee</span>
-                    <p class="text-sm font-semibold mt-2">Cafeterias</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">coffee</span>
+                    <p class="text-sm font-bold mt-3">Cafeterias</p>
                 </div>
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">delivery_dining</span>
-                    <p class="text-sm font-semibold mt-2">Delivery</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">delivery_dining</span>
+                    <p class="text-sm font-bold mt-3">Delivery</p>
                 </div>
 
-                <div class="fade-up bg-slate-900/60 border border-white/10 rounded-2xl p-5 text-center hover:border-blue-400/40 hover:scale-105 transition duration-500">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl">pets</span>
-                    <p class="text-sm font-semibold mt-2">Pet Shops</p>
+                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">pets</span>
+                    <p class="text-sm font-bold mt-3">Pet Shops</p>
                 </div>
 
             </div>
@@ -654,15 +668,15 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
-            <div class="text-center mb-16 fade-up">
-                <span class="inline-block mb-5 px-4 py-1.5 text-xs rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+            <div class="text-center mb-20 fade-up">
+                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
                     INTEGRAÇÕES OFICIAIS
                 </span>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4">
+                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Adquirentes
-                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">homologadas</span>
+                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">homologadas</span>
                 </h2>
-                <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+                <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
                     Compatível com as principais maquininhas do mercado.
                     Use a adquirente que você já tem ou contrate uma nova com as melhores taxas.
                 </p>
@@ -747,20 +761,23 @@
 
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10 fade-up">
 
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+            <h2 class="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">
                 Leve seu negócio para a
-                <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">palma da mão</span>
+                <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">palma da mão</span>
             </h2>
 
-            <p class="text-slate-400 text-lg mb-10">
+            <p class="text-slate-400 text-lg mb-12 leading-relaxed">
                 Fale com nosso time e descubra como o PDV Legal pode reduzir custos e dar mais agilidade ao seu atendimento.
             </p>
 
             <button onclick="abrirWhats('Olá! Quero contratar o PDV Legal.')"
-                class="bg-gradient-to-r from-green-500 to-green-600 px-8 py-4 rounded-xl font-semibold text-lg
-                shadow-lg shadow-green-500/30 hover:shadow-green-500/50
-                hover:scale-105 transition-all duration-500">
-                💬 Falar com especialista
+                class="bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-10 py-5 rounded-xl font-bold text-lg
+                shadow-2xl shadow-green-500/40 hover:shadow-3xl hover:shadow-green-500/60
+                hover:scale-110 transition-all duration-700 group overflow-hidden relative">
+                
+                <span class="relative z-10">💬 Falar com especialista</span>
+                
+                <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
             </button>
 
         </div>
@@ -773,11 +790,10 @@
 
     <!-- BOTÃO WHATS FIXO -->
     <button onclick="abrirWhats('Olá! Quero saber mais sobre o PDV Legal.')"
-        class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 p-4 rounded-full shadow-xl shadow-green-500/30 hover:scale-110 transition duration-500 z-50 whats-float">
+        class="fixed bottom-6 right-6 bg-gradient-to-r from-green-500 to-green-600 p-5 rounded-full shadow-2xl shadow-green-500/40 hover:shadow-3xl hover:shadow-green-500/60 hover:scale-125 transition-all duration-700 z-50 whats-float text-2xl">
         💬
     </button>
 
-    <script src="./assets/js/theme-toggle.js"></script>
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>
