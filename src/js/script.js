@@ -267,9 +267,9 @@ function iniciarKellyIa() {
       <div class="kellyia-options"></div>
     </section>
 
-    <button type="button" class="kellyia-toggle" aria-expanded="false" aria-controls="kellyIaWidget">
-      <img src="assets/images/tsuru.png" width="34" height="34" alt="" loading="lazy" decoding="async">
-      <span>Fale com a TsuruIA</span>
+    <button type="button" class="kellyia-toggle" aria-label="Falar no WhatsApp">
+      <span aria-hidden="true">💬</span>
+      <span>WhatsApp</span>
     </button>
   `;
 
@@ -286,7 +286,6 @@ function iniciarKellyIa() {
 
   function setOpen(isOpen) {
     widget.classList.toggle("kellyia-open", isOpen);
-    toggle.setAttribute("aria-expanded", String(isOpen));
 
     if (!isOpen) {
       resetChat();
@@ -325,14 +324,23 @@ function iniciarKellyIa() {
     options.appendChild(button);
   });
 
-  toggle.addEventListener("click", () => setOpen(!widget.classList.contains("kellyia-open")));
+  toggle.addEventListener("click", () => abrirWhats());
+
+  document.querySelectorAll("[data-tsuru-open]").forEach(button => {
+    button.addEventListener("click", event => {
+      event.stopPropagation();
+      setOpen(true);
+    });
+  });
+
   close.addEventListener("click", () => setOpen(false));
 
   document.addEventListener("click", event => {
     const isOpen = widget.classList.contains("kellyia-open");
     const clickedInsideWidget = widget.contains(event.target);
+    const clickedTsuruButton = event.target.closest("[data-tsuru-open]");
 
-    if (isOpen && !clickedInsideWidget) {
+    if (isOpen && !clickedInsideWidget && !clickedTsuruButton) {
       setOpen(false);
     }
   });

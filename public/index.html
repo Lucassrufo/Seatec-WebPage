@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' ws://127.0.0.1:* ws://localhost:* http://127.0.0.1:* http://localhost:*; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -86,16 +86,17 @@
       </nav>
 
       <div class="hidden md:block">
-      <button data-whatsapp class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 bg-size-200 bg-pos-0 hover:bg-pos-100 px-6 py-3 rounded-xl text-sm font-semibold 
-      shadow-lg shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/50 
+      <button data-tsuru-open class="relative bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-size-200 bg-pos-0 hover:bg-pos-100 px-5 py-3 rounded-xl text-sm font-semibold 
+      shadow-lg shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/50 
       hover:scale-110 transition-all duration-700 group overflow-hidden">
 
         <span class="relative z-10 flex items-center gap-2">
-          💬 Falar no WhatsApp
+          <img src="assets/images/tsuru.png" width="26" height="26" alt="" loading="lazy" decoding="async" class="h-6 w-6 object-contain">
+          Fale com a TsuruIA
         </span>
 
         <!-- glow effect -->
-        <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
+        <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400/30 to-cyan-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
       </button>
       </div>
 
@@ -113,7 +114,7 @@
         <a href="#funcionalidades" class="py-2">Funcionalidades</a>
         <a href="#depoimentos" class="py-2">Depoimentos</a>
         <a href="#contatos" class="py-2">Contatos</a>
-        <button data-whatsapp class="mt-2 rounded-xl bg-green-500 px-5 py-3 text-left font-bold text-white">Falar no WhatsApp</button>
+        <button data-tsuru-open class="mt-2 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-left font-bold text-white"><img src="assets/images/tsuru.png" width="24" height="24" alt="" loading="lazy" decoding="async" class="h-6 w-6 object-contain">Fale com a TsuruIA</button>
       </div>
     </nav>
   </header>
@@ -842,6 +843,18 @@
               </a>
             </div>
 
+            <div>
+              <p class="text-white font-semibold mb-2">Redes sociais</p>
+              <a href="https://www.instagram.com/pdvlegal_aricanduva/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da SEATEC" class="inline-flex items-center gap-2 hover:text-pink-400 transition-colors duration-500">
+                <svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                  <circle cx="12" cy="12" r="4"></circle>
+                  <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+                </svg>
+                <span>Instagram</span>
+              </a>
+            </div>
+
           </div>
         </div>
 
@@ -954,3 +967,4 @@
 </body>
 
 </html>
+

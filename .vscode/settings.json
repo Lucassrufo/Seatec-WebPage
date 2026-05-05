@@ -1,0 +1,8 @@
+{
+  "liveServer.settings.root": "/public",
+  "liveServer.settings.file": "index.html",
+  "liveServer.settings.ignoreFiles": [
+    "**/.git/**",
+    "**/node_modules/**"
+  ]
+}
