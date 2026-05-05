@@ -49,24 +49,60 @@
     <!-- HEADER -->
     <header
         class="fixed w-full z-50 backdrop-blur-2xl bg-slate-900/70 border-b border-white/10 shadow-2xl shadow-black/30 transition-all duration-700">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center gap-6">
             <a href="index.html" class="flex items-center gap-3">
                 <img src="assets/images/logo_seatec.png" width="2550" height="625" decoding="async"
                     class="h-8 w-auto transition-all duration-700 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"
                     alt="SEATEC">
             </a>
 
-            <a href="index.html#sistemas"
-                class="group inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-100 shadow-lg shadow-blue-500/10 backdrop-blur-xl transition-all duration-700 hover:-translate-y-0.5 hover:border-blue-300/70 hover:bg-blue-500/20 hover:text-white hover:shadow-blue-500/25">
-                <span
-                    class="material-symbols-outlined text-lg transition-transform duration-700 group-hover:-translate-x-1">arrow_back</span>
-                Voltar
-            </a>
+            <nav class="hidden xl:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-sm text-slate-300 backdrop-blur-xl">
+                <a href="#inicio" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Início</a>
+                <a href="#diferenciais" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Diferenciais</a>
+                <a href="#gestao" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Gestão</a>
+                <a href="#funcionalidades" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Funcionalidades</a>
+                <a href="#adquirentes" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Adquirentes</a>
+                <a href="#contato" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Contato</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html#sistemas"
+                    class="hidden sm:inline-flex group items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-100 shadow-lg shadow-blue-500/10 backdrop-blur-xl transition-all duration-700 hover:-translate-y-0.5 hover:border-blue-300/70 hover:bg-blue-500/20 hover:text-white hover:shadow-blue-500/25">
+                    <span
+                        class="material-symbols-outlined text-lg transition-transform duration-700 group-hover:-translate-x-1">arrow_back</span>
+                    Voltar
+                </a>
+
+                <button data-whatsapp="Olá! Quero saber mais sobre o PDV Legal."
+                    class="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-green-500 to-green-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-green-500/20 transition-all duration-700 hover:-translate-y-0.5 hover:shadow-green-500/35">
+                    <span class="material-symbols-outlined text-base">chat</span>
+                    WhatsApp
+                </button>
+
+                <button type="button" data-mobile-menu-toggle aria-controls="mobileMenu" aria-expanded="false"
+                    class="xl:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition-all duration-700 hover:bg-white/10 hover:text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden xl:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-xl">
+            <nav class="max-w-7xl mx-auto px-6 py-4 grid gap-2 text-sm text-slate-300">
+                <a href="#inicio" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Início</a>
+                <a href="#diferenciais" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Diferenciais</a>
+                <a href="#gestao" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Gestão</a>
+                <a href="#food-service" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Food service</a>
+                <a href="#funcionalidades" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Funcionalidades</a>
+                <a href="#segmentos" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Segmentos</a>
+                <a href="#adquirentes" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Adquirentes</a>
+                <a href="#contato" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Contato</a>
+                <a href="index.html#sistemas" class="rounded-xl px-4 py-3 text-blue-200 hover:bg-blue-500/10 hover:text-white transition-all duration-700">Voltar para sistemas</a>
+            </nav>
         </div>
     </header>
 
     <!-- HERO -->
-    <section class="pt-36 pb-24 bg-gradient-to-br from-blue-900/40 via-slate-900 to-black relative overflow-hidden">
+    <section id="inicio" class="pt-36 pb-24 bg-gradient-to-br from-blue-900/40 via-slate-900 to-black relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div
@@ -123,6 +159,20 @@
                         <span
                             class="material-symbols-outlined text-base transition-transform duration-700 group-hover:translate-x-2">arrow_forward</span>
                     </a>
+
+                    <button type="button" data-pdv-video-modal-open
+                        class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-size-200 bg-pos-0 hover:bg-pos-100 shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-cyan-500/35 hover:scale-105 transition-all duration-700 flex items-center gap-2 group font-semibold">
+                        Conhe&ccedil;a o PDV LEGAL
+                        <span
+                            class="material-symbols-outlined text-base transition-transform duration-700 group-hover:scale-110">play_circle</span>
+                    </button>
+
+                    <a href="https://ajuda.pdvlegal.com.br/" target="_blank" rel="noopener noreferrer"
+                        class="px-8 py-4 rounded-xl border-2 border-cyan-300/20 hover:border-cyan-300/55 bg-cyan-400/10 hover:bg-cyan-400/15 backdrop-blur-xl transition-all duration-700 flex items-center gap-2 group shadow-lg hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-105 font-semibold">
+                        Ajuda PDV Legal
+                        <span
+                            class="material-symbols-outlined text-base transition-transform duration-700 group-hover:-translate-y-1 group-hover:translate-x-1">open_in_new</span>
+                    </a>
                 </div>
 
                 <!-- BENEFÍCIOS -->
@@ -167,7 +217,7 @@
     </section>
 
     <!-- POR QUE PDV NA MAQUININHA -->
-    <section class="py-28 bg-gradient-to-b from-black via-slate-950 to-slate-900 relative overflow-hidden">
+    <section id="diferenciais" class="py-28 bg-gradient-to-b from-black via-slate-950 to-slate-900 relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 blur-3xl rounded-full"></div>
@@ -304,7 +354,7 @@
     </section>
 
     <!-- DASHBOARD / RETAGUARDA -->
-    <section class="py-32 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 relative overflow-hidden">
+    <section id="gestao" class="py-32 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-0 left-1/3 w-[600px] h-[600px] bg-blue-500/10 blur-3xl rounded-full"></div>
@@ -398,7 +448,7 @@
     </section>
 
     <!-- COMANDAS E COMISSÃO (DESTAQUE FOOD SERVICE) -->
-    <section class="py-28 bg-gradient-to-b from-slate-900 to-black relative overflow-hidden">
+    <section id="food-service" class="py-28 bg-gradient-to-b from-slate-900 to-black relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-3xl rounded-full"></div>
@@ -677,7 +727,7 @@
     </section>
 
     <!-- IDEAL PARA -->
-    <section class="py-28 bg-gradient-to-b from-slate-950 to-slate-900 relative overflow-hidden">
+    <section id="segmentos" class="py-28 bg-gradient-to-b from-slate-950 to-slate-900 relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div
@@ -783,7 +833,7 @@
     </section>
 
     <!-- ADQUIRENTES HOMOLOGADAS -->
-    <section class="py-32 bg-gradient-to-b from-slate-900 via-slate-950 to-black relative overflow-hidden">
+    <section id="adquirentes" class="py-32 bg-gradient-to-b from-slate-900 via-slate-950 to-black relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-20 left-1/3 w-[500px] h-[500px] bg-blue-500/10 blur-3xl rounded-full"></div>
@@ -809,7 +859,7 @@
                     Use a adquirente que você já tem ou contrate uma nova com as melhores taxas.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                 <div class="adquirente-card" data-delay="0">
                     <div class="adquirente-logo">
@@ -867,7 +917,7 @@
     </section>
 
     <!-- CLIENTES -->
-    <section class="py-24 bg-gradient-to-b from-black via-slate-950 to-black relative overflow-hidden">
+    <section id="clientes" class="py-24 bg-gradient-to-b from-black via-slate-950 to-black relative overflow-hidden">
         <div class="absolute inset-0 pointer-events-none">
             <div
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[420px] bg-blue-500/10 blur-3xl rounded-full">
@@ -941,7 +991,7 @@
     </section>
 
     <!-- CTA FINAL -->
-    <section class="py-24 bg-gradient-to-b from-black via-slate-950 to-black relative overflow-hidden">
+    <section id="contato" class="py-24 bg-gradient-to-b from-black via-slate-950 to-black relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div
@@ -976,10 +1026,287 @@
         </div>
     </section>
 
-    <!-- FOOTER MINI -->
-    <footer class="border-t border-white/10 py-8 text-center text-slate-500 text-sm">
-        © 2026 Seatec Soluções Tecnológicas — Todos os direitos reservados
+    <!-- FOOTER -->
+    <footer
+        class="bg-gradient-to-b from-slate-950 via-black to-black border-t border-white/10 pt-20 pb-10 relative overflow-hidden">
+
+        <!-- FUNDO DECORATIVO -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/3 w-[400px] h-[400px] bg-blue-500/10 blur-3xl rounded-full"></div>
+            <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-purple-500/10 blur-3xl rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- GRID -->
+            <div class="grid md:grid-cols-4 gap-12 mb-14">
+
+                <!-- LOGO + DESC -->
+                <div>
+                    <img src="assets/images/logo_seatec.png" width="2550" height="625" loading="lazy" decoding="async"
+                        class="h-9 w-auto mb-5 transition-all duration-700 hover:scale-110" alt="SEATEC">
+
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Desde 2012 ajudando empresas a crescer com tecnologia, automação comercial e sistemas PDV
+                        eficientes.
+                    </p>
+
+                    <!-- MINI BADGE -->
+                    <div
+                        class="mt-5 text-xs text-green-400 bg-green-500/10 inline-block px-4 py-2 rounded-full font-semibold border border-green-500/20">
+                        +400 clientes atendidos
+                    </div>
+                </div>
+
+            
+
+                <!-- SISTEMAS -->
+                <div>
+                    <h4 class="font-bold mb-5 text-white">Soluções</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="hover:text-white transition-colors duration-700 cursor-pointer" href="voe.html">
+                            VoePDV (Windows)</li>
+                        <li class="hover:text-white transition-colors duration-700 cursor-pointer"
+                            href="pdv-legal.html">PDV Legal (Android)</li>
+                        <li class="hover:text-white transition-colors duration-700 cursor-pointer">Automação Comercial
+                        </li>
+                        <li class="hover:text-white transition-colors duration-700 cursor-pointer">Implantação e Suporte
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CONTATO -->
+                <div>
+                    <h4 class="font-bold mb-5 text-white">Contato</h4>
+
+                    <div class="space-y-5 text-sm text-slate-400">
+
+                        <div>
+                            <p class="text-white font-semibold mb-1">Comercial</p>
+                            <a href="https://wa.me/551133846313?text=Olá,%20quero%20saber%20mais%20sobre%20os%20sistemas%20PDV"
+                                target="_blank" rel="noopener noreferrer"
+                                class="hover:text-green-400 transition-colors duration-700 cursor-pointer inline-block">
+                                +55 11 3384-6313
+                            </a>
+                        </div>
+
+                        <div>
+                            <p class="text-white font-semibold mb-1">Suporte</p>
+                            <a href="https://wa.me/551142101779?text=Olá,%20preciso%20de%20suporte%20técnico"
+                                target="_blank" rel="noopener noreferrer"
+                                class="hover:text-green-400 transition-colors duration-700 cursor-pointer inline-block">
+                                +55 11 4210-1779
+                            </a>
+                        </div>
+
+                        <div>
+                            <p class="text-white font-semibold mb-1">Email</p>
+                            <a href="mailto:suporte@seatec.com.br"
+                                class="hover:text-purple-400 transition-colors duration-700 cursor-pointer inline-block">
+                                suporte@seatec.com.br
+                            </a>
+                        </div>
+
+                        <div>
+                            <p class="text-white font-semibold mb-2">Redes sociais</p>
+                            <a href="https://www.instagram.com/pdvlegal_aricanduva/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram da SEATEC"
+                                class="inline-flex items-center gap-2 hover:text-pink-400 transition-colors duration-700">
+                                <svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+                                </svg>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-legal-info">
+                <div class="footer-legal-info__grid">
+                    <div class="footer-legal-info__item">
+                        <span class="footer-legal-info__icon" aria-hidden="true">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </span>
+                        <div>
+                            <p class="footer-legal-info__label">Endere&ccedil;o</p>
+                            <p class="footer-legal-info__text">Av Rio das pedras, 3473 - Jardim Aricanduva, S&atilde;o Paulo SP, CEP: 03930-310</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-legal-info__item">
+                        <span class="footer-legal-info__icon" aria-hidden="true">
+                            <span class="material-symbols-outlined">corporate_fare</span>
+                        </span>
+                        <div>
+                            <p class="footer-legal-info__label">Empresa</p>
+                            <p class="footer-legal-info__text">Seatec Solu&ccedil;&otilde;es Tecnol&oacute;gicas LTDA - CNPJ: 16.643.360/0001-41</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-legal-info__item">
+                        <span class="footer-legal-info__icon" aria-hidden="true">
+                            <span class="material-symbols-outlined">verified_user</span>
+                        </span>
+                        <div>
+                            <p class="footer-legal-info__label">Transpar&ecirc;ncia</p>
+                            <p class="footer-legal-info__text">Art. 49 do C&oacute;digo de Defesa do Consumidor: Garantia de 7 dias para cancelamento ap&oacute;s a contrata&ccedil;&atilde;o. Utilizamos a API Oficial do WhatsApp para comunica&ccedil;&atilde;o com clientes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIVISÃO -->
+            <div class="border-t border-white/10 pt-7 flex flex-col md:flex-row justify-between items-center gap-4">
+
+                <p class="text-slate-500 text-sm text-center md:text-left">
+                    © 2026 Seatec Soluções Tecnológicas — Todos os direitos reservados
+                </p>
+
+                <div class="flex gap-4 text-slate-400 text-sm">
+                    <span class="hover:text-white transition-colors duration-700 cursor-pointer">Automação
+                        Comercial</span>
+                    <span>•</span>
+                    <span class="hover:text-white transition-colors duration-700 cursor-pointer">Sistemas PDV</span>
+                    <span>•</span>
+                    <span class="hover:text-white transition-colors duration-700 cursor-pointer">Suporte
+                        Especializado</span>
+                </div>
+
+            </div>
+
+        </div>
     </footer>
+    <!-- MODAL SISTEMA -->
+    <div id="modalSistema" class="fixed inset-0 z-50 hidden items-center justify-center p-6">
+
+
+        <!-- BACKDROP -->
+        <div data-modal-close id="backdrop"
+            class="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-700">
+        </div>
+
+        <!-- CAIXA -->
+        <div id="modalBox" class="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto
+    rounded-3xl border-2 border-white/10
+    bg-gradient-to-br from-slate-900/95 to-slate-950/95
+    shadow-2xl shadow-black/50 backdrop-blur-xl
+
+    opacity-0 scale-90 translate-y-10
+    transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
+
+            <!-- HEADER -->
+            <div class="flex justify-between items-center p-7 border-b border-white/10">
+                <div class="flex items-center gap-4">
+                    <img id="modalLogo" src="" width="852" height="214" loading="lazy" decoding="async"
+                        class="h-10 w-auto hidden" alt="Logo sistema">
+                    <h3 id="modalTitulo" class="text-2xl font-bold"></h3>
+                </div>
+
+                <button data-modal-close class="w-10 h-10 flex items-center justify-center rounded-full
+        hover:bg-white/10 transition-all duration-700 text-slate-300 hover:text-white hover:scale-110">
+                    ✕
+                </button>
+            </div>
+
+            <!-- CONTEÚDO -->
+            <div class="p-10 space-y-10">
+
+                <!-- DESCRIÇÃO -->
+                <p id="modalDescricao" class="text-slate-300 leading-relaxed text-lg max-w-3xl">
+                </p>
+
+                <!-- GRID -->
+                <div class="grid md:grid-cols-2 gap-10 items-start">
+
+                    <!-- LISTA -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-5 text-white">
+                            Funcionalidades
+                        </h4>
+
+                        <ul id="modalLista" class="space-y-3 text-sm text-slate-300">
+                        </ul>
+                    </div>
+
+                    <!-- VIDEO -->
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-700">
+                        </div>
+
+                        <iframe id="modalVideo"
+                            class="relative w-full h-[260px] rounded-xl border-2 border-white/10 shadow-lg" src=""
+                            frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                            allow="fullscreen; picture-in-picture">
+                        </iframe>
+                    </div>
+
+                </div>
+
+
+                <!-- CTA -->
+                <div class="flex justify-between items-center flex-col md:flex-row gap-6 pt-5 border-t border-white/10">
+
+                    <span class="text-slate-400 text-sm">
+                        Quer implementar esse sistema no seu negócio?
+                    </span>
+
+                    <button data-whatsapp class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-7 py-4 rounded-xl font-bold
+            transition-all duration-700 transform hover:scale-110 active:scale-95
+            shadow-xl shadow-green-500/40 hover:shadow-2xl hover:shadow-green-500/60">
+                        Falar com especialista
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="pdvVideoModal" class="pdv-video-modal" aria-hidden="true" role="dialog" aria-modal="true"
+        aria-labelledby="pdvVideoModalTitle">
+        <div class="pdv-video-modal__backdrop" data-pdv-video-modal-close></div>
+
+        <div class="pdv-video-modal__box" role="document">
+            <div class="pdv-video-modal__header">
+                <div>
+                    <span class="pdv-video-modal__eyebrow">Demonstra&ccedil;&atilde;o em v&iacute;deo</span>
+                    <h3 id="pdvVideoModalTitle" class="pdv-video-modal__title">Conhe&ccedil;a o PDV LEGAL</h3>
+                </div>
+
+                <button type="button" class="pdv-video-modal__close" data-pdv-video-modal-close
+                    aria-label="Fechar v&iacute;deo do PDV Legal">
+                    <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                </button>
+            </div>
+
+            <div class="pdv-video-modal__content">
+                <div class="pdv-video-modal__video">
+                    <iframe id="pdvVideoFrame" title="Conhe&ccedil;a o PDV Legal"
+                        data-src="https://www.youtube-nocookie.com/embed/EpBA8pgvEOc?rel=0&modestbranding=1&playsinline=1"
+                        src="" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="pdv-video-modal__actions">
+                    <a href="https://www.youtube.com/watch?v=Dcx76e0ITvM&list=PLjkQMYhjHLHEIi9-ZLwoX_AkpL4tHcrB9"
+                        target="_blank" rel="noopener noreferrer" class="pdv-video-modal__playlist">
+                        Saiba mais sobre o PDV
+                        <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="./assets/js/script.min.js"></script>
 </body>
 

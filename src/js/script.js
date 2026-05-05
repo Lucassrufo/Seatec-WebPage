@@ -176,6 +176,54 @@ document.querySelectorAll("[data-modal-close]").forEach(button => {
   button.addEventListener("click", fecharModal);
 });
 
+const pdvVideoModal = document.getElementById("pdvVideoModal");
+const pdvVideoFrame = document.getElementById("pdvVideoFrame");
+const pdvVideoOpenButtons = document.querySelectorAll("[data-pdv-video-modal-open]");
+const pdvVideoCloseButtons = document.querySelectorAll("[data-pdv-video-modal-close]");
+let pdvVideoCloseTimer;
+
+function abrirPdvVideoModal() {
+  if (!pdvVideoModal || !pdvVideoFrame) return;
+
+  clearTimeout(pdvVideoCloseTimer);
+  const videoUrl = pdvVideoFrame.dataset.src;
+  if (videoUrl) {
+    pdvVideoFrame.src = videoUrl;
+  }
+
+  pdvVideoModal.classList.add("is-open");
+  pdvVideoModal.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function fecharPdvVideoModal() {
+  if (!pdvVideoModal || !pdvVideoFrame) return;
+
+  pdvVideoModal.classList.remove("is-open");
+  pdvVideoModal.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+
+  pdvVideoCloseTimer = setTimeout(() => {
+    if (!pdvVideoModal.classList.contains("is-open")) {
+      pdvVideoFrame.src = "";
+    }
+  }, 450);
+}
+
+pdvVideoOpenButtons.forEach(button => {
+  button.addEventListener("click", abrirPdvVideoModal);
+});
+
+pdvVideoCloseButtons.forEach(button => {
+  button.addEventListener("click", fecharPdvVideoModal);
+});
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape" && pdvVideoModal?.classList.contains("is-open")) {
+    fecharPdvVideoModal();
+  }
+});
+
 document.querySelectorAll(".adquirente-logo img").forEach(img => {
   img.addEventListener("error", () => {
     img.classList.add("hidden");

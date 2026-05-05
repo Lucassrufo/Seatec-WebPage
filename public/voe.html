@@ -4,17 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' ws: http:">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' ws: http:">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
+    <meta http-equiv="Permissions-Policy"
+        content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <title>VoePDV - Sistema PDV para Windows | Seatec</title>
-    <meta name="description" content="VoePDV é o sistema PDV Windows da SEATEC para caixa de alto volume, estoque, NFC-e, relatórios e operação estável mesmo em rotinas intensas.">
+    <meta name="description"
+        content="VoePDV é o sistema PDV Windows da SEATEC para caixa de alto volume, estoque, NFC-e, relatórios e operação estável mesmo em rotinas intensas.">
     <meta name="theme-color" content="#020617">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SEATEC">
     <meta property="og:title" content="VoePDV - Sistema PDV para Windows">
-    <meta property="og:description" content="PDV Windows robusto para caixa, estoque, NFC-e, relatórios e operação de alto volume.">
+    <meta property="og:description"
+        content="PDV Windows robusto para caixa, estoque, NFC-e, relatórios e operação de alto volume.">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="VoePDV - Sistema PDV para Windows">
     <meta name="twitter:description" content="PDV Windows estável e completo para operações comerciais de alto fluxo.">
@@ -22,47 +26,90 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" href="assets/images/optimized/caixa-voe-1200.jpg" fetchpriority="high">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/tailwind.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 
-<body class="product-page product-voe bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-white relative overflow-x-hidden">
+<body
+    class="product-page product-voe bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-white relative overflow-x-hidden">
 
     <!-- BACKGROUND GLOBAL -->
     <div class="fixed inset-0 -z-10 pointer-events-none">
         <div
             class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-orange-500/10 blur-[140px] rounded-full animate-pulse-slow">
         </div>
-        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-500/10 blur-[120px] rounded-full animate-pulse-slow"></div>
+        <div
+            class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-blue-500/10 blur-[120px] rounded-full animate-pulse-slow">
+        </div>
     </div>
 
     <!-- HEADER -->
     <header
         class="fixed w-full z-50 backdrop-blur-2xl bg-slate-900/70 border-b border-white/10 shadow-2xl shadow-black/30 transition-all duration-700">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center gap-6">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="assets/images/logo_seatec.png" width="2550" height="625" decoding="async" class="h-8 w-auto transition-all duration-700 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(251,146,60,0.5)]" alt="SEATEC">
+                <img src="assets/images/logo_seatec.png" width="2550" height="625" decoding="async"
+                    class="h-8 w-auto transition-all duration-700 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(251,146,60,0.5)]"
+                    alt="SEATEC">
             </a>
 
-            <a href="index.html#sistemas"
-                class="group inline-flex items-center gap-2 rounded-full border border-orange-400/30 bg-orange-500/10 px-4 py-2 text-sm font-semibold text-orange-100 shadow-lg shadow-orange-500/10 backdrop-blur-xl transition-all duration-700 hover:-translate-y-0.5 hover:border-orange-300/70 hover:bg-orange-500/20 hover:text-white hover:shadow-orange-500/25">
-                <span class="material-symbols-outlined text-lg transition-transform duration-700 group-hover:-translate-x-1">arrow_back</span>
-                Voltar
-            </a>
+            <nav class="hidden lg:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-sm text-slate-300 backdrop-blur-xl">
+                <a href="#inicio" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Início</a>
+                <a href="#diferenciais" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Diferenciais</a>
+                <a href="#gestao" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Gestão</a>
+                <a href="#funcionalidades" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Funcionalidades</a>
+                <a href="#segmentos" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Segmentos</a>
+                <a href="#contato" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Contato</a>
+            </nav>
+
+            <div class="flex items-center gap-3">
+                <a href="index.html#sistemas"
+                    class="hidden sm:inline-flex group items-center gap-2 rounded-full border border-orange-400/30 bg-orange-500/10 px-4 py-2 text-sm font-semibold text-orange-100 shadow-lg shadow-orange-500/10 backdrop-blur-xl transition-all duration-700 hover:-translate-y-0.5 hover:border-orange-300/70 hover:bg-orange-500/20 hover:text-white hover:shadow-orange-500/25">
+                    <span
+                        class="material-symbols-outlined text-lg transition-transform duration-700 group-hover:-translate-x-1">arrow_back</span>
+                    Voltar
+                </a>
+
+                <button data-whatsapp="Olá! Quero saber mais sobre o VoePDV."
+                    class="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-green-500 to-green-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-green-500/20 transition-all duration-700 hover:-translate-y-0.5 hover:shadow-green-500/35">
+                    <span class="material-symbols-outlined text-base">chat</span>
+                    WhatsApp
+                </button>
+
+                <button type="button" data-mobile-menu-toggle aria-controls="mobileMenu" aria-expanded="false"
+                    class="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition-all duration-700 hover:bg-white/10 hover:text-white">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-xl">
+            <nav class="max-w-7xl mx-auto px-6 py-4 grid gap-2 text-sm text-slate-300">
+                <a href="#inicio" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Início</a>
+                <a href="#diferenciais" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Diferenciais</a>
+                <a href="#gestao" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Gestão</a>
+                <a href="#funcionalidades" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Funcionalidades</a>
+                <a href="#segmentos" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Segmentos</a>
+                <a href="#contato" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Contato</a>
+                <a href="index.html#sistemas" class="rounded-xl px-4 py-3 text-orange-200 hover:bg-orange-500/10 hover:text-white transition-all duration-700">Voltar para sistemas</a>
+            </nav>
         </div>
     </header>
 
     <!-- HERO -->
-    <section class="pt-36 pb-24 bg-gradient-to-br from-orange-900/40 via-slate-900 to-black relative overflow-hidden">
+    <section id="inicio" class="pt-36 pb-24 bg-gradient-to-br from-orange-900/40 via-slate-900 to-black relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div
                 class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-orange-500/10 blur-[120px] rounded-full animate-pulse-slow">
             </div>
-            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full animate-pulse-slow"></div>
+            <div
+                class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 blur-[100px] rounded-full animate-pulse-slow">
+            </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
@@ -75,36 +122,40 @@
                     SISTEMA DESKTOP PARA WINDOWS
                 </span>
 
-                <img src="assets/images/voepdv.png" width="852" height="214" decoding="async" class="h-12 w-auto mb-7 transition-all duration-700 hover:scale-110 drop-shadow-lg" alt="VoePDV">
+                <img src="assets/images/voepdv.png" width="852" height="214" decoding="async"
+                    class="h-12 w-auto mb-7 transition-all duration-700 hover:scale-110 drop-shadow-lg" alt="VoePDV">
 
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
                     O PDV Windows para
-                    <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.4)]">operações que não podem parar</span>
+                    <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.4)]">operações que não podem
+                        parar</span>
                 </h1>
 
                 <p class="text-slate-300 mt-6 text-lg max-w-xl leading-relaxed">
-                    Instalado direto no seu computador, o <b class="text-white font-semibold">VoePDV</b> entrega estabilidade para lojas de SP/ZL e operações em todo o Brasil.
+                    Instalado direto no seu computador, o <b class="text-white font-semibold">VoePDV</b> entrega
+                    estabilidade para lojas de SP/ZL e operações em todo o Brasil.
                     Funciona com leitor de código, balança, gaveta de dinheiro, impressora fiscal e
                     <b class="text-white font-semibold">mantém o caixa vendendo mesmo quando a internet cai</b>.
                 </p>
 
                 <!-- BOTÕES -->
                 <div class="flex flex-wrap gap-4 mt-9">
-                    <button data-whatsapp="Olá! Quero saber mais sobre o VoePDV."
-                        class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-8 py-4 rounded-xl font-semibold
+                    <button data-whatsapp="Olá! Quero saber mais sobre o VoePDV." class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-8 py-4 rounded-xl font-semibold
                         shadow-xl shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/50
                         hover:scale-110 transition-all duration-700 group overflow-hidden">
-                        
+
                         <span class="relative z-10">💬 Falar com especialista</span>
-                        
+
                         <span
                             class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
                     </button>
 
-                    <a href="#funcionalidades" class="px-8 py-4 rounded-xl border-2 border-white/10 hover:border-orange-400/50
+                    <a href="#funcionalidades"
+                        class="px-8 py-4 rounded-xl border-2 border-white/10 hover:border-orange-400/50
                     bg-white/5 hover:bg-white/10 backdrop-blur-xl transition-all duration-700 flex items-center gap-2 group shadow-lg hover:shadow-2xl hover:shadow-orange-500/20 hover:scale-105 font-semibold">
                         Ver funcionalidades
-                        <span class="material-symbols-outlined text-base transition-transform duration-700 group-hover:translate-x-2">arrow_forward</span>
+                        <span
+                            class="material-symbols-outlined text-base transition-transform duration-700 group-hover:translate-x-2">arrow_forward</span>
                     </a>
                 </div>
 
@@ -123,11 +174,15 @@
 
             <!-- VISUAL -->
             <div class="fade-up relative">
-                <div class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-amber-500/20 blur-3xl opacity-70 animate-pulse-slow"></div>
-                <div class="relative bg-gradient-to-br from-slate-900/70 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl text-center hover:border-orange-500/30 transition-all duration-700 hover:scale-[1.02] overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-amber-500/20 blur-3xl opacity-70 animate-pulse-slow">
+                </div>
+                <div
+                    class="relative bg-gradient-to-br from-slate-900/70 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl text-center hover:border-orange-500/30 transition-all duration-700 hover:scale-[1.02] overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-amber-500/5 opacity-60"></div>
 
-                    <img src="assets/images/optimized/caixa-voe-1200.jpg" width="1200" height="800" decoding="async" fetchpriority="high" alt="VoePDV em operação no computador"
+                    <img src="assets/images/optimized/caixa-voe-1200.jpg" width="1200" height="800" decoding="async"
+                        fetchpriority="high" alt="VoePDV em operação no computador"
                         class="relative z-10 w-full max-h-[360px] object-contain rounded-2xl drop-shadow-[0_20px_45px_rgba(15,23,42,0.7)]">
 
                     <p class="relative z-10 text-slate-300 mt-5 mb-2 text-base md:text-lg">
@@ -142,7 +197,7 @@
     </section>
 
     <!-- POR QUE WINDOWS / DIFERENCIAL -->
-    <section class="py-28 bg-gradient-to-b from-black via-slate-950 to-slate-900 relative overflow-hidden">
+    <section id="diferenciais" class="py-28 bg-gradient-to-b from-black via-slate-950 to-slate-900 relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-orange-500/10 blur-3xl rounded-full"></div>
@@ -151,12 +206,14 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <div class="text-center mb-20 fade-up">
-                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/30 backdrop-blur-sm">
+                <span
+                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/30 backdrop-blur-sm">
                     POR QUE DESKTOP?
                 </span>
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Feito para gestores que exigem
-                    <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">caixa rápido e previsível</span>
+                    <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">caixa rápido e
+                        previsível</span>
                 </h2>
                 <p class="text-slate-400 text-lg max-w-3xl mx-auto leading-relaxed">
                     Diferente de sistemas web ou apps de celular, o VoePDV roda nativamente no Windows,
@@ -167,57 +224,70 @@
             <div class="grid md:grid-cols-3 gap-10">
 
                 <!-- DIFERENCIAL 1 -->
-                <div class="fade-up bg-gradient-to-br from-orange-900/50 to-slate-900/60 border-2 border-orange-500/30 p-10 rounded-3xl hover:scale-105 hover:border-orange-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-orange-500/20 hover:shadow-3xl hover:shadow-orange-500/40 group overflow-hidden">
-                    
-                    <div class="w-16 h-16 rounded-2xl bg-orange-500/20 border-2 border-orange-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
+                <div
+                    class="fade-up bg-gradient-to-br from-orange-900/50 to-slate-900/60 border-2 border-orange-500/30 p-10 rounded-3xl hover:scale-105 hover:border-orange-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-orange-500/20 hover:shadow-3xl hover:shadow-orange-500/40 group overflow-hidden">
+
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-orange-500/20 border-2 border-orange-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
                         <span class="material-symbols-outlined text-orange-400 text-4xl">wifi_off</span>
                     </div>
-                    
+
                     <h3 class="text-xl font-bold mb-4">Vendas mesmo sem internet</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
                         Por estar instalado no PC, o sistema não para se a internet cair. A operação continua
                         e os dados sincronizam automaticamente quando a conexão volta.
                     </p>
 
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-amber-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-amber-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700">
+                    </div>
                 </div>
 
                 <!-- DIFERENCIAL 2 -->
-                <div class="fade-up bg-gradient-to-br from-orange-900/50 to-slate-900/60 border-2 border-orange-500/30 p-10 rounded-3xl hover:scale-105 hover:border-orange-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-orange-500/20 hover:shadow-3xl hover:shadow-orange-500/40 group overflow-hidden">
-                    
-                    <div class="w-16 h-16 rounded-2xl bg-orange-500/20 border-2 border-orange-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
+                <div
+                    class="fade-up bg-gradient-to-br from-orange-900/50 to-slate-900/60 border-2 border-orange-500/30 p-10 rounded-3xl hover:scale-105 hover:border-orange-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-orange-500/20 hover:shadow-3xl hover:shadow-orange-500/40 group overflow-hidden">
+
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-orange-500/20 border-2 border-orange-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
                         <span class="material-symbols-outlined text-orange-400 text-4xl">cable</span>
                     </div>
-                    
+
                     <h3 class="text-xl font-bold mb-4">Integração com periféricos</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
                         Leitor de código de barras, balança, gaveta de dinheiro, impressora térmica e fiscal,
                         TEF — tudo conectado e funcionando em harmonia.
                     </p>
 
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-amber-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-amber-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700">
+                    </div>
                 </div>
 
                 <!-- DIFERENCIAL 3 -->
-                <div class="fade-up bg-gradient-to-br from-orange-900/50 to-slate-900/60 border-2 border-orange-500/30 p-10 rounded-3xl hover:scale-105 hover:border-orange-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-orange-500/20 hover:shadow-3xl hover:shadow-orange-500/40 group overflow-hidden">
-                    
-                    <div class="w-16 h-16 rounded-2xl bg-orange-500/20 border-2 border-orange-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
+                <div
+                    class="fade-up bg-gradient-to-br from-orange-900/50 to-slate-900/60 border-2 border-orange-500/30 p-10 rounded-3xl hover:scale-105 hover:border-orange-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-orange-500/20 hover:shadow-3xl hover:shadow-orange-500/40 group overflow-hidden">
+
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-orange-500/20 border-2 border-orange-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
                         <span class="material-symbols-outlined text-orange-400 text-4xl">speed</span>
                     </div>
-                    
+
                     <h3 class="text-xl font-bold mb-4">Velocidade no caixa</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
                         Atalhos de teclado, busca instantânea de produtos e finalização rápida.
                         Pensado para o ritmo de quem atende muitos clientes por dia.
                     </p>
 
-                    <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-amber-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-orange-500/10 to-amber-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700">
+                    </div>
                 </div>
 
             </div>
 
             <!-- LINHA DE INFO TÉCNICA -->
-            <div class="fade-up mt-20 bg-gradient-to-r from-slate-900/80 to-slate-900/40 border-2 border-white/10 rounded-3xl p-8 flex flex-wrap items-center justify-around gap-8 text-center backdrop-blur-xl shadow-xl">
+            <div
+                class="fade-up mt-20 bg-gradient-to-r from-slate-900/80 to-slate-900/40 border-2 border-white/10 rounded-3xl p-8 flex flex-wrap items-center justify-around gap-8 text-center backdrop-blur-xl shadow-xl">
 
                 <div class="flex items-center gap-4">
                     <span class="material-symbols-outlined text-orange-400 text-3xl">desktop_windows</span>
@@ -263,7 +333,7 @@
     </section>
 
     <!-- DASHBOARD PREVIEW -->
-    <section class="py-32 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 relative overflow-hidden">
+    <section id="gestao" class="py-32 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div class="absolute top-0 left-1/3 w-[600px] h-[600px] bg-orange-500/10 blur-3xl rounded-full"></div>
@@ -280,7 +350,8 @@
                 </span>
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Gestão em tempo real para
-                    <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">decisões de diretoria</span>
+                    <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">decisões de
+                        diretoria</span>
                 </h2>
                 <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
                     O VoePDV vai além do caixa: oferece um painel completo com tudo que você precisa para
@@ -292,7 +363,9 @@
             <div class="fade-up relative max-w-6xl mx-auto">
 
                 <!-- Glow atrás -->
-                <div class="absolute -inset-4 bg-gradient-to-r from-orange-500/20 via-amber-500/20 to-orange-600/20 blur-3xl opacity-60 rounded-3xl"></div>
+                <div
+                    class="absolute -inset-4 bg-gradient-to-r from-orange-500/20 via-amber-500/20 to-orange-600/20 blur-3xl opacity-60 rounded-3xl">
+                </div>
 
                 <!-- Moldura do dashboard -->
                 <div class="relative bg-gradient-to-br from-slate-900/80 to-slate-800/60 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl shadow-orange-500/20
@@ -307,7 +380,8 @@
                     </div>
 
                     <!-- Imagem do dashboard -->
-                    <img src="assets/images/optimized/voe-dash-1200.jpg" width="1200" height="575" loading="lazy" decoding="async" alt="Painel VoePDV"
+                    <img src="assets/images/optimized/voe-dash-1200.jpg" width="1200" height="575" loading="lazy"
+                        decoding="async" alt="Painel VoePDV"
                         class="w-full rounded-b-2xl group-hover:scale-[1.005] transition-transform duration-700">
 
                 </div>
@@ -318,7 +392,8 @@
             <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mt-20">
 
                 <div class="fade-up text-center">
-                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-orange-500/15 border-2 border-orange-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-orange-500/15 border-2 border-orange-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
                         <span class="material-symbols-outlined text-orange-400 text-4xl">dashboard</span>
                     </div>
                     <h3 class="font-bold mb-2">Visão Geral</h3>
@@ -326,7 +401,8 @@
                 </div>
 
                 <div class="fade-up text-center">
-                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-blue-500/15 border-2 border-blue-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-blue-500/15 border-2 border-blue-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
                         <span class="material-symbols-outlined text-blue-400 text-4xl">trending_up</span>
                     </div>
                     <h3 class="font-bold mb-2">Faturamento</h3>
@@ -334,7 +410,8 @@
                 </div>
 
                 <div class="fade-up text-center">
-                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-green-500/15 border-2 border-green-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-green-500/15 border-2 border-green-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
                         <span class="material-symbols-outlined text-green-400 text-4xl">pie_chart</span>
                     </div>
                     <h3 class="font-bold mb-2">Tipos de Venda</h3>
@@ -342,7 +419,8 @@
                 </div>
 
                 <div class="fade-up text-center">
-                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-purple-500/15 border-2 border-purple-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-purple-500/15 border-2 border-purple-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
                         <span class="material-symbols-outlined text-purple-400 text-4xl">credit_card</span>
                     </div>
                     <h3 class="font-bold mb-2">Formas de Pagto</h3>
@@ -365,64 +443,76 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <div class="text-center mb-20 fade-up">
-                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/30 backdrop-blur-sm">
+                <span
+                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/30 backdrop-blur-sm">
                     FUNCIONALIDADES
                 </span>
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Funcionalidades que protegem
-                    <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">margem, estoque e atendimento</span>
+                    <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">margem, estoque e
+                        atendimento</span>
                 </h2>
                 <p class="text-slate-400 text-lg">
-                    Recursos pensados para lojas, mercados, bares e redes que precisam de velocidade sem perder controle.
+                    Recursos pensados para lojas, mercados, bares e redes que precisam de velocidade sem perder
+                    controle.
                 </p>
             </div>
 
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-orange-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-orange-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
                     <span class="material-symbols-outlined text-orange-400 text-4xl drop-shadow-lg">point_of_sale</span>
                     <h3 class="mt-5 font-bold text-base">Frente de Caixa</h3>
                     <p class="text-sm text-slate-400 mt-2">Atalhos de teclado e operação ágil.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-blue-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-blue-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-4xl drop-shadow-lg">receipt_long</span>
                     <h3 class="mt-5 font-bold text-base">NFC-e, NF-e e SAT</h3>
                     <p class="text-sm text-slate-400 mt-2">Emissão fiscal completa e homologada.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-green-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-green-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-green-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-green-500/20">
                     <span class="material-symbols-outlined text-green-400 text-4xl drop-shadow-lg">inventory_2</span>
                     <h3 class="mt-5 font-bold text-base">Gestão de Estoque</h3>
                     <p class="text-sm text-slate-400 mt-2">Entradas, saídas e inventário.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-purple-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-purple-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-purple-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-purple-500/20">
                     <span class="material-symbols-outlined text-purple-400 text-4xl drop-shadow-lg">analytics</span>
                     <h3 class="mt-5 font-bold text-base">Relatórios Gerenciais</h3>
                     <p class="text-sm text-slate-400 mt-2">DRE, vendas, produtos e mais.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-yellow-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-yellow-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-yellow-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-yellow-500/20">
                     <span class="material-symbols-outlined text-yellow-400 text-4xl drop-shadow-lg">restaurant</span>
                     <h3 class="mt-5 font-bold text-base">Comandas e Mesas</h3>
                     <p class="text-sm text-slate-400 mt-2">Ideal para bares e restaurantes.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-red-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-red-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-red-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-red-500/20">
                     <span class="material-symbols-outlined text-red-400 text-4xl drop-shadow-lg">print</span>
                     <h3 class="mt-5 font-bold text-base">Impressão na Cozinha</h3>
                     <p class="text-sm text-slate-400 mt-2">Pedidos enviados direto ao preparo.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-emerald-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-emerald-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-emerald-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-emerald-500/20">
                     <span class="material-symbols-outlined text-emerald-400 text-4xl drop-shadow-lg">payments</span>
                     <h3 class="mt-5 font-bold text-base">TEF Integrado</h3>
                     <p class="text-sm text-slate-400 mt-2">Cartão, Pix e dinheiro no mesmo fluxo.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-indigo-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20">
-                    <span class="material-symbols-outlined text-indigo-400 text-4xl drop-shadow-lg">account_balance_wallet</span>
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-indigo-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20">
+                    <span
+                        class="material-symbols-outlined text-indigo-400 text-4xl drop-shadow-lg">account_balance_wallet</span>
                     <h3 class="mt-5 font-bold text-base">Contas a Pagar/Receber</h3>
                     <p class="text-sm text-slate-400 mt-2">Controle financeiro completo.</p>
                 </div>
@@ -433,55 +523,67 @@
     </section>
 
     <!-- IDEAL PARA -->
-    <section class="py-28 bg-gradient-to-b from-slate-950 to-black relative overflow-hidden">
+    <section id="segmentos" class="py-28 bg-gradient-to-b from-slate-950 to-black relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/10 blur-3xl rounded-full"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-orange-500/10 blur-3xl rounded-full">
+            </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <div class="text-center mb-20 fade-up">
-                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/30 backdrop-blur-sm">
+                <span
+                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/30 backdrop-blur-sm">
                     SEGMENTOS
                 </span>
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Preparado para diferentes segmentos
-                    <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">com rotina de alto giro</span>
+                    <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">com rotina de alto
+                        giro</span>
                 </h2>
                 <p class="text-slate-400 text-lg">
-                    Da Zona Leste de São Paulo para empresas em todo o Brasil, o VoePDV se adapta à rotina real do seu negócio.
+                    Da Zona Leste de São Paulo para empresas em todo o Brasil, o VoePDV se adapta à rotina real do seu
+                    negócio.
                 </p>
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
                     <span class="material-symbols-outlined text-orange-400 text-5xl drop-shadow-lg">storefront</span>
                     <p class="text-sm font-bold mt-3">Mercados</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
                     <span class="material-symbols-outlined text-orange-400 text-5xl drop-shadow-lg">restaurant</span>
                     <p class="text-sm font-bold mt-3">Restaurantes</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
                     <span class="material-symbols-outlined text-orange-400 text-5xl drop-shadow-lg">local_bar</span>
                     <p class="text-sm font-bold mt-3">Bares</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
                     <span class="material-symbols-outlined text-orange-400 text-5xl drop-shadow-lg">checkroom</span>
                     <p class="text-sm font-bold mt-3">Lojas de Roupa</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
-                    <span class="material-symbols-outlined text-orange-400 text-5xl drop-shadow-lg">local_pharmacy</span>
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
+                    <span
+                        class="material-symbols-outlined text-orange-400 text-5xl drop-shadow-lg">local_pharmacy</span>
                     <p class="text-sm font-bold mt-3">Farmácias</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-orange-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
                     <span class="material-symbols-outlined text-orange-400 text-5xl drop-shadow-lg">bakery_dining</span>
                     <p class="text-sm font-bold mt-3">Padarias</p>
                 </div>
@@ -492,7 +594,7 @@
     </section>
 
     <!-- CLIENTES -->
-    <section class="py-24 bg-gradient-to-b from-black via-slate-950 to-black relative overflow-hidden">
+    <section id="clientes" class="py-24 bg-gradient-to-b from-black via-slate-950 to-black relative overflow-hidden">
         <div class="absolute inset-0 pointer-events-none">
             <div
                 class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[420px] bg-orange-500/10 blur-3xl rounded-full">
@@ -501,7 +603,8 @@
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-14 fade-up">
-                <span class="inline-block mb-5 px-5 py-2 text-xs font-semibold rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/30 backdrop-blur-sm">
+                <span
+                    class="inline-block mb-5 px-5 py-2 text-xs font-semibold rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/30 backdrop-blur-sm">
                     Quem Já Usa e Aprova
                 </span>
 
@@ -511,41 +614,52 @@
                 </h2>
 
                 <p class="text-slate-400 leading-relaxed">
-                    Negócios que contam com a SEATEC para manter o caixa estável, rápido e pronto para vender todos os dias.
+                    Negócios que contam com a SEATEC para manter o caixa estável, rápido e pronto para vender todos os
+                    dias.
                 </p>
             </div>
 
             <div class="clientes-marquee fade-up" aria-label="Clientes VoePDV">
                 <div class="clientes-marquee-track">
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente6.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Carillo">
+                        <img src="assets/images/clientes/cliente6.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Carillo">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente7.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Cliente VoePDV">
+                        <img src="assets/images/clientes/cliente7.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Cliente VoePDV">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente8.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Sarah Eller Boutique">
+                        <img src="assets/images/clientes/cliente8.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Sarah Eller Boutique">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente9.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Imperio Burger Hamburgueria">
+                        <img src="assets/images/clientes/cliente9.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Imperio Burger Hamburgueria">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente10.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Boteco do Rony">
+                        <img src="assets/images/clientes/cliente10.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Boteco do Rony">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente6.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Carillo">
+                        <img src="assets/images/clientes/cliente6.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Carillo">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente7.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Cliente VoePDV">
+                        <img src="assets/images/clientes/cliente7.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Cliente VoePDV">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente8.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Sarah Eller Boutique">
+                        <img src="assets/images/clientes/cliente8.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Sarah Eller Boutique">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente9.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Imperio Burger Hamburgueria">
+                        <img src="assets/images/clientes/cliente9.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Imperio Burger Hamburgueria">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente10.jpg" width="300" height="300" loading="lazy" decoding="async" alt="Boteco do Rony">
+                        <img src="assets/images/clientes/cliente10.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Boteco do Rony">
                     </div>
                 </div>
             </div>
@@ -553,7 +667,7 @@
     </section>
 
     <!-- CTA FINAL -->
-    <section class="py-24 bg-gradient-to-b from-black to-slate-950 relative overflow-hidden">
+    <section id="contato" class="py-24 bg-gradient-to-b from-black to-slate-950 relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div
@@ -565,30 +679,270 @@
 
             <h2 class="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">
                 Pronto para um PDV
-                <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">à altura da sua operação?</span>
+                <span class="text-orange-400 drop-shadow-[0_0_30px_rgba(251,146,60,0.3)]">à altura da sua
+                    operação?</span>
             </h2>
 
             <p class="text-slate-400 text-lg mb-12 leading-relaxed">
-                Fale com nosso time e descubra como o VoePDV pode dar mais estabilidade, controle fiscal e velocidade para o seu caixa.
+                Fale com nosso time e descubra como o VoePDV pode dar mais estabilidade, controle fiscal e velocidade
+                para o seu caixa.
             </p>
 
-            <button data-whatsapp="Olá! Quero contratar o VoePDV."
-                class="bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-10 py-5 rounded-xl font-bold text-lg
+            <button data-whatsapp="Olá! Quero contratar o VoePDV." class="bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-10 py-5 rounded-xl font-bold text-lg
                 shadow-2xl shadow-green-500/40 hover:shadow-3xl hover:shadow-green-500/60
                 hover:scale-110 transition-all duration-700 group overflow-hidden relative">
-                
+
                 <span class="relative z-10">💬 Falar com especialista</span>
-                
-                <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
+
+                <span
+                    class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
             </button>
 
         </div>
     </section>
 
-    <!-- FOOTER MINI -->
-    <footer class="border-t border-white/10 py-8 text-center text-slate-500 text-sm">
-        © 2026 Seatec Soluções Tecnológicas — Todos os direitos reservados
+    <!-- FOOTER -->
+    <footer
+        class="bg-gradient-to-b from-slate-950 via-black to-black border-t border-white/10 pt-20 pb-10 relative overflow-hidden">
+
+        <!-- FUNDO DECORATIVO -->
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/3 w-[400px] h-[400px] bg-blue-500/10 blur-3xl rounded-full"></div>
+            <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-purple-500/10 blur-3xl rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <!-- GRID -->
+            <div class="grid md:grid-cols-4 gap-12 mb-14">
+
+                <!-- LOGO + DESC -->
+                <div>
+                    <img src="assets/images/logo_seatec.png" width="2550" height="625" loading="lazy" decoding="async"
+                        class="h-9 w-auto mb-5 transition-all duration-700 hover:scale-110" alt="SEATEC">
+
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Desde 2012 ajudando empresas a crescer com tecnologia, automação comercial e sistemas PDV
+                        eficientes.
+                    </p>
+
+                    <!-- MINI BADGE -->
+                    <div
+                        class="mt-5 text-xs text-green-400 bg-green-500/10 inline-block px-4 py-2 rounded-full font-semibold border border-green-500/20">
+                        +400 clientes atendidos
+                    </div>
+                </div>
+
+                <!-- SISTEMAS -->
+                <div>
+                    <h4 class="font-bold mb-5 text-white">Soluções</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li class="hover:text-white transition-colors duration-700 cursor-pointer" href="voe.html">
+                            VoePDV (Windows)</li>
+                        <li class="hover:text-white transition-colors duration-700 cursor-pointer"
+                            href="pdv-legal.html">PDV Legal (Android)</li>
+                        <li class="hover:text-white transition-colors duration-700 cursor-pointer">Automação Comercial
+                        </li>
+                        <li class="hover:text-white transition-colors duration-700 cursor-pointer">Implantação e Suporte
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- CONTATO -->
+                <div>
+                    <h4 class="font-bold mb-5 text-white">Contato</h4>
+
+                    <div class="space-y-5 text-sm text-slate-400">
+
+                        <div>
+                            <p class="text-white font-semibold mb-1">Comercial</p>
+                            <a href="https://wa.me/551133846313?text=Olá,%20quero%20saber%20mais%20sobre%20os%20sistemas%20PDV"
+                                target="_blank" rel="noopener noreferrer"
+                                class="hover:text-green-400 transition-colors duration-700 cursor-pointer inline-block">
+                                +55 11 3384-6313
+                            </a>
+                        </div>
+
+                        <div>
+                            <p class="text-white font-semibold mb-1">Suporte</p>
+                            <a href="https://wa.me/551142101779?text=Olá,%20preciso%20de%20suporte%20técnico"
+                                target="_blank" rel="noopener noreferrer"
+                                class="hover:text-green-400 transition-colors duration-700 cursor-pointer inline-block">
+                                +55 11 4210-1779
+                            </a>
+                        </div>
+
+                        <div>
+                            <p class="text-white font-semibold mb-1">Email</p>
+                            <a href="mailto:suporte@seatec.com.br"
+                                class="hover:text-purple-400 transition-colors duration-700 cursor-pointer inline-block">
+                                suporte@seatec.com.br
+                            </a>
+                        </div>
+
+                        <div>
+                            <p class="text-white font-semibold mb-2">Redes sociais</p>
+                            <a href="https://www.instagram.com/pdvlegal_aricanduva/" target="_blank"
+                                rel="noopener noreferrer" aria-label="Instagram da SEATEC"
+                                class="inline-flex items-center gap-2 hover:text-pink-400 transition-colors duration-700">
+                                <svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                                    <circle cx="12" cy="12" r="4"></circle>
+                                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
+                                </svg>
+                                <span>Instagram</span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="footer-legal-info">
+                <div class="footer-legal-info__grid">
+                    <div class="footer-legal-info__item">
+                        <span class="footer-legal-info__icon" aria-hidden="true">
+                            <span class="material-symbols-outlined">location_on</span>
+                        </span>
+                        <div>
+                            <p class="footer-legal-info__label">Endere&ccedil;o</p>
+                            <p class="footer-legal-info__text">Av Rio das pedras, 3473 - Jardim Aricanduva, S&atilde;o Paulo SP, CEP: 03930-310</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-legal-info__item">
+                        <span class="footer-legal-info__icon" aria-hidden="true">
+                            <span class="material-symbols-outlined">corporate_fare</span>
+                        </span>
+                        <div>
+                            <p class="footer-legal-info__label">Empresa</p>
+                            <p class="footer-legal-info__text">Seatec Solu&ccedil;&otilde;es Tecnol&oacute;gicas LTDA - CNPJ: 16.643.360/0001-41</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-legal-info__item">
+                        <span class="footer-legal-info__icon" aria-hidden="true">
+                            <span class="material-symbols-outlined">verified_user</span>
+                        </span>
+                        <div>
+                            <p class="footer-legal-info__label">Transpar&ecirc;ncia</p>
+                            <p class="footer-legal-info__text">Art. 49 do C&oacute;digo de Defesa do Consumidor: Garantia de 7 dias para cancelamento ap&oacute;s a contrata&ccedil;&atilde;o. Utilizamos a API Oficial do WhatsApp para comunica&ccedil;&atilde;o com clientes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DIVISÃO -->
+            <div class="border-t border-white/10 pt-7 flex flex-col md:flex-row justify-between items-center gap-4">
+
+                <p class="text-slate-500 text-sm text-center md:text-left">
+                    © 2026 Seatec Soluções Tecnológicas — Todos os direitos reservados
+                </p>
+
+                <div class="flex gap-4 text-slate-400 text-sm">
+                    <span class="hover:text-white transition-colors duration-700 cursor-pointer">Automação
+                        Comercial</span>
+                    <span>•</span>
+                    <span class="hover:text-white transition-colors duration-700 cursor-pointer">Sistemas PDV</span>
+                    <span>•</span>
+                    <span class="hover:text-white transition-colors duration-700 cursor-pointer">Suporte
+                        Especializado</span>
+                </div>
+
+            </div>
+
+        </div>
     </footer>
+    <!-- MODAL SISTEMA -->
+    <div id="modalSistema" class="fixed inset-0 z-50 hidden items-center justify-center p-6">
+
+
+        <!-- BACKDROP -->
+        <div data-modal-close id="backdrop"
+            class="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-700">
+        </div>
+
+        <!-- CAIXA -->
+        <div id="modalBox" class="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto
+    rounded-3xl border-2 border-white/10
+    bg-gradient-to-br from-slate-900/95 to-slate-950/95
+    shadow-2xl shadow-black/50 backdrop-blur-xl
+
+    opacity-0 scale-90 translate-y-10
+    transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
+
+            <!-- HEADER -->
+            <div class="flex justify-between items-center p-7 border-b border-white/10">
+                <div class="flex items-center gap-4">
+                    <img id="modalLogo" src="" width="852" height="214" loading="lazy" decoding="async"
+                        class="h-10 w-auto hidden" alt="Logo sistema">
+                    <h3 id="modalTitulo" class="text-2xl font-bold"></h3>
+                </div>
+
+                <button data-modal-close class="w-10 h-10 flex items-center justify-center rounded-full
+        hover:bg-white/10 transition-all duration-700 text-slate-300 hover:text-white hover:scale-110">
+                    ✕
+                </button>
+            </div>
+
+            <!-- CONTEÚDO -->
+            <div class="p-10 space-y-10">
+
+                <!-- DESCRIÇÃO -->
+                <p id="modalDescricao" class="text-slate-300 leading-relaxed text-lg max-w-3xl">
+                </p>
+
+                <!-- GRID -->
+                <div class="grid md:grid-cols-2 gap-10 items-start">
+
+                    <!-- LISTA -->
+                    <div>
+                        <h4 class="text-lg font-bold mb-5 text-white">
+                            Funcionalidades
+                        </h4>
+
+                        <ul id="modalLista" class="space-y-3 text-sm text-slate-300">
+                        </ul>
+                    </div>
+
+                    <!-- VIDEO -->
+                    <div class="relative group">
+                        <div
+                            class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-700">
+                        </div>
+
+                        <iframe id="modalVideo"
+                            class="relative w-full h-[260px] rounded-xl border-2 border-white/10 shadow-lg" src=""
+                            frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                            allow="fullscreen; picture-in-picture">
+                        </iframe>
+                    </div>
+
+                </div>
+
+
+                <!-- CTA -->
+                <div class="flex justify-between items-center flex-col md:flex-row gap-6 pt-5 border-t border-white/10">
+
+                    <span class="text-slate-400 text-sm">
+                        Quer implementar esse sistema no seu negócio?
+                    </span>
+
+                    <button data-whatsapp class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-7 py-4 rounded-xl font-bold
+            transition-all duration-700 transform hover:scale-110 active:scale-95
+            shadow-xl shadow-green-500/40 hover:shadow-2xl hover:shadow-green-500/60">
+                        Falar com especialista
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
     <script src="./assets/js/script.min.js"></script>
 </body>
 
