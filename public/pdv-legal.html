@@ -4,12 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' ws://127.0.0.1:* ws://localhost:* http://127.0.0.1:* http://localhost:*; upgrade-insecure-requests">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' ws: http:">
     <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
+    <meta http-equiv="Permissions-Policy"
+        content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <title>PDV Legal - Sistema PDV para Maquininha e Smart POS | Seatec</title>
-    <meta name="description" content="PDV Legal é o sistema PDV Android da SEATEC para maquininha, Smart POS, delivery, estoque, vendas e emissão fiscal com mobilidade.">
+    <meta name="description"
+        content="PDV Legal é o sistema PDV Android da SEATEC para maquininha, Smart POS, delivery, estoque, vendas e emissão fiscal com mobilidade.">
     <meta name="theme-color" content="#020617">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SEATEC">
@@ -22,31 +25,41 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" as="image" href="assets/images/legal-equipamentos.png" fetchpriority="high">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/tailwind.css">
     <link rel="stylesheet" href="./assets/css/style.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
 </head>
 
-<body class="bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-white relative overflow-x-hidden">
+<body
+    class="product-page product-legal bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-white relative overflow-x-hidden">
 
     <!-- BACKGROUND GLOBAL -->
     <div class="fixed inset-0 -z-10 pointer-events-none">
-        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-blue-500/10 blur-[140px] rounded-full animate-pulse-slow"></div>
-        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-500/10 blur-[120px] rounded-full animate-pulse-slow"></div>
+        <div
+            class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-blue-500/10 blur-[140px] rounded-full animate-pulse-slow">
+        </div>
+        <div
+            class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-500/10 blur-[120px] rounded-full animate-pulse-slow">
+        </div>
     </div>
 
     <!-- HEADER -->
-    <header class="fixed w-full z-50 backdrop-blur-2xl bg-slate-900/70 border-b border-white/10 shadow-2xl shadow-black/30 transition-all duration-700">
+    <header
+        class="fixed w-full z-50 backdrop-blur-2xl bg-slate-900/70 border-b border-white/10 shadow-2xl shadow-black/30 transition-all duration-700">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="assets/images/logo_seatec.png" width="2550" height="625" decoding="async" class="h-8 w-auto transition-all duration-700 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]" alt="SEATEC">
+                <img src="assets/images/logo_seatec.png" width="2550" height="625" decoding="async"
+                    class="h-8 w-auto transition-all duration-700 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"
+                    alt="SEATEC">
             </a>
 
             <a href="index.html#sistemas"
-                class="group inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-100 shadow-lg shadow-blue-500/10 backdrop-blur-xl transition-all duration-500 hover:-translate-y-0.5 hover:border-blue-300/70 hover:bg-blue-500/20 hover:text-white hover:shadow-blue-500/25">
-                <span class="material-symbols-outlined text-lg transition-transform duration-500 group-hover:-translate-x-1">arrow_back</span>
+                class="group inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-100 shadow-lg shadow-blue-500/10 backdrop-blur-xl transition-all duration-700 hover:-translate-y-0.5 hover:border-blue-300/70 hover:bg-blue-500/20 hover:text-white hover:shadow-blue-500/25">
+                <span
+                    class="material-symbols-outlined text-lg transition-transform duration-700 group-hover:-translate-x-1">arrow_back</span>
                 Voltar
             </a>
         </div>
@@ -56,47 +69,59 @@
     <section class="pt-36 pb-24 bg-gradient-to-br from-blue-900/40 via-slate-900 to-black relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[120px] rounded-full animate-pulse-slow"></div>
-            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[100px] rounded-full animate-pulse-slow"></div>
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[120px] rounded-full animate-pulse-slow">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[100px] rounded-full animate-pulse-slow">
+            </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
 
             <!-- TEXTO -->
             <div class="fade-up">
-                <span class="inline-flex items-center gap-2 mb-5 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 shadow-lg shadow-blue-500/10 backdrop-blur-sm hover:bg-blue-500/20 hover:border-blue-400/50 transition-all duration-700">
+                <span
+                    class="inline-flex items-center gap-2 mb-5 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 shadow-lg shadow-blue-500/10 backdrop-blur-sm hover:bg-blue-500/20 hover:border-blue-400/50 transition-all duration-700">
                     <span class="material-symbols-outlined text-sm">phone_android</span>
                     PDV NA MAQUININHA • ANDROID • SMART POS
                 </span>
 
-                <img src="assets/images/pdvlegal.png" width="819" height="209" decoding="async" class="h-12 w-auto mb-7 transition-all duration-700 hover:scale-110 drop-shadow-lg" alt="PDV Legal">
+                <img src="assets/images/pdvlegal.png" width="819" height="209" decoding="async"
+                    class="h-12 w-auto mb-7 transition-all duration-700 hover:scale-110 drop-shadow-lg" alt="PDV Legal">
 
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
                     Venda, receba e emita
-                    <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.4)]">sem prender a operação</span>
+                    <span
+                        class="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.4)]">sem
+                        prender a operação</span>
                 </h1>
 
                 <p class="text-slate-300 mt-6 text-lg max-w-xl leading-relaxed">
-                    O PDV Legal coloca venda, NFC-e, estoque, comandas e pagamento <b class="text-white font-semibold">direto na maquininha</b>.
-                    Ideal para empresas de SP/ZL e do Brasil que querem mobilidade sem abrir mão de controle fiscal e gestão.
+                    O PDV Legal coloca venda, NFC-e, estoque, comandas e pagamento <b
+                        class="text-white font-semibold">direto na maquininha</b>.
+                    Ideal para empresas de SP/ZL e do Brasil que querem mobilidade sem abrir mão de controle fiscal e
+                    gestão.
                 </p>
 
                 <!-- BOTÕES -->
                 <div class="flex flex-wrap gap-4 mt-9">
-                    <button data-whatsapp="Olá! Quero saber mais sobre o PDV Legal."
-                        class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-8 py-4 rounded-xl font-semibold
+                    <button data-whatsapp="Olá! Quero saber mais sobre o PDV Legal." class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-8 py-4 rounded-xl font-semibold
                         shadow-xl shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/50
                         hover:scale-110 transition-all duration-700 group overflow-hidden">
-                        
+
                         <span class="relative z-10">💬 Falar com especialista</span>
-                        
-                        <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
+
+                        <span
+                            class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
                     </button>
 
-                    <a href="#funcionalidades" class="px-8 py-4 rounded-xl border-2 border-white/10 hover:border-blue-400/50
+                    <a href="#funcionalidades"
+                        class="px-8 py-4 rounded-xl border-2 border-white/10 hover:border-blue-400/50
                     bg-white/5 hover:bg-white/10 backdrop-blur-xl transition-all duration-700 flex items-center gap-2 group shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-105 font-semibold">
                         Ver funcionalidades
-                        <span class="material-symbols-outlined text-base transition-transform duration-700 group-hover:translate-x-2">arrow_forward</span>
+                        <span
+                            class="material-symbols-outlined text-base transition-transform duration-700 group-hover:translate-x-2">arrow_forward</span>
                     </a>
                 </div>
 
@@ -119,11 +144,15 @@
 
             <!-- VISUAL -->
             <div class="fade-up relative">
-                <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 blur-3xl opacity-70 animate-pulse-slow"></div>
-                <div class="relative bg-gradient-to-br from-slate-900/70 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl text-center hover:border-blue-500/30 transition-all duration-1000 hover:scale-[1.02] overflow-hidden">
+                <div
+                    class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 blur-3xl opacity-70 animate-pulse-slow">
+                </div>
+                <div
+                    class="relative bg-gradient-to-br from-slate-900/70 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl text-center hover:border-blue-500/30 transition-all duration-700 hover:scale-[1.02] overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-60"></div>
 
-                    <img src="assets/images/legal-equipamentos.png" width="742" height="623" decoding="async" fetchpriority="high" alt="PDV Legal rodando em maquininha e equipamentos Android"
+                    <img src="assets/images/legal-equipamentos.png" width="742" height="623" decoding="async"
+                        fetchpriority="high" alt="PDV Legal rodando em maquininha e equipamentos Android"
                         class="relative z-10 w-full max-h-[360px] object-contain rounded-2xl drop-shadow-[0_20px_45px_rgba(15,23,42,0.7)]">
 
                     <p class="relative z-10 text-slate-300 mt-5 mb-2 text-base md:text-lg">
@@ -147,12 +176,15 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <div class="text-center mb-20 fade-up">
-                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
+                <span
+                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
                     POR QUE PDV NA MAQUININHA?
                 </span>
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Menos estrutura no balcão,
-                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">mais giro por atendimento</span>
+                    <span
+                        class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">mais
+                        giro por atendimento</span>
                 </h2>
                 <p class="text-slate-400 text-lg max-w-3xl mx-auto leading-relaxed">
                     Reduza pontos de falha, libere espaço e leve o caixa até onde a venda acontece.
@@ -163,57 +195,70 @@
             <div class="grid md:grid-cols-3 gap-10">
 
                 <!-- DIFERENCIAL 1 -->
-                <div class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-1000 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
-                    
-                    <div class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-6">
+                <div
+                    class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
+
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
                         <span class="material-symbols-outlined text-blue-400 text-4xl">savings</span>
                     </div>
-                    
+
                     <h3 class="text-xl font-bold mb-4">Economia real</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
                         Dispensa computador, monitor, nobreak, teclado, mouse e impressora dedicada.
                         Você economiza na compra, na manutenção e até no espaço do balcão.
                     </p>
 
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-1000"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700">
+                    </div>
                 </div>
 
                 <!-- DIFERENCIAL 2 -->
-                <div class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-1000 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
-                    
-                    <div class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-6">
+                <div
+                    class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
+
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
                         <span class="material-symbols-outlined text-blue-400 text-4xl">explore</span>
                     </div>
-                    
+
                     <h3 class="text-xl font-bold mb-4">Mobilidade total</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
                         Atenda na mesa, no balcão, no estacionamento ou na rua.
                         Como funciona com 4G ou Wi-Fi, sua equipe leva o caixa pra onde o cliente estiver.
                     </p>
 
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-1000"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700">
+                    </div>
                 </div>
 
                 <!-- DIFERENCIAL 3 -->
-                <div class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-1000 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
-                    
-                    <div class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-1000 group-hover:scale-110 group-hover:rotate-6">
+                <div
+                    class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
+
+                    <div
+                        class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
                         <span class="material-symbols-outlined text-blue-400 text-4xl">sync</span>
                     </div>
-                    
+
                     <h3 class="text-xl font-bold mb-4">Pagamento integrado</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
                         Como o sistema roda na própria maquininha, o pagamento já vem vinculado à NFC-e.
                         Atende a obrigatoriedade fiscal de estados como RS e MT, sem complicação.
                     </p>
 
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-1000"></div>
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700">
+                    </div>
                 </div>
 
             </div>
 
             <!-- LINHA DE INFO TÉCNICA -->
-            <div class="fade-up mt-20 bg-gradient-to-r from-slate-900/80 to-slate-900/40 border-2 border-white/10 rounded-3xl p-8 flex flex-wrap items-center justify-around gap-8 text-center backdrop-blur-xl shadow-xl">
+            <div
+                class="fade-up mt-20 bg-gradient-to-r from-slate-900/80 to-slate-900/40 border-2 border-white/10 rounded-3xl p-8 flex flex-wrap items-center justify-around gap-8 text-center backdrop-blur-xl shadow-xl">
 
                 <div class="flex items-center gap-4">
                     <span class="material-symbols-outlined text-blue-400 text-3xl">android</span>
@@ -269,12 +314,15 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <div class="text-center mb-20 fade-up">
-                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
+                <span
+                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
                     PAINEL DE GESTÃO
                 </span>
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Indicadores na nuvem para
-                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">decidir mais rápido</span>
+                    <span
+                        class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">decidir
+                        mais rápido</span>
                 </h2>
                 <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
                     Enquanto sua equipe vende na maquininha, a gestão acompanha tudo pelo navegador —
@@ -284,10 +332,12 @@
 
             <!-- IMAGEM DO DASHBOARD -->
             <div class="fade-up relative max-w-6xl mx-auto">
-                <div class="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 blur-3xl opacity-60 rounded-3xl"></div>
+                <div
+                    class="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 blur-3xl opacity-60 rounded-3xl">
+                </div>
 
                 <div class="relative bg-gradient-to-br from-slate-900/80 to-slate-800/60 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl shadow-blue-500/20
-                hover:scale-[1.01] transition-all duration-1000 group">
+                hover:scale-[1.01] transition-all duration-700 group">
 
                     <div class="flex items-center gap-2 px-5 py-4 border-b border-white/10">
                         <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
@@ -296,8 +346,9 @@
                         <span class="ml-4 text-xs text-slate-500 truncate font-medium">pdvlegal • Retaguarda</span>
                     </div>
 
-                    <img src="assets/images/optimized/pdvlegal-dash-1200.jpg" width="1200" height="567" loading="lazy" decoding="async" alt="Retaguarda PDV Legal"
-                        class="w-full rounded-b-2xl group-hover:scale-[1.005] transition-transform duration-1000">
+                    <img src="assets/images/optimized/pdvlegal-dash-1200.jpg" width="1200" height="567" loading="lazy"
+                        decoding="async" alt="Retaguarda PDV Legal"
+                        class="w-full rounded-b-2xl group-hover:scale-[1.005] transition-transform duration-700">
 
                 </div>
             </div>
@@ -306,7 +357,8 @@
             <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mt-20">
 
                 <div class="fade-up text-center">
-                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-blue-500/15 border-2 border-blue-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-blue-500/15 border-2 border-blue-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
                         <span class="material-symbols-outlined text-blue-400 text-4xl">date_range</span>
                     </div>
                     <h3 class="font-bold mb-2">Filtros por Período</h3>
@@ -314,7 +366,8 @@
                 </div>
 
                 <div class="fade-up text-center">
-                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-purple-500/15 border-2 border-purple-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-purple-500/15 border-2 border-purple-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
                         <span class="material-symbols-outlined text-purple-400 text-4xl">store</span>
                     </div>
                     <h3 class="font-bold mb-2">Multi-filial</h3>
@@ -322,7 +375,8 @@
                 </div>
 
                 <div class="fade-up text-center">
-                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-green-500/15 border-2 border-green-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-green-500/15 border-2 border-green-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
                         <span class="material-symbols-outlined text-green-400 text-4xl">badge</span>
                     </div>
                     <h3 class="font-bold mb-2">Comissão Garçom</h3>
@@ -330,7 +384,8 @@
                 </div>
 
                 <div class="fade-up text-center">
-                    <div class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-yellow-500/15 border-2 border-yellow-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
+                    <div
+                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-yellow-500/15 border-2 border-yellow-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
                         <span class="material-symbols-outlined text-yellow-400 text-4xl">leaderboard</span>
                     </div>
                     <h3 class="font-bold mb-2">Mais Vendidos</h3>
@@ -353,12 +408,15 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <div class="text-center mb-20 fade-up">
-                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 backdrop-blur-sm">
+                <span
+                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 backdrop-blur-sm">
                     BARES E RESTAURANTES
                 </span>
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Atendimento de mesa com
-                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(168,85,247,0.3)]">menos espera e mais controle</span>
+                    <span
+                        class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(168,85,247,0.3)]">menos
+                        espera e mais controle</span>
                 </h2>
                 <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
                     Garçons com maquininha na mão, pedidos imprimindo automaticamente na cozinha
@@ -372,7 +430,8 @@
                 <div class="fade-up space-y-7">
 
                     <div class="flex gap-5 group">
-                        <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
+                        <div
+                            class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
                             <span class="material-symbols-outlined text-blue-400 text-2xl">restaurant_menu</span>
                         </div>
                         <div>
@@ -385,20 +444,23 @@
                     </div>
 
                     <div class="flex gap-5 group">
-                        <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
+                        <div
+                            class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
                             <span class="material-symbols-outlined text-blue-400 text-2xl">print</span>
                         </div>
                         <div>
                             <h3 class="font-bold text-lg mb-2">Impressão por setor de produção</h3>
                             <p class="text-slate-400 text-sm leading-relaxed">
-                                Conecte até <b class="text-white font-semibold">10 impressoras</b> de expedição. Bebidas vão pro bar,
+                                Conecte até <b class="text-white font-semibold">10 impressoras</b> de expedição. Bebidas
+                                vão pro bar,
                                 comidas vão pra cozinha — automaticamente.
                             </p>
                         </div>
                     </div>
 
                     <div class="flex gap-5 group">
-                        <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
+                        <div
+                            class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
                             <span class="material-symbols-outlined text-blue-400 text-2xl">tune</span>
                         </div>
                         <div>
@@ -411,7 +473,8 @@
                     </div>
 
                     <div class="flex gap-5 group">
-                        <div class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
+                        <div
+                            class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
                             <span class="material-symbols-outlined text-blue-400 text-2xl">badge</span>
                         </div>
                         <div>
@@ -427,8 +490,11 @@
 
                 <!-- COLUNA VISUAL -->
                 <div class="fade-up relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/10 blur-3xl opacity-60"></div>
-                    <div class="relative bg-gradient-to-br from-slate-900/90 to-slate-950/90 border-2 border-blue-500/30 rounded-3xl p-10 shadow-2xl shadow-blue-500/20 backdrop-blur-xl">
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/10 blur-3xl opacity-60">
+                    </div>
+                    <div
+                        class="relative bg-gradient-to-br from-slate-900/90 to-slate-950/90 border-2 border-blue-500/30 rounded-3xl p-10 shadow-2xl shadow-blue-500/20 backdrop-blur-xl">
 
                         <!-- Mock comanda -->
                         <div class="border-b border-white/10 pb-5 mb-5 flex justify-between items-center">
@@ -436,7 +502,8 @@
                                 <p class="text-xs text-slate-500 uppercase tracking-wide font-semibold">Mesa 12</p>
                                 <p class="text-xl font-bold">Comanda #4821</p>
                             </div>
-                            <span class="text-xs bg-green-500/20 text-green-400 px-3 py-1.5 rounded-full border border-green-500/40 font-semibold">Aberta</span>
+                            <span
+                                class="text-xs bg-green-500/20 text-green-400 px-3 py-1.5 rounded-full border border-green-500/40 font-semibold">Aberta</span>
                         </div>
 
                         <div class="space-y-4 mb-6">
@@ -472,7 +539,8 @@
                             </div>
                         </div>
 
-                        <div class="mt-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center gap-4 text-sm backdrop-blur-sm">
+                        <div
+                            class="mt-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center gap-4 text-sm backdrop-blur-sm">
                             <span class="material-symbols-outlined text-blue-400 text-2xl">person</span>
                             <div>
                                 <p class="text-xs text-slate-500 font-semibold">Garçom</p>
@@ -499,12 +567,15 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <div class="text-center mb-20 fade-up">
-                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
+                <span
+                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
                     FUNCIONALIDADES
                 </span>
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Recursos para vender mais
-                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">sem perder governança</span>
+                    <span
+                        class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">sem
+                        perder governança</span>
                 </h2>
                 <p class="text-slate-400 text-lg">
                     Mobilidade, emissão fiscal, estoque e relatórios para uma rotina comercial mais leve e rastreável.
@@ -513,73 +584,88 @@
 
             <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-blue-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-blue-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-4xl drop-shadow-lg">smartphone</span>
                     <h3 class="mt-5 font-bold text-base">Roda em qualquer Android</h3>
                     <p class="text-sm text-slate-400 mt-2">Maquininha, celular ou tablet.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-purple-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-purple-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-purple-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-purple-500/20">
                     <span class="material-symbols-outlined text-purple-400 text-4xl drop-shadow-lg">receipt_long</span>
                     <h3 class="mt-5 font-bold text-base">Emissão NFC-e</h3>
                     <p class="text-sm text-slate-400 mt-2">Cupom fiscal direto da maquininha.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-green-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-green-500/20">
-                    <span class="material-symbols-outlined text-green-400 text-4xl drop-shadow-lg">restaurant_menu</span>
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-green-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-green-500/20">
+                    <span
+                        class="material-symbols-outlined text-green-400 text-4xl drop-shadow-lg">restaurant_menu</span>
                     <h3 class="mt-5 font-bold text-base">Comandas e Mesas</h3>
                     <p class="text-sm text-slate-400 mt-2">Atendimento direto na mesa.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-yellow-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-yellow-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-yellow-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-yellow-500/20">
                     <span class="material-symbols-outlined text-yellow-400 text-4xl drop-shadow-lg">touch_app</span>
                     <h3 class="mt-5 font-bold text-base">Interface Intuitiva</h3>
                     <p class="text-sm text-slate-400 mt-2">Treinamento mínimo da equipe.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-orange-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
-                    <span class="material-symbols-outlined text-orange-400 text-4xl drop-shadow-lg">qr_code_scanner</span>
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-orange-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
+                    <span
+                        class="material-symbols-outlined text-orange-400 text-4xl drop-shadow-lg">qr_code_scanner</span>
                     <h3 class="mt-5 font-bold text-base">Leitura de Código</h3>
                     <p class="text-sm text-slate-400 mt-2">Câmera ou scanner integrado.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-red-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-red-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-red-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-red-500/20">
                     <span class="material-symbols-outlined text-red-400 text-4xl drop-shadow-lg">print</span>
                     <h3 class="mt-5 font-bold text-base">Até 10 Impressoras</h3>
                     <p class="text-sm text-slate-400 mt-2">Bar, cozinha e produção.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-emerald-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-emerald-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-emerald-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-emerald-500/20">
                     <span class="material-symbols-outlined text-emerald-400 text-4xl drop-shadow-lg">payments</span>
                     <h3 class="mt-5 font-bold text-base">Pagamento Integrado</h3>
                     <p class="text-sm text-slate-400 mt-2">Pix, cartão e dinheiro.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-indigo-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-indigo-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20">
                     <span class="material-symbols-outlined text-indigo-400 text-4xl drop-shadow-lg">cloud_sync</span>
                     <h3 class="mt-5 font-bold text-base">Sincronização em Nuvem</h3>
                     <p class="text-sm text-slate-400 mt-2">Dados sempre atualizados.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-cyan-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-cyan-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20">
                     <span class="material-symbols-outlined text-cyan-400 text-4xl drop-shadow-lg">badge</span>
                     <h3 class="mt-5 font-bold text-base">Controle de Garçom</h3>
                     <p class="text-sm text-slate-400 mt-2">Comissão automática por venda.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-pink-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-pink-500/20">
-                    <span class="material-symbols-outlined text-pink-400 text-4xl drop-shadow-lg">confirmation_number</span>
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-pink-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-pink-500/20">
+                    <span
+                        class="material-symbols-outlined text-pink-400 text-4xl drop-shadow-lg">confirmation_number</span>
                     <h3 class="mt-5 font-bold text-base">Fichas e Senhas</h3>
                     <p class="text-sm text-slate-400 mt-2">Ideal para eventos e food trucks.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-amber-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-amber-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-amber-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-amber-500/20">
                     <span class="material-symbols-outlined text-amber-400 text-4xl drop-shadow-lg">scale</span>
                     <h3 class="mt-5 font-bold text-base">Integração com Balança</h3>
                     <p class="text-sm text-slate-400 mt-2">Para venda por peso.</p>
                 </div>
 
-                <div class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-teal-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-teal-500/20">
+                <div
+                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-teal-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-teal-500/20">
                     <span class="material-symbols-outlined text-teal-400 text-4xl drop-shadow-lg">analytics</span>
                     <h3 class="mt-5 font-bold text-base">Relatórios Completos</h3>
                     <p class="text-sm text-slate-400 mt-2">Por horário, produto e forma.</p>
@@ -594,18 +680,23 @@
     <section class="py-28 bg-gradient-to-b from-slate-950 to-slate-900 relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-3xl rounded-full"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-3xl rounded-full">
+            </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <div class="text-center mb-20 fade-up">
-                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
+                <span
+                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
                     SEGMENTOS
                 </span>
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Feito sob medida para
-                    <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">food service e varejo</span>
+                    <span
+                        class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">food
+                        service e varejo</span>
                 </h2>
                 <p class="text-slate-400 text-lg">
                     Negócios que precisam de mobilidade, agilidade e simplicidade
@@ -614,62 +705,74 @@
 
             <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">restaurant</span>
                     <p class="text-sm font-bold mt-3">Restaurantes</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">lunch_dining</span>
                     <p class="text-sm font-bold mt-3">Lanchonetes</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">local_bar</span>
                     <p class="text-sm font-bold mt-3">Bares</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">icecream</span>
                     <p class="text-sm font-bold mt-3">Sorveterias</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">local_dining</span>
                     <p class="text-sm font-bold mt-3">Food Trucks</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">store</span>
                     <p class="text-sm font-bold mt-3">Conveniência</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">storefront</span>
                     <p class="text-sm font-bold mt-3">Quiosques</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">festival</span>
                     <p class="text-sm font-bold mt-3">Eventos</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">bakery_dining</span>
                     <p class="text-sm font-bold mt-3">Padarias</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">coffee</span>
                     <p class="text-sm font-bold mt-3">Cafeterias</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">delivery_dining</span>
                     <p class="text-sm font-bold mt-3">Delivery</p>
                 </div>
 
-                <div class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
+                <div
+                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
                     <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">pets</span>
                     <p class="text-sm font-bold mt-3">Pet Shops</p>
                 </div>
@@ -690,73 +793,70 @@
         <div class="max-w-7xl mx-auto px-6 relative z-10">
 
             <div class="text-center mb-20 fade-up">
-                <span class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
+                <span
+                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
                     INTEGRAÇÕES OFICIAIS
                 </span>
                 <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
                     Integrações homologadas para
-                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">operar com confiança</span>
+                    <span
+                        class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">operar
+                        com confiança</span>
                 </h2>
                 <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                    Compatível com as principais adquirentes do mercado para reduzir atrito na implantação e no atendimento.
+                    Compatível com as principais adquirentes do mercado para reduzir atrito na implantação e no
+                    atendimento.
                     Use a adquirente que você já tem ou contrate uma nova com as melhores taxas.
                 </p>
             </div>
-
+            
             <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-
                 <div class="adquirente-card" data-delay="0">
                     <div class="adquirente-logo">
-                        <img src="assets/images/adquirentes/getnet.png" width="887" height="198" loading="lazy" decoding="async" alt="Getnet">
-                        <div class="adquirente-fallback hidden">GETNET</div>
+                        <img src="assets/images/adquirentes/getnet.png" width="887" height="198" loading="lazy"
+                            decoding="async" alt="Getnet">
                     </div>
                     <h3>Getnet</h3>
                 </div>
-
                 <div class="adquirente-card" data-delay="100">
                     <div class="adquirente-logo">
-                        <img src="assets/images/optimized/cielo-280.png" width="280" height="93" loading="lazy" decoding="async" alt="Cielo">
-                        <div class="adquirente-fallback hidden">CIELO</div>
+                        <img src="assets/images/optimized/cielo-280.png" width="280" height="93" loading="lazy"
+                            decoding="async" alt="Cielo">
                     </div>
                     <h3>Cielo</h3>
                 </div>
-
                 <div class="adquirente-card" data-delay="200">
                     <div class="adquirente-logo">
-                        <img src="assets/images/optimized/stone-280.png" width="280" height="142" loading="lazy" decoding="async" alt="Stone">
-                        <div class="adquirente-fallback hidden">STONE</div>
+                        <img src="assets/images/optimized/stone-280.png" width="280" height="142" loading="lazy"
+                            decoding="async" alt="Stone">
                     </div>
                     <h3>Stone</h3>
                 </div>
-
                 <div class="adquirente-card" data-delay="300">
                     <div class="adquirente-logo">
-                        <img src="assets/images/adquirentes/pagbank.png" width="615" height="190" loading="lazy" decoding="async" alt="PagBank">
-                        <div class="adquirente-fallback hidden">PAGBANK</div>
+                        <img src="assets/images/adquirentes/pagbank.png" width="615" height="190" loading="lazy"
+                            decoding="async" alt="PagBank">
                     </div>
                     <h3>PagBank</h3>
                 </div>
-
                 <div class="adquirente-card" data-delay="400">
                     <div class="adquirente-logo">
-                        <img src="assets/images/optimized/sicredi-280.png" width="280" height="66" loading="lazy" decoding="async" alt="Sicredi">
-                        <div class="adquirente-fallback hidden">SICREDI</div>
+                        <img src="assets/images/optimized/sicredi-280.png" width="280" height="66" loading="lazy"
+                            decoding="async" alt="Sicredi">
                     </div>
                     <h3>Sicredi</h3>
                 </div>
-
                 <div class="adquirente-card" data-delay="500">
                     <div class="adquirente-logo">
-                        <img src="assets/images/optimized/caixa-280.png" width="280" height="63" loading="lazy" decoding="async" alt="Caixa">
-                        <div class="adquirente-fallback hidden">CAIXA</div>
+                        <img src="assets/images/optimized/caixa-280.png" width="280" height="63" loading="lazy"
+                            decoding="async" alt="Caixa">
                     </div>
                     <h3>Caixa</h3>
                 </div>
-
-                <div class="adquirente-card" data-delay="600">
+                <div class="adquirente-card adquirente-card-banrisul" data-delay="600">
                     <div class="adquirente-logo">
-                        <img src="assets/images/optimized/banrisul-280.png" width="280" height="126" loading="lazy" decoding="async" alt="Banrisul">
-                        <div class="adquirente-fallback hidden">BANRISUL</div>
+                        <img src="assets/images/optimized/banrisul-280.png" width="280" height="126" loading="lazy"
+                            decoding="async" alt="Banrisul">
                     </div>
                     <h3>Banrisul</h3>
                 </div>
@@ -769,50 +869,71 @@
     <!-- CLIENTES -->
     <section class="py-24 bg-gradient-to-b from-black via-slate-950 to-black relative overflow-hidden">
         <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[420px] bg-blue-500/10 blur-3xl rounded-full"></div>
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[420px] bg-blue-500/10 blur-3xl rounded-full">
+            </div>
         </div>
 
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="text-center max-w-3xl mx-auto mb-14 fade-up">
-                <span class="inline-block mb-5 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
-                    FINA
+                <span
+                    class="inline-block mb-5 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
+                    Quem Já Usa e Aprova
                 </span>
 
                 <h2 class="text-3xl md:text-4xl font-extrabold mb-5 tracking-tight">
                     Clientes que usam
-                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">PDV Legal</span>
+                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">PDV
+                        Legal</span>
                 </h2>
 
                 <p class="text-slate-400 leading-relaxed">
-                    Empresas que contam com a SEATEC para vender com mobilidade, emitir NFC-e e manter a operação na palma da mão.
+                    Empresas que contam com a SEATEC para vender com mobilidade, emitir NFC-e e manter a operação na
+                    palma da mão.
                 </p>
             </div>
 
             <div class="clientes-marquee fade-up" aria-label="Clientes PDV Legal">
                 <div class="clientes-marquee-track">
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente1.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 1">
+                        <img src="assets/images/clientes/cliente1.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Rehem II">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 2">
+                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Janela">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente1.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 1">
+                        <img src="assets/images/clientes/cliente3.png" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Cookie da Boleta">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 2">
+                        <img src="assets/images/clientes/cliente4.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Coxa Sports Bar e Parrilla">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente1.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 1">
+                        <img src="assets/images/clientes/cliente5.png" width="300" height="300" loading="lazy"
+                            decoding="async" alt="El Perrito">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 2">
+                        <img src="assets/images/clientes/cliente1.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Rehem II">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente1.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 1">
+                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Janela">
                     </div>
                     <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy" decoding="async" alt="Cliente PDV Legal 2">
+                        <img src="assets/images/clientes/cliente3.png" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Cookie da Boleta">
+                    </div>
+                    <div class="cliente-logo-card">
+                        <img src="assets/images/clientes/cliente4.jpg" width="300" height="300" loading="lazy"
+                            decoding="async" alt="Coxa Sports Bar e Parrilla">
+                    </div>
+                    <div class="cliente-logo-card">
+                        <img src="assets/images/clientes/cliente5.png" width="300" height="300" loading="lazy"
+                            decoding="async" alt="El Perrito">
                     </div>
                 </div>
             </div>
@@ -823,28 +944,33 @@
     <section class="py-24 bg-gradient-to-b from-black via-slate-950 to-black relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/15 blur-3xl rounded-full"></div>
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/15 blur-3xl rounded-full">
+            </div>
         </div>
 
         <div class="max-w-4xl mx-auto px-6 text-center relative z-10 fade-up">
 
             <h2 class="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">
                 Modernize seu atendimento
-                <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">com mobilidade real</span>
+                <span
+                    class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">com
+                    mobilidade real</span>
             </h2>
 
             <p class="text-slate-400 text-lg mb-12 leading-relaxed">
-                Fale com nosso time e veja como o PDV Legal pode reduzir estrutura, acelerar filas e dar mais controle para sua gestão.
+                Fale com nosso time e veja como o PDV Legal pode reduzir estrutura, acelerar filas e dar mais controle
+                para sua gestão.
             </p>
 
-            <button data-whatsapp="Olá! Quero contratar o PDV Legal."
-                class="bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-10 py-5 rounded-xl font-bold text-lg
+            <button data-whatsapp="Olá! Quero contratar o PDV Legal." class="bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-10 py-5 rounded-xl font-bold text-lg
                 shadow-2xl shadow-green-500/40 hover:shadow-3xl hover:shadow-green-500/60
                 hover:scale-110 transition-all duration-700 group overflow-hidden relative">
-                
+
                 <span class="relative z-10">💬 Falar com especialista</span>
-                
-                <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
+
+                <span
+                    class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
             </button>
 
         </div>

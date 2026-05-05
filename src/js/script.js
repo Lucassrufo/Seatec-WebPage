@@ -169,7 +169,7 @@ function fecharModal() {
     modalVideo.src = "";
     modalLogo.src = "";
     modalLogo.classList.add("hidden");
-  }, 400);
+  }, 300);
 }
 
 document.querySelectorAll("[data-modal-close]").forEach(button => {

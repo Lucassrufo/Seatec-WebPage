@@ -34,10 +34,10 @@ html {
 
 .fade-up {
     opacity: 0;
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 96px, 0);
     transition:
-        opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.95s cubic-bezier(0.16, 1, 0.3, 1);
+        opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 2.1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .fade-up.show {
@@ -45,8 +45,160 @@ html {
     transform: translate3d(0, 0, 0);
 }
 
+.about-zoom:not(.show) {
+    transform: translate3d(0, 72px, 0) scale(0.94);
+}
+
+.system-title:not(.show) {
+    transform: translate3d(0, -110px, 0);
+}
+
+.system-card {
+    transition:
+        opacity 2s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 3.2s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.feature-drop:not(.show) {
+    transform: translate3d(0, -96px, 0);
+}
+
+.feature-rise:not(.show) {
+    transform: translate3d(0, 96px, 0);
+}
+
+.system-from-left:not(.show) {
+    transform: translate3d(-180px, 0, 0);
+}
+
+.system-from-right:not(.show) {
+    transform: translate3d(180px, 0, 0);
+}
+
+.features-title:not(.show) {
+    transform: translate3d(0, 90px, 0) scale(0.96);
+}
+
+.testimonials-title:not(.show) {
+    transform: translate3d(-96px, 0, 0);
+}
+
+.testimonial-tilt-left:not(.show) {
+    transform: translate3d(-80px, 70px, 0) rotate(-4deg);
+}
+
+.testimonial-tilt-up:not(.show) {
+    transform: translate3d(0, 110px, 0) scale(0.96);
+}
+
+.testimonial-tilt-right:not(.show) {
+    transform: translate3d(80px, 70px, 0) rotate(4deg);
+}
+
+.contact-title:not(.show) {
+    transform: translate3d(0, -90px, 0) scale(0.96);
+}
+
+.contact-from-left:not(.show) {
+    transform: translate3d(-96px, 0, 0);
+}
+
+.contact-from-bottom:not(.show) {
+    transform: translate3d(0, 120px, 0);
+}
+
+.contact-from-right:not(.show) {
+    transform: translate3d(96px, 0, 0);
+}
+
 .fade-up.show.animation-done {
     will-change: auto;
+}
+
+.system-card.show.animation-done {
+    transition:
+        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        opacity 0.3s ease;
+}
+
+.product-page .fade-up,
+.product-page .maquininha-card,
+.product-page .adquirente-card {
+    transition:
+        opacity 1.75s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 2.45s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.product-page section:nth-of-type(1) .grid > .fade-up:nth-child(1):not(.show) {
+    transform: translate3d(-150px, 0, 0);
+}
+
+.product-page section:nth-of-type(1) .grid > .fade-up:nth-child(2):not(.show) {
+    transform: translate3d(150px, 0, 0) scale(0.96);
+}
+
+.product-page section:nth-of-type(2) .grid > .fade-up:nth-child(odd):not(.show) {
+    transform: translate3d(-110px, 90px, 0) rotate(-3deg);
+}
+
+.product-page section:nth-of-type(2) .grid > .fade-up:nth-child(even):not(.show) {
+    transform: translate3d(110px, 90px, 0) rotate(3deg);
+}
+
+.product-page section:nth-of-type(2) .mt-20.fade-up:not(.show) {
+    transform: translate3d(0, 130px, 0) scale(0.94);
+}
+
+.product-page section:nth-of-type(3) .relative.max-w-6xl.fade-up:not(.show) {
+    transform: translate3d(0, 120px, 0) scale(0.92);
+}
+
+.product-page section:nth-of-type(3) .grid .fade-up:nth-child(odd):not(.show) {
+    transform: translate3d(0, -95px, 0);
+}
+
+.product-page section:nth-of-type(3) .grid .fade-up:nth-child(even):not(.show) {
+    transform: translate3d(0, 95px, 0);
+}
+
+.product-page section:nth-of-type(4) .grid > .fade-up:nth-child(1):not(.show) {
+    transform: translate3d(-130px, 0, 0);
+}
+
+.product-page section:nth-of-type(4) .grid > .fade-up:nth-child(2):not(.show) {
+    transform: translate3d(130px, 0, 0) scale(0.96);
+}
+
+.product-page #funcionalidades .grid > .fade-up:nth-child(4n+1):not(.show),
+.product-page #funcionalidades .grid > .fade-up:nth-child(4n+2):not(.show) {
+    transform: translate3d(0, -110px, 0);
+}
+
+.product-page #funcionalidades .grid > .fade-up:nth-child(4n+3):not(.show),
+.product-page #funcionalidades .grid > .fade-up:nth-child(4n+4):not(.show) {
+    transform: translate3d(0, 110px, 0);
+}
+
+.product-page section:nth-last-of-type(3) .grid > .fade-up:nth-child(odd):not(.show) {
+    transform: translate3d(-90px, 70px, 0) rotate(-2deg);
+}
+
+.product-page section:nth-last-of-type(3) .grid > .fade-up:nth-child(even):not(.show) {
+    transform: translate3d(90px, 70px, 0) rotate(2deg);
+}
+
+.product-page .clientes-marquee.fade-up:not(.show) {
+    transform: translate3d(0, 120px, 0) scale(0.95);
+}
+
+.product-page section:last-of-type .fade-up:not(.show) {
+    transform: translate3d(0, 120px, 0) scale(0.92);
 }
 
 .fade-up:not(.show),
@@ -101,12 +253,12 @@ html {
 .whats-float {
     animation: floatGentle 6s ease-in-out infinite;
     transition:
-        color 0.22s ease,
-        background-color 0.22s ease,
-        border-color 0.22s ease,
-        box-shadow 0.22s ease,
-        transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-        opacity 0.22s ease;
+        color 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.3s ease;
 }
 
 .whats-float:hover {
@@ -144,7 +296,7 @@ html {
     font-weight: 800;
     font-size: 0.82rem;
     box-shadow: 0 14px 34px rgba(34, 197, 94, 0.32);
-    transition: transform 0.45s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.45s ease;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
     pointer-events: auto;
 }
 
@@ -168,7 +320,7 @@ html {
     opacity: 0;
     pointer-events: none;
     transform: translateY(22px) scale(0.96);
-    transition: opacity 0.35s ease, transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .kellyia-open .kellyia-chat {
@@ -310,7 +462,7 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.09);
     font-size: 0.84rem;
     font-weight: 700;
-    transition: background 0.28s ease, border-color 0.28s ease, transform 0.28s ease;
+    transition: background 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
 }
 
 .kellyia-option:hover,
@@ -371,7 +523,7 @@ html {
 
 .hero-image-wrap {
     animation: heroImageFloat 9s ease-in-out infinite;
-    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
 }
 
 .hero-image-wrap:hover {
@@ -388,7 +540,7 @@ html {
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(4px);
-    transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .hero-mini-badge:hover {
@@ -434,13 +586,13 @@ img {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 96px, 0);
     opacity: 0;
     transition:
-        opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.95s cubic-bezier(0.16, 1, 0.3, 1),
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
+        opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 2.1s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
     box-shadow: 
         0 25px 50px rgba(0, 0, 0, 0.4),
         inset 0 1px 0 rgba(255, 255, 255, 0.05);
@@ -459,7 +611,7 @@ img {
     border-radius: 28px;
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(168, 85, 247, 0.08));
     opacity: 0;
-    transition: opacity 0.8s ease;
+    transition: opacity 0.65s ease;
 }
 
 .maquininha-card::after {
@@ -471,7 +623,7 @@ img {
     height: 200%;
     background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
     opacity: 0;
-    transition: opacity 0.8s ease;
+    transition: opacity 0.65s ease;
 }
 
 .maquininha-card:hover {
@@ -495,7 +647,7 @@ img {
     position: relative;
     z-index: 1;
     animation: none;
-    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), filter 0.25s ease;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
     filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.4));
 }
 
@@ -515,7 +667,7 @@ img {
     font-size: 1.1rem;
     color: #e2e8f0;
     text-align: center;
-    transition: color 0.6s ease;
+    transition: color 0.3s ease;
 }
 
 .maquininha-card:hover h3 {
@@ -550,12 +702,12 @@ img {
     align-items: center;
     gap: 16px;
     opacity: 0;
-    transform: translate3d(0, 40px, 0);
+    transform: translate3d(0, 96px, 0);
     transition:
-        opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.95s cubic-bezier(0.16, 1, 0.3, 1),
-        border-color 0.25s ease,
-        box-shadow 0.25s ease;
+        opacity 1.6s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 2.1s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
     box-shadow: 
         0 15px 40px rgba(0, 0, 0, 0.35),
         inset 0 1px 0 rgba(255, 255, 255, 0.04);
@@ -570,7 +722,7 @@ img {
     border-radius: 24px;
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.12), rgba(168, 85, 247, 0.08));
     opacity: 0;
-    transition: opacity 0.7s ease;
+    transition: opacity 0.65s ease;
     pointer-events: none;
 }
 
@@ -581,7 +733,7 @@ img {
     border-radius: 24px;
     background: radial-gradient(circle at 50% 0%, rgba(59, 130, 246, 0.15), transparent 60%);
     opacity: 0;
-    transition: opacity 0.7s ease;
+    transition: opacity 0.65s ease;
     pointer-events: none;
 }
 
@@ -592,11 +744,15 @@ img {
 
 .adquirente-card[data-delay="0"]   { transition-delay: 0ms; }
 .adquirente-card[data-delay="100"] { transition-delay: 120ms; }
-.adquirente-card[data-delay="200"] { transition-delay: 240ms; }
-.adquirente-card[data-delay="300"] { transition-delay: 360ms; }
-.adquirente-card[data-delay="400"] { transition-delay: 480ms; }
-.adquirente-card[data-delay="500"] { transition-delay: 600ms; }
-.adquirente-card[data-delay="600"] { transition-delay: 720ms; }
+.adquirente-card[data-delay="200"] { transition-delay: 220ms; }
+.adquirente-card[data-delay="300"] { transition-delay: 320ms; }
+.adquirente-card[data-delay="400"] { transition-delay: 420ms; }
+.adquirente-card[data-delay="500"] { transition-delay: 520ms; }
+.adquirente-card[data-delay="600"] { transition-delay: 620ms; }
+
+.adquirente-card-banrisul:not(.show) {
+    transform: translate3d(0, 96px, 0);
+}
 
 .adquirente-card:hover {
     transform: translateY(-10px) scale(1.04);
@@ -620,7 +776,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .adquirente-card:hover .adquirente-logo {
@@ -632,7 +788,7 @@ img {
     max-height: 75px;
     object-fit: contain;
     filter: brightness(1) drop-shadow(0 6px 16px rgba(0, 0, 0, 0.4));
-    transition: filter 0.7s ease;
+    transition: filter 0.3s ease;
 }
 
 .adquirente-card:hover .adquirente-logo img {
@@ -652,7 +808,7 @@ img {
     background: linear-gradient(135deg, rgba(59, 130, 246, 0.18), rgba(168, 85, 247, 0.12));
     border: 1.5px dashed rgba(255, 255, 255, 0.15);
     border-radius: 14px;
-    transition: background 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;
 }
 
 .adquirente-card:hover .adquirente-fallback {
@@ -667,7 +823,7 @@ img {
     font-size: 16px;
     color: #e2e8f0;
     letter-spacing: 0.4px;
-    transition: color 0.5s ease;
+    transition: color 0.3s ease;
 }
 
 .adquirente-card:hover h3 {
@@ -735,12 +891,12 @@ img {
 
 a, button {
     transition:
-        color 0.22s ease,
-        background-color 0.22s ease,
-        border-color 0.22s ease,
-        box-shadow 0.22s ease,
-        transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
-        opacity 0.22s ease;
+        color 0.3s ease,
+        background-color 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        opacity 0.3s ease;
 }
 
 .transition-all {

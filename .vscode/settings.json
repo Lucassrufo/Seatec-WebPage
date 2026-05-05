@@ -1,6 +1,7 @@
 {
   "liveServer.settings.root": "/public",
   "liveServer.settings.file": "index.html",
+  "liveServer.settings.host": "0.0.0.0",
   "liveServer.settings.ignoreFiles": [
     "**/.git/**",
     "**/node_modules/**"
