@@ -56,11 +56,13 @@
                     alt="SEATEC">
             </a>
 
-            <nav class="hidden xl:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-sm text-slate-300 backdrop-blur-xl">
+            <nav class="hidden xl:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-xs text-slate-300 backdrop-blur-xl">
                 <a href="#inicio" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Início</a>
                 <a href="#diferenciais" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Diferenciais</a>
                 <a href="#gestao" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Gestão</a>
+                <a href="#food-service" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Food service</a>
                 <a href="#funcionalidades" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Funcionalidades</a>
+                <a href="#segmentos" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Segmentos</a>
                 <a href="#adquirentes" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Adquirentes</a>
                 <a href="#contato" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Contato</a>
             </nav>
@@ -160,12 +162,12 @@
                             class="material-symbols-outlined text-base transition-transform duration-700 group-hover:translate-x-2">arrow_forward</span>
                     </a>
 
-                    <button type="button" data-pdv-video-modal-open
+                    <a href="#video-pdv-legal"
                         class="px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-size-200 bg-pos-0 hover:bg-pos-100 shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-cyan-500/35 hover:scale-105 transition-all duration-700 flex items-center gap-2 group font-semibold">
                         Conhe&ccedil;a o PDV LEGAL
                         <span
                             class="material-symbols-outlined text-base transition-transform duration-700 group-hover:scale-110">play_circle</span>
-                    </button>
+                    </a>
 
                     <a href="https://ajuda.pdvlegal.com.br/" target="_blank" rel="noopener noreferrer"
                         class="px-8 py-4 rounded-xl border-2 border-cyan-300/20 hover:border-cyan-300/55 bg-cyan-400/10 hover:bg-cyan-400/15 backdrop-blur-xl transition-all duration-700 flex items-center gap-2 group shadow-lg hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-105 font-semibold">
@@ -213,6 +215,51 @@
                 </div>
             </div>
 
+        </div>
+    </section>
+
+    <!-- VIDEO PDV LEGAL -->
+    <section id="video-pdv-legal" class="pdv-video-showcase py-24 bg-gradient-to-b from-black via-slate-950 to-slate-900 relative overflow-hidden">
+        <div class="absolute inset-0 pointer-events-none">
+            <div class="absolute top-0 left-1/4 w-[520px] h-[520px] bg-blue-500/10 blur-3xl rounded-full"></div>
+            <div class="absolute bottom-0 right-1/4 w-[420px] h-[420px] bg-cyan-500/10 blur-3xl rounded-full"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="pdv-video-showcase__panel fade-up">
+                <div class="pdv-video-showcase__media">
+                    <iframe title="Conhe&ccedil;a o PDV Legal"
+                        src="https://www.youtube-nocookie.com/embed/EpBA8pgvEOc?rel=0&modestbranding=1"
+                        frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+
+                <div class="pdv-video-showcase__content">
+                    <span class="pdv-video-showcase__eyebrow">
+                        <span class="material-symbols-outlined">play_circle</span>
+                        Demonstra&ccedil;&atilde;o do sistema
+                    </span>
+                    <h2>Veja o PDV Legal em funcionamento</h2>
+                    <p>
+                        Assista uma apresenta&ccedil;&atilde;o r&aacute;pida do sistema na pr&oacute;pria p&aacute;gina. O v&iacute;deo fica parado at&eacute; o cliente clicar para iniciar.
+                    </p>
+
+                    <div class="pdv-video-showcase__actions">
+                        <a href="https://www.youtube.com/watch?v=Dcx76e0ITvM&list=PLjkQMYhjHLHEIi9-ZLwoX_AkpL4tHcrB9"
+                            target="_blank" rel="noopener noreferrer" class="pdv-video-showcase__playlist">
+                            <span class="material-symbols-outlined">video_library</span>
+                            Saiba mais sobre o PDV
+                        </a>
+
+                        <a href="https://ajuda.pdvlegal.com.br/" target="_blank" rel="noopener noreferrer"
+                            class="pdv-video-showcase__help">
+                            <span class="material-symbols-outlined">help</span>
+                            Central de ajuda
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1057,7 +1104,20 @@
                     </div>
                 </div>
 
-            
+                <!-- LINKS -->
+                <div>
+                    <h4 class="font-bold mb-5 text-white">Navega&ccedil;&atilde;o</h4>
+                    <ul class="space-y-3 text-sm text-slate-400">
+                        <li><a href="#inicio" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">In&iacute;cio</a></li>
+                        <li><a href="#diferenciais" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Diferenciais</a></li>
+                        <li><a href="#gestao" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Gest&atilde;o</a></li>
+                        <li><a href="#food-service" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Food service</a></li>
+                        <li><a href="#funcionalidades" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Funcionalidades</a></li>
+                        <li><a href="#segmentos" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Segmentos</a></li>
+                        <li><a href="#adquirentes" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Adquirentes</a></li>
+                        <li><a href="#contato" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Contato</a></li>
+                    </ul>
+                </div>
 
                 <!-- SISTEMAS -->
                 <div>
@@ -1168,14 +1228,11 @@
                     © 2026 Seatec Soluções Tecnológicas — Todos os direitos reservados
                 </p>
 
-                <div class="flex gap-4 text-slate-400 text-sm">
-                    <span class="hover:text-white transition-colors duration-700 cursor-pointer">Automação
-                        Comercial</span>
-                    <span>•</span>
-                    <span class="hover:text-white transition-colors duration-700 cursor-pointer">Sistemas PDV</span>
-                    <span>•</span>
-                    <span class="hover:text-white transition-colors duration-700 cursor-pointer">Suporte
-                        Especializado</span>
+                <div class="footer-policy-links flex gap-4 text-slate-400 text-sm">
+                    <a href="https://seatec.com.br/termos-e-condicoes.html" class="hover:text-white transition-colors duration-700">Termos e condi&ccedil;&otilde;es</a>
+                    <span>&bull;</span>
+                    <a href="https://seatec.com.br/termos-e-condicoes.html" class="hover:text-white transition-colors duration-700">Pol&iacute;ticas de Privacidade</a>
+                    
                 </div>
 
             </div>

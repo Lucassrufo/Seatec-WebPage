@@ -234,9 +234,9 @@ document.querySelectorAll(".adquirente-logo img").forEach(img => {
 const kellyIaTopics = [
   {
     id: "time",
-    question: "Conhe\u00e7a nosso time",
+    question: "Conhe\u00e7a o time SEATEC",
     answer: `
-      <strong>Nosso time une atendimento, tecnologia e gest\u00e3o para acompanhar o cliente de perto.</strong><br><br>
+      <strong>Nosso time une suporte, tecnologia e gest\u00e3o para acompanhar sua opera\u00e7\u00e3o de perto.</strong><br><br>
       <strong>Suporte:</strong><br>
       Carlos Martos;<br>
       Luis Eduardo;<br>
@@ -250,9 +250,9 @@ const kellyIaTopics = [
   },
   {
     id: "sistemas",
-    question: "Quais sistemas a SEATEC oferece?",
+    question: "Qual sistema combina com minha opera\u00e7\u00e3o?",
     answer: `
-      A SEATEC trabalha com solu\u00e7\u00f5es PDV para diferentes tipos de opera\u00e7\u00e3o.<br><br>
+      A SEATEC trabalha com solu\u00e7\u00f5es PDV para diferentes rotinas comerciais.<br><br>
       <strong>VoePDV:</strong> sistema para Windows, ideal para caixa com alto fluxo, gest\u00e3o de estoque, emiss\u00e3o NFC-e e NF-e, relat\u00f3rios, TEF integrado e controle completo da opera\u00e7\u00e3o.<br><br>
       <strong>PDV Legal:</strong> sistema para Android, maquininha e Smart POS. Permite vender, emitir NFC-e, controlar estoque, comandas, delivery e acompanhar relat\u00f3rios em tempo real.
     `
@@ -261,8 +261,8 @@ const kellyIaTopics = [
     id: "implantacao",
     question: "Como funciona a implanta\u00e7\u00e3o?",
     answer: `
-      A implanta\u00e7\u00e3o \u00e9 acompanhada pelo time da SEATEC para deixar o sistema pronto para uso no dia a dia.<br><br>
-      Ajudamos na configura\u00e7\u00e3o inicial, orientamos o uso das principais fun\u00e7\u00f5es e ajustamos o sistema conforme a rotina do neg\u00f3cio, seja no caixa Windows com o VoePDV ou na opera\u00e7\u00e3o Android com o PDV Legal.
+      A implanta\u00e7\u00e3o \u00e9 acompanhada pelo time da SEATEC para deixar o sistema pronto para a rotina da empresa.<br><br>
+      Ajudamos na configura\u00e7\u00e3o inicial, parametriza\u00e7\u00e3o fiscal, orienta\u00e7\u00e3o de uso e ajustes conforme o tipo de opera\u00e7\u00e3o, seja no caixa Windows com o VoePDV ou na opera\u00e7\u00e3o Android com o PDV Legal.
     `
   },
   {
@@ -270,13 +270,13 @@ const kellyIaTopics = [
     question: "Como funciona o suporte?",
     answer: `
       O suporte da SEATEC \u00e9 feito por um time que conhece a opera\u00e7\u00e3o comercial de perto e busca resolver com agilidade.<br><br>
-      O cliente pode chamar pelo WhatsApp de suporte, receber orienta\u00e7\u00f5es sobre o sistema e contar com acompanhamento para d\u00favidas, ajustes e rotinas importantes do PDV.
+      O cliente pode chamar pelo WhatsApp de suporte para tirar d\u00favidas, receber orienta\u00e7\u00f5es do sistema e acompanhar ajustes importantes do PDV.
     `
   },
   {
     id: "contato",
-    question: "Quero falar com um consultor",
-    answer: "Perfeito. Nosso time comercial pode entender sua opera\u00e7\u00e3o e indicar a melhor solu\u00e7\u00e3o entre VoePDV, PDV Legal e outros recursos da SEATEC.",
+    question: "Falar com um consultor",
+    answer: "Perfeito. Nosso time comercial pode entender sua opera\u00e7\u00e3o, volume de vendas, necessidade fiscal e indicar a melhor solu\u00e7\u00e3o entre VoePDV, PDV Legal e outros recursos da SEATEC.",
     action: {
       label: "Abrir WhatsApp",
       message: "Ol\u00e1! Vim pelo chat TsuruIA e quero falar com um consultor."
@@ -298,7 +298,8 @@ function iniciarKellyIa() {
         </div>
         <div>
           <strong>TsuruIA</strong>
-          <span>Assistente virtual da SEATEC</span>
+          <span>Assistente comercial da SEATEC</span>
+          <small><i></i> Online agora</small>
         </div>
         <button type="button" class="kellyia-close" aria-label="Fechar TsuruIA">
           <span class="material-symbols-outlined">close</span>
@@ -306,18 +307,39 @@ function iniciarKellyIa() {
       </header>
 
       <div class="kellyia-body">
+        <div class="kellyia-intro">
+          <span class="material-symbols-outlined">auto_awesome</span>
+          <div>
+            <strong>Como posso ajudar?</strong>
+            <p>Escolha um assunto abaixo ou fale com um consultor pelo WhatsApp.</p>
+          </div>
+        </div>
+
         <div class="kellyia-message kellyia-message-bot">
-          Oi! Eu sou a TsuruIA. Escolha uma pergunta abaixo para saber mais sobre a SEATEC.
+          Ol\u00e1! Eu sou a TsuruIA. Posso orientar voc\u00ea sobre sistemas PDV, implanta\u00e7\u00e3o, suporte e contato comercial.
         </div>
         <div class="kellyia-reply" aria-live="polite"></div>
       </div>
 
       <div class="kellyia-options"></div>
+
+      <footer class="kellyia-footer">
+        <button type="button" class="kellyia-human">
+          <span class="material-symbols-outlined">support_agent</span>
+          Atendimento humano
+        </button>
+      </footer>
     </section>
 
-    <button type="button" class="kellyia-toggle" aria-label="Falar no WhatsApp">
+    <button type="button" class="kellyia-toggle" aria-label="Abrir TsuruIA">
+      <span class="kellyia-toggle-avatar" aria-hidden="true">
+        <img src="assets/images/tsuru.png" width="38" height="38" alt="" loading="lazy" decoding="async">
+      </span>
       <span aria-hidden="true">💬</span>
-      <span>WhatsApp</span>
+      <span>
+        <strong>TsuruIA</strong>
+        <small>Assistente virtual</small>
+      </span>
     </button>
   `;
 
@@ -327,6 +349,7 @@ function iniciarKellyIa() {
   const close = widget.querySelector(".kellyia-close");
   const options = widget.querySelector(".kellyia-options");
   const reply = widget.querySelector(".kellyia-reply");
+  const human = widget.querySelector(".kellyia-human");
 
   function resetChat() {
     reply.innerHTML = "";
@@ -367,12 +390,13 @@ function iniciarKellyIa() {
     const button = document.createElement("button");
     button.type = "button";
     button.className = "kellyia-option";
-    button.textContent = topic.question;
+    button.innerHTML = `<span class="material-symbols-outlined">chevron_right</span><strong>${topic.question}</strong>`;
     button.addEventListener("click", () => showTopic(topic));
     options.appendChild(button);
   });
 
-  toggle.addEventListener("click", () => abrirWhats());
+  toggle.addEventListener("click", () => setOpen(!widget.classList.contains("kellyia-open")));
+  human.addEventListener("click", () => abrirWhats("Ol\u00e1! Vim pelo chat TsuruIA e quero falar com um atendente."));
 
   document.querySelectorAll("[data-tsuru-open]").forEach(button => {
     button.addEventListener("click", event => {
