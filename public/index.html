@@ -85,7 +85,7 @@
 
       </nav>
 
-      <div class="hidden md:block">
+      <div class="hidden md:flex items-center gap-3">
       <a href="#sistemas" class="header-systems-cta relative inline-flex bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-size-200 bg-pos-0 hover:bg-pos-100 px-5 py-3 rounded-xl text-sm font-semibold 
       shadow-lg shadow-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/50 
       hover:scale-110 transition-all duration-700 group overflow-hidden">
@@ -98,6 +98,11 @@
         <!-- glow effect -->
         <span class="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-400/30 to-cyan-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
       </a>
+
+      <button type="button" class="header-theme-toggle" data-theme-toggle aria-pressed="false" aria-label="Ativar tema claro">
+        <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
+        <span data-theme-label>Tema claro</span>
+      </button>
       </div>
 
       <button type="button" class="md:hidden w-11 h-11 grid place-items-center rounded-xl border border-white/10 bg-white/5 text-white" data-mobile-menu-toggle aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menu">
@@ -115,13 +120,17 @@
         <a href="#depoimentos" class="py-2">Depoimentos</a>
         <a href="#contatos" class="py-2">Contatos</a>
         <a href="#sistemas" class="mt-2 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-5 py-3 text-left font-bold text-white"><span class="material-symbols-outlined text-base">apps</span>Ver sistemas</a>
+        <button type="button" class="header-theme-toggle justify-start" data-theme-toggle aria-pressed="false" aria-label="Ativar tema claro">
+          <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
+          <span data-theme-label>Tema claro</span>
+        </button>
       </div>
     </nav>
   </header>
 
   <!-- HERO -->
   <section id="inicio"
-    class="pt-32 pb-28 bg-gradient-to-br from-blue-900/40 via-slate-900 to-black relative overflow-hidden">
+    class="index-hero professional-hero pt-32 pb-28 bg-gradient-to-br from-blue-900/40 via-slate-900 to-black relative overflow-hidden">
 
     <!-- EFEITO FUNDO -->
     <div class="absolute inset-0 pointer-events-none">
@@ -211,7 +220,7 @@
         <div class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 blur-3xl opacity-70 animate-pulse-slow"></div>
 
         <!-- card efeito -->
-        <div class="relative bg-gradient-to-br from-slate-900/60 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl hero-image-wrap hover:border-blue-500/30 transition-all duration-700">
+        <div class="hero-visual-card relative bg-gradient-to-br from-slate-900/60 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl hero-image-wrap hover:border-blue-500/30 transition-all duration-700">
 
           <img src="assets/images/optimized/imagem-1200.jpg" width="1200" height="800" decoding="async" fetchpriority="high" class="rounded-2xl shadow-2xl transition-all duration-700 hover:scale-[1.03]" alt="Sistema SEATEC em operação">
 
@@ -912,7 +921,7 @@
     </div>
   </footer>
   <!-- MODAL SISTEMA -->
-  <div id="modalSistema" class="fixed inset-0 z-50 hidden items-center justify-center p-6">
+  <div id="modalSistema" class="fixed inset-0 z-50 hidden items-center justify-center p-6" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitulo">
 
 
     <!-- BACKDROP -->
@@ -936,7 +945,7 @@
           <h3 id="modalTitulo" class="text-2xl font-bold"></h3>
         </div>
 
-        <button data-modal-close class="w-10 h-10 flex items-center justify-center rounded-full
+        <button type="button" data-modal-close aria-label="Fechar modal" class="w-10 h-10 flex items-center justify-center rounded-full
         hover:bg-white/10 transition-all duration-700 text-slate-300 hover:text-white hover:scale-110">
           ✕
         </button>
@@ -966,8 +975,8 @@
           <div class="relative group">
             <div class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-700"></div>
 
-            <iframe id="modalVideo" class="relative w-full h-[260px] rounded-xl border-2 border-white/10 shadow-lg" src=""
-              frameborder="0" referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; picture-in-picture">
+            <iframe id="modalVideo" title="Video do sistema" loading="lazy" class="relative w-full h-[260px] rounded-xl border-2 border-white/10 shadow-lg" src=""
+              referrerpolicy="strict-origin-when-cross-origin" allow="fullscreen; picture-in-picture">
             </iframe>
           </div>
 
@@ -994,7 +1003,7 @@
     </div>
   </div>
 
-  <script src="./assets/js/script.min.js"></script>
+  <script src="./assets/js/script.min.js" defer></script>
 
 </body>
 

@@ -75,6 +75,11 @@
                     Voltar
                 </a>
 
+                <button type="button" class="header-theme-toggle hidden sm:inline-flex" data-theme-toggle aria-pressed="false" aria-label="Ativar tema claro">
+                    <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
+                    <span data-theme-label>Tema claro</span>
+                </button>
+
                 <button data-whatsapp="Olá! Quero saber mais sobre o PDV Legal."
                     class="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-green-500 to-green-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-green-500/20 transition-all duration-700 hover:-translate-y-0.5 hover:shadow-green-500/35">
                     <span class="material-symbols-outlined text-base">chat</span>
@@ -99,12 +104,16 @@
                 <a href="#adquirentes" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Adquirentes</a>
                 <a href="#contato" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Contato</a>
                 <a href="index.html#sistemas" class="rounded-xl px-4 py-3 text-blue-200 hover:bg-blue-500/10 hover:text-white transition-all duration-700">Voltar para sistemas</a>
+                <button type="button" class="header-theme-toggle justify-start" data-theme-toggle aria-pressed="false" aria-label="Ativar tema claro">
+                    <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
+                    <span data-theme-label>Tema claro</span>
+                </button>
             </nav>
         </div>
     </header>
 
     <!-- HERO -->
-    <section id="inicio" class="pt-36 pb-24 bg-gradient-to-br from-blue-900/40 via-slate-900 to-black relative overflow-hidden">
+    <section id="inicio" class="product-hero professional-hero pt-36 pb-24 bg-gradient-to-br from-blue-900/40 via-slate-900 to-black relative overflow-hidden">
 
         <div class="absolute inset-0 pointer-events-none">
             <div
@@ -200,7 +209,7 @@
                     class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 blur-3xl opacity-70 animate-pulse-slow">
                 </div>
                 <div
-                    class="relative bg-gradient-to-br from-slate-900/70 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl text-center hover:border-blue-500/30 transition-all duration-700 hover:scale-[1.02] overflow-hidden">
+                    class="hero-visual-card relative bg-gradient-to-br from-slate-900/70 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl text-center hover:border-blue-500/30 transition-all duration-700 hover:scale-[1.02] overflow-hidden">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-60"></div>
 
                     <img src="assets/images/legal-equipamentos.png" width="742" height="623" decoding="async"
@@ -230,7 +239,7 @@
                 <div class="pdv-video-showcase__media">
                     <iframe title="Conhe&ccedil;a o PDV Legal"
                         src="https://www.youtube-nocookie.com/embed/EpBA8pgvEOc?rel=0&modestbranding=1"
-                        frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                        referrerpolicy="strict-origin-when-cross-origin"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen loading="lazy"></iframe>
                 </div>
@@ -1240,7 +1249,7 @@
         </div>
     </footer>
     <!-- MODAL SISTEMA -->
-    <div id="modalSistema" class="fixed inset-0 z-50 hidden items-center justify-center p-6">
+    <div id="modalSistema" class="fixed inset-0 z-50 hidden items-center justify-center p-6" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitulo">
 
 
         <!-- BACKDROP -->
@@ -1265,7 +1274,7 @@
                     <h3 id="modalTitulo" class="text-2xl font-bold"></h3>
                 </div>
 
-                <button data-modal-close class="w-10 h-10 flex items-center justify-center rounded-full
+                <button type="button" data-modal-close aria-label="Fechar modal" class="w-10 h-10 flex items-center justify-center rounded-full
         hover:bg-white/10 transition-all duration-700 text-slate-300 hover:text-white hover:scale-110">
                     ✕
                 </button>
@@ -1297,9 +1306,9 @@
                             class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-700">
                         </div>
 
-                        <iframe id="modalVideo"
+                        <iframe id="modalVideo" title="Video do sistema" loading="lazy"
                             class="relative w-full h-[260px] rounded-xl border-2 border-white/10 shadow-lg" src=""
-                            frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                            referrerpolicy="strict-origin-when-cross-origin"
                             allow="fullscreen; picture-in-picture">
                         </iframe>
                     </div>
@@ -1348,7 +1357,7 @@
                 <div class="pdv-video-modal__video">
                     <iframe id="pdvVideoFrame" title="Conhe&ccedil;a o PDV Legal"
                         data-src="https://www.youtube-nocookie.com/embed/EpBA8pgvEOc?rel=0&modestbranding=1&playsinline=1"
-                        src="" frameborder="0" referrerpolicy="strict-origin-when-cross-origin"
+                        src="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
                         allowfullscreen></iframe>
                 </div>
@@ -1364,7 +1373,7 @@
         </div>
     </div>
 
-    <script src="./assets/js/script.min.js"></script>
+    <script src="./assets/js/script.min.js" defer></script>
 </body>
 
 </html>
