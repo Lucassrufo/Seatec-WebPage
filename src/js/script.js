@@ -38,55 +38,44 @@ const modalContent = {
 
 const kellyIaTopics = [
   {
-    id: "time",
-    question: "Conheça o time SEATEC",
+    id: "resumo",
+    question: "Resumo rápido do site",
     answer: `
-      <strong>Nosso time une suporte, tecnologia e gestão para acompanhar sua operação de perto.</strong><br><br>
-      <strong>Suporte:</strong><br>
-      Carlos Martos;<br>
-      Luis Eduardo;<br>
-      Lucas Rufo.<br><br>
-      <strong>Comercial:</strong><br>
-      Danilo Lira;<br>
-      Kelly Portela.<br><br>
-      <strong>Financeiro:</strong><br>
-      Leandro.
+      <strong>A SEATEC ajuda empresas a vender com mais controle, velocidade e suporte pr&oacute;ximo.</strong><br><br>
+      O site apresenta duas frentes principais: <strong>VoePDV</strong>, para caixas Windows e opera&ccedil;&otilde;es de alto fluxo, e <strong>PDV Legal</strong>, para Android, maquininhas e Smart POS.<br><br>
+      Tamb&eacute;m mostramos recursos de estoque, vendas, emiss&atilde;o fiscal, relat&oacute;rios, implanta&ccedil;&atilde;o e atendimento comercial pelo WhatsApp.
     `
   },
   {
     id: "sistemas",
-    question: "Qual sistema combina com minha operação?",
+    question: "Qual PDV combina com minha operação?",
     answer: `
-      A SEATEC trabalha com soluções PDV para diferentes rotinas comerciais.<br><br>
-      <strong>VoePDV:</strong> sistema para Windows, ideal para caixa com alto fluxo, gestão de estoque, emissão NFC-e e NF-e, relatórios, TEF integrado e controle completo da operação.<br><br>
-      <strong>PDV Legal:</strong> sistema para Android, maquininha e Smart POS. Permite vender, emitir NFC-e, controlar estoque, comandas, delivery e acompanhar relatórios em tempo real.
+      <strong>VoePDV</strong> costuma ser a melhor escolha para empresas com caixa fixo, computador Windows, alto volume de atendimento e necessidade de uma retaguarda completa.<br><br>
+      <strong>PDV Legal</strong> combina com quem precisa vender com mobilidade: maquininha, Smart POS, delivery, comandas, balc&atilde;o e atendimento fora do caixa tradicional.<br><br>
+      Se a sua opera&ccedil;&atilde;o mistura os dois cen&aacute;rios, o consultor pode indicar a combina&ccedil;&atilde;o mais adequada.
     `
   },
   {
-    id: "implantacao",
-    question: "Como funciona a implantação?",
+    id: "entregas",
+    question: "O que a SEATEC entrega?",
     answer: `
-      A implantação é acompanhada pelo time da SEATEC para deixar o sistema pronto para a rotina da empresa.<br><br>
-      Ajudamos na configuração inicial, parametrização fiscal, orientação de uso e ajustes conforme o tipo de operação, seja no caixa Windows com o VoePDV ou na operação Android com o PDV Legal.
+      A proposta n&atilde;o &eacute; s&oacute; instalar um sistema. A SEATEC acompanha configura&ccedil;&atilde;o, parametriza&ccedil;&atilde;o fiscal, orienta&ccedil;&atilde;o inicial e ajustes para a rotina real da empresa.<br><br>
+      O foco &eacute; deixar vendas, estoque, caixa, relat&oacute;rios e emiss&atilde;o fiscal funcionando com clareza para a equipe.
     `
   },
   {
     id: "suporte",
     question: "Como funciona o suporte?",
     answer: `
-      O suporte da SEATEC é feito por um time que conhece a operação comercial de perto e busca resolver com agilidade.<br><br>
-      O cliente pode chamar pelo WhatsApp de suporte para tirar dúvidas, receber orientações do sistema e acompanhar ajustes importantes do PDV.
+      O suporte &eacute; pensado para quem depende do PDV todos os dias. O cliente pode chamar a equipe para tirar d&uacute;vidas, receber orienta&ccedil;&otilde;es e acompanhar ajustes importantes da opera&ccedil;&atilde;o.<br><br>
+      A ideia &eacute; reduzir parada, organizar o uso do sistema e manter o atendimento fluindo.
     `
   },
   {
     id: "contato",
-    question: "Falar com um consultor",
+    question: "Quero uma indicação para minha empresa",
     answer:
-      "Perfeito. Nosso time comercial pode entender sua operação, volume de vendas, necessidade fiscal e indicar a melhor solução entre VoePDV, PDV Legal e outros recursos da SEATEC.",
-    action: {
-      label: "Abrir WhatsApp",
-      message: "Olá! Vim pelo chat TsuruIA e quero falar com um consultor."
-    }
+      "Perfeito. O time comercial pode entender seu segmento, volume de vendas, forma de atendimento, necessidade fiscal e indicar o caminho mais adequado entre VoePDV, PDV Legal e recursos complementares."
   }
 ];
 
@@ -369,6 +358,7 @@ function initDeferredIframes() {
 }
 
 function showKellyTopic(topic, reply) {
+  kellyIaWidget?.classList.add("kellyia-has-answer");
   reply.replaceChildren();
 
   const question = document.createElement("div");
@@ -381,6 +371,12 @@ function showKellyTopic(topic, reply) {
 
   reply.append(question, answer);
 
+  const resetButton = document.createElement("button");
+  resetButton.type = "button";
+  resetButton.className = "kellyia-reset";
+  resetButton.textContent = "Ver outras perguntas";
+  reply.appendChild(resetButton);
+
   if (!topic.action) return;
 
   const actionButton = document.createElement("button");
@@ -391,13 +387,20 @@ function showKellyTopic(topic, reply) {
   reply.appendChild(actionButton);
 }
 
+function resetKellyConversation() {
+  if (!kellyIaWidget) return;
+
+  kellyIaWidget.classList.remove("kellyia-has-answer");
+  kellyIaWidget.querySelector(".kellyia-reply")?.replaceChildren();
+}
+
 function setKellyOpen(isOpen) {
   if (!kellyIaWidget) return;
 
   kellyIaWidget.classList.toggle("kellyia-open", isOpen);
   kellyIaWidget.querySelector(".kellyia-toggle")?.setAttribute("aria-expanded", String(isOpen));
 
-  if (!isOpen) kellyIaWidget.querySelector(".kellyia-reply")?.replaceChildren();
+  if (!isOpen) resetKellyConversation();
 }
 
 function iniciarKellyIa() {
@@ -427,12 +430,12 @@ function iniciarKellyIa() {
           <span class="material-symbols-outlined">auto_awesome</span>
           <div>
             <strong>Como posso ajudar?</strong>
-            <p>Escolha um assunto abaixo ou fale com um consultor pelo WhatsApp.</p>
+            <p>Veja um resumo do site ou fale com um consultor pelo WhatsApp.</p>
           </div>
         </div>
 
         <div class="kellyia-message kellyia-message-bot">
-          Olá! Eu sou a TsuruIA. Posso orientar você sobre sistemas PDV, implantação, suporte e contato comercial.
+          Ol&aacute;! Eu sou a TsuruIA. Resumo as principais informa&ccedil;&otilde;es do site para voc&ecirc; decidir mais r&aacute;pido.
         </div>
         <div class="kellyia-reply" aria-live="polite"></div>
       </div>
@@ -495,6 +498,7 @@ function handleDocumentClick(event) {
   const kellyToggle = target.closest(".kellyia-toggle");
   const kellyClose = target.closest(".kellyia-close");
   const kellyOption = target.closest(".kellyia-option");
+  const kellyReset = target.closest(".kellyia-reset");
   const tsuruOpen = target.closest("[data-tsuru-open]");
 
   if (themeToggle) {
@@ -550,6 +554,11 @@ function handleDocumentClick(event) {
 
   if (kellyClose) {
     setKellyOpen(false);
+    return;
+  }
+
+  if (kellyReset && kellyIaWidget) {
+    resetKellyConversation();
     return;
   }
 

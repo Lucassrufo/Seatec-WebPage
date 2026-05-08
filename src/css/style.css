@@ -91,6 +91,35 @@ body > .theme-toggle:hover {
     transform: translateY(-3px);
 }
 
+.site-header {
+    background:
+        linear-gradient(135deg, rgba(2, 6, 23, 0.88), rgba(15, 23, 42, 0.72)) !important;
+    border-bottom-color: rgba(148, 163, 184, 0.16) !important;
+    box-shadow:
+        0 18px 50px rgba(2, 6, 23, 0.34),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06) !important;
+}
+
+.site-header > div {
+    min-height: 68px;
+}
+
+.site-header nav.hidden {
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 12px 32px rgba(0, 0, 0, 0.16);
+}
+
+.site-header nav.hidden a {
+    line-height: 1;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.site-header img[alt="SEATEC"] {
+    max-height: 34px;
+}
+
 .theme-toggle .material-symbols-outlined,
 .header-theme-toggle .material-symbols-outlined {
     font-size: 1.2rem;
@@ -1614,6 +1643,23 @@ body:not(.product-page) #sistemas .system-card img {
     gap: 10px;
 }
 
+.kellyia-has-answer .kellyia-body {
+    justify-content: center;
+}
+
+.kellyia-has-answer .kellyia-intro,
+.kellyia-has-answer .kellyia-body > .kellyia-message-bot,
+.kellyia-has-answer .kellyia-options {
+    display: none;
+}
+
+.kellyia-has-answer .kellyia-reply {
+    min-height: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
 .kellyia-message {
     max-width: 92%;
     padding: 12px 14px;
@@ -1633,6 +1679,22 @@ body:not(.product-page) #sistemas .system-card img {
     align-self: flex-end;
     color: #ffffff;
     background: linear-gradient(135deg, rgba(37, 99, 235, 0.95), rgba(8, 145, 178, 0.95));
+}
+
+.kellyia-has-answer .kellyia-message {
+    align-self: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.kellyia-has-answer .kellyia-message-user {
+    max-width: min(92%, 320px);
+    text-align: center;
+    justify-content: center;
+}
+
+.kellyia-has-answer .kellyia-message-bot {
+    max-width: 100%;
 }
 
 .kellyia-options {
@@ -1671,6 +1733,24 @@ body:not(.product-page) #sistemas .system-card img {
     color: #ffffff;
     background: linear-gradient(135deg, #22c55e, #16a34a);
     border-color: rgba(134, 239, 172, 0.35);
+}
+
+.kellyia-reset {
+    min-height: 38px;
+    padding: 8px 13px;
+    border-radius: 999px;
+    color: #bae6fd;
+    background: rgba(14, 165, 233, 0.1);
+    border: 1px solid rgba(125, 211, 252, 0.18);
+    font-size: 0.78rem;
+    font-weight: 800;
+}
+
+.kellyia-reset:hover {
+    color: #ffffff;
+    background: rgba(14, 165, 233, 0.18);
+    border-color: rgba(125, 211, 252, 0.34);
+    transform: translateY(-2px);
 }
 
 @media (max-width: 640px) {
@@ -1940,6 +2020,10 @@ body:not(.product-page) #sistemas .system-card img {
     padding-inline: 16px;
     border-radius: 14px;
     box-shadow: 0 14px 32px rgba(34, 197, 94, 0.18);
+}
+
+.kellyia-has-answer .kellyia-action {
+    align-self: center;
 }
 
 .kellyia-toggle {
@@ -3128,6 +3212,17 @@ body.theme-light .kellyia-option .material-symbols-outlined {
     background: rgba(14, 165, 233, 0.1) !important;
 }
 
+body.theme-light .kellyia-reset {
+    color: #0369a1 !important;
+    background: rgba(14, 165, 233, 0.1) !important;
+    border-color: rgba(14, 165, 233, 0.22) !important;
+}
+
+body.theme-light .kellyia-reset:hover {
+    color: #075985 !important;
+    background: rgba(14, 165, 233, 0.16) !important;
+}
+
 body.theme-light .kellyia-toggle {
     color: #0f172a !important;
     background:
@@ -3160,16 +3255,37 @@ body.theme-light .kellyia-toggle:hover {
 .clientes-marquee {
     position: relative;
     overflow: hidden;
-    padding: 8px 0;
-    mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
-    -webkit-mask-image: linear-gradient(90deg, transparent, black 10%, black 90%, transparent);
+    padding: 18px 0 24px;
+    mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+
+.clientes-marquee::before,
+.clientes-marquee::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    bottom: 18px;
+    z-index: 2;
+    width: min(120px, 14vw);
+    pointer-events: none;
+}
+
+.clientes-marquee::before {
+    left: 0;
+    background: linear-gradient(90deg, rgba(2, 6, 23, 0.95), transparent);
+}
+
+.clientes-marquee::after {
+    right: 0;
+    background: linear-gradient(270deg, rgba(2, 6, 23, 0.95), transparent);
 }
 
 .clientes-marquee-track {
     display: flex;
     width: max-content;
-    gap: 24px;
-    animation: clientesMarquee 36s linear infinite;
+    gap: 28px;
+    animation: clientesMarquee 42s linear infinite;
 }
 
 .clientes-marquee:hover .clientes-marquee-track {
@@ -3177,26 +3293,81 @@ body.theme-light .kellyia-toggle:hover {
 }
 
 .cliente-logo-card {
-    width: clamp(190px, 22vw, 260px);
-    height: 128px;
+    position: relative;
+    width: clamp(210px, 22vw, 286px);
+    height: 148px;
     flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 22px;
-    border-radius: 22px;
-    background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(30, 41, 59, 0.62));
-    border: 1.5px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 22px 50px rgba(0, 0, 0, 0.28);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    padding: 24px;
+    overflow: hidden;
+    border-radius: 20px;
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(226, 232, 240, 0.9)),
+        radial-gradient(circle at 18% 0%, var(--product-accent-soft, rgba(56, 189, 248, 0.14)), transparent 48%);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow:
+        0 24px 58px rgba(0, 0, 0, 0.34),
+        0 1px 0 rgba(255, 255, 255, 0.9) inset;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.cliente-logo-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.75), transparent 36%),
+        radial-gradient(circle at 50% 100%, var(--product-accent-soft, rgba(56, 189, 248, 0.16)), transparent 54%);
+    opacity: 0.72;
+    pointer-events: none;
+}
+
+.cliente-logo-card::after {
+    content: "";
+    position: absolute;
+    inset: auto 24px 18px;
+    height: 3px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, transparent, var(--product-accent, #38bdf8), transparent);
+    opacity: 0.55;
+}
+
+.cliente-logo-card:hover {
+    transform: translateY(-7px);
+    border-color: rgba(255, 255, 255, 0.95);
+    box-shadow:
+        0 32px 70px rgba(0, 0, 0, 0.42),
+        0 0 42px var(--product-accent-shadow, rgba(14, 165, 233, 0.18)),
+        0 1px 0 rgba(255, 255, 255, 0.95) inset;
 }
 
 .cliente-logo-card img {
+    position: relative;
+    z-index: 1;
     max-width: 100%;
-    max-height: 82px;
+    max-height: 92px;
     object-fit: contain;
-    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.35));
+    filter: contrast(1.04) saturate(1.03) drop-shadow(0 14px 20px rgba(15, 23, 42, 0.22));
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), filter 0.3s ease;
+}
+
+.cliente-logo-card:hover img {
+    transform: scale(1.05);
+    filter: contrast(1.06) saturate(1.06) drop-shadow(0 16px 24px rgba(15, 23, 42, 0.26));
+}
+
+body.theme-light .cliente-logo-card {
+    background:
+        linear-gradient(145deg, rgba(255, 255, 255, 0.98), rgba(241, 245, 249, 0.94)),
+        radial-gradient(circle at 18% 0%, var(--product-accent-soft, rgba(56, 189, 248, 0.12)), transparent 48%) !important;
+    border-color: rgba(148, 163, 184, 0.24) !important;
+    box-shadow:
+        0 22px 54px rgba(15, 23, 42, 0.12),
+        0 1px 0 rgba(255, 255, 255, 0.95) inset !important;
 }
 
 @keyframes clientesMarquee {

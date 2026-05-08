@@ -48,7 +48,7 @@
 
     <!-- HEADER -->
     <header
-        class="fixed w-full z-50 backdrop-blur-2xl bg-slate-900/70 border-b border-white/10 shadow-2xl shadow-black/30 transition-all duration-700">
+        class="site-header fixed w-full z-50 backdrop-blur-2xl bg-slate-900/70 border-b border-white/10 shadow-2xl shadow-black/30 transition-all duration-700">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center gap-6">
             <a href="index.html" class="flex items-center gap-3">
                 <img src="assets/images/logo_seatec.png" width="2550" height="625" decoding="async"
@@ -56,14 +56,12 @@
                     alt="SEATEC">
             </a>
 
-            <nav class="hidden xl:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-xs text-slate-300 backdrop-blur-xl">
+            <nav class="hidden lg:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-sm text-slate-300 backdrop-blur-xl">
                 <a href="#inicio" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Início</a>
-                <a href="#diferenciais" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Diferenciais</a>
-                <a href="#gestao" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Gestão</a>
+                <a href="#diferenciais" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Vantagens</a>
                 <a href="#food-service" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Food service</a>
-                <a href="#funcionalidades" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Funcionalidades</a>
-                <a href="#segmentos" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Segmentos</a>
-                <a href="#adquirentes" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Adquirentes</a>
+                <a href="#funcionalidades" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Recursos</a>
+                <a href="#clientes" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Clientes</a>
                 <a href="#contato" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Contato</a>
             </nav>
 
@@ -87,21 +85,19 @@
                 </button>
 
                 <button type="button" data-mobile-menu-toggle aria-controls="mobileMenu" aria-expanded="false"
-                    class="xl:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition-all duration-700 hover:bg-white/10 hover:text-white">
+                    class="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition-all duration-700 hover:bg-white/10 hover:text-white">
                     <span class="material-symbols-outlined">menu</span>
                 </button>
             </div>
         </div>
 
-        <div id="mobileMenu" class="hidden xl:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-xl">
+        <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-xl">
             <nav class="max-w-7xl mx-auto px-6 py-4 grid gap-2 text-sm text-slate-300">
                 <a href="#inicio" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Início</a>
-                <a href="#diferenciais" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Diferenciais</a>
-                <a href="#gestao" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Gestão</a>
+                <a href="#diferenciais" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Vantagens</a>
                 <a href="#food-service" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Food service</a>
-                <a href="#funcionalidades" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Funcionalidades</a>
-                <a href="#segmentos" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Segmentos</a>
-                <a href="#adquirentes" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Adquirentes</a>
+                <a href="#funcionalidades" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Recursos</a>
+                <a href="#clientes" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Clientes</a>
                 <a href="#contato" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Contato</a>
                 <a href="index.html#sistemas" class="rounded-xl px-4 py-3 text-blue-200 hover:bg-blue-500/10 hover:text-white transition-all duration-700">Voltar para sistemas</a>
                 <button type="button" class="header-theme-toggle justify-start" data-theme-toggle aria-pressed="false" aria-label="Ativar tema claro">
