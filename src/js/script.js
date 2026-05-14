@@ -312,7 +312,7 @@ function initRevealAnimations() {
         observer.unobserve(entry.target);
       });
     },
-    { rootMargin: "120px 0px -10% 0px", threshold: 0.08 }
+    { rootMargin: "0px 0px -18% 0px", threshold: 0.18 }
   );
 
   elements.forEach(el => observer.observe(el));
@@ -410,7 +410,7 @@ function iniciarKellyIa() {
   widget.id = "kellyIaWidget";
   widget.className = "kellyia-widget";
   widget.innerHTML = `
-    <section class="kellyia-chat" aria-label="Chat TsuruIA">
+    <div class="kellyia-chat" role="dialog" aria-label="Chat TsuruIA">
       <header class="kellyia-header">
         <div class="kellyia-avatar">
           <img src="${tsuruAvatarSrc}" width="56" height="56" alt="" loading="lazy" decoding="async">
@@ -448,7 +448,7 @@ function iniciarKellyIa() {
           Atendimento humano
         </button>
       </footer>
-    </section>
+    </div>
 
     <button type="button" class="kellyia-toggle" aria-label="Abrir TsuruIA" aria-expanded="false">
       <span class="kellyia-toggle-avatar" aria-hidden="true">
