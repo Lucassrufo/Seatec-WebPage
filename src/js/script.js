@@ -292,11 +292,25 @@ function fecharPdvVideoModal() {
 
 function initRevealAnimations() {
   const elements = document.querySelectorAll(".fade-up, .maquininha-card, .adquirente-card");
+  const revealDoneDelay = 10000;
 
   if (prefersReducedMotion || !("IntersectionObserver" in window)) {
     elements.forEach(el => el.classList.add("show", "animation-done"));
     return;
   }
+
+  elements.forEach(el => {
+    const parent = el.parentElement;
+    if (!parent) return;
+
+    const siblings = Array.from(parent.children).filter(child =>
+      child.matches?.(".fade-up, .maquininha-card, .adquirente-card")
+    );
+    const index = siblings.indexOf(el);
+    if (index < 1) return;
+
+    el.style.setProperty("--reveal-delay", `${Math.min(index, 7) * 320}ms`);
+  });
 
   const observer = new IntersectionObserver(
     entries => {
@@ -304,15 +318,11 @@ function initRevealAnimations() {
         if (!entry.isIntersecting) return;
 
         entry.target.classList.add("show");
-        entry.target.addEventListener(
-          "transitionend",
-          () => entry.target.classList.add("animation-done"),
-          { once: true }
-        );
+        window.setTimeout(() => entry.target.classList.add("animation-done"), revealDoneDelay);
         observer.unobserve(entry.target);
       });
     },
-    { rootMargin: "0px 0px -18% 0px", threshold: 0.18 }
+    { rootMargin: "0px 0px -4% 0px", threshold: 0.08 }
   );
 
   elements.forEach(el => observer.observe(el));
