@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build:tailwind": "tailwindcss -c ./tailwind.config.js -i ./src/css/tailwind-input.css -o ./public/assets/css/tailwind.css --minify",
-    "build:assets": "cleancss -o ./public/assets/css/style.min.css ./src/css/style.css && terser ./src/js/script.js -c -m -o ./public/assets/js/script.min.js",
+    "build:tailwind": "tailwindcss -c ./tailwind.config.js -i ./src/styles/tailwind-input.css -o ./public/assets/css/tailwind.css --minify",
+    "build:assets": "cleancss -o ./public/assets/css/style.min.css ./src/styles/site.css && terser ./src/scripts/site.js -c -m -o ./public/assets/js/script.min.js",
     "build": "npm run build:tailwind && npm run build:assets",
     "build:css": "npm run build:tailwind"
   },

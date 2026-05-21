@@ -1,6 +1,6 @@
 # SEATEC WebPage
 
-Site institucional estático da SEATEC Soluções Tecnológicas, com foco em sistemas PDV, automação comercial, suporte e conversão via WhatsApp.
+Site institucional estático da SEATEC Soluções Tecnológicas, com foco em sistemas PDV, automação comercial, suporte técnico e conversão via WhatsApp.
 
 ## Visão Geral
 
@@ -10,26 +10,25 @@ O projeto contém três páginas principais:
 - `public/voe.html`: página do VoePDV, sistema PDV para Windows.
 - `public/pdv-legal.html`: página do PDV Legal, sistema PDV Android para maquininha, Smart POS, delivery, estoque, vendas e emissão fiscal.
 
-Também há uma página de erro:
+Também há uma página de fallback:
 
-- `public/404.html`: página de fallback para publicação estática.
+- `public/404.html`: página de erro para publicação estática.
 
 ## Principais Recursos
 
+- Design system próprio com tokens de cor, cards, botões, navegação, seções e CTAs.
 - Layout responsivo para mobile, tablet e desktop.
-- Headers com navegação por âncoras.
-- Footers com navegação, soluções, contato, dados legais, endereço, CNPJ, termos e privacidade.
+- Headers com navegação por âncoras e tema claro/escuro.
+- Footers com navegação, soluções, contato, endereço, CNPJ, termos e privacidade.
 - CTAs para WhatsApp comercial e suporte.
 - Chat flutuante TsuruIA com perguntas rápidas e atendimento humano.
 - Modal de sistemas na página inicial.
-- Seção de vídeo do PDV Legal incorporada na página.
-- Modal opcional de vídeo do PDV Legal.
-- Carrossel/marquee de clientes.
-- Cards de adquirentes homologadas.
+- Vídeo incorporado do PDV Legal.
+- Marquee de clientes e cards de adquirentes.
 - Animações suaves com respeito a `prefers-reduced-motion`.
 - Headers de segurança e cache para hosts compatíveis com `_headers`.
 
-## Estrutura de Pastas
+## Estrutura
 
 ```text
 .
@@ -52,11 +51,11 @@ Também há uma página de erro:
 │           ├── clientes/
 │           └── optimized/
 ├── src/
-│   ├── css/
-│   │   ├── style.css
-│   │   └── tailwind-input.css
-│   └── js/
-│       └── script.js
+│   ├── scripts/
+│   │   └── site.js
+│   └── styles/
+│       ├── site.css
+│       └── tailwind-input.css
 ├── package.json
 ├── package-lock.json
 ├── tailwind.config.js
@@ -90,13 +89,13 @@ npm.cmd run build
 - `npm run build:assets`: gera `public/assets/css/style.min.css` e `public/assets/js/script.min.js`.
 - `npm run build:css`: atalho para gerar somente o Tailwind.
 
-## Arquivos Fonte e Arquivos Gerados
+## Arquivos Fonte
 
 Edite preferencialmente:
 
-- `src/css/style.css`
-- `src/css/tailwind-input.css`
-- `src/js/script.js`
+- `src/styles/site.css`
+- `src/styles/tailwind-input.css`
+- `src/scripts/site.js`
 - HTMLs dentro de `public/`
 
 Arquivos gerados pelo build:
@@ -124,7 +123,7 @@ Arquivos úteis para hospedagem:
 - Não edite `node_modules/`; a pasta é recriada com `npm install`.
 - Ao trocar favicon, atualize as referências nos HTMLs.
 - Ao mudar links legais, mantenha os três footers sincronizados.
-- Ao alterar textos de CTA ou WhatsApp, revise também `src/js/script.js`.
+- Ao alterar textos de CTA ou WhatsApp, revise também `src/scripts/site.js`.
 
 ## Validação Recomendada
 
@@ -132,8 +131,8 @@ Antes de publicar:
 
 ```bash
 npm.cmd run build
-node --check src/js/script.js
+node --check src/scripts/site.js
 node --check public/assets/js/script.min.js
 ```
 
-Observação: o build pode exibir aviso de Browserslist/caniuse-lite desatualizado. Isso não impede a geração dos assets.
+O build pode exibir aviso de Browserslist/caniuse-lite desatualizado. Isso não impede a geração dos assets.

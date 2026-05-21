@@ -2,1385 +2,344 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' ws: http:">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy"
-        content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <title>PDV Legal - Sistema PDV para Maquininha e Smart POS | Seatec</title>
-    <meta name="description"
-        content="PDV Legal é o sistema PDV Android da SEATEC para maquininha, Smart POS, delivery, estoque, vendas e emissão fiscal com mobilidade.">
-    <meta name="theme-color" content="#020617">
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="SEATEC">
-    <meta property="og:title" content="PDV Legal - Sistema PDV para Android e Smart POS">
-    <meta property="og:description" content="Venda, receba e emita NFC-e direto da maquininha com o PDV Legal.">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="PDV Legal - Sistema PDV para Android e Smart POS">
-    <meta name="twitter:description" content="PDV Android para maquininha, delivery, estoque e vendas móveis.">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' ws: http:">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <title>PDV Legal - Sistema PDV para Maquininha e Smart POS | Seatec</title>
+  <meta name="description" content="PDV Legal é o sistema PDV Android da SEATEC para maquininha, Smart POS, delivery, estoque, vendas e emissão fiscal com mobilidade.">
+  <meta name="theme-color" content="#020617">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SEATEC">
+  <meta property="og:title" content="PDV Legal - Sistema PDV para Android e Smart POS">
+  <meta property="og:description" content="Venda, receba e emita NFC-e direto da maquininha com o PDV Legal.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PDV Legal - Sistema PDV para Android e Smart POS">
+  <meta name="twitter:description" content="PDV Android para maquininha, delivery, estoque e vendas móveis.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="image" href="assets/images/legal-equipamentos.png" fetchpriority="high">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/tailwind.css">
-    <link rel="stylesheet" href="./assets/css/style.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
-    <link rel="icon" type="image/png" href="assets/images/faviconfinal.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="image" href="assets/images/optimized/hero-pdvlegal-dashboard.png" fetchpriority="high">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/tailwind.css">
+  <link rel="stylesheet" href="./assets/css/style.min.css">
+  <link rel="icon" type="image/png" href="assets/images/faviconfinal.png">
 </head>
 
-<body
-    class="product-page product-legal bg-gradient-to-b from-slate-950 via-slate-950 to-slate-900 text-white relative overflow-x-hidden">
-
-    <!-- BACKGROUND GLOBAL -->
-    <div class="fixed inset-0 -z-10 pointer-events-none">
-        <div
-            class="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[900px] bg-blue-500/10 blur-[140px] rounded-full animate-pulse-slow">
-        </div>
-        <div
-            class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-500/10 blur-[120px] rounded-full animate-pulse-slow">
-        </div>
-    </div>
-
-    <!-- HEADER -->
-    <header
-        class="site-header fixed w-full z-50 backdrop-blur-2xl bg-slate-900/70 border-b border-white/10 shadow-2xl shadow-black/30 transition-all duration-700">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center gap-6">
-            <a href="index.html" class="flex items-center gap-3">
-                <img src="assets/images/logo_seatec.png" width="2550" height="625" decoding="async"
-                    class="h-8 w-auto transition-all duration-700 hover:scale-110 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]"
-                    alt="SEATEC">
-            </a>
-
-            <nav class="hidden lg:flex items-center gap-1 rounded-full border border-white/10 bg-white/5 p-1 text-sm text-slate-300 backdrop-blur-xl">
-                <a href="#inicio" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Início</a>
-                <a href="#diferenciais" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Vantagens</a>
-                <a href="#food-service" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Food service</a>
-                <a href="#funcionalidades" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Recursos</a>
-                <a href="#clientes" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Clientes</a>
-                <a href="#contato" class="px-3 py-2 rounded-full hover:bg-white/10 hover:text-white transition-all duration-700">Contato</a>
-            </nav>
-
-            <div class="flex items-center gap-3">
-                <a href="index.html#sistemas"
-                    class="hidden sm:inline-flex group items-center gap-2 rounded-full border border-blue-400/30 bg-blue-500/10 px-4 py-2 text-sm font-semibold text-blue-100 shadow-lg shadow-blue-500/10 backdrop-blur-xl transition-all duration-700 hover:-translate-y-0.5 hover:border-blue-300/70 hover:bg-blue-500/20 hover:text-white hover:shadow-blue-500/25">
-                    <span
-                        class="material-symbols-outlined text-lg transition-transform duration-700 group-hover:-translate-x-1">arrow_back</span>
-                    Voltar
-                </a>
-
-                <button type="button" class="header-theme-toggle hidden sm:inline-flex" data-theme-toggle aria-pressed="false" aria-label="Ativar tema claro">
-                    <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
-                    <span data-theme-label>Tema claro</span>
-                </button>
-
-                <button data-whatsapp="Olá! Quero saber mais sobre o PDV Legal."
-                    class="hidden md:inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-green-500 to-green-600 px-4 py-2 text-sm font-bold text-white shadow-lg shadow-green-500/20 transition-all duration-700 hover:-translate-y-0.5 hover:shadow-green-500/35">
-                    <span class="material-symbols-outlined text-base">chat</span>
-                    WhatsApp
-                </button>
-
-                <button type="button" data-mobile-menu-toggle aria-controls="mobileMenu" aria-expanded="false"
-                    class="lg:hidden inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-slate-200 transition-all duration-700 hover:bg-white/10 hover:text-white">
-                    <span class="material-symbols-outlined">menu</span>
-                </button>
+<body class="product-page product-legal">
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand-link" href="index.html" aria-label="SEATEC">
+          <img src="assets/images/LOGO-PNG.svg" width="2550" height="625" alt="SEATEC">
+        </a>
+        <nav class="desktop-nav" aria-label="Navegação principal">
+          <a href="#inicio">Início</a>
+          <div class="nav-dropdown">
+            <button type="button" aria-haspopup="true">
+              Soluções PDV <span class="material-symbols-outlined" aria-hidden="true" style="font-size: 1rem;">expand_more</span>
+            </button>
+            <div class="nav-dropdown-menu" role="menu">
+              <a href="voe.html" role="menuitem"><span class="material-symbols-outlined" aria-hidden="true">desktop_windows</span>VoePDV</a>
+              <a href="pdv-legal.html" role="menuitem"><span class="material-symbols-outlined" aria-hidden="true">phone_android</span>PDV Legal</a>
             </div>
+          </div>
+          <a href="#video-pdv-legal">Vídeo</a>
+          <a href="#diferenciais">Vantagens</a>
+          <a href="#food-service">Food service</a>
+          <a href="#funcionalidades">Recursos</a>
+          <a href="#adquirentes">Adquirentes</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <div class="nav-actions">
+          <a class="btn btn-ghost" href="index.html#sistemas"><span class="material-symbols-outlined" aria-hidden="true">arrow_back</span>Voltar</a>
+          <button class="btn btn-ghost theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Ativar tema claro"><span class="material-symbols-outlined" aria-hidden="true">light_mode</span><span data-theme-label>Tema</span></button>
+          <button class="btn btn-success" type="button" data-whatsapp="Olá! Vim pela página do PDV Legal e quero entender como vender pela maquininha ou Smart POS."><span class="material-symbols-outlined" aria-hidden="true">chat</span>Contato</button>
+          <button class="mobile-toggle" type="button" data-mobile-menu-toggle aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menu"><span class="material-symbols-outlined" aria-hidden="true">menu</span></button>
         </div>
-
-        <div id="mobileMenu" class="hidden lg:hidden border-t border-white/10 bg-slate-950/95 backdrop-blur-xl">
-            <nav class="max-w-7xl mx-auto px-6 py-4 grid gap-2 text-sm text-slate-300">
-                <a href="#inicio" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Início</a>
-                <a href="#diferenciais" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Vantagens</a>
-                <a href="#food-service" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Food service</a>
-                <a href="#funcionalidades" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Recursos</a>
-                <a href="#clientes" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Clientes</a>
-                <a href="#contato" class="rounded-xl px-4 py-3 hover:bg-white/10 hover:text-white transition-all duration-700">Contato</a>
-                <a href="index.html#sistemas" class="rounded-xl px-4 py-3 text-blue-200 hover:bg-blue-500/10 hover:text-white transition-all duration-700">Voltar para sistemas</a>
-                <button type="button" class="header-theme-toggle justify-start" data-theme-toggle aria-pressed="false" aria-label="Ativar tema claro">
-                    <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
-                    <span data-theme-label>Tema claro</span>
-                </button>
-            </nav>
-        </div>
+      </div>
+      <div id="mobileMenu" class="mobile-menu" data-mobile-menu>
+        <nav aria-label="Navegação mobile">
+          <a href="#inicio">Início</a>
+          <a href="#video-pdv-legal">Vídeo</a>
+          <a href="#diferenciais">Vantagens</a>
+          <a href="#food-service">Food service</a>
+          <a href="#funcionalidades">Recursos</a>
+          <a href="#adquirentes">Adquirentes</a>
+          <a href="#contato">Contato</a>
+          <a href="index.html#sistemas">Voltar para sistemas</a>
+          <button type="button" data-theme-toggle aria-pressed="false" aria-label="Ativar tema claro"><span class="material-symbols-outlined" aria-hidden="true">light_mode</span><span data-theme-label>Tema</span></button>
+        </nav>
+      </div>
     </header>
 
-    <!-- HERO -->
-    <section id="inicio" class="product-hero professional-hero pt-36 pb-24 bg-gradient-to-br from-blue-900/40 via-slate-900 to-black relative overflow-hidden">
-
-        <div class="absolute inset-0 pointer-events-none">
-            <div
-                class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/10 blur-[120px] rounded-full animate-pulse-slow">
+    <main>
+      <section id="inicio" class="hero section product-home-hero">
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">phone_android</span>PDV na maquininha • Android • Smart POS</span>
+            <img class="hero-logo" src="assets/images/pdvlegal.png" width="819" height="209" fetchpriority="high" alt="PDV Legal">
+            <h1>PDV Legal na maquininha. <span>Venda de qualquer ponto.</span></h1>
+            <p>O PDV Legal coloca venda, NFC-e, estoque, comandas e pagamento <strong>direto na maquininha</strong>. Ideal para empresas em todo o Brasil que precisam de mobilidade com controle fiscal e gestão.</p>
+            <div class="hero-actions">
+              <button class="btn btn-success" type="button" data-whatsapp="Olá! Vim pela página do PDV Legal e quero entender como vender pela maquininha ou Smart POS."><span class="material-symbols-outlined" aria-hidden="true">chat</span>Falar com especialista</button>
+              <a class="btn btn-ghost" href="#funcionalidades">Ver recursos<span class="material-symbols-outlined" aria-hidden="true">arrow_forward</span></a>
+              <a class="btn btn-primary" href="#video-pdv-legal"><span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Conheça o PDV Legal</a>
+              <a class="btn btn-ghost" href="https://ajuda.pdvlegal.com.br/" target="_blank" rel="noopener noreferrer">Ajuda PDV Legal<span class="material-symbols-outlined" aria-hidden="true">open_in_new</span></a>
             </div>
-            <div
-                class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-[100px] rounded-full animate-pulse-slow">
+            <div class="proof-row">
+              <span class="pill"><span class="material-symbols-outlined" aria-hidden="true">attach_money</span>Reduz custos operacionais</span>
+              <span class="pill"><span class="material-symbols-outlined" aria-hidden="true">cloud_done</span>Retaguarda em nuvem</span>
+              <span class="pill"><span class="material-symbols-outlined" aria-hidden="true">verified</span>Emite NFC-e</span>
             </div>
+          </div>
+          <div class="hero-client-strip" aria-label="Clientes PDV Legal">
+            <span>Operações que vendem com mobilidade</span>
+            <div class="hero-client-window">
+              <div class="hero-client-track">
+                <img src="assets/images/clientes/cliente2.png" width="300" height="300" alt="Janela">
+                <img src="assets/images/clientes/cliente3.png" width="300" height="300" alt="Cookie da Boleta">
+                <img src="assets/images/clientes/cliente4.jpg" width="300" height="300" alt="Coxa Sports Bar e Parrilla">
+                <img src="assets/images/clientes/cliente5.png" width="300" height="300" alt="El Perrito">
+                <img src="assets/images/clientes/cliente2.png" width="300" height="300" alt="Janela">
+                <img src="assets/images/clientes/cliente3.png" width="300" height="300" alt="Cookie da Boleta">
+                <img src="assets/images/clientes/cliente4.jpg" width="300" height="300" alt="Coxa Sports Bar e Parrilla">
+                <img src="assets/images/clientes/cliente5.png" width="300" height="300" alt="El Perrito">
+                <img src="assets/images/clientes/cliente2.png" width="300" height="300" alt="Janela">
+                <img src="assets/images/clientes/cliente3.png" width="300" height="300" alt="Cookie da Boleta">
+                <img src="assets/images/clientes/cliente4.jpg" width="300" height="300" alt="Coxa Sports Bar e Parrilla">
+                <img src="assets/images/clientes/cliente5.png" width="300" height="300" alt="El Perrito">
+              </div>
+            </div>
+          </div>
+          <div class="visual-frame contain reveal">
+            <img src="assets/images/legal-equipamentos.png" width="742" height="623" fetchpriority="high" alt="PDV Legal rodando em maquininha e equipamentos Android">
+            <div class="floating-stat stat-one"><strong>Tudo em uma maquininha</strong><small>sistema, fiscal, estoque e pagamento</small></div>
+            <div class="floating-stat stat-two"><strong>Atendimento móvel</strong><small>balcão, delivery e salão</small></div>
+          </div>
         </div>
+      </section>
 
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
-
-            <!-- TEXTO -->
-            <div class="fade-up">
-                <span
-                    class="inline-flex items-center gap-2 mb-5 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 shadow-lg shadow-blue-500/10 backdrop-blur-sm hover:bg-blue-500/20 hover:border-blue-400/50 transition-all duration-700">
-                    <span class="material-symbols-outlined text-sm">phone_android</span>
-                    PDV NA MAQUININHA • ANDROID • SMART POS
-                </span>
-
-                <img src="assets/images/pdvlegal.png" width="819" height="209" decoding="async"
-                    class="h-12 w-auto mb-7 transition-all duration-700 hover:scale-110 drop-shadow-lg" alt="PDV Legal">
-
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-                    PDV Legal na maquininha.
-                    <span
-                        class="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.4)]">Venda
-                        de qualquer ponto</span>
-                </h1>
-
-                <p class="text-slate-300 mt-6 text-lg max-w-xl leading-relaxed">
-                    Pedido, pagamento e fiscal em uma experi&ecirc;ncia leve para balc&atilde;o, delivery e atendimento m&oacute;vel.
-                </p>
-
-                <h1 class="hero-legacy-copy text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight tracking-tight">
-                    Venda, receba e emita
-                    <span
-                        class="bg-gradient-to-r from-blue-400 via-cyan-400 to-blue-500 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.4)]">sem
-                        prender a operação</span>
-                </h1>
-
-                <p class="text-slate-300 mt-6 text-lg max-w-xl leading-relaxed">
-                    O PDV Legal coloca venda, NFC-e, estoque, comandas e pagamento <b
-                        class="text-white font-semibold">direto na maquininha</b>.
-                    Ideal para empresas de SP/ZL e do Brasil que querem mobilidade sem abrir mão de controle fiscal e
-                    gestão.
-                </p>
-
-                <!-- BOTÕES -->
-                <div class="flex flex-wrap gap-4 mt-9">
-                    <button data-whatsapp="Olá! Quero saber mais sobre o PDV Legal." class="relative bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-8 py-4 rounded-xl font-semibold
-                        shadow-xl shadow-green-500/30 hover:shadow-2xl hover:shadow-green-500/50
-                        hover:scale-110 transition-all duration-700 group overflow-hidden">
-
-                        <span class="relative z-10">💬 Falar com especialista</span>
-
-                        <span
-                            class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
-                    </button>
-
-                    <a href="#funcionalidades"
-                        class="px-8 py-4 rounded-xl border-2 border-white/10 hover:border-blue-400/50
-                    bg-white/5 hover:bg-white/10 backdrop-blur-xl transition-all duration-700 flex items-center gap-2 group shadow-lg hover:shadow-2xl hover:shadow-blue-500/20 hover:scale-105 font-semibold">
-                        Ver recursos
-                        <span
-                            class="material-symbols-outlined text-base transition-transform duration-700 group-hover:translate-x-2">arrow_forward</span>
-                    </a>
-
-                    <a href="#video-pdv-legal"
-                        class="hero-extra-action px-8 py-4 rounded-xl bg-gradient-to-r from-blue-600 via-cyan-600 to-blue-600 bg-size-200 bg-pos-0 hover:bg-pos-100 shadow-xl shadow-blue-500/25 hover:shadow-2xl hover:shadow-cyan-500/35 hover:scale-105 transition-all duration-700 flex items-center gap-2 group font-semibold">
-                        Conhe&ccedil;a o PDV LEGAL
-                        <span
-                            class="material-symbols-outlined text-base transition-transform duration-700 group-hover:scale-110">play_circle</span>
-                    </a>
-
-                    <a href="https://ajuda.pdvlegal.com.br/" target="_blank" rel="noopener noreferrer"
-                        class="hero-extra-action px-8 py-4 rounded-xl border-2 border-cyan-300/20 hover:border-cyan-300/55 bg-cyan-400/10 hover:bg-cyan-400/15 backdrop-blur-xl transition-all duration-700 flex items-center gap-2 group shadow-lg hover:shadow-2xl hover:shadow-cyan-500/20 hover:scale-105 font-semibold">
-                        Ajuda PDV Legal
-                        <span
-                            class="material-symbols-outlined text-base transition-transform duration-700 group-hover:-translate-y-1 group-hover:translate-x-1">open_in_new</span>
-                    </a>
-                </div>
-
-                <!-- BENEFÍCIOS -->
-                <div class="flex flex-wrap gap-6 mt-12 text-sm text-slate-400">
-                    <div class="flex items-center gap-2 hero-mini-badge">
-                        <span class="material-symbols-outlined text-blue-400 text-base">attach_money</span>
-                        <span class="font-medium">Reduz custos operacionais</span>
-                    </div>
-                    <div class="flex items-center gap-2 hero-mini-badge">
-                        <span class="material-symbols-outlined text-purple-400 text-base">cloud_done</span>
-                        <span class="font-medium">Retaguarda em nuvem</span>
-                    </div>
-                    <div class="flex items-center gap-2 hero-mini-badge">
-                        <span class="material-symbols-outlined text-green-400 text-base">verified</span>
-                        <span class="font-medium">Emite NFC-e</span>
-                    </div>
-                </div>
+      <section id="video-pdv-legal" class="section">
+        <div class="container">
+          <div class="video-panel reveal">
+            <div class="video-embed">
+              <iframe title="Conheça o PDV Legal" data-src="https://www.youtube-nocookie.com/embed/EpBA8pgvEOc?rel=0&modestbranding=1" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen loading="lazy"></iframe>
             </div>
-
-            <!-- VISUAL -->
-            <div class="fade-up relative">
-                <div
-                    class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 blur-3xl opacity-70 animate-pulse-slow">
-                </div>
-                <div
-                    class="hero-visual-card relative bg-gradient-to-br from-slate-900/70 to-slate-800/40 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl text-center hover:border-blue-500/30 transition-all duration-700 hover:scale-[1.02] overflow-hidden">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-60"></div>
-
-                    <img src="assets/images/legal-equipamentos.png" width="742" height="623" decoding="async"
-                        fetchpriority="high" alt="PDV Legal rodando em maquininha e equipamentos Android"
-                        class="relative z-10 w-full max-h-[360px] object-contain rounded-2xl drop-shadow-[0_20px_45px_rgba(15,23,42,0.7)]">
-
-                    <p class="relative z-10 text-slate-300 mt-5 mb-2 text-base md:text-lg">
-                        Sistema, fiscal, estoque e pagamento.
-                        <br>
-                        <span class="text-blue-300 font-bold">Tudo em uma maquininha.</span>
-                    </p>
-                </div>
+            <div>
+              <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">play_circle</span>Demonstração do sistema</span>
+              <h2 style="font-size: clamp(2rem, 4vw, 3.6rem); line-height: 1;">Veja o PDV Legal em funcionamento</h2>
+              <p class="lead">Assista uma apresentação rápida do sistema na própria página. O vídeo fica parado até o cliente clicar para iniciar.</p>
+              <div class="button-row">
+                <a class="btn btn-primary" href="https://www.youtube.com/watch?v=Dcx76e0ITvM&list=PLjkQMYhjHLHEIi9-ZLwoX_AkpL4tHcrB9" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined" aria-hidden="true">video_library</span>Saiba mais sobre o PDV</a>
+                <a class="btn btn-ghost" href="https://ajuda.pdvlegal.com.br/" target="_blank" rel="noopener noreferrer"><span class="material-symbols-outlined" aria-hidden="true">help</span>Central de ajuda</a>
+              </div>
             </div>
-
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- VIDEO PDV LEGAL -->
-    <section id="video-pdv-legal" class="pdv-video-showcase py-24 bg-gradient-to-b from-black via-slate-950 to-slate-900 relative overflow-hidden">
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 left-1/4 w-[520px] h-[520px] bg-blue-500/10 blur-3xl rounded-full"></div>
-            <div class="absolute bottom-0 right-1/4 w-[420px] h-[420px] bg-cyan-500/10 blur-3xl rounded-full"></div>
+      <section id="diferenciais" class="section">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="eyebrow"><i aria-hidden="true"></i>Por que PDV na maquininha?</span>
+            <h2>Mobilidade para vender, receber e emitir <span>sem prender a operação.</span></h2>
+            <p>Um fluxo leve para quem precisa atender com velocidade no balcão, no salão, em eventos ou no delivery.</p>
+          </div>
+          <div class="grid grid-3">
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">savings</span></div><h3>Economia real</h3><p>Reduz estrutura, cabos e equipamentos dedicados ao caixa tradicional.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">directions_run</span></div><h3>Mobilidade total</h3><p>Venda em maquininha, celular ou tablet, com atendimento onde o cliente estiver.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">payments</span></div><h3>Pagamento integrado</h3><p>Pedido, pagamento e emissão fiscal dentro de uma jornada simples para a equipe.</p></article>
+          </div>
+          <div class="metric-band reveal">
+            <div class="metric-card"><span>Plataforma</span><strong>Android • Smart POS</strong></div>
+            <div class="metric-card"><span>Retaguarda</span><strong>100% em nuvem</strong></div>
+            <div class="metric-card"><span>Emissão fiscal</span><strong>NFC-e integrada</strong></div>
+            <div class="metric-card"><span>Multi-dispositivo</span><strong>POS, celular ou tablet</strong></div>
+          </div>
         </div>
+      </section>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="pdv-video-showcase__panel fade-up">
-                <div class="pdv-video-showcase__media">
-                    <iframe title="Conhe&ccedil;a o PDV Legal"
-                        src="https://www.youtube-nocookie.com/embed/EpBA8pgvEOc?rel=0&modestbranding=1"
-                        referrerpolicy="strict-origin-when-cross-origin"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen loading="lazy"></iframe>
-                </div>
-
-                <div class="pdv-video-showcase__content">
-                    <span class="pdv-video-showcase__eyebrow">
-                        <span class="material-symbols-outlined">play_circle</span>
-                        Demonstra&ccedil;&atilde;o do sistema
-                    </span>
-                    <h2>Veja o PDV Legal em funcionamento</h2>
-                    <p>
-                        Assista uma apresenta&ccedil;&atilde;o r&aacute;pida do sistema na pr&oacute;pria p&aacute;gina. O v&iacute;deo fica parado at&eacute; o cliente clicar para iniciar.
-                    </p>
-
-                    <div class="pdv-video-showcase__actions">
-                        <a href="https://www.youtube.com/watch?v=Dcx76e0ITvM&list=PLjkQMYhjHLHEIi9-ZLwoX_AkpL4tHcrB9"
-                            target="_blank" rel="noopener noreferrer" class="pdv-video-showcase__playlist">
-                            <span class="material-symbols-outlined">video_library</span>
-                            Saiba mais sobre o PDV
-                        </a>
-
-                        <a href="https://ajuda.pdvlegal.com.br/" target="_blank" rel="noopener noreferrer"
-                            class="pdv-video-showcase__help">
-                            <span class="material-symbols-outlined">help</span>
-                            Central de ajuda
-                        </a>
-                    </div>
-                </div>
-            </div>
+      <section id="gestao" class="section">
+        <div class="container showcase">
+          <div class="section-heading reveal">
+            <span class="eyebrow"><i aria-hidden="true"></i>Gestão em nuvem</span>
+            <h2>Retaguarda para acompanhar <span>todas as unidades.</span></h2>
+            <p>Acompanhe filtros por período, multi-filial, comissão de garçom e produtos mais vendidos.</p>
+          </div>
+          <div class="media-panel reveal"><img src="assets/images/optimized/pdvlegal-dash-1200.jpg" width="1200" height="567" alt="Dashboard do PDV Legal"></div>
         </div>
-    </section>
-
-    <!-- POR QUE PDV NA MAQUININHA -->
-    <section id="diferenciais" class="py-28 bg-gradient-to-b from-black via-slate-950 to-slate-900 relative overflow-hidden">
-
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-500/10 blur-3xl rounded-full"></div>
+        <div class="container">
+          <div class="grid grid-4">
+            <article class="mini-card reveal"><h3>Filtros por Período</h3><p>Análise diária, mensal ou anual</p></article>
+            <article class="mini-card reveal"><h3>Multi-filial</h3><p>Gerencie todas as unidades</p></article>
+            <article class="mini-card reveal"><h3>Comissão Garçom</h3><p>Controle automático</p></article>
+            <article class="mini-card reveal"><h3>Mais Vendidos</h3><p>Ranking automático</p></article>
+          </div>
         </div>
+      </section>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-
-            <div class="text-center mb-20 fade-up">
-                <span
-                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
-                    POR QUE PDV NA MAQUININHA?
-                </span>
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
-                    Menos estrutura no balcão,
-                    <span
-                        class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">mais
-                        giro por atendimento</span>
-                </h2>
-                <p class="text-slate-400 text-lg max-w-3xl mx-auto leading-relaxed">
-                    Reduza pontos de falha, libere espaço e leve o caixa até onde a venda acontece.
-                    A operação cabe em um equipamento Android, com fiscal e pagamento no mesmo fluxo.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-10">
-
-                <!-- DIFERENCIAL 1 -->
-                <div
-                    class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
-
-                    <div
-                        class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
-                        <span class="material-symbols-outlined text-blue-400 text-4xl">savings</span>
-                    </div>
-
-                    <h3 class="text-xl font-bold mb-4">Economia real</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Dispensa computador, monitor, nobreak, teclado, mouse e impressora dedicada.
-                        Você economiza na compra, na manutenção e até no espaço do balcão.
-                    </p>
-
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700">
-                    </div>
-                </div>
-
-                <!-- DIFERENCIAL 2 -->
-                <div
-                    class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
-
-                    <div
-                        class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
-                        <span class="material-symbols-outlined text-blue-400 text-4xl">explore</span>
-                    </div>
-
-                    <h3 class="text-xl font-bold mb-4">Mobilidade total</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Atenda na mesa, no balcão, no estacionamento ou na rua.
-                        Como funciona com 4G ou Wi-Fi, sua equipe leva o caixa pra onde o cliente estiver.
-                    </p>
-
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700">
-                    </div>
-                </div>
-
-                <!-- DIFERENCIAL 3 -->
-                <div
-                    class="fade-up bg-gradient-to-br from-blue-900/50 to-slate-900/60 border-2 border-blue-500/30 p-10 rounded-3xl hover:scale-105 hover:border-blue-400/60 transition-all duration-700 backdrop-blur-sm shadow-2xl shadow-blue-500/20 hover:shadow-3xl hover:shadow-blue-500/40 group overflow-hidden">
-
-                    <div
-                        class="w-16 h-16 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center mb-6 transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
-                        <span class="material-symbols-outlined text-blue-400 text-4xl">sync</span>
-                    </div>
-
-                    <h3 class="text-xl font-bold mb-4">Pagamento integrado</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Como o sistema roda na própria maquininha, o pagamento já vem vinculado à NFC-e.
-                        Atende a obrigatoriedade fiscal de estados como RS e MT, sem complicação.
-                    </p>
-
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/5 opacity-0 group-hover:opacity-100 blur-2xl transition-opacity duration-700">
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- LINHA DE INFO TÉCNICA -->
-            <div
-                class="fade-up mt-20 bg-gradient-to-r from-slate-900/80 to-slate-900/40 border-2 border-white/10 rounded-3xl p-8 flex flex-wrap items-center justify-around gap-8 text-center backdrop-blur-xl shadow-xl">
-
-                <div class="flex items-center gap-4">
-                    <span class="material-symbols-outlined text-blue-400 text-3xl">android</span>
-                    <div class="text-left">
-                        <p class="text-xs text-slate-500 font-semibold">Plataforma</p>
-                        <p class="text-sm font-bold">Android • Smart POS</p>
-                    </div>
-                </div>
-
-                <div class="hidden md:block w-px h-12 bg-white/20"></div>
-
-                <div class="flex items-center gap-4">
-                    <span class="material-symbols-outlined text-blue-400 text-3xl">cloud</span>
-                    <div class="text-left">
-                        <p class="text-xs text-slate-500 font-semibold">Retaguarda</p>
-                        <p class="text-sm font-bold">100% em nuvem</p>
-                    </div>
-                </div>
-
-                <div class="hidden md:block w-px h-12 bg-white/20"></div>
-
-                <div class="flex items-center gap-4">
-                    <span class="material-symbols-outlined text-blue-400 text-3xl">receipt_long</span>
-                    <div class="text-left">
-                        <p class="text-xs text-slate-500 font-semibold">Emissão fiscal</p>
-                        <p class="text-sm font-bold">NFC-e integrada</p>
-                    </div>
-                </div>
-
-                <div class="hidden md:block w-px h-12 bg-white/20"></div>
-
-                <div class="flex items-center gap-4">
-                    <span class="material-symbols-outlined text-blue-400 text-3xl">devices</span>
-                    <div class="text-left">
-                        <p class="text-xs text-slate-500 font-semibold">Multi-dispositivo</p>
-                        <p class="text-sm font-bold">POS, celular ou tablet</p>
-                    </div>
-                </div>
-
-            </div>
-
+      <section id="food-service" class="section">
+        <div class="container showcase">
+          <div class="section-heading reveal">
+            <span class="eyebrow"><i aria-hidden="true"></i>Food service</span>
+            <h2>Comandas, produção e salão <span>em uma rotina mais fluida.</span></h2>
+            <p>Controle pedidos, mesas, impressão por setor e comissão de garçom com operação em tempo real.</p>
+          </div>
+          <div class="showcase-list">
+            <article class="mini-card reveal"><h3>Comandas individuais ou por mesa</h3><p>Organize o atendimento no salão, balcão e delivery sem perder o histórico do pedido.</p></article>
+            <article class="mini-card reveal"><h3>Impressão por setor de produção</h3><p>Envie itens para bar, cozinha e produção com mais agilidade.</p></article>
+            <article class="mini-card reveal"><h3>Modificadores de pedido</h3><p>Registre adicionais, observações e preferências do cliente.</p></article>
+            <article class="mini-card reveal"><h3>Comissão de garçom em tempo real</h3><p>Acompanhe atendimento e comissão automática por venda.</p></article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- DASHBOARD / RETAGUARDA -->
-    <section id="gestao" class="py-32 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 relative overflow-hidden">
-
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 left-1/3 w-[600px] h-[600px] bg-blue-500/10 blur-3xl rounded-full"></div>
-            <div class="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-purple-500/10 blur-3xl rounded-full"></div>
+      <section id="funcionalidades" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <span class="eyebrow"><i aria-hidden="true"></i>Recursos</span>
+            <h2>Recursos Android para <span>vender com mobilidade real.</span></h2>
+            <p>Funcionalidades para maquininha, Smart POS, delivery, estoque e atendimento móvel.</p>
+          </div>
+          <div class="grid grid-4 feature-grid">
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">android</span></div><h3>Roda em qualquer Android</h3><p>Maquininha, celular ou tablet.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">receipt_long</span></div><h3>Emissão NFC-e</h3><p>Cupom fiscal direto da maquininha.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">table_restaurant</span></div><h3>Comandas e Mesas</h3><p>Atendimento direto na mesa.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">touch_app</span></div><h3>Interface Intuitiva</h3><p>Treinamento mínimo da equipe.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">qr_code_scanner</span></div><h3>Leitura de Código</h3><p>Câmera ou scanner integrado.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">print</span></div><h3>Até 10 Impressoras</h3><p>Bar, cozinha e produção.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">payments</span></div><h3>Pagamento Integrado</h3><p>Pix, cartão e dinheiro.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">sync</span></div><h3>Sincronização em Nuvem</h3><p>Dados sempre atualizados.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">groups</span></div><h3>Controle de Garçom</h3><p>Comissão automática por venda.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">confirmation_number</span></div><h3>Fichas e Senhas</h3><p>Ideal para eventos e food trucks.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">scale</span></div><h3>Integração com Balança</h3><p>Para venda por peso.</p></article>
+            <article class="feature-card reveal"><div class="feature-icon"><span class="material-symbols-outlined">analytics</span></div><h3>Relatórios Completos</h3><p>Por horário, produto e forma.</p></article>
+          </div>
         </div>
+      </section>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-
-            <div class="text-center mb-20 fade-up">
-                <span
-                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
-                    PAINEL DE GESTÃO
-                </span>
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
-                    Indicadores na nuvem para
-                    <span
-                        class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">decidir
-                        mais rápido</span>
-                </h2>
-                <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                    Enquanto sua equipe vende na maquininha, a gestão acompanha tudo pelo navegador —
-                    relatórios, comissão de garçom, vendas por horário e produtos mais vendidos em tempo real.
-                </p>
-            </div>
-
-            <!-- IMAGEM DO DASHBOARD -->
-            <div class="fade-up relative max-w-6xl mx-auto">
-                <div
-                    class="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-blue-500/20 blur-3xl opacity-60 rounded-3xl">
-                </div>
-
-                <div class="relative bg-gradient-to-br from-slate-900/80 to-slate-800/60 backdrop-blur-xl rounded-3xl border-2 border-white/10 p-4 shadow-2xl shadow-blue-500/20
-                hover:scale-[1.01] transition-all duration-700 group">
-
-                    <div class="flex items-center gap-2 px-5 py-4 border-b border-white/10">
-                        <span class="w-3 h-3 rounded-full bg-red-500/70"></span>
-                        <span class="w-3 h-3 rounded-full bg-yellow-500/70"></span>
-                        <span class="w-3 h-3 rounded-full bg-green-500/70"></span>
-                        <span class="ml-4 text-xs text-slate-500 truncate font-medium">pdvlegal • Retaguarda</span>
-                    </div>
-
-                    <img src="assets/images/optimized/pdvlegal-dash-1200.jpg" width="1200" height="567" loading="lazy"
-                        decoding="async" alt="Retaguarda PDV Legal"
-                        class="w-full rounded-b-2xl group-hover:scale-[1.005] transition-transform duration-700">
-
-                </div>
-            </div>
-
-            <!-- DESTAQUES ABAIXO DA IMAGEM -->
-            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mt-20">
-
-                <div class="fade-up text-center">
-                    <div
-                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-blue-500/15 border-2 border-blue-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
-                        <span class="material-symbols-outlined text-blue-400 text-4xl">date_range</span>
-                    </div>
-                    <h3 class="font-bold mb-2">Filtros por Período</h3>
-                    <p class="text-sm text-slate-400">Análise diária, mensal ou anual</p>
-                </div>
-
-                <div class="fade-up text-center">
-                    <div
-                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-purple-500/15 border-2 border-purple-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
-                        <span class="material-symbols-outlined text-purple-400 text-4xl">store</span>
-                    </div>
-                    <h3 class="font-bold mb-2">Multi-filial</h3>
-                    <p class="text-sm text-slate-400">Gerencie todas as unidades</p>
-                </div>
-
-                <div class="fade-up text-center">
-                    <div
-                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-green-500/15 border-2 border-green-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
-                        <span class="material-symbols-outlined text-green-400 text-4xl">badge</span>
-                    </div>
-                    <h3 class="font-bold mb-2">Comissão Garçom</h3>
-                    <p class="text-sm text-slate-400">Controle automático</p>
-                </div>
-
-                <div class="fade-up text-center">
-                    <div
-                        class="w-16 h-16 mx-auto mb-5 rounded-2xl bg-yellow-500/15 border-2 border-yellow-500/40 flex items-center justify-center hover:scale-110 transition-transform duration-700">
-                        <span class="material-symbols-outlined text-yellow-400 text-4xl">leaderboard</span>
-                    </div>
-                    <h3 class="font-bold mb-2">Mais Vendidos</h3>
-                    <p class="text-sm text-slate-400">Ranking automático</p>
-                </div>
-
-            </div>
-
+      <section id="segmentos" class="section">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="eyebrow"><i aria-hidden="true"></i>Segmentos</span>
+            <h2>Ideal para atendimento <span>móvel e food service.</span></h2>
+            <p>Uma solução versátil para negócios que vendem no balcão, no salão, em eventos e no delivery.</p>
+          </div>
+          <div class="grid grid-4 segment-grid">
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">restaurant</span><p>Restaurantes</p></article>
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">lunch_dining</span><p>Lanchonetes</p></article>
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">sports_bar</span><p>Bares</p></article>
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">icecream</span><p>Sorveterias</p></article>
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">local_shipping</span><p>Food Trucks</p></article>
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">store</span><p>Conveniência</p></article>
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">storefront</span><p>Quiosques</p></article>
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">festival</span><p>Eventos</p></article>
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">bakery_dining</span><p>Padarias</p></article>
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">local_cafe</span><p>Cafeterias</p></article>
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">delivery_dining</span><p>Delivery</p></article>
+            <article class="mini-card segment-card reveal"><span class="material-symbols-outlined">pets</span><p>Pet Shops</p></article>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- COMANDAS E COMISSÃO (DESTAQUE FOOD SERVICE) -->
-    <section id="food-service" class="py-28 bg-gradient-to-b from-slate-900 to-black relative overflow-hidden">
-
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-blue-500/10 blur-3xl rounded-full"></div>
-            <div class="absolute bottom-0 right-0 w-[500px] h-[500px] bg-purple-500/10 blur-3xl rounded-full"></div>
+      <section id="adquirentes" class="section">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="eyebrow"><i aria-hidden="true"></i>Adquirentes</span>
+            <h2>Compatível com as principais <span>maquininhas do mercado.</span></h2>
+            <p>Venda com PDV Legal em Smart POS e parceiros de pagamento usados por empresas brasileiras.</p>
+          </div>
+          <div class="grid grid-4">
+            <article class="adquirente-card reveal"><img src="assets/images/adquirentes/getnet.png" width="887" height="198" alt="Getnet"><h3>Getnet</h3></article>
+            <article class="adquirente-card reveal"><img src="assets/images/optimized/cielo-280.png" width="280" height="93" alt="Cielo"><h3>Cielo</h3></article>
+            <article class="adquirente-card reveal"><img src="assets/images/optimized/stone-280.png" width="280" height="142" alt="Stone"><h3>Stone</h3></article>
+            <article class="adquirente-card reveal"><img src="assets/images/adquirentes/pagbank.png" width="615" height="190" alt="PagBank"><h3>PagBank</h3></article>
+            <article class="adquirente-card reveal"><img src="assets/images/optimized/sicredi-280.png" width="280" height="66" alt="Sicredi"><h3>Sicredi</h3></article>
+            <article class="adquirente-card reveal"><img src="assets/images/optimized/caixa-280.png" width="280" height="63" alt="Caixa"><h3>Caixa</h3></article>
+            <article class="adquirente-card reveal"><img src="assets/images/optimized/banrisul-280.png" width="280" height="126" alt="Banrisul"><h3>Banrisul</h3></article>
+          </div>
         </div>
+      </section>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-
-            <div class="text-center mb-20 fade-up">
-                <span
-                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/30 backdrop-blur-sm">
-                    BARES E RESTAURANTES
-                </span>
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
-                    Atendimento de mesa com
-                    <span
-                        class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(168,85,247,0.3)]">menos
-                        espera e mais controle</span>
-                </h2>
-                <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                    Garçons com maquininha na mão, pedidos imprimindo automaticamente na cozinha
-                    e comissão calculada na hora. Tudo em um sistema só.
-                </p>
+      <section id="clientes" class="section">
+        <div class="container">
+          <div class="section-heading center reveal">
+            <span class="eyebrow"><i aria-hidden="true"></i>Quem já usa e aprova</span>
+            <h2>Clientes que usam <span>PDV Legal.</span></h2>
+            <p>Empresas que vendem com mobilidade, controle fiscal e atendimento rápido.</p>
+          </div>
+          <div class="logo-marquee reveal" aria-label="Clientes PDV Legal">
+            <div class="logo-track">
+              <div class="logo-card"><img src="assets/images/clientes/cliente2.png" width="300" height="300" alt="Janela"></div>
+              <div class="logo-card"><img src="assets/images/clientes/cliente3.png" width="300" height="300" alt="Cookie da Boleta"></div>
+              <div class="logo-card"><img src="assets/images/clientes/cliente4.jpg" width="300" height="300" alt="Coxa Sports Bar e Parrilla"></div>
+              <div class="logo-card"><img src="assets/images/clientes/cliente5.png" width="300" height="300" alt="El Perrito"></div>
+              <div class="logo-card"><img src="assets/images/clientes/cliente2.png" width="300" height="300" alt="Janela"></div>
+              <div class="logo-card"><img src="assets/images/clientes/cliente3.png" width="300" height="300" alt="Cookie da Boleta"></div>
+              <div class="logo-card"><img src="assets/images/clientes/cliente4.jpg" width="300" height="300" alt="Coxa Sports Bar e Parrilla"></div>
+              <div class="logo-card"><img src="assets/images/clientes/cliente5.png" width="300" height="300" alt="El Perrito"></div>
             </div>
-
-            <div class="grid md:grid-cols-2 gap-14 items-center">
-
-                <!-- COLUNA TEXTO -->
-                <div class="fade-up space-y-7">
-
-                    <div class="flex gap-5 group">
-                        <div
-                            class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
-                            <span class="material-symbols-outlined text-blue-400 text-2xl">restaurant_menu</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg mb-2">Comandas individuais ou por mesa</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                Abra comandas separadas para cada cliente da mesa, divida a conta com facilidade
-                                e mantenha o controle de tudo que foi consumido.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-5 group">
-                        <div
-                            class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
-                            <span class="material-symbols-outlined text-blue-400 text-2xl">print</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg mb-2">Impressão por setor de produção</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                Conecte até <b class="text-white font-semibold">10 impressoras</b> de expedição. Bebidas
-                                vão pro bar,
-                                comidas vão pra cozinha — automaticamente.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-5 group">
-                        <div
-                            class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
-                            <span class="material-symbols-outlined text-blue-400 text-2xl">tune</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg mb-2">Modificadores de pedido</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                Adicionais, remoções, ponto da carne, observações... Personalize qualquer prato
-                                com poucos toques — e o valor já se ajusta automaticamente.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-5 group">
-                        <div
-                            class="flex-shrink-0 w-14 h-14 rounded-2xl bg-blue-500/20 border-2 border-blue-500/40 flex items-center justify-center transition-transform duration-700 group-hover:scale-110 group-hover:rotate-6">
-                            <span class="material-symbols-outlined text-blue-400 text-2xl">badge</span>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-lg mb-2">Comissão de garçom em tempo real</h3>
-                            <p class="text-slate-400 text-sm leading-relaxed">
-                                Cada venda é vinculada ao garçom responsável. Acompanhe a produtividade do time
-                                e a comissão acumulada direto no painel.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-                <!-- COLUNA VISUAL -->
-                <div class="fade-up relative">
-                    <div
-                        class="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/10 blur-3xl opacity-60">
-                    </div>
-                    <div
-                        class="relative bg-gradient-to-br from-slate-900/90 to-slate-950/90 border-2 border-blue-500/30 rounded-3xl p-10 shadow-2xl shadow-blue-500/20 backdrop-blur-xl">
-
-                        <!-- Mock comanda -->
-                        <div class="border-b border-white/10 pb-5 mb-5 flex justify-between items-center">
-                            <div>
-                                <p class="text-xs text-slate-500 uppercase tracking-wide font-semibold">Mesa 12</p>
-                                <p class="text-xl font-bold">Comanda #4821</p>
-                            </div>
-                            <span
-                                class="text-xs bg-green-500/20 text-green-400 px-3 py-1.5 rounded-full border border-green-500/40 font-semibold">Aberta</span>
-                        </div>
-
-                        <div class="space-y-4 mb-6">
-                            <div class="flex justify-between text-sm">
-                                <div>
-                                    <p class="font-medium">2x Hambúrguer Artesanal</p>
-                                    <p class="text-xs text-slate-500 mt-1">+ bacon, sem cebola</p>
-                                </div>
-                                <p class="text-blue-300 font-bold">R$ 78,00</p>
-                            </div>
-                            <div class="flex justify-between text-sm">
-                                <p class="font-medium">1x Batata Frita G</p>
-                                <p class="text-blue-300 font-bold">R$ 24,90</p>
-                            </div>
-                            <div class="flex justify-between text-sm">
-                                <p class="font-medium">3x Chopp Pilsen 300ml</p>
-                                <p class="text-blue-300 font-bold">R$ 36,00</p>
-                            </div>
-                        </div>
-
-                        <div class="border-t border-white/10 pt-5 space-y-3">
-                            <div class="flex justify-between text-sm text-slate-400">
-                                <span>Subtotal</span>
-                                <span class="font-medium">R$ 138,90</span>
-                            </div>
-                            <div class="flex justify-between text-sm text-slate-400">
-                                <span>Taxa de serviço (10%)</span>
-                                <span class="font-medium">R$ 13,89</span>
-                            </div>
-                            <div class="flex justify-between text-base font-extrabold pt-3 border-t border-white/10">
-                                <span>Total</span>
-                                <span class="text-blue-300">R$ 152,79</span>
-                            </div>
-                        </div>
-
-                        <div
-                            class="mt-6 p-4 bg-blue-500/10 border border-blue-500/30 rounded-xl flex items-center gap-4 text-sm backdrop-blur-sm">
-                            <span class="material-symbols-outlined text-blue-400 text-2xl">person</span>
-                            <div>
-                                <p class="text-xs text-slate-500 font-semibold">Garçom</p>
-                                <p class="font-bold">Pedro Silva</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- FUNCIONALIDADES -->
-    <section id="funcionalidades" class="py-28 bg-gradient-to-b from-black to-slate-950 relative overflow-hidden">
-
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 left-1/4 w-[400px] h-[400px] bg-blue-500/10 blur-3xl rounded-full"></div>
-            <div class="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-500/10 blur-3xl rounded-full"></div>
+      <section id="contato" class="section">
+        <div class="container">
+          <div class="cta-panel reveal">
+            <h2>Modernize seu atendimento <span>com mobilidade real.</span></h2>
+            <p>Fale com nosso time e veja como o PDV Legal pode reduzir estrutura, acelerar filas e dar mais controle para sua gestão.</p>
+            <div class="button-row" style="justify-content: center;">
+              <button class="btn btn-success" type="button" data-whatsapp="Olá! Vim pela página do PDV Legal e quero contratar ou receber uma demonstração do sistema."><span class="material-symbols-outlined" aria-hidden="true">chat</span>Falar com especialista</button>
+            </div>
+          </div>
         </div>
+      </section>
+    </main>
 
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-
-            <div class="text-center mb-20 fade-up">
-                <span
-                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
-                    FUNCIONALIDADES
-                </span>
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
-                    Recursos para vender mais
-                    <span
-                        class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">sem
-                        perder governança</span>
-                </h2>
-                <p class="text-slate-400 text-lg">
-                    Mobilidade, emissão fiscal, estoque e relatórios para uma rotina comercial mais leve e rastreável.
-                </p>
-            </div>
-
-            <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-blue-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-4xl drop-shadow-lg">smartphone</span>
-                    <h3 class="mt-5 font-bold text-base">Roda em qualquer Android</h3>
-                    <p class="text-sm text-slate-400 mt-2">Maquininha, celular ou tablet.</p>
-                </div>
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-purple-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-purple-500/20">
-                    <span class="material-symbols-outlined text-purple-400 text-4xl drop-shadow-lg">receipt_long</span>
-                    <h3 class="mt-5 font-bold text-base">Emissão NFC-e</h3>
-                    <p class="text-sm text-slate-400 mt-2">Cupom fiscal direto da maquininha.</p>
-                </div>
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-green-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-green-500/20">
-                    <span
-                        class="material-symbols-outlined text-green-400 text-4xl drop-shadow-lg">restaurant_menu</span>
-                    <h3 class="mt-5 font-bold text-base">Comandas e Mesas</h3>
-                    <p class="text-sm text-slate-400 mt-2">Atendimento direto na mesa.</p>
-                </div>
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-yellow-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-yellow-500/20">
-                    <span class="material-symbols-outlined text-yellow-400 text-4xl drop-shadow-lg">touch_app</span>
-                    <h3 class="mt-5 font-bold text-base">Interface Intuitiva</h3>
-                    <p class="text-sm text-slate-400 mt-2">Treinamento mínimo da equipe.</p>
-                </div>
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-orange-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-orange-500/20">
-                    <span
-                        class="material-symbols-outlined text-orange-400 text-4xl drop-shadow-lg">qr_code_scanner</span>
-                    <h3 class="mt-5 font-bold text-base">Leitura de Código</h3>
-                    <p class="text-sm text-slate-400 mt-2">Câmera ou scanner integrado.</p>
-                </div>
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-red-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-red-500/20">
-                    <span class="material-symbols-outlined text-red-400 text-4xl drop-shadow-lg">print</span>
-                    <h3 class="mt-5 font-bold text-base">Até 10 Impressoras</h3>
-                    <p class="text-sm text-slate-400 mt-2">Bar, cozinha e produção.</p>
-                </div>
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-emerald-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-emerald-500/20">
-                    <span class="material-symbols-outlined text-emerald-400 text-4xl drop-shadow-lg">payments</span>
-                    <h3 class="mt-5 font-bold text-base">Pagamento Integrado</h3>
-                    <p class="text-sm text-slate-400 mt-2">Pix, cartão e dinheiro.</p>
-                </div>
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-indigo-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-indigo-500/20">
-                    <span class="material-symbols-outlined text-indigo-400 text-4xl drop-shadow-lg">cloud_sync</span>
-                    <h3 class="mt-5 font-bold text-base">Sincronização em Nuvem</h3>
-                    <p class="text-sm text-slate-400 mt-2">Dados sempre atualizados.</p>
-                </div>
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-cyan-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-cyan-500/20">
-                    <span class="material-symbols-outlined text-cyan-400 text-4xl drop-shadow-lg">badge</span>
-                    <h3 class="mt-5 font-bold text-base">Controle de Garçom</h3>
-                    <p class="text-sm text-slate-400 mt-2">Comissão automática por venda.</p>
-                </div>
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-pink-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-pink-500/20">
-                    <span
-                        class="material-symbols-outlined text-pink-400 text-4xl drop-shadow-lg">confirmation_number</span>
-                    <h3 class="mt-5 font-bold text-base">Fichas e Senhas</h3>
-                    <p class="text-sm text-slate-400 mt-2">Ideal para eventos e food trucks.</p>
-                </div>
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-amber-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-amber-500/20">
-                    <span class="material-symbols-outlined text-amber-400 text-4xl drop-shadow-lg">scale</span>
-                    <h3 class="mt-5 font-bold text-base">Integração com Balança</h3>
-                    <p class="text-sm text-slate-400 mt-2">Para venda por peso.</p>
-                </div>
-
-                <div
-                    class="bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 p-7 rounded-2xl hover:scale-105 hover:border-teal-400/50 transition-all duration-700 fade-up backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-teal-500/20">
-                    <span class="material-symbols-outlined text-teal-400 text-4xl drop-shadow-lg">analytics</span>
-                    <h3 class="mt-5 font-bold text-base">Relatórios Completos</h3>
-                    <p class="text-sm text-slate-400 mt-2">Por horário, produto e forma.</p>
-                </div>
-
-            </div>
-
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div><img src="assets/images/LOGO-PNG.svg" width="2550" height="625" alt="SEATEC"><p>Desde 2012 ajudando empresas a crescer com tecnologia, automação comercial e sistemas PDV eficientes.</p><div class="footer-badge">+400 clientes atendidos</div></div>
+          <div><h4>Navegação</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#diferenciais">Diferenciais</a></li><li><a href="#gestao">Gestão</a></li><li><a href="#food-service">Food service</a></li><li><a href="#funcionalidades">Funcionalidades</a></li><li><a href="#segmentos">Segmentos</a></li><li><a href="#adquirentes">Adquirentes</a></li><li><a href="#contato">Contato</a></li></ul></div>
+          <div><h4>Soluções</h4><ul><li><a href="voe.html">VoePDV (Windows)</a></li><li><a href="pdv-legal.html">PDV Legal (Android)</a></li><li>Automação Comercial</li><li>Implantação e Suporte</li></ul></div>
+          <div><h4>Contato</h4><ul><li><strong>Comercial</strong><br><a href="https://wa.me/551133846313?text=Olá,%20quero%20saber%20mais%20sobre%20os%20sistemas%20PDV" target="_blank" rel="noopener noreferrer">+55 11 3384-6313</a></li><li><strong>Suporte</strong><br><a href="https://wa.me/551142101779?text=Olá,%20preciso%20de%20suporte%20técnico" target="_blank" rel="noopener noreferrer">+55 11 4210-1779</a></li><li><strong>Email</strong><br><a href="mailto:suporte@seatec.com.br">suporte@seatec.com.br</a></li><li><strong>Redes sociais</strong><br><a href="https://www.instagram.com/pdvlegal_aricanduva/" target="_blank" rel="noopener noreferrer">Instagram</a></li></ul></div>
         </div>
-    </section>
-
-    <!-- IDEAL PARA -->
-    <section id="segmentos" class="py-28 bg-gradient-to-b from-slate-950 to-slate-900 relative overflow-hidden">
-
-        <div class="absolute inset-0 pointer-events-none">
-            <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-3xl rounded-full">
-            </div>
+        <div class="legal-grid">
+          <div class="legal-item"><span class="material-symbols-outlined">location_on</span><div><strong>Endereço</strong><p>Av Rio das pedras, 3473 - Jardim Aricanduva, São Paulo SP, CEP: 03930-310</p></div></div>
+          <div class="legal-item"><span class="material-symbols-outlined">corporate_fare</span><div><strong>Empresa</strong><p>Seatec Soluções Tecnológicas LTDA - CNPJ: 16.643.360/0001-41</p></div></div>
+          <div class="legal-item"><span class="material-symbols-outlined">verified_user</span><div><strong>Transparência</strong><p>Art. 49 do Código de Defesa do Consumidor: Garantia de 7 dias para cancelamento após a contratação. Utilizamos a API Oficial do WhatsApp para comunicação com clientes.</p></div></div>
         </div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-
-            <div class="text-center mb-20 fade-up">
-                <span
-                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
-                    SEGMENTOS
-                </span>
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
-                    Feito sob medida para
-                    <span
-                        class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">food
-                        service e varejo</span>
-                </h2>
-                <p class="text-slate-400 text-lg">
-                    Negócios que precisam de mobilidade, agilidade e simplicidade
-                </p>
-            </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5">
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">restaurant</span>
-                    <p class="text-sm font-bold mt-3">Restaurantes</p>
-                </div>
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">lunch_dining</span>
-                    <p class="text-sm font-bold mt-3">Lanchonetes</p>
-                </div>
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">local_bar</span>
-                    <p class="text-sm font-bold mt-3">Bares</p>
-                </div>
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">icecream</span>
-                    <p class="text-sm font-bold mt-3">Sorveterias</p>
-                </div>
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">local_dining</span>
-                    <p class="text-sm font-bold mt-3">Food Trucks</p>
-                </div>
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">store</span>
-                    <p class="text-sm font-bold mt-3">Conveniência</p>
-                </div>
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">storefront</span>
-                    <p class="text-sm font-bold mt-3">Quiosques</p>
-                </div>
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">festival</span>
-                    <p class="text-sm font-bold mt-3">Eventos</p>
-                </div>
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">bakery_dining</span>
-                    <p class="text-sm font-bold mt-3">Padarias</p>
-                </div>
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">coffee</span>
-                    <p class="text-sm font-bold mt-3">Cafeterias</p>
-                </div>
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">delivery_dining</span>
-                    <p class="text-sm font-bold mt-3">Delivery</p>
-                </div>
-
-                <div
-                    class="fade-up bg-gradient-to-br from-slate-900/80 to-slate-800/40 border-2 border-white/10 rounded-2xl p-6 text-center hover:border-blue-400/50 hover:scale-110 transition-all duration-700 backdrop-blur-sm shadow-xl hover:shadow-2xl hover:shadow-blue-500/20">
-                    <span class="material-symbols-outlined text-blue-400 text-5xl drop-shadow-lg">pets</span>
-                    <p class="text-sm font-bold mt-3">Pet Shops</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- ADQUIRENTES HOMOLOGADAS -->
-    <section id="adquirentes" class="py-32 bg-gradient-to-b from-slate-900 via-slate-950 to-black relative overflow-hidden">
-
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-20 left-1/3 w-[500px] h-[500px] bg-blue-500/10 blur-3xl rounded-full"></div>
-            <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-purple-500/10 blur-3xl rounded-full"></div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-
-            <div class="text-center mb-20 fade-up">
-                <span
-                    class="inline-block mb-6 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
-                    INTEGRAÇÕES OFICIAIS
-                </span>
-                <h2 class="text-4xl md:text-5xl font-extrabold mb-5 tracking-tight">
-                    Integrações homologadas para
-                    <span
-                        class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">operar
-                        com confiança</span>
-                </h2>
-                <p class="text-slate-400 text-lg max-w-2xl mx-auto leading-relaxed">
-                    Compatível com as principais adquirentes do mercado para reduzir atrito na implantação e no
-                    atendimento.
-                    Use a adquirente que você já tem ou contrate uma nova com as melhores taxas.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div class="adquirente-card" data-delay="0">
-                    <div class="adquirente-logo">
-                        <img src="assets/images/adquirentes/getnet.png" width="887" height="198" loading="lazy"
-                            decoding="async" alt="Getnet">
-                    </div>
-                    <h3>Getnet</h3>
-                </div>
-                <div class="adquirente-card" data-delay="100">
-                    <div class="adquirente-logo">
-                        <img src="assets/images/optimized/cielo-280.png" width="280" height="93" loading="lazy"
-                            decoding="async" alt="Cielo">
-                    </div>
-                    <h3>Cielo</h3>
-                </div>
-                <div class="adquirente-card" data-delay="200">
-                    <div class="adquirente-logo">
-                        <img src="assets/images/optimized/stone-280.png" width="280" height="142" loading="lazy"
-                            decoding="async" alt="Stone">
-                    </div>
-                    <h3>Stone</h3>
-                </div>
-                <div class="adquirente-card" data-delay="300">
-                    <div class="adquirente-logo">
-                        <img src="assets/images/adquirentes/pagbank.png" width="615" height="190" loading="lazy"
-                            decoding="async" alt="PagBank">
-                    </div>
-                    <h3>PagBank</h3>
-                </div>
-                <div class="adquirente-card" data-delay="400">
-                    <div class="adquirente-logo">
-                        <img src="assets/images/optimized/sicredi-280.png" width="280" height="66" loading="lazy"
-                            decoding="async" alt="Sicredi">
-                    </div>
-                    <h3>Sicredi</h3>
-                </div>
-                <div class="adquirente-card" data-delay="500">
-                    <div class="adquirente-logo">
-                        <img src="assets/images/optimized/caixa-280.png" width="280" height="63" loading="lazy"
-                            decoding="async" alt="Caixa">
-                    </div>
-                    <h3>Caixa</h3>
-                </div>
-                <div class="adquirente-card adquirente-card-banrisul" data-delay="600">
-                    <div class="adquirente-logo">
-                        <img src="assets/images/optimized/banrisul-280.png" width="280" height="126" loading="lazy"
-                            decoding="async" alt="Banrisul">
-                    </div>
-                    <h3>Banrisul</h3>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- CLIENTES -->
-    <section id="clientes" class="py-24 bg-gradient-to-b from-black via-slate-950 to-black relative overflow-hidden">
-        <div class="absolute inset-0 pointer-events-none">
-            <div
-                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[420px] bg-blue-500/10 blur-3xl rounded-full">
-            </div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-14 fade-up">
-                <span
-                    class="inline-block mb-5 px-5 py-2 text-xs font-semibold rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/30 backdrop-blur-sm">
-                    Quem Já Usa e Aprova
-                </span>
-
-                <h2 class="text-3xl md:text-4xl font-extrabold mb-5 tracking-tight">
-                    Clientes que usam
-                    <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">PDV
-                        Legal</span>
-                </h2>
-
-                <p class="text-slate-400 leading-relaxed">
-                    Empresas que contam com a SEATEC para vender com mobilidade, emitir NFC-e e manter a operação na
-                    palma da mão.
-                </p>
-            </div>
-
-            <div class="clientes-marquee fade-up" aria-label="Clientes PDV Legal">
-                <div class="clientes-marquee-track">
-                    <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente1.jpg" width="300" height="300" loading="lazy"
-                            decoding="async" alt="Rehem II">
-                    </div>
-                    <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy"
-                            decoding="async" alt="Janela">
-                    </div>
-                    <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente3.png" width="300" height="300" loading="lazy"
-                            decoding="async" alt="Cookie da Boleta">
-                    </div>
-                    <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente4.jpg" width="300" height="300" loading="lazy"
-                            decoding="async" alt="Coxa Sports Bar e Parrilla">
-                    </div>
-                    <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente5.png" width="300" height="300" loading="lazy"
-                            decoding="async" alt="El Perrito">
-                    </div>
-                    <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente1.jpg" width="300" height="300" loading="lazy"
-                            decoding="async" alt="Rehem II">
-                    </div>
-                    <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente2.png" width="300" height="300" loading="lazy"
-                            decoding="async" alt="Janela">
-                    </div>
-                    <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente3.png" width="300" height="300" loading="lazy"
-                            decoding="async" alt="Cookie da Boleta">
-                    </div>
-                    <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente4.jpg" width="300" height="300" loading="lazy"
-                            decoding="async" alt="Coxa Sports Bar e Parrilla">
-                    </div>
-                    <div class="cliente-logo-card">
-                        <img src="assets/images/clientes/cliente5.png" width="300" height="300" loading="lazy"
-                            decoding="async" alt="El Perrito">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA FINAL -->
-    <section id="contato" class="py-24 bg-gradient-to-b from-black via-slate-950 to-black relative overflow-hidden">
-
-        <div class="absolute inset-0 pointer-events-none">
-            <div
-                class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-500/15 blur-3xl rounded-full">
-            </div>
-        </div>
-
-        <div class="max-w-4xl mx-auto px-6 text-center relative z-10 fade-up">
-
-            <h2 class="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">
-                Modernize seu atendimento
-                <span
-                    class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_30px_rgba(59,130,246,0.3)]">com
-                    mobilidade real</span>
-            </h2>
-
-            <p class="text-slate-400 text-lg mb-12 leading-relaxed">
-                Fale com nosso time e veja como o PDV Legal pode reduzir estrutura, acelerar filas e dar mais controle
-                para sua gestão.
-            </p>
-
-            <button data-whatsapp="Olá! Quero contratar o PDV Legal." class="bg-gradient-to-r from-green-500 via-green-600 to-green-500 px-10 py-5 rounded-xl font-bold text-lg
-                shadow-2xl shadow-green-500/40 hover:shadow-3xl hover:shadow-green-500/60
-                hover:scale-110 transition-all duration-700 group overflow-hidden relative">
-
-                <span class="relative z-10">💬 Falar com especialista</span>
-
-                <span
-                    class="absolute inset-0 rounded-xl bg-gradient-to-r from-green-400/30 to-emerald-400/30 blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></span>
-            </button>
-
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer
-        class="bg-gradient-to-b from-slate-950 via-black to-black border-t border-white/10 pt-20 pb-10 relative overflow-hidden">
-
-        <!-- FUNDO DECORATIVO -->
-        <div class="absolute inset-0 pointer-events-none">
-            <div class="absolute top-0 left-1/3 w-[400px] h-[400px] bg-blue-500/10 blur-3xl rounded-full"></div>
-            <div class="absolute bottom-0 right-0 w-[300px] h-[300px] bg-purple-500/10 blur-3xl rounded-full"></div>
-        </div>
-
-        <div class="max-w-7xl mx-auto px-6 relative z-10">
-            <!-- GRID -->
-            <div class="grid md:grid-cols-4 gap-12 mb-14">
-
-                <!-- LOGO + DESC -->
-                <div>
-                    <img src="assets/images/logo_seatec.png" width="2550" height="625" loading="lazy" decoding="async"
-                        class="h-9 w-auto mb-5 transition-all duration-700 hover:scale-110" alt="SEATEC">
-
-                    <p class="text-slate-400 text-sm leading-relaxed">
-                        Desde 2012 ajudando empresas a crescer com tecnologia, automação comercial e sistemas PDV
-                        eficientes.
-                    </p>
-
-                    <!-- MINI BADGE -->
-                    <div
-                        class="mt-5 text-xs text-green-400 bg-green-500/10 inline-block px-4 py-2 rounded-full font-semibold border border-green-500/20">
-                        +400 clientes atendidos
-                    </div>
-                </div>
-
-                <!-- LINKS -->
-                <div>
-                    <h4 class="font-bold mb-5 text-white">Navega&ccedil;&atilde;o</h4>
-                    <ul class="space-y-3 text-sm text-slate-400">
-                        <li><a href="#inicio" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">In&iacute;cio</a></li>
-                        <li><a href="#diferenciais" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Diferenciais</a></li>
-                        <li><a href="#gestao" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Gest&atilde;o</a></li>
-                        <li><a href="#food-service" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Food service</a></li>
-                        <li><a href="#funcionalidades" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Funcionalidades</a></li>
-                        <li><a href="#segmentos" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Segmentos</a></li>
-                        <li><a href="#adquirentes" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Adquirentes</a></li>
-                        <li><a href="#contato" class="hover:text-white transition-colors duration-700 hover:translate-x-1 inline-block">Contato</a></li>
-                    </ul>
-                </div>
-
-                <!-- SISTEMAS -->
-                <div>
-                    <h4 class="font-bold mb-5 text-white">Soluções</h4>
-                    <ul class="space-y-3 text-sm text-slate-400">
-                        <li class="hover:text-white transition-colors duration-700 cursor-pointer" href="voe.html">
-                            VoePDV (Windows)</li>
-                        <li class="hover:text-white transition-colors duration-700 cursor-pointer"
-                            href="pdv-legal.html">PDV Legal (Android)</li>
-                        <li class="hover:text-white transition-colors duration-700 cursor-pointer">Automação Comercial
-                        </li>
-                        <li class="hover:text-white transition-colors duration-700 cursor-pointer">Implantação e Suporte
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- CONTATO -->
-                <div>
-                    <h4 class="font-bold mb-5 text-white">Contato</h4>
-
-                    <div class="space-y-5 text-sm text-slate-400">
-
-                        <div>
-                            <p class="text-white font-semibold mb-1">Comercial</p>
-                            <a href="https://wa.me/551133846313?text=Olá,%20quero%20saber%20mais%20sobre%20os%20sistemas%20PDV"
-                                target="_blank" rel="noopener noreferrer"
-                                class="hover:text-green-400 transition-colors duration-700 cursor-pointer inline-block">
-                                +55 11 3384-6313
-                            </a>
-                        </div>
-
-                        <div>
-                            <p class="text-white font-semibold mb-1">Suporte</p>
-                            <a href="https://wa.me/551142101779?text=Olá,%20preciso%20de%20suporte%20técnico"
-                                target="_blank" rel="noopener noreferrer"
-                                class="hover:text-green-400 transition-colors duration-700 cursor-pointer inline-block">
-                                +55 11 4210-1779
-                            </a>
-                        </div>
-
-                        <div>
-                            <p class="text-white font-semibold mb-1">Email</p>
-                            <a href="mailto:suporte@seatec.com.br"
-                                class="hover:text-purple-400 transition-colors duration-700 cursor-pointer inline-block">
-                                suporte@seatec.com.br
-                            </a>
-                        </div>
-
-                        <div>
-                            <p class="text-white font-semibold mb-2">Redes sociais</p>
-                            <a href="https://www.instagram.com/pdvlegal_aricanduva/" target="_blank"
-                                rel="noopener noreferrer" aria-label="Instagram da SEATEC"
-                                class="inline-flex items-center gap-2 hover:text-pink-400 transition-colors duration-700">
-                                <svg width="18" height="18" aria-hidden="true" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2.2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                                    <circle cx="12" cy="12" r="4"></circle>
-                                    <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"></circle>
-                                </svg>
-                                <span>Instagram</span>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="footer-legal-info">
-                <div class="footer-legal-info__grid">
-                    <div class="footer-legal-info__item">
-                        <span class="footer-legal-info__icon" aria-hidden="true">
-                            <span class="material-symbols-outlined">location_on</span>
-                        </span>
-                        <div>
-                            <p class="footer-legal-info__label">Endere&ccedil;o</p>
-                            <p class="footer-legal-info__text">Av Rio das pedras, 3473 - Jardim Aricanduva, S&atilde;o Paulo SP, CEP: 03930-310</p>
-                        </div>
-                    </div>
-
-                    <div class="footer-legal-info__item">
-                        <span class="footer-legal-info__icon" aria-hidden="true">
-                            <span class="material-symbols-outlined">corporate_fare</span>
-                        </span>
-                        <div>
-                            <p class="footer-legal-info__label">Empresa</p>
-                            <p class="footer-legal-info__text">Seatec Solu&ccedil;&otilde;es Tecnol&oacute;gicas LTDA - CNPJ: 16.643.360/0001-41</p>
-                        </div>
-                    </div>
-
-                    <div class="footer-legal-info__item">
-                        <span class="footer-legal-info__icon" aria-hidden="true">
-                            <span class="material-symbols-outlined">verified_user</span>
-                        </span>
-                        <div>
-                            <p class="footer-legal-info__label">Transpar&ecirc;ncia</p>
-                            <p class="footer-legal-info__text">Art. 49 do C&oacute;digo de Defesa do Consumidor: Garantia de 7 dias para cancelamento ap&oacute;s a contrata&ccedil;&atilde;o. Utilizamos a API Oficial do WhatsApp para comunica&ccedil;&atilde;o com clientes.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- DIVISÃO -->
-            <div class="border-t border-white/10 pt-7 flex flex-col md:flex-row justify-between items-center gap-4">
-
-                <p class="text-slate-500 text-sm text-center md:text-left">
-                    © 2026 Seatec Soluções Tecnológicas — Todos os direitos reservados
-                </p>
-
-                <div class="footer-policy-links flex gap-4 text-slate-400 text-sm">
-                    <a href="https://seatec.com.br/termos-e-condicoes.html" class="hover:text-white transition-colors duration-700">Termos e condi&ccedil;&otilde;es</a>
-                    <span>&bull;</span>
-                    <a href="https://seatec.com.br/termos-e-condicoes.html" class="hover:text-white transition-colors duration-700">Pol&iacute;ticas de Privacidade</a>
-                    
-                </div>
-
-            </div>
-
-        </div>
+        <div class="footer-bottom"><span>© 2026 Seatec Soluções Tecnológicas — Todos os direitos reservados</span><span><a href="https://seatec.com.br/termos-e-condicoes.html">Termos e condições</a> · <a href="https://seatec.com.br/termos-e-condicoes.html">Políticas de Privacidade</a></span></div>
+      </div>
     </footer>
-    <!-- MODAL SISTEMA -->
-    <div id="modalSistema" class="fixed inset-0 z-50 hidden items-center justify-center p-6" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalTitulo">
+  </div>
 
-
-        <!-- BACKDROP -->
-        <div data-modal-close id="backdrop"
-            class="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 transition-opacity duration-700">
+  <div id="pdvVideoModal" class="video-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="pdvVideoModalTitle">
+    <div class="modal-backdrop" data-pdv-video-modal-close></div>
+    <div class="modal-box" role="document">
+      <div class="modal-head">
+        <div>
+          <span class="eyebrow">Demonstração em vídeo</span>
+          <h3 id="pdvVideoModalTitle">Conheça o PDV LEGAL</h3>
         </div>
-
-        <!-- CAIXA -->
-        <div id="modalBox" class="relative w-full max-w-5xl max-h-[90vh] overflow-y-auto
-    rounded-3xl border-2 border-white/10
-    bg-gradient-to-br from-slate-900/95 to-slate-950/95
-    shadow-2xl shadow-black/50 backdrop-blur-xl
-
-    opacity-0 scale-90 translate-y-10
-    transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
-
-            <!-- HEADER -->
-            <div class="flex justify-between items-center p-7 border-b border-white/10">
-                <div class="flex items-center gap-4">
-                    <img id="modalLogo" src="" width="852" height="214" loading="lazy" decoding="async"
-                        class="h-10 w-auto hidden" alt="Logo sistema">
-                    <h3 id="modalTitulo" class="text-2xl font-bold"></h3>
-                </div>
-
-                <button type="button" data-modal-close aria-label="Fechar modal" class="w-10 h-10 flex items-center justify-center rounded-full
-        hover:bg-white/10 transition-all duration-700 text-slate-300 hover:text-white hover:scale-110">
-                    ✕
-                </button>
-            </div>
-
-            <!-- CONTEÚDO -->
-            <div class="p-10 space-y-10">
-
-                <!-- DESCRIÇÃO -->
-                <p id="modalDescricao" class="text-slate-300 leading-relaxed text-lg max-w-3xl">
-                </p>
-
-                <!-- GRID -->
-                <div class="grid md:grid-cols-2 gap-10 items-start">
-
-                    <!-- LISTA -->
-                    <div>
-                        <h4 class="text-lg font-bold mb-5 text-white">
-                            Funcionalidades
-                        </h4>
-
-                        <ul id="modalLista" class="space-y-3 text-sm text-slate-300">
-                        </ul>
-                    </div>
-
-                    <!-- VIDEO -->
-                    <div class="relative group">
-                        <div
-                            class="absolute inset-0 bg-blue-500/10 blur-2xl opacity-50 group-hover:opacity-80 transition-opacity duration-700">
-                        </div>
-
-                        <iframe id="modalVideo" title="Video do sistema" loading="lazy"
-                            class="relative w-full h-[260px] rounded-xl border-2 border-white/10 shadow-lg" src=""
-                            referrerpolicy="strict-origin-when-cross-origin"
-                            allow="fullscreen; picture-in-picture">
-                        </iframe>
-                    </div>
-
-                </div>
-
-
-                <!-- CTA -->
-                <div class="flex justify-between items-center flex-col md:flex-row gap-6 pt-5 border-t border-white/10">
-
-                    <span class="text-slate-400 text-sm">
-                        Quer implementar esse sistema no seu negócio?
-                    </span>
-
-                    <button data-whatsapp class="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 px-7 py-4 rounded-xl font-bold
-            transition-all duration-700 transform hover:scale-110 active:scale-95
-            shadow-xl shadow-green-500/40 hover:shadow-2xl hover:shadow-green-500/60">
-                        Falar com especialista
-                    </button>
-
-                </div>
-
-            </div>
-
+        <button class="icon-button" type="button" data-pdv-video-modal-close aria-label="Fechar vídeo do PDV Legal"><span class="material-symbols-outlined" aria-hidden="true">close</span></button>
+      </div>
+      <div class="modal-body">
+        <div class="video-embed">
+          <iframe id="pdvVideoFrame" title="Conheça o PDV Legal" data-src="https://www.youtube-nocookie.com/embed/EpBA8pgvEOc?rel=0&modestbranding=1&playsinline=1" src="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen" allowfullscreen></iframe>
         </div>
+        <div class="button-row">
+          <a class="btn btn-primary" href="https://www.youtube.com/watch?v=Dcx76e0ITvM&list=PLjkQMYhjHLHEIi9-ZLwoX_AkpL4tHcrB9" target="_blank" rel="noopener noreferrer">Saiba mais sobre o PDV<span class="material-symbols-outlined" aria-hidden="true">open_in_new</span></a>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div id="pdvVideoModal" class="pdv-video-modal" aria-hidden="true" role="dialog" aria-modal="true"
-        aria-labelledby="pdvVideoModalTitle">
-        <div class="pdv-video-modal__backdrop" data-pdv-video-modal-close></div>
-
-        <div class="pdv-video-modal__box" role="document">
-            <div class="pdv-video-modal__header">
-                <div>
-                    <span class="pdv-video-modal__eyebrow">Demonstra&ccedil;&atilde;o em v&iacute;deo</span>
-                    <h3 id="pdvVideoModalTitle" class="pdv-video-modal__title">Conhe&ccedil;a o PDV LEGAL</h3>
-                </div>
-
-                <button type="button" class="pdv-video-modal__close" data-pdv-video-modal-close
-                    aria-label="Fechar v&iacute;deo do PDV Legal">
-                    <span class="material-symbols-outlined" aria-hidden="true">close</span>
-                </button>
-            </div>
-
-            <div class="pdv-video-modal__content">
-                <div class="pdv-video-modal__video">
-                    <iframe id="pdvVideoFrame" title="Conhe&ccedil;a o PDV Legal"
-                        data-src="https://www.youtube-nocookie.com/embed/EpBA8pgvEOc?rel=0&modestbranding=1&playsinline=1"
-                        src="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share; fullscreen"
-                        allowfullscreen></iframe>
-                </div>
-
-                <div class="pdv-video-modal__actions">
-                    <a href="https://www.youtube.com/watch?v=Dcx76e0ITvM&list=PLjkQMYhjHLHEIi9-ZLwoX_AkpL4tHcrB9"
-                        target="_blank" rel="noopener noreferrer" class="pdv-video-modal__playlist">
-                        Saiba mais sobre o PDV
-                        <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="./assets/js/script.min.js" defer></script>
+  <script src="./assets/js/script.min.js" defer></script>
 </body>
 
 </html>
