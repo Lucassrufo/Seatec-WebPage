@@ -518,7 +518,7 @@ function handleClick(event) {
   const themeToggle = target.closest("[data-theme-toggle]");
   const menuToggle = target.closest("[data-mobile-menu-toggle]");
   const anchor = target.closest('a[href^="#"]');
-  const productTransition = target.closest('a[data-page-transition], a[href$="pdv-legal.html"], a[href$="voe.html"], a[href^="index.html"]');
+  const productTransition = target.closest("a[data-page-transition]");
   const whatsapp = target.closest("[data-whatsapp]");
   const modalOpen = target.closest("[data-system-modal]");
   const modalClose = target.closest("[data-modal-close]");
@@ -557,11 +557,7 @@ function handleClick(event) {
     closeMobileMenu();
     const product =
       productTransition.dataset.pageTransition ||
-      (productTransition.getAttribute("href")?.includes("voe.html")
-        ? "voe"
-        : productTransition.getAttribute("href")?.includes("index.html")
-          ? "seatec"
-          : "pdvlegal");
+      (productTransition.getAttribute("href")?.includes("voe.html") ? "voe" : "pdvlegal");
     runProductTransition(productTransition, product);
     return;
   }
