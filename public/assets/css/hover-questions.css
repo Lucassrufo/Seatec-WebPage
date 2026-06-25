@@ -1,0 +1,109 @@
+.hover-questions-section {
+  min-height: auto;
+  padding-block: clamp(72px, 9vw, 132px);
+  overflow: hidden;
+  --scroll-progress: 0;
+}
+
+.hover-questions-section .scroll-questions-sticky {
+  position: relative;
+  top: auto;
+  min-height: auto;
+  padding-block: 0;
+}
+
+.hover-questions-section .scroll-questions-panel {
+  min-height: auto;
+  overflow: visible;
+  transform: none;
+  transition: none;
+}
+
+.hover-questions-section .scroll-orbit {
+  opacity: 0.48;
+  transform: translateY(-50%);
+  background:
+    radial-gradient(circle, rgba(96, 165, 250, 0.18), transparent 58%),
+    conic-gradient(from 120deg, transparent, rgba(34, 211, 238, 0.28), transparent 42%);
+}
+
+.hover-questions-section .scroll-question-list {
+  min-height: auto;
+  display: grid;
+  gap: 14px;
+}
+
+.hover-questions-section .scroll-question,
+.hover-questions-section .scroll-question:nth-child(n) {
+  position: relative;
+  left: auto;
+  top: auto;
+  max-width: 100%;
+  min-height: 0;
+  color: rgba(226, 232, 240, 0.72);
+  opacity: 1;
+  filter: none;
+  transform: none;
+  will-change: auto;
+  cursor: default;
+  transition:
+    color 220ms var(--ease),
+    background 220ms var(--ease),
+    border-color 220ms var(--ease),
+    box-shadow 220ms var(--ease),
+    transform 220ms var(--ease);
+}
+
+.hover-questions-section .scroll-question:hover,
+.hover-questions-section .scroll-question:focus-visible,
+.hover-questions-section .scroll-question:active {
+  color: #fff;
+  opacity: 1;
+  filter: none;
+  transform: translateY(-3px);
+  border-color: rgba(96, 165, 250, 0.42);
+  background:
+    linear-gradient(135deg, rgba(59, 130, 246, 0.24), rgba(34, 211, 238, 0.1)),
+    rgba(10, 22, 42, 0.86);
+  box-shadow:
+    0 26px 76px rgba(37, 99, 235, 0.24),
+    0 18px 56px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+  text-shadow: 0 16px 46px rgba(34, 211, 238, 0.18);
+}
+
+.hover-questions-section .scroll-question-final,
+.hover-questions-section .scroll-question-final.is-current {
+  color: rgba(226, 232, 240, 0.72);
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.045)),
+    rgba(8, 16, 32, 0.58);
+  -webkit-text-fill-color: currentColor;
+  background-clip: border-box;
+}
+
+.hover-questions-section .scroll-question-final:hover,
+.hover-questions-section .scroll-question-final:focus-visible,
+.hover-questions-section .scroll-question-final:active {
+  color: #fff;
+  background:
+    linear-gradient(135deg, rgba(59, 130, 246, 0.24), rgba(34, 211, 238, 0.1)),
+    rgba(10, 22, 42, 0.86);
+  -webkit-text-fill-color: currentColor;
+  background-clip: border-box;
+}
+
+.product-voe .hover-questions-section .scroll-question:hover,
+.product-voe .hover-questions-section .scroll-question:focus-visible,
+.product-voe .hover-questions-section .scroll-question:active {
+  color: #fff7ed;
+  border-color: rgba(249, 115, 22, 0.44);
+  background:
+    linear-gradient(135deg, rgba(249, 115, 22, 0.24), rgba(34, 211, 238, 0.08)),
+    rgba(24, 16, 10, 0.86);
+  box-shadow:
+    0 26px 76px rgba(249, 115, 22, 0.2),
+    0 18px 56px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  text-shadow: 0 16px 46px rgba(249, 115, 22, 0.18);
+}

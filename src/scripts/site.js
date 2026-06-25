@@ -3,8 +3,6 @@
    ========================================================= */
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const themeStorageKey = 'seatec-theme';
-const lightThemeClass = 'theme-light';
 const whatsappPhone = '551133846313';
 const defaultWhatsappMessage = 'Olá! Vim pelo site e quero saber mais sobre os sistemas PDV.';
 const voeAiAvatarSrc = 'assets/images/voeai-avatar.png';
@@ -107,34 +105,6 @@ let tiltAnimId;
 let scrollQuestionSections = [];
 let scrollQuestionAnimId;
 
-/* --- Theme --- */
-
-function getSavedTheme() {
-  try { return localStorage.getItem(themeStorageKey); } catch { return null; }
-}
-
-function saveTheme(theme) {
-  try { localStorage.setItem(themeStorageKey, theme); } catch { /* noop */ }
-}
-
-function setTheme(theme) {
-  const isLight = theme === 'light';
-  document.body.classList.toggle(lightThemeClass, isLight);
-  document.documentElement.dataset.theme = theme;
-  document.querySelector('meta[name="theme-color"]')?.setAttribute('content', isLight ? '#f8fafc' : '#030712');
-
-  document.querySelectorAll('[data-theme-toggle]').forEach(btn => {
-    btn.setAttribute('aria-pressed', String(isLight));
-    btn.setAttribute('aria-label', isLight ? 'Ativar tema escuro' : 'Ativar tema claro');
-    btn.querySelector('.material-symbols-outlined')?.replaceChildren(
-      document.createTextNode(isLight ? 'dark_mode' : 'light_mode')
-    );
-    btn.querySelector('[data-theme-label]')?.replaceChildren(
-      document.createTextNode(isLight ? 'Escuro' : 'Tema')
-    );
-  });
-}
-
 /* --- WhatsApp --- */
 
 function openWhatsapp(message = defaultWhatsappMessage) {
@@ -154,6 +124,7 @@ function closeMobileMenu() {
   const toggle = document.querySelector('[data-mobile-menu-toggle]');
   menu?.classList.remove('is-open');
   toggle?.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('is-mobile-menu-open');
 }
 
 function toggleMobileMenu() {
@@ -162,6 +133,13 @@ function toggleMobileMenu() {
   if (!menu || !toggle) return;
   const isOpen = menu.classList.toggle('is-open');
   toggle.setAttribute('aria-expanded', String(isOpen));
+  document.body.classList.toggle('is-mobile-menu-open', isOpen);
+}
+
+function initMobileMenu() {
+  document.querySelectorAll('[data-mobile-menu]').forEach(menu => {
+    if (menu.parentElement !== document.body) document.body.appendChild(menu);
+  });
 }
 
 /* --- Header scroll --- */
@@ -510,6 +488,81 @@ function initVoeAiChat() {
 
 /* --- Page transition --- */
 
+function getProductTransitionConfig(product = 'pdvlegal') {
+  return {
+    voe: {
+      src: 'assets/images/voepdv.png',
+      alt: 'VoePDV',
+      className: 'page-transition--voe',
+      eyebrow: 'Caixa Windows',
+      title: 'Preparando o VoePDV',
+      text: 'Abrindo uma experiencia pensada para velocidade, perifericos e venda sem pausa.'
+    },
+    pdvlegal: {
+      src: 'assets/images/pdvlegal.png',
+      alt: 'PDV Legal',
+      className: 'page-transition--pdvlegal',
+      eyebrow: 'Android e Smart POS',
+      title: 'Preparando o PDV Legal',
+      text: 'Carregando a experiencia para venda movel, NFC-e, comandas e retaguarda em nuvem.'
+    },
+    seatec: {
+      src: 'assets/images/LOGO-PNG.svg',
+      alt: 'SEATEC',
+      className: 'page-transition--seatec',
+      eyebrow: 'SEATEC',
+      title: 'Voltando ao inicio',
+      text: 'Organizando as solucoes certas para sua operacao.'
+    }
+  }[product] || {
+    src: 'assets/images/pdvlegal.png',
+    alt: 'PDV Legal',
+    className: 'page-transition--pdvlegal',
+    eyebrow: 'Android e Smart POS',
+    title: 'Preparando o PDV Legal',
+    text: 'Carregando a experiencia para venda movel, NFC-e, comandas e retaguarda em nuvem.'
+  };
+}
+
+function createPageTransitionOverlay(product = 'pdvlegal', sourceLogo = null) {
+  const cfg = getProductTransitionConfig(product);
+  const logoSource = sourceLogo || document.querySelector(`[data-page-transition-logo="${product}"]`)
+    || document.querySelector(`img[src*="${cfg.src.split('/').pop()}"]`);
+
+  const overlay  = document.createElement('div');
+  const stage    = document.createElement('div');
+  const logoWrap = document.createElement('div');
+  const logo     = document.createElement('img');
+  const copy     = document.createElement('div');
+  const eyebrow  = document.createElement('span');
+  const title    = document.createElement('strong');
+  const text     = document.createElement('p');
+  const progress = document.createElement('span');
+
+  overlay.className = `page-transition ${cfg.className}`;
+  overlay.setAttribute('role', 'status');
+  overlay.setAttribute('aria-live', 'polite');
+  stage.className    = 'page-transition__stage';
+  logoWrap.className = 'page-transition__logo-wrap';
+  logo.className    = 'page-transition__logo';
+  logo.src          = logoSource?.currentSrc || logoSource?.src || cfg.src;
+  logo.alt          = cfg.alt;
+  copy.className     = 'page-transition__copy';
+  eyebrow.className  = 'page-transition__eyebrow';
+  title.className    = 'page-transition__title';
+  text.className     = 'page-transition__text';
+  progress.className = 'page-transition__progress';
+  eyebrow.textContent = cfg.eyebrow;
+  title.textContent   = cfg.title;
+  text.textContent    = cfg.text;
+
+  logoWrap.appendChild(logo);
+  copy.append(eyebrow, title, text, progress);
+  stage.append(logoWrap, copy);
+  overlay.appendChild(stage);
+  return overlay;
+}
+
 function runProductTransition(link, product = 'pdvlegal') {
   const href = link.href;
 
@@ -517,33 +570,14 @@ function runProductTransition(link, product = 'pdvlegal') {
 
   pageTransitionActive = true;
 
-  const cfg = {
-    voe:      { src: 'assets/images/voepdv.png',   alt: 'VoePDV',   className: 'page-transition--voe' },
-    pdvlegal: { src: 'assets/images/pdvlegal.png',  alt: 'PDV Legal', className: 'page-transition--pdvlegal' },
-    seatec:   { src: 'assets/images/LOGO-PNG.svg',  alt: 'SEATEC',   className: 'page-transition--seatec' }
-  }[product] || { src: 'assets/images/pdvlegal.png', alt: 'PDV Legal', className: 'page-transition--pdvlegal' };
-
   const sourceLogo = document.querySelector(`[data-page-transition-logo="${product}"]`)
-    || document.querySelector(`img[src*="${cfg.src.split('/').pop()}"]`);
-
-  const overlay = document.createElement('div');
-  const stage   = document.createElement('div');
-  const logo    = document.createElement('img');
-
-  overlay.className = `page-transition ${cfg.className}`;
-  stage.className   = 'page-transition__logo-wrap';
-  logo.className    = 'page-transition__logo';
-  logo.src          = sourceLogo?.currentSrc || sourceLogo?.src || cfg.src;
-  logo.alt          = cfg.alt;
-
-  stage.appendChild(logo);
-  overlay.appendChild(stage);
+    || document.querySelector(`img[src*="${getProductTransitionConfig(product).src.split('/').pop()}"]`);
+  const overlay = createPageTransitionOverlay(product, sourceLogo);
   document.body.appendChild(overlay);
   document.body.classList.add('is-page-transitioning');
 
   requestAnimationFrame(() => overlay.classList.add('is-running'));
-  window.setTimeout(() => overlay.classList.add('is-leaving'), 980);
-  window.setTimeout(() => { window.location.href = href; }, 1320);
+  window.setTimeout(() => { window.location.href = href; }, 920);
 }
 
 /* --- Click video --- */
@@ -568,7 +602,6 @@ function toggleClickVideo(trigger) {
 function handleClick(event) {
   const t = event.target;
 
-  const themeToggle    = t.closest('[data-theme-toggle]');
   const menuToggle     = t.closest('[data-mobile-menu-toggle]');
   const anchor         = t.closest('a[href^="#"]');
   const pageTransition = t.closest('a[data-page-transition]');
@@ -585,7 +618,6 @@ function handleClick(event) {
     && !t.closest('[data-voeai-open]');
 
   if (chatOutside)    { setChatOpen(false); }
-  if (themeToggle)    { const next = document.body.classList.contains(lightThemeClass) ? 'dark' : 'light'; setTheme(next); saveTheme(next); return; }
   if (menuToggle)     { toggleMobileMenu(); return; }
   if (clickVideo)     { toggleClickVideo(clickVideo); return; }
 
@@ -620,7 +652,7 @@ function handleKeydown(e) {
 /* --- Init --- */
 
 function init() {
-  setTheme(getSavedTheme() === 'light' ? 'light' : 'dark');
+  initMobileMenu();
   updateHeaderState();
   initReveal();
   initImages();

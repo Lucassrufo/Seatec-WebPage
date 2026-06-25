@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' ws: http:">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; form-action 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; frame-src https://www.youtube.com https://www.youtube-nocookie.com; connect-src 'self' https: wss:">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
@@ -15,6 +15,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="SEATEC">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://seatec.com.br/">
   <meta property="og:title" content="Sistema PDV e Automação Comercial para Todo o Brasil | SEATEC">
   <meta property="og:description" content="PDV para varejo, restaurantes, lanchonetes e delivery com emissão fiscal, estoque, caixa e suporte técnico no Brasil todo.">
   <meta property="og:image" content="https://seatec.com.br/assets/images/optimized/hero-pdv-premium.png">
@@ -29,9 +30,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/tailwind.css">
   <link rel="stylesheet" href="./assets/css/style.min.css">
-  <link rel="icon" type="image/png" href="./assets/images/ATUAL ESCURO.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/ATUAL ESCURO.png">
-  <link rel="shortcut icon" href="./assets/images/ATUAL ESCURO.png">
+  <link rel="stylesheet" href="./assets/css/hover-questions.css">
+  <link rel="icon" type="image/png" href="./assets/images/favicon_novo_seatec.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon_novo_seatec.png">
+  <link rel="shortcut icon" href="./assets/images/favicon_novo_seatec.png">
 
   <script type="application/ld+json">
   {
@@ -83,10 +85,6 @@
           <a class="btn btn-primary" href="#sistemas">
             <span class="material-symbols-outlined" aria-hidden="true">apps</span>Sistemas
           </a>
-          <button class="btn btn-ghost theme-toggle" type="button" data-theme-toggle aria-pressed="false" aria-label="Ativar tema claro">
-            <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
-            <span data-theme-label>Tema</span>
-          </button>
           <button class="mobile-toggle" type="button" data-mobile-menu-toggle aria-controls="mobileMenu" aria-expanded="false" aria-label="Abrir menu de navegação">
             <span class="material-symbols-outlined" aria-hidden="true">menu</span>
           </button>
@@ -101,10 +99,6 @@
           <a href="#funcionalidades">Funcionalidades</a>
           <a href="#depoimentos">Depoimentos</a>
           <a href="#contatos">Contato</a>
-          <button type="button" data-theme-toggle aria-pressed="false" aria-label="Ativar tema claro">
-            <span class="material-symbols-outlined" aria-hidden="true">light_mode</span>
-            <span data-theme-label>Tema</span>
-          </button>
         </nav>
       </div>
     </header>
@@ -112,7 +106,7 @@
     <main>
 
       <!-- ============================================================
-              HERO
+                                HERO
       ============================================================ -->
       <section id="inicio" class="hero section home-hero">
         <div class="home-hero-video-wrap" aria-hidden="true">
@@ -199,25 +193,25 @@
       <!-- ============================================================
            ISSO ACONTECE COM VOCE?
       ============================================================ -->
-      <section class="section scroll-questions-section" data-scroll-questions style="--question-count: 7;">
+      <section class="section scroll-questions-section hover-questions-section" style="--question-count: 7;">
         <div class="scroll-questions-sticky">
           <div class="container scroll-questions-layout">
             <div class="scroll-questions-copy reveal-blur" data-reveal="left">
               <span class="eyebrow"><span class="material-symbols-outlined" aria-hidden="true">sync_problem</span>Isso acontece com voc&ecirc;?</span>
               <h2>Sua opera&ccedil;&atilde;o pede mais controle, menos retrabalho e um PDV que acompanhe o ritmo.</h2>
-              <p>Enquanto voc&ecirc; rola, cada sinal mostra um ponto da rotina comercial que a SEATEC ajuda a organizar com tecnologia, suporte e solu&ccedil;&otilde;es certas.</p>
+              <p>Passe o mouse sobre cada sinal para destacar um ponto da rotina comercial que a SEATEC ajuda a organizar com tecnologia, suporte e solu&ccedil;&otilde;es certas.</p>
             </div>
 
             <div class="scroll-questions-panel" aria-label="Perguntas sobre a rotina da empresa">
               <div class="scroll-orbit" aria-hidden="true"></div>
               <div class="scroll-question-list">
-                <p class="scroll-question" data-question-step>Seu atendimento ainda depende de processos manuais?</p>
-                <p class="scroll-question" data-question-step>Voc&ecirc; perde tempo conferindo pedidos, caixa e estoque?</p>
-                <p class="scroll-question" data-question-step>Seu restaurante precisa vender melhor no balc&atilde;o, mesa e delivery?</p>
-                <p class="scroll-question" data-question-step>Falta controle financeiro e relat&oacute;rios claros?</p>
-                <p class="scroll-question" data-question-step>Seu PDV atual trava sua opera&ccedil;&atilde;o?</p>
-                <p class="scroll-question" data-question-step>Voc&ecirc; quer tecnologia sem complicar a rotina da equipe?</p>
-                <p class="scroll-question scroll-question-final" data-question-step>A Seatec conecta sua empresa &agrave;s solu&ccedil;&otilde;es certas: PDV Legal e VoePDV.</p>
+                <p class="scroll-question">Seu atendimento ainda depende de processos manuais?</p>
+                <p class="scroll-question">Voc&ecirc; perde tempo conferindo pedidos, caixa e estoque?</p>
+                <p class="scroll-question">Seu restaurante precisa vender melhor no balc&atilde;o, mesa e delivery?</p>
+                <p class="scroll-question">Falta controle financeiro e relat&oacute;rios claros?</p>
+                <p class="scroll-question">Seu PDV atual trava sua opera&ccedil;&atilde;o?</p>
+                <p class="scroll-question">Voc&ecirc; quer tecnologia sem complicar a rotina da equipe?</p>
+                <p class="scroll-question scroll-question-final">A Seatec conecta sua empresa &agrave;s solu&ccedil;&otilde;es certas: PDV Legal e VoePDV.</p>
               </div>
             </div>
           </div>
