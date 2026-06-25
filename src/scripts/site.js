@@ -107,8 +107,9 @@ let scrollQuestionAnimId;
 
 /* --- WhatsApp --- */
 
-function openWhatsapp(message = defaultWhatsappMessage) {
-  window.open(`https://wa.me/${whatsappPhone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+function openWhatsapp(message = defaultWhatsappMessage, phone = whatsappPhone) {
+  const targetPhone = String(phone || whatsappPhone).replace(/\D/g, '');
+  window.open(`https://wa.me/${targetPhone}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
 }
 
 function getPageWhatsappMessage() {
@@ -631,7 +632,7 @@ function handleClick(event) {
   }
 
   if (anchor && scrollToAnchor(anchor)) { event.preventDefault(); return; }
-  if (whatsapp)    { openWhatsapp(whatsapp.dataset.whatsapp || getPageWhatsappMessage()); return; }
+  if (whatsapp)    { openWhatsapp(whatsapp.dataset.whatsapp || getPageWhatsappMessage(), whatsapp.dataset.whatsappPhone); return; }
   if (modalOpen)   { openSystemModal(modalOpen.dataset.systemModal); return; }
   if (modalClose)  { closeSystemModal(); return; }
   if (chatToggle)  { setChatOpen(!chatWidget?.classList.contains('is-open')); return; }
