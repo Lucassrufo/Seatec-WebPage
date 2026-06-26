@@ -506,7 +506,12 @@
       width: max-content;
       display: flex;
       gap: 12px;
-      animation: legal-marquee 22s linear infinite;
+      animation: legal-marquee var(--marquee-duration, 22s) linear infinite;
+      will-change: transform;
+    }
+
+    .legal-logo-track > * {
+      flex: 0 0 auto;
     }
 
     .legal-logo-track img,
@@ -799,17 +804,65 @@
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 16px;
+      align-items: stretch;
     }
 
     .legal-logo-card {
-      min-height: 128px;
-      padding: 18px;
-      display: grid;
-      place-items: center;
+      min-height: 142px;
+      width: 100%;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
       text-align: center;
+      color: #f7f7f2;
+      cursor: pointer;
+      isolation: isolate;
+      appearance: none;
+      font: inherit;
+    }
+
+    .legal-logo-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      opacity: 0;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(0,152,216,0.26), transparent 58%),
+        linear-gradient(145deg, rgba(255,255,255,0.12), rgba(255,255,255,0.02));
+      transition: opacity 520ms var(--legal-ease);
+    }
+
+    .legal-logo-card::after {
+      content: "";
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      z-index: 0;
+      width: min(178px, 76%);
+      height: 50px;
+      border: 1px solid rgba(125,211,252,0.22);
+      border-radius: 18px;
+      pointer-events: none;
+      background:
+        linear-gradient(145deg, rgba(247,247,242,0.82), rgba(185,243,255,0.5)),
+        rgba(255,255,255,0.14);
+      box-shadow:
+        0 18px 44px rgba(0,0,0,0.24),
+        inset 0 1px 0 rgba(255,255,255,0.55);
+      backdrop-filter: blur(12px) saturate(1.08);
+      -webkit-backdrop-filter: blur(12px) saturate(1.08);
+      opacity: 0;
+      transition: opacity 300ms var(--legal-ease), transform 460ms var(--legal-ease);
+      transform: translate3d(-50%, 8px, 0) scale(0.96);
     }
 
     .legal-logo-card img {
+      position: relative;
+      z-index: 1;
       width: min(150px, 82%);
       height: 44px;
       object-fit: contain;
@@ -817,6 +870,289 @@
       border: 0;
       box-shadow: none;
       filter: brightness(0.92) saturate(0.85);
+      transition: filter 360ms var(--legal-ease), transform 360ms var(--legal-ease);
+    }
+
+    .legal-logo-card strong {
+      position: relative;
+      z-index: 1;
+      font-size: 0.95rem;
+    }
+
+    .legal-logo-card:hover::before,
+    .legal-logo-card:focus-visible::before,
+    .legal-logo-card.is-active::before {
+      opacity: 1;
+    }
+
+    .legal-logo-card:hover::after,
+    .legal-logo-card:focus-visible::after,
+    .legal-logo-card.is-active::after {
+      opacity: 1;
+      transform: translate3d(-50%, 0, 0) scale(1);
+    }
+
+    .legal-logo-card:hover img,
+    .legal-logo-card:focus-visible img,
+    .legal-logo-card.is-active img {
+      filter: brightness(1.04) saturate(1.08) contrast(1.05) drop-shadow(0 10px 16px rgba(0,0,0,0.18));
+      transform: translateY(-2px) scale(1.035);
+    }
+
+    .legal-logo-card:focus-visible {
+      outline: 2px solid rgba(125,211,252,0.85);
+      outline-offset: 4px;
+    }
+
+    .legal-logo-card.is-active {
+      border-color: rgba(94,220,255,0.58);
+      box-shadow: 0 40px 130px rgba(0,0,0,0.52), 0 0 86px rgba(0,152,216,0.2);
+      transform: translateY(-8px);
+    }
+
+    .legal-logo-hint {
+      position: relative;
+      z-index: 1;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      min-height: 28px;
+      padding: 6px 10px;
+      border: 1px solid rgba(125,211,252,0.18);
+      border-radius: 999px;
+      color: rgba(226,242,255,0.74);
+      background: rgba(0,152,216,0.08);
+      font-size: 0.72rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      opacity: 0;
+      transform: translateY(7px);
+      transition: opacity 420ms var(--legal-ease), transform 420ms var(--legal-ease), border-color 420ms var(--legal-ease);
+    }
+
+    .legal-logo-hint .material-symbols-outlined {
+      font-size: 0.95rem;
+    }
+
+    .legal-logo-card:hover .legal-logo-hint,
+    .legal-logo-card:focus-visible .legal-logo-hint,
+    .legal-logo-card.is-active .legal-logo-hint {
+      opacity: 1;
+      transform: translateY(0);
+      border-color: rgba(125,211,252,0.36);
+    }
+
+    .legal-acquirer-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 320;
+      display: grid;
+      place-items: center;
+      padding: clamp(18px, 4vw, 46px);
+      visibility: hidden;
+      pointer-events: none;
+      isolation: isolate;
+      transition: visibility 0s linear 280ms;
+    }
+
+    .legal-acquirer-modal.is-open {
+      visibility: visible;
+      transition-delay: 0s;
+    }
+
+    .legal-acquirer-modal.is-ready {
+      pointer-events: auto;
+    }
+
+    .legal-acquirer-backdrop {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 50% 12%, rgba(0,152,216,0.24), transparent 34rem),
+        rgba(0,0,0,0.68);
+      backdrop-filter: blur(22px) saturate(1.12);
+      -webkit-backdrop-filter: blur(22px) saturate(1.12);
+      opacity: 0;
+      transition: none;
+      will-change: opacity;
+    }
+
+    .legal-acquirer-modal.is-open .legal-acquirer-backdrop {
+      opacity: 1;
+    }
+
+    .legal-acquirer-dialog {
+      position: relative;
+      width: min(980px, 100%);
+      max-height: min(86vh, 840px);
+      overflow: auto;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 34px;
+      background:
+        radial-gradient(circle at 15% 0%, rgba(0,152,216,0.18), transparent 32rem),
+        linear-gradient(145deg, rgba(18,18,18,0.96), rgba(3,7,12,0.98));
+      box-shadow: 0 48px 170px rgba(0,0,0,0.62), inset 0 1px 0 rgba(255,255,255,0.08);
+      opacity: 1;
+      filter: blur(8px);
+      transform: translate3d(0, 34px, 0) scale(0.965);
+      transform-origin: 50% 58%;
+      transition: none;
+      will-change: opacity, filter, transform;
+    }
+
+    .legal-acquirer-dialog.is-ready {
+      animation: legal-acquirer-dialog-in 560ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    }
+
+    .legal-acquirer-logo-frame,
+    .legal-acquirer-copy > * {
+      opacity: 1;
+      transform: translate3d(0, 12px, 0);
+      transition:
+        transform 520ms cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+
+    .legal-acquirer-dialog.is-ready .legal-acquirer-logo-frame,
+    .legal-acquirer-dialog.is-ready .legal-acquirer-copy > * {
+      transform: translate3d(0, 0, 0);
+    }
+
+    .legal-acquirer-dialog.is-ready .legal-acquirer-logo-frame {
+      transition-delay: 60ms;
+    }
+
+    .legal-acquirer-dialog.is-ready .legal-acquirer-kicker {
+      transition-delay: 90ms;
+    }
+
+    .legal-acquirer-dialog.is-ready .legal-acquirer-copy h3 {
+      transition-delay: 125ms;
+    }
+
+    .legal-acquirer-dialog.is-ready .legal-acquirer-copy p {
+      transition-delay: 155ms;
+    }
+
+    .legal-acquirer-dialog.is-ready .legal-model-chips {
+      transition-delay: 185ms;
+    }
+
+    @keyframes legal-acquirer-dialog-in {
+      from {
+        filter: blur(8px);
+        transform: translate3d(0, 34px, 0) scale(0.965);
+      }
+      58% {
+        filter: blur(1.5px);
+      }
+      to {
+        filter: blur(0);
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+    }
+
+    .legal-acquirer-close {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      z-index: 2;
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 999px;
+      color: rgba(247,247,242,0.78);
+      background: rgba(255,255,255,0.055);
+      transition: color 240ms var(--legal-ease), border-color 240ms var(--legal-ease), background 240ms var(--legal-ease);
+    }
+
+    .legal-acquirer-close:hover,
+    .legal-acquirer-close:focus-visible {
+      color: #fff;
+      border-color: rgba(125,211,252,0.38);
+      background: rgba(0,152,216,0.14);
+    }
+
+    .legal-acquirer-hero {
+      display: grid;
+      grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1fr);
+      gap: clamp(20px, 4vw, 46px);
+      padding: clamp(24px, 5vw, 54px);
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .legal-acquirer-logo-frame {
+      min-height: 180px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(125,211,252,0.14);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(0,152,216,0.16), transparent 58%),
+        rgba(255,255,255,0.04);
+    }
+
+    .legal-acquirer-logo-frame img {
+      width: min(210px, 82%);
+      height: 74px;
+      object-fit: contain;
+    }
+
+    .legal-acquirer-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 12px;
+      color: #7dd3fc;
+      font-size: 0.74rem;
+      font-weight: 950;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .legal-acquirer-copy h3 {
+      margin: 0;
+      color: #fff;
+      font-size: clamp(2rem, 5vw, 4.25rem);
+      line-height: 0.94;
+      letter-spacing: -0.065em;
+    }
+
+    .legal-acquirer-copy p {
+      max-width: 56ch;
+      margin: 14px 0 0;
+      color: rgba(226,242,255,0.7);
+      line-height: 1.7;
+    }
+
+    .legal-model-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .legal-model-chip {
+      display: inline-flex;
+      align-items: center;
+      min-height: 34px;
+      padding: 7px 12px;
+      border: 1px solid rgba(125,211,252,0.22);
+      border-radius: 999px;
+      color: #f7f7f2;
+      background: rgba(0,152,216,0.11);
+      font-size: 0.84rem;
+      font-weight: 900;
+    }
+
+    .legal-model-chip.is-testing {
+      color: #b9f3ff;
+      border-color: rgba(185,243,255,0.34);
+      background: rgba(185,243,255,0.08);
     }
 
     .legal-client-marquee {
@@ -1135,7 +1471,7 @@
 
     @keyframes legal-marquee {
       from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+      to { transform: translateX(var(--marquee-translate, -50%)); }
     }
 
     @media (max-width: 1100px) {
@@ -1202,6 +1538,34 @@
       }
       .legal-footer-bottom {
         flex-direction: column;
+      }
+      .legal-logo-card {
+        min-height: 136px;
+      }
+      .legal-acquirer-modal {
+        padding: 12px;
+      }
+      .legal-acquirer-dialog {
+        max-height: 88vh;
+        border-radius: 26px;
+      }
+      .legal-acquirer-close {
+        top: 12px;
+        right: 12px;
+      }
+      .legal-acquirer-hero {
+        grid-template-columns: 1fr;
+        padding: 22px;
+      }
+      .legal-acquirer-logo-frame {
+        min-height: 132px;
+        border-radius: 22px;
+      }
+      .legal-acquirer-logo-frame img {
+        height: 58px;
+      }
+      .legal-acquirer-copy h3 {
+        padding-right: 48px;
       }
     }
 
@@ -2339,6 +2703,20 @@
       filter: none;
     }
 
+    .product-legal .legal-logo-card:hover::after,
+    .product-legal .legal-logo-card:focus-visible::after,
+    .product-legal .legal-logo-card.is-active::after {
+      opacity: 1 !important;
+      transform: translate3d(-50%, 0, 0) scale(1) !important;
+    }
+
+    .product-legal .legal-logo-card:hover img,
+    .product-legal .legal-logo-card:focus-visible img,
+    .product-legal .legal-logo-card.is-active img {
+      filter: brightness(1.04) saturate(1.08) contrast(1.05) drop-shadow(0 10px 16px rgba(0,0,0,0.18)) !important;
+      transform: translateY(-2px) scale(1.035) !important;
+    }
+
     @media (max-width: 1100px) {
       .legal-hero .legal-container {
         width: min(100% - 32px, 1180px);
@@ -2528,27 +2906,6 @@
                 <img src="assets/images/clientes/clientes_pdvlegal/dropscafe.jpg" width="225" height="225" alt="Drops Cafe" loading="lazy">
                 <img src="assets/images/clientes/clientes_pdvlegal/elperrito.png" width="375" height="362" alt="El Perrito" loading="lazy">
                 <img src="assets/images/clientes/clientes_pdvlegal/janelabar.png" width="300" height="300" alt="Janela Bar" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/behapcafe.png" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/centenario_chopp.jpg" width="447" height="447" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/cookieboleta.png" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/coxa.jpg" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/dropscafe.jpg" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/elperrito.png" width="375" height="362" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/janelabar.png" width="300" height="300" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/behapcafe.png" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/centenario_chopp.jpg" width="447" height="447" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/cookieboleta.png" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/coxa.jpg" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/dropscafe.jpg" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/elperrito.png" width="375" height="362" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/janelabar.png" width="300" height="300" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/behapcafe.png" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/centenario_chopp.jpg" width="447" height="447" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/cookieboleta.png" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/coxa.jpg" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/dropscafe.jpg" width="225" height="225" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/elperrito.png" width="375" height="362" alt="" aria-hidden="true" loading="lazy">
-                <img src="assets/images/clientes/clientes_pdvlegal/janelabar.png" width="300" height="300" alt="" aria-hidden="true" loading="lazy">
               </div>
             </div>
           </div>
@@ -2737,16 +3094,69 @@
           </div>
 
           <div class="legal-logo-grid">
-            <article class="legal-logo-card legal-reveal"><img src="assets/images/adquirentes/getnet.png" width="887" height="198" alt="Getnet" loading="lazy"><strong>Getnet</strong></article>
-            <article class="legal-logo-card legal-reveal"><img src="assets/images/optimized/cielo-280.png" width="280" height="93" alt="Cielo" loading="lazy"><strong>Cielo</strong></article>
-            <article class="legal-logo-card legal-reveal"><img src="assets/images/optimized/stone-280.png" width="280" height="142" alt="Stone" loading="lazy"><strong>Stone</strong></article>
-            <article class="legal-logo-card legal-reveal"><img src="assets/images/adquirentes/pagbank.png" width="615" height="190" alt="PagBank" loading="lazy"><strong>PagBank</strong></article>
-            <article class="legal-logo-card legal-reveal"><img src="assets/images/optimized/sicredi-280.png" width="280" height="66" alt="Sicredi" loading="lazy"><strong>Sicredi</strong></article>
-            <article class="legal-logo-card legal-reveal"><img src="assets/images/optimized/caixa-280.png" width="280" height="63" alt="Caixa" loading="lazy"><strong>Caixa</strong></article>
-            <article class="legal-logo-card legal-reveal"><img src="assets/images/optimized/banrisul-280.png" width="280" height="126" alt="Banrisul" loading="lazy"><strong>Banrisul</strong></article>
+            <button class="legal-logo-card legal-reveal" type="button" data-acquirer="getnet" aria-haspopup="dialog" aria-controls="legalAcquirerModal">
+              <img src="assets/images/adquirentes/getnet.png" width="887" height="198" alt="Getnet" loading="lazy">
+              <strong>Getnet</strong>
+              <span class="legal-logo-hint"><span class="material-symbols-outlined" aria-hidden="true">touch_app</span>Ver modelos</span>
+            </button>
+            <button class="legal-logo-card legal-reveal" type="button" data-acquirer="cielo" aria-haspopup="dialog" aria-controls="legalAcquirerModal">
+              <img src="assets/images/optimized/cielo-280.png" width="280" height="93" alt="Cielo" loading="lazy">
+              <strong>Cielo</strong>
+              <span class="legal-logo-hint"><span class="material-symbols-outlined" aria-hidden="true">touch_app</span>Ver modelos</span>
+            </button>
+            <button class="legal-logo-card legal-reveal" type="button" data-acquirer="stone" aria-haspopup="dialog" aria-controls="legalAcquirerModal">
+              <img src="assets/images/optimized/stone-280.png" width="280" height="142" alt="Stone" loading="lazy">
+              <strong>Stone</strong>
+              <span class="legal-logo-hint"><span class="material-symbols-outlined" aria-hidden="true">touch_app</span>Ver modelos</span>
+            </button>
+            <button class="legal-logo-card legal-reveal" type="button" data-acquirer="pagbank" aria-haspopup="dialog" aria-controls="legalAcquirerModal">
+              <img src="assets/images/adquirentes/pagbank.png" width="615" height="190" alt="PagBank" loading="lazy">
+              <strong>PagBank</strong>
+              <span class="legal-logo-hint"><span class="material-symbols-outlined" aria-hidden="true">touch_app</span>Ver modelos</span>
+            </button>
+            <button class="legal-logo-card legal-reveal" type="button" data-acquirer="sicredi" aria-haspopup="dialog" aria-controls="legalAcquirerModal">
+              <img src="assets/images/optimized/sicredi-280.png" width="280" height="66" alt="Sicredi" loading="lazy">
+              <strong>Sicredi</strong>
+              <span class="legal-logo-hint"><span class="material-symbols-outlined" aria-hidden="true">touch_app</span>Ver modelos</span>
+            </button>
+            <button class="legal-logo-card legal-reveal" type="button" data-acquirer="caixa" aria-haspopup="dialog" aria-controls="legalAcquirerModal">
+              <img src="assets/images/optimized/caixa-280.png" width="280" height="63" alt="Caixa" loading="lazy">
+              <strong>Caixa</strong>
+              <span class="legal-logo-hint"><span class="material-symbols-outlined" aria-hidden="true">touch_app</span>Ver modelos</span>
+            </button>
+            <button class="legal-logo-card legal-reveal" type="button" data-acquirer="vero" aria-haspopup="dialog" aria-controls="legalAcquirerModal">
+              <img src="assets/images/optimized/banrisul-280.png" width="280" height="126" alt="Vero" loading="lazy">
+              <strong>Vero</strong>
+              <span class="legal-logo-hint"><span class="material-symbols-outlined" aria-hidden="true">touch_app</span>Ver modelos</span>
+            </button>
+            <button class="legal-logo-card legal-reveal" type="button" data-acquirer="rede" aria-haspopup="dialog" aria-controls="legalAcquirerModal">
+              <img src="assets/images/adquirentes/rede-.png" width="1920" height="627" alt="Rede" loading="lazy">
+              <strong>Rede</strong>
+              <span class="legal-logo-hint"><span class="material-symbols-outlined" aria-hidden="true">touch_app</span>Ver modelos</span>
+            </button>
           </div>
         </div>
       </section>
+
+      <div class="legal-acquirer-modal" id="legalAcquirerModal" aria-hidden="true">
+        <div class="legal-acquirer-backdrop" data-acquirer-close></div>
+        <section class="legal-acquirer-dialog" role="dialog" aria-modal="true" aria-labelledby="legalAcquirerTitle" tabindex="-1">
+          <button class="legal-acquirer-close" type="button" aria-label="Fechar modelos homologados" data-acquirer-close>
+            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+          </button>
+          <div class="legal-acquirer-hero">
+            <div class="legal-acquirer-logo-frame">
+              <img data-acquirer-logo src="assets/images/optimized/stone-280.png" width="280" height="142" alt="">
+            </div>
+            <div class="legal-acquirer-copy">
+              <span class="legal-acquirer-kicker"><span class="material-symbols-outlined" aria-hidden="true">verified</span>Modelos homologados</span>
+              <h3 id="legalAcquirerTitle" data-acquirer-title>Stone</h3>
+              <p data-acquirer-summary>Modelos ja validados para vender com PDV Legal em Smart POS.</p>
+              <div class="legal-model-chips" data-acquirer-models></div>
+            </div>
+          </div>
+        </section>
+      </div>
 
       <section id="clientes" class="legal-section">
         <div class="legal-container">
@@ -2765,41 +3175,6 @@
               <img src="assets/images/clientes/clientes_pdvlegal/dropscafe.jpg" width="225" height="225" alt="Drops Cafe" loading="lazy">
               <img src="assets/images/clientes/clientes_pdvlegal/elperrito.png" width="375" height="362" alt="El Perrito" loading="lazy">
               <img src="assets/images/clientes/clientes_pdvlegal/janelabar.png" width="300" height="300" alt="Janela Bar" loading="lazy">
-              <img src="assets/images/clientes/clientes_pdvlegal/behapcafe.png" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/centenario_chopp.jpg" width="447" height="447" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/cookieboleta.png" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/coxa.jpg" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/dropscafe.jpg" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/elperrito.png" width="375" height="362" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/janelabar.png" width="300" height="300" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/behapcafe.png" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/centenario_chopp.jpg" width="447" height="447" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/cookieboleta.png" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/coxa.jpg" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/dropscafe.jpg" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/elperrito.png" width="375" height="362" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/janelabar.png" width="300" height="300" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/behapcafe.png" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/centenario_chopp.jpg" width="447" height="447" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/cookieboleta.png" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/coxa.jpg" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/dropscafe.jpg" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/elperrito.png" width="375" height="362" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/janelabar.png" width="300" height="300" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/behapcafe.png" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/centenario_chopp.jpg" width="447" height="447" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/cookieboleta.png" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/coxa.jpg" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/dropscafe.jpg" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/elperrito.png" width="375" height="362" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/janelabar.png" width="300" height="300" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/behapcafe.png" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/centenario_chopp.jpg" width="447" height="447" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/cookieboleta.png" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/coxa.jpg" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/dropscafe.jpg" width="225" height="225" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/elperrito.png" width="375" height="362" alt="" loading="lazy" aria-hidden="true">
-              <img src="assets/images/clientes/clientes_pdvlegal/janelabar.png" width="300" height="300" alt="" loading="lazy" aria-hidden="true">
             </div>
           </div>
         </div>
@@ -2850,8 +3225,7 @@
           <div>
             <h4>Contato</h4>
             <ul>
-              <li><strong>Comercial</strong><br><a href="https://wa.me/551133846313?text=Ol%C3%A1%2C%20quero%20saber%20mais%20sobre%20os%20sistemas%20PDV" target="_blank" rel="noopener noreferrer">+55 11 3384-6313</a></li>
-              <li><strong>Comercial - Anderson Cruz</strong><br><a href="https://api.whatsapp.com/send/?phone=551152530604&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer">+55 11 5253-0604</a></li>
+              <li><strong>Comercial</strong><br><a href="https://api.whatsapp.com/send/?phone=551152530604&amp;text&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer">+55 11 5253-0604</a></li>
               <li><strong>Suporte</strong><br><a href="https://wa.me/551142101779?text=Ol%C3%A1%2C%20preciso%20de%20suporte%20t%C3%A9cnico" target="_blank" rel="noopener noreferrer">+55 11 4210-1779</a></li>
               <li><strong>Email</strong><br><a href="mailto:suporte@seatec.com.br">suporte@seatec.com.br</a></li>
               <li><strong>Redes sociais</strong><br><a href="https://www.instagram.com/pdvlegal_aricanduva/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
@@ -2896,6 +3270,85 @@
       const mobileMenu = document.querySelector('[data-legal-mobile-menu]');
       const revealItems = document.querySelectorAll('.legal-reveal, .legal-card, .legal-module, .legal-operation-card, .legal-stat, .legal-logo-card');
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const acquirerCards = Array.from(document.querySelectorAll('[data-acquirer]'));
+      const acquirerModal = document.getElementById('legalAcquirerModal');
+      const acquirerDialog = acquirerModal?.querySelector('.legal-acquirer-dialog');
+      const acquirerTitle = acquirerModal?.querySelector('[data-acquirer-title]');
+      const acquirerSummary = acquirerModal?.querySelector('[data-acquirer-summary]');
+      const acquirerLogo = acquirerModal?.querySelector('[data-acquirer-logo]');
+      const acquirerModels = acquirerModal?.querySelector('[data-acquirer-models]');
+      let lastAcquirerTrigger = null;
+      let acquirerCloseTimer = 0;
+
+      const acquirerGroups = [
+        { key: 'stone', name: 'Stone', models: ['A8', 'P2', 'L3', 'L4'] },
+        { key: 'getnet', name: 'GetNet', models: ['A8', 'P2', 'N910', 'DX8000', 'P3 em testes'] },
+        { key: 'bin-caixa-sicredi', name: 'BIN / Caixa / Sicredi', models: ['DX8000', 'L3', 'P2', 'P2 SE em testes'] },
+        { key: 'cielo', name: 'Cielo', models: ['DX8000', 'L3', 'L4'] },
+        { key: 'clover', name: 'Clover', models: ['Clover Flex 3', 'Clover Flex 4', 'Clover Mini'] },
+        { key: 'vero', name: 'Vero', models: ['A8', 'P2', 'L3', 'DX8000', 'Newland N950'] },
+        { key: 'pagbank', name: 'PagBank', models: ['P2', 'GPOS780'] },
+        { key: 'rede', name: 'Rede', models: ['Newland N960K'] }
+      ];
+
+      const acquirerCardsData = {
+        getnet: {
+          groupKey: 'getnet',
+          name: 'Getnet',
+          logo: 'assets/images/adquirentes/getnet.png',
+          alt: 'Getnet',
+          summary: 'Modelos homologados para operacoes Getnet com PDV Legal em Smart POS.'
+        },
+        cielo: {
+          groupKey: 'cielo',
+          name: 'Cielo',
+          logo: 'assets/images/optimized/cielo-280.png',
+          alt: 'Cielo',
+          summary: 'Compatibilidade validada com os modelos Cielo usados em atendimento movel.'
+        },
+        stone: {
+          groupKey: 'stone',
+          name: 'Stone',
+          logo: 'assets/images/optimized/stone-280.png',
+          alt: 'Stone',
+          summary: 'Modelos Stone ja homologados para venda, recebimento e emissao pelo PDV Legal.'
+        },
+        pagbank: {
+          groupKey: 'pagbank',
+          name: 'PagBank',
+          logo: 'assets/images/adquirentes/pagbank.png',
+          alt: 'PagBank',
+          summary: 'Modelos PagBank validados para uso com o fluxo de venda do PDV Legal.'
+        },
+        sicredi: {
+          groupKey: 'bin-caixa-sicredi',
+          name: 'Sicredi',
+          logo: 'assets/images/optimized/sicredi-280.png',
+          alt: 'Sicredi',
+          summary: 'Homologacao compartilhada no grupo BIN, Caixa e Sicredi.'
+        },
+        caixa: {
+          groupKey: 'bin-caixa-sicredi',
+          name: 'Caixa',
+          logo: 'assets/images/optimized/caixa-280.png',
+          alt: 'Caixa',
+          summary: 'Homologacao compartilhada no grupo BIN, Caixa e Sicredi.'
+        },
+        vero: {
+          groupKey: 'vero',
+          name: 'Vero',
+          logo: 'assets/images/optimized/banrisul-280.png',
+          alt: 'Vero',
+          summary: 'Modelos Vero homologados para operar com PDV Legal em Smart POS.'
+        },
+        rede: {
+          groupKey: 'rede',
+          name: 'Rede',
+          logo: 'assets/images/adquirentes/rede-.png',
+          alt: 'Rede',
+          summary: 'Modelo Rede homologado para venda com PDV Legal.'
+        }
+      };
 
       if (mobileMenu && mobileMenu.parentElement !== document.body) {
         document.body.appendChild(mobileMenu);
@@ -2904,6 +3357,73 @@
       const setHeaderState = () => {
         body.classList.toggle('legal-scrolled', window.scrollY > 18);
       };
+
+      const isTestingModel = (model) => model.toLowerCase().includes('testes');
+
+      const fillAcquirerModels = (models) => {
+        if (!acquirerModels) return;
+        acquirerModels.replaceChildren();
+        models.forEach((model) => {
+          const chip = document.createElement('span');
+          chip.className = `legal-model-chip${isTestingModel(model) ? ' is-testing' : ''}`;
+          chip.textContent = model;
+          acquirerModels.appendChild(chip);
+        });
+      };
+
+      const openAcquirerModal = (key, trigger) => {
+        const card = acquirerCardsData[key];
+        if (!card || !acquirerModal) return;
+
+        const group = acquirerGroups.find((item) => item.key === card.groupKey);
+        if (!group) return;
+
+        lastAcquirerTrigger = trigger || null;
+        acquirerCards.forEach((item) => item.classList.toggle('is-active', item.dataset.acquirer === key));
+
+        if (acquirerTitle) acquirerTitle.textContent = card.name;
+        if (acquirerSummary) acquirerSummary.textContent = card.summary;
+        if (acquirerLogo) {
+          acquirerLogo.src = card.logo;
+          acquirerLogo.alt = card.alt;
+        }
+
+        fillAcquirerModels(group.models);
+
+        window.clearTimeout(acquirerCloseTimer);
+        acquirerModal.classList.remove('is-ready');
+        acquirerDialog?.classList.remove('is-ready');
+        acquirerModal.classList.add('is-open');
+        acquirerModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+        void acquirerDialog?.offsetWidth;
+        acquirerModal.classList.add('is-ready');
+        acquirerDialog?.classList.add('is-ready');
+        window.setTimeout(() => acquirerDialog?.focus({ preventScroll: true }), 40);
+      };
+
+      const closeAcquirerModal = () => {
+        if (!acquirerModal?.classList.contains('is-open')) return;
+        acquirerModal.classList.remove('is-ready');
+        acquirerDialog?.classList.remove('is-ready');
+        acquirerModal.setAttribute('aria-hidden', 'true');
+        acquirerCards.forEach((item) => item.classList.remove('is-active'));
+        document.body.style.overflow = '';
+        lastAcquirerTrigger?.focus?.({ preventScroll: true });
+        lastAcquirerTrigger = null;
+        window.clearTimeout(acquirerCloseTimer);
+        acquirerCloseTimer = window.setTimeout(() => {
+          acquirerModal.classList.remove('is-open');
+        }, 260);
+      };
+
+      acquirerCards.forEach((card) => {
+        card.addEventListener('click', () => openAcquirerModal(card.dataset.acquirer, card));
+      });
+
+      acquirerModal?.addEventListener('click', (event) => {
+        if (event.target.closest('[data-acquirer-close]')) closeAcquirerModal();
+      });
 
       if (menuToggle && mobileMenu) {
         menuToggle.addEventListener('click', () => {
@@ -3038,6 +3558,9 @@
       window.addEventListener('scroll', setHeaderState, { passive: true });
       window.addEventListener('scroll', requestMotion, { passive: true });
       window.addEventListener('resize', requestMotion);
+      window.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') closeAcquirerModal();
+      });
     })();
   </script>
 </body>
